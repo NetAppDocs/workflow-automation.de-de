@@ -1,0 +1,60 @@
+---
+permalink: help/reference-new-approval-point-dialog-box.html 
+sidebar: sidebar 
+keywords: new, approval, point, dialog box, enable, add, point, checkpoint, workflow, pause, execution, resume 
+summary: Im Dialogfeld Neuer Genehmigungspunkt können Sie einen Genehmigungspunkt als Kontrollpunkt in einem Workflow hinzufügen, um die Ausführung des Workflows anzuhalten und ihn aufgrund Ihrer Genehmigung fortzusetzen. 
+---
+= Dialogfeld „Neuer Genehmigungspunkt“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Neuer Genehmigungspunkt können Sie einen Genehmigungspunkt als Kontrollpunkt in einem Workflow hinzufügen, um die Ausführung des Workflows anzuhalten und ihn aufgrund Ihrer Genehmigung fortzusetzen.
+
+* *Kommentar eingeben (optional)*
++
+Ermöglicht die Bereitstellung von Informationen wie Änderungszeitpunkt, Benutzer und Kommentaren, sodass Sie sehen können, wann und warum die Workflow-Ausführung angehalten oder fortgesetzt wurde.
+
++
+Die Kommentare zu den Genehmigungspunktpunkten können MVFLEX Expression Language (MVEL)-Ausdrücke enthalten.
+
+* *Geben Sie die Ausführungsbedingung (falls vorhanden)* ein
++
+Hier können Sie Bedingungen für die Ausführung eines Befehls angeben:
+
++
+** Immer
++
+Führt den Befehl bedingungslos aus.
+
+** Wenn die folgende Variable gefunden wurde
++
+Ermöglicht Ihnen die Ausführung eines Befehls nur, wenn die angegebene Variable gefunden wurde. Sie können die Variable im Feld angeben.
+
+** Wenn die folgende Variable nicht gefunden wurde
++
+Ermöglicht Ihnen die Ausführung eines Befehls nur, wenn die angegebene Variable nicht gefunden wurde. Sie können die Variable im Feld angeben.
+
+** Wenn der folgende Ausdruck WAHR ist
++
+Ermöglicht die Ausführung eines Befehls nur, wenn der angegebene MVEL-Ausdruck „`true`“ lautet. Sie können den Ausdruck im Feld angeben.
+
+
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *OK*
++
+Ermöglicht das Hinzufügen des Genehmigungspunkts.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

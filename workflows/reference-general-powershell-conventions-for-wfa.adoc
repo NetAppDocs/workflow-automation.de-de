@@ -1,0 +1,34 @@
+---
+permalink: workflows/reference-general-powershell-conventions-for-wfa.html 
+sidebar: sidebar 
+keywords: must, understand, certain, powershell, perl, conventions, use, create, scripts, consistent, existing, script 
+summary: Sie müssen bestimmte PowerShell- und Perl-Konventionen kennen, die in WFA zum Erstellen von Skripten verwendet werden, die mit vorhandenen Skripten identisch sind. 
+---
+= Allgemeine PowerShell und Perl Konventionen für WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen bestimmte PowerShell- und Perl-Konventionen kennen, die in WFA zum Erstellen von Skripten verwendet werden, die mit vorhandenen Skripten identisch sind.
+
+* Verwenden Sie Variablen, die Ihnen helfen, das zu klären, was das Skript tun soll.
+* Lesbarer Code schreiben, der ohne Kommentare verstanden werden kann.
+* Skripte und Befehle so einfach wie möglich halten.
+* Für PowerShell Skripte:
++
+** Nutzen Sie nach Möglichkeit Commandlets.
+** Rufen Sie den .NET-Code auf, wenn kein Cmdlet verfügbar ist.
+
+
+* Für Perl-Skripte:
++
+** Beenden Sie immer „`die`“-Aussagen mit Newline-Zeichen.
++
+Wenn kein newline-Zeichen vorhanden ist, wird die Skriptliniennummer gedruckt, was für das Debuggen von Perl-Befehlen, die von WFA ausgeführt werden, nicht nützlich ist.
+
+** Machen Sie im Modul „`getopt`“ die Zeichenfolgenargumente zu einem Befehl erforderlich.
+
+
+

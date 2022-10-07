@@ -1,0 +1,14 @@
+---
+permalink: rhel-install/reference-troubleshooting.html 
+sidebar: sidebar 
+keywords: troubleshoot, installation, configuration issues 
+summary: 'Sie können Probleme beheben, die bei der Installation und Konfiguration von OnCommand Workflow Automation (WFA) auftreten können.' 
+---
+= Fehlerbehebung bei Installations- und Konfigurationsproblemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Probleme beheben, die bei der Installation und Konfiguration von OnCommand Workflow Automation (WFA) auftreten können.

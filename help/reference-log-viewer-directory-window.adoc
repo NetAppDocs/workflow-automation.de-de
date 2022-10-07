@@ -1,0 +1,19 @@
+---
+permalink: help/reference-log-viewer-directory-window.html 
+sidebar: sidebar 
+keywords: log, viewer, window, list, available, oncommand, workflow, automation, access, select, maintenance, click, log viewer 
+summary: Im Fenster Log Viewer werden alle in OnCommand Workflow Automation verfügbaren Protokolle aufgeführt. Sie können auf dieses Fenster zugreifen, indem Sie Einstellungen auswählen und unter Wartung auf Log Viewer klicken. 
+---
+= Log Viewer-Fenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster Log Viewer werden alle in OnCommand Workflow Automation verfügbaren Protokolle aufgeführt. Sie können auf dieses Fenster zugreifen, indem Sie *Einstellungen* und unter *Wartung* auf *Log Viewer* klicken.
+
+Das Fenster Log Viewer listet die Protokolldateien (in alphabetischer Reihenfolge) auf und enthält die Dateigröße und das Datum, an dem jede Datei generiert wurde.
+
+
+NOTE: Diese Funktion wird unter Microsoft Windows Server 2003 nicht unterstützt.

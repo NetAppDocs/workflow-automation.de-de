@@ -1,0 +1,22 @@
+---
+permalink: rhel-install/reference-cannot-view-performance-advisor-data-in-wfa.html 
+sidebar: sidebar 
+keywords: cannot, view, performance, advisor, data, wfa 
+summary: Wenn Performance Advisor Daten in WFA nicht angezeigt werden können oder der Datenerfassungsprozess aus der Performance Advisor Datenquelle ausfällt, sollten Sie bestimmte Aktionen durchführen, um das Problem zu beheben. 
+---
+= Performance Advisor Daten in WFA können nicht angezeigt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Performance Advisor Daten in WFA nicht angezeigt werden können oder der Datenerfassungsprozess aus der Performance Advisor Datenquelle ausfällt, sollten Sie bestimmte Aktionen durchführen, um das Problem zu beheben.
+
+* Vergewissern Sie sich, dass Sie die Anmeldedaten eines Active IQ Unified Manager-Benutzers mit einer Mindestrolle von GlobalRead angegeben haben, wenn Sie Performance Advisor als Datenquelle in WFA konfigurieren.
+* Vergewissern Sie sich, dass Sie den richtigen Port angegeben haben, wenn Sie Performance Advisor als Datenquelle in WFA konfigurieren.
++
+Standardmäßig verwendet Active IQ Unified Manager Port 8088 für eine HTTP-Verbindung und Port 8488 für eine HTTPS-Verbindung.
+
+* Stellen Sie sicher, dass Leistungsdaten vom Active IQ Unified Manager-Server erfasst werden.
+

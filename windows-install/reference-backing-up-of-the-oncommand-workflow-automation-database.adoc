@@ -1,0 +1,46 @@
+---
+permalink: windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html 
+sidebar: sidebar 
+keywords: back up, oncommand, workflow, automation, database 
+summary: 'Ein Backup der OnCommand Workflow Automation Datenbank (WFA) umfasst die Systemkonfigurationseinstellungen und Cacheinformationen, einschließlich der Playground-Datenbank. Sie können das Backup für Wiederherstellungszwecke auf demselben System oder auf einem anderen System verwenden.' 
+---
+= Backup der OnCommand Workflow Automation-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Backup der OnCommand Workflow Automation Datenbank (WFA) umfasst die Systemkonfigurationseinstellungen und Cacheinformationen, einschließlich der Playground-Datenbank. Sie können das Backup für Wiederherstellungszwecke auf demselben System oder auf einem anderen System verwenden.
+
+Ein automatisches Backup der Datenbank wird täglich um 2 Uhr erstellt Sie wird als ZIP-Datei an folgendem Speicherort gespeichert: wfa_install_location/WFA-Backups.
+
+WFA speichert bis zu fünf Backups im WFA-Backup-Verzeichnis und ersetzt das älteste Backup durch das neueste Backup. Das Verzeichnis WFA-Backups wird bei der Deinstallation von WFA nicht gelöscht. Sie können das automatisch erstellte Backup zur Wiederherstellung verwenden, wenn Sie kein Backup der WFA Datenbank erstellt haben, während Sie WFA deinstallieren.
+
+Sie können die WFA-Datenbank auch manuell sichern, wenn Sie spezifische Änderungen für die Wiederherstellung speichern müssen, beispielsweise wenn Sie vor dem automatischen Backup die von Ihnen vorgenommenen Änderungen sichern möchten.
+
+[NOTE]
+====
+* Sie können ein Backup einer WFA Datenbank nur auf einem System wiederherstellen, auf dem dieselbe oder eine höhere Version von WFA ausgeführt wird.
++
+Wenn Sie beispielsweise ein Backup auf einem System erstellt haben, auf dem WFA 4.2 ausgeführt wird, kann das Backup nur auf Systemen wiederhergestellt werden, auf denen WFA 4.2 oder höher ausgeführt wird.
+
+* Es ist nicht möglich, das Backup der WFA Datenbank während einer Disaster Recovery in einer Hochverfügbarkeitseinrichtung über die Web-Benutzeroberfläche zu verwenden.
+
+
+====
+
+
+== Backup und Wiederherstellung der Benutzeranmeldeinformationen
+
+Zum Backup der WFA Datenbank sind die WFA Benutzeranmeldeinformationen enthalten.
+
+
+NOTE: Die WFA Datenbank ist ebenfalls in den AutoSupport-Daten enthalten, das Passwort eines WFA Benutzers ist jedoch nicht in den AutoSupport-Daten enthalten.
+
+Wenn eine WFA Datenbank aus einem Backup wiederhergestellt wird, sind folgende Elemente erhalten:
+
+* Die bei der aktuellen WFA Installation erstellten Admin-Benutzer-Anmeldedaten.
+* Wenn ein Benutzer mit anderen Administratorrechten als der standardmäßige Admin-Benutzer die Datenbank wiederherstellt, werden die Anmeldeinformationen der beiden Admin-Benutzer wiederhergestellt.
+* Alle anderen Anmeldedaten der aktuellen WFA Installation werden durch die vom Backup bereitgestellten Anmeldedaten ersetzt.
+

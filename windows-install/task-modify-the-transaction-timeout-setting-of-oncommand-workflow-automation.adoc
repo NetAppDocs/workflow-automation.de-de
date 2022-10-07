@@ -1,0 +1,37 @@
+---
+permalink: windows-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: modify, transaction, timeout, set, oncommand, workflow, automation 
+summary: 'Die Transaktionszeiten der OnCommand Workflow Automation (WFA) Datenbank liegen standardmäßig in 300 Sekunden vor. Sie können die Standard-Zeitdauer beim Wiederherstellen einer großen WFA Datenbank aus einem Backup erhöhen, um einen potenziellen Ausfall der Datenbankwiederherstellung zu vermeiden.' 
+---
+= Ändern Sie die Einstellung für das Transaktions-Timeout von OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Transaktionszeiten der OnCommand Workflow Automation (WFA) Datenbank liegen standardmäßig in 300 Sekunden vor. Sie können die Standard-Zeitdauer beim Wiederherstellen einer großen WFA Datenbank aus einem Backup erhöhen, um einen potenziellen Ausfall der Datenbankwiederherstellung zu vermeiden.
+
+Sie müssen als Administrator beim WFA Host-System angemeldet sein.
+
+In diesem Verfahren wird der WFA Standardinstallationspfad verwendet. Wenn Sie während der Installation den Standardspeicherort geändert haben, müssen Sie den geänderten WFA Installationspfad verwenden.
+
+.Schritte
+. Öffnen Sie Windows Explorer und navigieren Sie zum folgenden Verzeichnis:
++
+`WFA_install_location\WFA\bin`
+
+. Doppelklicken Sie auf die Datei ps.cmd.
++
+Es wird eine PowerShell Eingabeaufforderung für die Befehlszeilenschnittstelle (CLI) geöffnet, wobei ONTAP- und WFA-Module enthalten sind.
+
+. Geben Sie an der Eingabeaufforderung Folgendes ein:
++
+`Set-WfaConfig -Name TransactionTimeOut -Seconds NumericValue`
+
++
+`Set-WfaConfig -Name TransactionTimeOut -Seconds 1000`
+
+. Starten Sie die WFA Services nach der entsprechenden Aufforderung neu.
+

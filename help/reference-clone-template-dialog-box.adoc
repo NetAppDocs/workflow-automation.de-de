@@ -1,0 +1,50 @@
+---
+permalink: help/reference-clone-template-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, template, dialog box, enable, create, copy, template, edit 
+summary: Im Dialogfeld Vorlage klonen können Sie eine Kopie der Vorlage erstellen und die Vorlage bearbeiten. 
+---
+= Dialogfeld „Vorlage klonen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Vorlage klonen können Sie eine Kopie der Vorlage erstellen und die Vorlage bearbeiten.
+
+* *Name*
++
+Ermöglicht Ihnen die Bearbeitung des Namens der Vorlage.
+
+* *Typ*
++
+Ermöglicht die Auswahl eines Wörterbuchobjekts aus der Liste. Der Name der Vorlage, die Sie zum Klonen ausgewählt haben, wird als Name für den Klon verwendet und standardmäßig mit - copy angehängt.
+
+* *Entity Version*
++
+Hier können Sie die Versionsnummer für die Vorlage in eingeben `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Beschreibung*
++
+Hier können Sie die Beschreibung der Vorlage bearbeiten.
+
+* *Attribute*
++
+Zeigt die Attribute für das ausgewählte Wörterbuchobjekt an und ermöglicht die Eingabe eines Werts für jedes Attribut, z. B. enum und Funktion.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die Vorlage und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Speichert die Vorlage nicht und schließt das Dialogfeld.
+
+

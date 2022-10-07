@@ -1,0 +1,24 @@
+---
+permalink: rhel-install/task-configure-syslog.html 
+sidebar: sidebar 
+keywords: configure, syslog 
+summary: 'Sie können OnCommand Workflow Automation (WFA) konfigurieren, um Protokolldaten für Zwecke wie Ereignisprotokollierung und die Analyse von Protokollinformationen an einen bestimmten Syslog-Server zu senden.' 
+---
+= Syslog Konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können OnCommand Workflow Automation (WFA) konfigurieren, um Protokolldaten für Zwecke wie Ereignisprotokollierung und die Analyse von Protokollinformationen an einen bestimmten Syslog-Server zu senden.
+
+Sie müssen den Syslog-Server konfiguriert haben, um Daten vom WFA-Server zu akzeptieren.
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Administrator bei WFA an.
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Wartung* auf *Syslog*.
+. Aktivieren Sie das Kontrollkästchen *Syslog* aktivieren.
+. Geben Sie den Syslog-Host-Namen ein, und wählen Sie die Syslog-Ebene.
+. Klicken Sie Auf *Speichern*.
+

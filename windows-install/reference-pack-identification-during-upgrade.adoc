@@ -1,0 +1,27 @@
+---
+permalink: windows-install/reference-pack-identification-during-upgrade.html 
+sidebar: sidebar 
+keywords: pack, identification, during upgrade 
+summary: 'Während des Upgrade-Prozesses identifiziert und klassifiziert OnCommand Workflow Automation (WFA) die Einheiten in ein Paket. Wenn Sie eine Einheit eines Pakets vor dem Upgrade gelöscht haben, wird das Paket während des Upgrades nicht identifiziert.' 
+---
+= Pack-Identifizierung während des Upgrades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Während des Upgrade-Prozesses identifiziert und klassifiziert OnCommand Workflow Automation (WFA) die Einheiten in ein Paket. Wenn Sie eine Einheit eines Pakets vor dem Upgrade gelöscht haben, wird das Paket während des Upgrades nicht identifiziert.
+
+Während des Upgrades vergleicht WFA die Pakete in der Datenbank mit der Liste der im Storage Automation Store veröffentlichten Pakete, um die vor dem Upgrade installierten Pakete zu identifizieren. Die Pack-Identifizierung klassifiziert somit vorhandene Packungen in der Datenbank.
+
+WFA führt die folgenden Prozesse zur Identifizierung und Klassifizierung von Paketen durch:
+
+* Unterhält eine Liste der im Storage Automation Store freigegebenen Pakete, um die vor dem Upgrade installierten Pakete zu vergleichen und zu identifizieren.
+* Klassifiziert die Einheiten in einem Paket als Teil der Synchronisierung des Storage Automation Store, wenn Storage Automation Store aktiviert ist.
+* Klassifiziert die Einheiten in Packungen unter Verwendung der aktualisierten Liste.
+
+
+Die Identifikation von Packs ist nur für von NetApp zertifizierte Pakete anwendbar, die im Storage Automation Store heruntergeladen wurden.
+
+Wenn ein Paket während des Upgrades nicht erkannt wird, können Sie es erneut importieren, um es in WFA zu identifizieren. Die wfa.log Dateien enthalten Details zu den Einheiten, die während des Upgrades nicht als Paket identifiziert wurden.

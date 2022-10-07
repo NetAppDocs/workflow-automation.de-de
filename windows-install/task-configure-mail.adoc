@@ -1,0 +1,30 @@
+---
+permalink: windows-install/task-configure-mail.html 
+sidebar: sidebar 
+keywords: configure, email, notifications 
+summary: 'Zudem lässt sich OnCommand Workflow Automation (WFA) konfigurieren, um Ihnen E-Mail-Benachrichtigungen zu Workflow-Vorgängen zu senden, beispielsweise gestartete Workflows oder fehlgeschlagener Workflow.' 
+---
+= Konfigurieren Sie E-Mail-Benachrichtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zudem können Sie OnCommand Workflow Automation (WFA) so konfigurieren, dass Sie E-Mail-Benachrichtigungen zu Workflow-Vorgängen senden – beispielsweise gestartete Workflows oder fehlgeschlagener Workflow.
+
+Sie müssen einen Mail-Host in Ihrer Umgebung konfiguriert haben.
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Administrator bei WFA an.
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Setup* auf *Mail*.
+. Geben Sie die erforderlichen Informationen in die Felder ein.
+. Testen Sie die E-Mail-Einstellungen wie folgt:
++
+.. Klicken Sie auf *Testmail senden*.
+.. Geben Sie im Dialogfeld Verbindung testen die E-Mail-Adresse ein, an die Sie die E-Mail senden möchten.
+.. Klicken Sie Auf *Test*.
+
+
+. Klicken Sie Auf *Speichern*.
+

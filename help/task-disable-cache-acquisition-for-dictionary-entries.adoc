@@ -1,0 +1,21 @@
+---
+permalink: help/task-disable-cache-acquisition-for-dictionary-entries.html 
+sidebar: sidebar 
+keywords: necessary, cache, dictionary, objects, oncommand, workflow, automation, disable, reduce, time, complete, data, source, acquisition 
+summary: 'Wenn das Caching von Wörterbuchobjekten in OnCommand Workflow Automation (WFA) nicht erforderlich ist, können Sie das Caching dieser Objekte deaktivieren. Durch die Deaktivierung des Caching unerwünschter Objekte kann WFA die zur vollständigen Übernahme der Datenquelle benötigte Zeit verkürzen.' 
+---
+= Deaktivieren Sie die Cacheerfassung für Wörterbucheinträge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das Caching von Wörterbuchobjekten in OnCommand Workflow Automation (WFA) nicht erforderlich ist, können Sie das Caching dieser Objekte deaktivieren. Durch die Deaktivierung des Caching unerwünschter Objekte kann WFA die zur vollständigen Übernahme der Datenquelle benötigte Zeit verkürzen.
+
+.Schritte
+. Klicken Sie Auf *Datenquellendesign* > *Wörterbuch*.
+. Wählen Sie den Wörterbucheintrag aus, für den die Datenerfassung deaktiviert werden soll.
+. Klicken Sie Auf image:../media/disable_acquisition_wfa_icon.gif["Symbol „Aufnahme deaktivieren“"] Klicken Sie auf der Symbolleiste auf *Ja*.
+. Wenn die Fehlermeldung angezeigt wird `_Cache acquisition for the dictionary entry cannot be disabled,_` Deaktivieren Sie die Cacheerfassung für die in der Fehlermeldung aufgeführten Wörterbucheinträge und deaktivieren Sie dann die Cacheerfassung für das aktuelle Wörterbuchobjekt.
+

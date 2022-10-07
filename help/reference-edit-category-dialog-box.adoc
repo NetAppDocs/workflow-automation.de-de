@@ -1,0 +1,62 @@
+---
+permalink: help/reference-edit-category-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, category, dialog box, enable, workflow 
+summary: Im Dialogfeld Kategorie bearbeiten können Sie eine Workflow-Kategorie bearbeiten. 
+---
+= Dialogfeld Kategorie bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Kategorie bearbeiten können Sie eine Workflow-Kategorie bearbeiten.
+
+* *Name*
++
+Ermöglicht Ihnen, den Namen der Kategorie zu bearbeiten.
+
+* *Beschreibung*
++
+Hier können Sie die Beschreibung der Kategorie bearbeiten.
+
+* *Verfügbare Workflows*
++
+Zeigt alle verfügbaren Workflows an, die nicht in das Feld Ausgewählte Workflows verschoben werden.
+
+* *Ausgewählte Workflows*
++
+Zeigt alle Workflows an, die für die Kategorie ausgewählt wurden.
+
+* *Kategorie für Workflow-Autorisierung*
++
+Ermöglicht es Ihnen, Benutzern mit Bedienerrolle Zugriff auf die Ausführung der Kategorie zu gewähren. Das Kontrollkästchen ist standardmäßig nicht aktiviert.
+
+* *Verfügbare Operatoren*
++
+Zeigt alle Benutzer mit Operatorrolle an, die keinen Zugriff auf die Kategorie haben.
+
+* *Ausgewählte Operatoren*
++
+Zeigt die Benutzer an, denen der Zugriff auf die Kategorie gewährt wird.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Auswahltasten*
++
+Verschiebt den ausgewählten Eintrag von einem Feld in ein anderes.
+
+* *Speichern*
++
+Speichert die Kategorie und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Speichert die Kategorie nicht und schließt das Dialogfeld.
+
+

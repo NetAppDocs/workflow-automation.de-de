@@ -1,0 +1,40 @@
+---
+permalink: rhel-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, rest apis 
+summary: 'Sie können die OnCommand Workflow Automation (WFA) Datenbank mithilfe VON REST-APIs wiederherstellen. In einer vollständigen Wiederherstellung können Sie die WFA Datenbank, die WFA Konfiguration und den Schlüssel wiederherstellen.' 
+---
+= Stellen Sie die WFA Datenbank mithilfe VON REST-APIs wieder her (vollständig)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die OnCommand Workflow Automation (WFA) Datenbank mithilfe VON REST-APIs wiederherstellen. In einer vollständigen Wiederherstellung können Sie die WFA Datenbank, die WFA Konfiguration und den Schlüssel wiederherstellen.
+
+* Sie müssen eine ZIP-Sicherung der WFA Datenbank erstellt haben.
+* Sie müssen über Administrator- oder Architekturdaten verfügen.
+* Wenn Sie die Datenbank im Rahmen des Migrationsvorgangs wiederherstellen, müssen Sie eine vollständige Wiederherstellung durchführen.
+
+
+.Schritte
+. Geben Sie in den Browser DES REST-Clients die folgende URL ein: `+https://IP address of WFA server/rest/backups?full=true+`
+. Wählen Sie im Backup-Fenster die Methode *POST* aus.
+. Wählen Sie in der Dropdown-Liste *Teil* die Option *mehrteiligem Körper* aus.
+. Geben Sie im Feld *Datei* die folgenden Informationen ein:
++
+.. Wählen Sie in der Dropdown-Liste *Inhaltstyp* die Option *mehrteilige/Formulardaten* aus.
+.. Wählen Sie in der Dropdown-Liste *Charset* die Option *ISO-8859-1* aus.
+.. Geben Sie im Feld *Dateiname* den Namen der Sicherungsdatei ein, die Sie erstellt haben und die Sie wiederherstellen möchten.
+.. Klicken Sie Auf *Durchsuchen*.
+.. Wählen Sie den Speicherort der ZIP-Sicherungsdatei aus.
+
+
+. Navigieren Sie zum Verzeichnis /opt/netapp/wfa/bin und starten Sie die WFA Services neu:
+. Starten Sie den Service *NetApp WFA Database* und *NetApp WFA Server* neu:
++
+`wfa --restart`
+
+. Vergewissern Sie sich, dass der Wiederherstellungsvorgang erfolgreich ist und WFA zugänglich ist.
+

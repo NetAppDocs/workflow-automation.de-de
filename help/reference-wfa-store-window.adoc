@@ -1,0 +1,16 @@
+---
+permalink: help/reference-wfa-store-window.html 
+sidebar: sidebar 
+keywords: storage, automation, store, cotains, netapp-certified, workflow, pack, developed, use, oncommand, download, import, execute 
+summary: 'Der Storage Automation Store enthält von NetApp zertifizierte automatisierte Workflow-Pakete für die Verwendung mit OnCommand Workflow Automation (WFA). Sie können die Pakete herunterladen und anschließend in WFA importieren, um sie auszuführen.' 
+---
+= Storage Automation Store-Fenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Storage Automation Store enthält von NetApp zertifizierte automatisierte Workflow-Pakete für die Verwendung mit OnCommand Workflow Automation (WFA). Sie können die Pakete herunterladen und anschließend in WFA importieren, um sie auszuführen.
+
+Die automatisierten Workflows stehen in zur Verfügung https://automationstore.netapp.com["Storage Automation Store"^]

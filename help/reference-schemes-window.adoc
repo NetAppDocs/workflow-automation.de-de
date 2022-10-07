@@ -1,0 +1,167 @@
+---
+permalink: help/reference-schemes-window.html 
+sidebar: sidebar 
+keywords: scheme, window, display, available, scheme, enable, manage, oncommand, workflow, automation, acquire, data, relevant, environment 
+summary: 'Im Fenster Schemas werden die verfügbaren Schemata angezeigt und Sie können die Schemata verwalten. OnCommand Workflow Automation (WFA) nutzt Schemata, um Daten zu erfassen, die für eine Umgebung relevant sind.' 
+---
+= Fenster „Schemas“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster Schemas werden die verfügbaren Schemata angezeigt und Sie können die Schemata verwalten. OnCommand Workflow Automation (WFA) nutzt Schemata, um Daten zu erfassen, die für eine Umgebung relevant sind.
+
+Ein Schema repräsentiert das Datenmodell für ein System. Das Datenmodell ist eine Sammlung von Wörterbucheinträgen. Sie können ein Schema definieren und dann einen Datenquelltyp definieren. Die Datenquelle legt fest, wie die Daten erfasst und das Schema gefüllt wird. Beispielsweise enthält ein _vc-Schema_ Daten, die für Ihre virtuelle Umgebung relevant sind, z. B. Virtual Machines, Hosts und Datastores.
+
+
+
+== Schemata-Tabelle
+
+In der Tabelle Schemata werden die verfügbaren Schemata-Einträge aufgelistet. Jeder Eintrag ist wie folgt gekennzeichnet:
+
+* image:../media/community_certification.gif[""] - Inhalt von Nutzern erstellt
+* image:../media/ps_certified_icon_wfa.gif[""] - Von Professional Services (PS) entwickelter Inhalt, der nur bei eigenen PS-Installationen verfügbar ist
+* image:../media/community_certification.gif[""] - Pakete von Benutzern entwickelt
+* image:../media/lock_icon_wfa.gif[""] - Inhalt, der von Benutzern erstellt wurde, die gesperrt sind
+* image:../media/netapp_certified.gif[""] - NetApp zertifizierter Inhalte
+
+
+Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+Die Tabelle Schemata enthält die folgenden Spalten:
+
+* * Zertifizierung*
++
+Gibt an, ob das Schema vom Benutzer erstellt wurde (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), Gemeinschaft (image:../media/community_certification.gif[""]), Benutzer-gesperrt (image:../media/lock_icon_wfa.gif[""]) Oder NetApp zertifiziert (image:../media/netapp_certified.gif[""]).
+
+* *Name*
++
+Zeigt den Namen des Schemas an.
+
++
+Sie können nach einem Schema suchen, indem Sie seinen Namen in das Textfeld * Suchen* eingeben.
+
+* *Anzeigename*
++
+Zeigt den Namen des Schemas an.
+
++
+Sie können nach einem Schema suchen, indem Sie seinen Namen in das Textfeld * Suchen* eingeben.
+
+* *Entity Version*
++
+Zeigt die Versionsnummer des Objekts in an `major.minor.revision` Format – z. B. 1.0.0.
+
++
+Sie können nach einem Schema suchen, indem Sie die Versionsnummer in das Textfeld * Suchen* eingeben.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Schemas an.
+
++
+Sie können nach einem Schema suchen, indem Sie dessen Beschreibung in das Textfeld * Suchen* eingeben.
+
+* *Typ*
++
+Gibt an, ob das Schema zum Erfassen von Daten aus einem Remote-System oder direkt aus Workflows oder Befehlen verwendet wird. Mögliche Werte sind Datenquellenerfassung und andere.
+
++
+Sie können nach Schemata suchen, indem Sie den Typ in das Textfeld * Suchen* eingeben.
+
+* *Kennzeichnung Zurücksetzen*
++
+Gibt an, ob das Schema während des nächsten Datenerfassungszyklus zurückgesetzt wird. Mögliche Werte sind wahr und falsch.
+
+* *Zuletzt Aktualisiert Am*
++
+Zeigt das Datum und die Uhrzeit an, zu der das Schema zuletzt aktualisiert wurde.
+
++
+Sie können nach Schemata suchen, indem Sie in der Dropdown-Liste Filter die gewünschte Zeitkategorie auswählen.
+
+* *Aktualisiert Von*
++
+Zeigt den Namen des Benutzers an, der das Schema aktualisiert hat.
+
++
+Sie können nach Schemata suchen, indem Sie den Benutzernamen in das Textfeld * Suchen* eingeben.
+
+* *Gesperrt Von*
++
+Zeigt den Namen des Benutzers an, der das Schema gesperrt hat.
+
++
+Sie können nach Schemata suchen, indem Sie den Benutzernamen in das Textfeld * Suchen* eingeben.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/new_wfa_icon.gif["Neues Symbol"] (Neu)*
++
+Öffnet das Dialogfeld Neue Schemata, in dem Sie ein neues Schema erstellen können.
+
+* *image:../media/edit_wfa_icon.gif["Symbol bearbeiten"] (Bearbeiten)*
++
+Öffnet das Dialogfeld Schema <SchemeName> für das ausgewählte Schema, mit dem Sie das Schema bearbeiten können.
+
+* *image:../media/lock_wfa_icon.gif["Symbol sperren"] (Sperre)*
++
+Öffnet das Dialogfeld „Bestätigung des Schemas sperren“, in dem Sie das ausgewählte Schema sperren können. Diese Option ist nur für die von Ihnen erstellten Schemata aktiviert.
+
+* *image:../media/unlock_wfa_icon.gif["Symbol entsperren"] (Entsperren)*
++
+Öffnet das Dialogfeld „Bestätigung des Schemas entsperren“, in dem Sie das ausgewählte Schema entsperren können. Diese Option ist nur für die Schemata aktiviert, die Sie gesperrt haben. Administratoren können Schemata freischalten, die von anderen Benutzern gesperrt sind.
+
+* *image:../media/delete_wfa_icon.gif["Symbol Löschen"] (Löschen)*
++
+Öffnet das Bestätigungsdialogfeld Schema löschen, in dem Sie die ausgewählten benutzererstellten Schemata löschen können.
+
++
+
+NOTE: Ein WFA oder PS-Schema kann nicht gelöscht werden.
+
+* *image:../media/export_wfa_icon.gif["Symbol „Exportieren“"] (Export)*
++
+Ermöglicht Ihnen den Export des ausgewählten benutzererstellten Schemas.
+
++
+
+NOTE: Sie können kein WFA oder PS-Schema exportieren.
+
+* *image:../media/reset_scheme_wfa_icon.gif["Schema-Symbol zurücksetzen"] (Schema Zurücksetzen)*
++
+Ermöglicht Ihnen das Zurücksetzen des Schemas während des nächsten Datenerfassungszyklus.
+
+* *image:../media/add_to_pack.png["Zum Pack-Symbol hinzufügen"] (Zum Paket Hinzufügen)*
++
+Öffnet das Dialogfeld „Add to Pack Schemes“, in dem Sie das Schema und seine zuverlässigen Einheiten einem Paket hinzufügen können, das bearbeitbar ist.
+
++
+
+NOTE: Die Funktion Add to Pack ist nur für Programme aktiviert, für die die Zertifizierung auf *Keine.* eingestellt ist
+
+* *image:../media/remove_from_pack.png["Aus Packungssymbol entfernen"] (Aus Packung Entfernen)*
++
+Öffnet das Dialogfeld „aus Pack-Schemata entfernen“ für das ausgewählte Schema, mit dem Sie das Schema aus dem Paket löschen oder entfernen können.
+
++
+
+NOTE: Die Funktion „aus Pack entfernen“ ist nur für Systeme aktiviert, für die die Zertifizierung auf *Keine.* eingestellt ist
+
+

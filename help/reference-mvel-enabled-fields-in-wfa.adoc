@@ -1,0 +1,78 @@
+---
+permalink: help/reference-mvel-enabled-fields-in-wfa.html 
+sidebar: sidebar 
+keywords: field, oncommand, workflow, automation, enable, expression, language, syntax, design 
+summary: 'Für MVFLEX Expression Language (MVEL) sind mehrere Felder in OnCommand Workflow Automation (WFA) aktiviert. Sie können MVEL-Syntax in diesen Feldern bei der Gestaltung von Workflows verwenden.' 
+---
+= MVEL-fähige Felder in OnCommand Workflow Automation
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für MVFLEX Expression Language (MVEL) sind mehrere Felder in OnCommand Workflow Automation (WFA) aktiviert. Sie können MVEL-Syntax in diesen Feldern bei der Gestaltung von Workflows verwenden.
+
+In der folgenden Tabelle wird erläutert, wann und wo MVEL Synchronisierungsprobleme in der WFA Schnittstelle verwendet werden können:
+
+[cols="2*"]
+|===
+| Wenn... | Einsatzort... 
+
+
+ a| 
+Erstellen oder Bearbeiten eines Workflows
+ a| 
+* _Menu:Workflow_[Details > Rückgabeparameter > Parameterwert]
+* _Menu:Workflow_[Details > Konstanten > Wert]
+
+
+
+
+ a| 
+Erstellen oder Bearbeiten von Befehlsdetails in einem Workflow
+ a| 
+* Menü:Befehle[Parameter für_Parameter_Name_ > Suchkriterien eingeben > Ressourcenauswahl > Finder > Parameter]
+* Menü:Befehle[Parameter für_Parameter_Name_ > Suchkriterien eingeben > Ressourcenauswahl > Erweitert > Suche ausführen nur dann, wenn der folgende Ausdruck wahr wird]
+* Menü:Befehle[Parameter für_Parameter_Name_ > Erweitert > Wenn der folgende Ausdruck WAHR ist]
+* Menü:Befehle[Parameter für_Parameter_Name_ > andere Parameter]
+* Menü:Befehle[_Parameter_Name_ > Attribute]
+
+
+
+
+ a| 
+Erstellen oder Bearbeiten eines Befehls
+ a| 
+* Menü:Befehle[Befehlsdefinition_Command_Name_ > Eigenschaften > Zeichendarstellung]
+
+
+
+
+ a| 
+Erstellen oder Bearbeiten einer Funktion
+ a| 
+* Menü:Funktionen[Function_Function_Name_ > Funktionsdefinition]
+
+
+
+
+ a| 
+Erstellen oder Bearbeiten einer Vorlage
+ a| 
+* Menü:Vorlage[Parameter für_Parameter_Name_ > Vorlage_Template_Name_ > Attribute > Wert]
+
+
+
+
+ a| 
+Bearbeiten einer Zeile
+ a| 
+* _Menü:Workflow_[Workflow > Zeile wiederholen > Wiederholungen > Anzahl der Zeiten]
+* _Menu:Workflow_[Workflow > Zeile wiederholen > Variablen > Variablen für _initial_value_ und_Expression_]
+* _Menu:Workflow_[Workflow > Zeile wiederholen > für jede Ressource in einer Gruppe > Kriterien für Ressourcensuche > zu filternden Parameter]
+* _Menu:Workflow_[Workflow > Bedingung hinzufügen > Wenn der folgende Ausdruck WAHR ist]
+
+
+|===

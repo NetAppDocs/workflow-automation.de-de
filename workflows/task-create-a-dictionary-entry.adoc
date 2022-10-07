@@ -1,0 +1,42 @@
+---
+permalink: workflows/task-create-a-dictionary-entry.html 
+sidebar: sidebar 
+keywords: create, wfa, dictionary, entry, define, object, type, relationship, storage, environment 
+summary: Sie können einen Eintrag im WFA Wörterbuch erstellen, wenn Sie einen neuen Objekttyp und seine Beziehung in Ihrer Storage-Umgebung definieren möchten. 
+---
+= Erstellen Sie einen Wörterbucheintrag
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Eintrag im WFA Wörterbuch erstellen, wenn Sie einen neuen Objekttyp und seine Beziehung in Ihrer Storage-Umgebung definieren möchten.
+
+.Schritte
+. Klicken Sie Auf *Datenquellendesign* > *Wörterbuch*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Geben Sie im Dialogfeld *New Dictionary Entry* die erforderlichen Angaben in die Felder *Name des Objekttyps* und *Beschreibung* ein.
+. Führen Sie für das Feld *Schema* eine der folgenden Aktionen durch:
++
+** Wählen Sie eines der verfügbaren Schemas aus der Liste aus.
+** Klicken Sie auf *Neues Schema hinzufügen*, geben Sie im Dialogfeld Neues Schema den erforderlichen *Scheme Name* ein und klicken Sie dann auf *Hinzufügen*.
+
+
+. Klicken Sie auf *Zeile hinzufügen* und führen Sie die folgenden Schritte aus, um das Attribut zu beschreiben:
++
+.. Klicken Sie auf die Spalte *Name* und geben Sie den Namen des Attributs ein.
+.. Wählen Sie in der Spalte *Typ* den gewünschten Typ aus.
++
+Die Spalte *Zeichenlänge* ist ausgefüllt und kann bearbeitet werden, wenn Sie als Typ String ausgewählt haben. Auch die Spalte *Werte* kann bearbeitet werden, wenn Sie als Typ *enum* ausgewählt haben.
+
+.. Wählen Sie im die entsprechenden Kontrollkästchen für das Attribut aus `Natural Key, To be Cached`, und `Can be Null columns`.
++
+Wenn Sie das Kontrollkästchen *Natural Key* aktiviert haben, können Sie das Kontrollkästchen *can be Null* nicht aktivieren.
+
+.. Fügen Sie die erforderlichen Attribute für das Wörterbuchobjekt hinzu.
+.. *Optional:* Wählen Sie das Kontrollkästchen *Werte in natürlichen Schlüsselspalten sind Groß- und Kleinschreibung* aus, wenn die natürlichen Schlüssel Groß- und Kleinschreibung beachten sollen.
+
+
+. Klicken Sie Auf *Speichern*.
+

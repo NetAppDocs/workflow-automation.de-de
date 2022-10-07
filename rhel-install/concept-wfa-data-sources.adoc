@@ -1,0 +1,22 @@
+---
+permalink: rhel-install/concept-wfa-data-sources.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, data, sources 
+summary: 'OnCommand Workflow Automation (WFA) arbeitet auf Daten, die aus Datenquellen abgerufen werden. Verschiedene Versionen von Active IQ Unified Manager und VMware vCenter Server werden als vordefinierte WFA Datenquelltypen bereitgestellt. Sie müssen die vordefinierten Datenquelltypen kennen, bevor Sie die Datenquellen für die Datenerfassung einrichten.' 
+---
+= OnCommand Workflow Automation Datenquellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) arbeitet auf Daten, die aus Datenquellen abgerufen werden. Verschiedene Versionen von Active IQ Unified Manager und VMware vCenter Server werden als vordefinierte WFA Datenquelltypen bereitgestellt. Sie müssen die vordefinierten Datenquelltypen kennen, bevor Sie die Datenquellen für die Datenerfassung einrichten.
+
+Eine Datenquelle ist eine schreibgeschützte Datenstruktur, die als Verbindung zum Datenquellobjekt eines bestimmten Datenquelltyps dient. Beispielsweise kann eine Datenquelle eine Verbindung zu einer Active IQ Unified Manager-Datenbank eines Active IQ Unified Manager 6.3-Datenquelltyps sein. Sie können WFA eine benutzerdefinierte Datenquelle hinzufügen, nachdem Sie den erforderlichen Datenquelltyp definiert haben.
+
+Weitere Informationen zu den vordefinierten Datenquelltypen finden Sie in der Interoperabilitäts-Matrix.
+
+*Verwandte Informationen*
+
+https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]

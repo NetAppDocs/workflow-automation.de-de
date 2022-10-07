@@ -1,0 +1,171 @@
+---
+permalink: help/reference-monitoring-window.html 
+sidebar: sidebar 
+keywords: monitoring, window, display, details, result, planning, execution, phase, workflow, tab, read-only, content, areas, application, select, preview, option 
+summary: Das Fenster Überwachung zeigt Details zu den Ergebnissen der Planungs- oder Ausführungsphase des Workflows an. Auf den Registerkarten im Fenster wird nur lesbare Inhalte angezeigt. Sie können in verschiedenen Bereichen der WFA Applikation auf dieses Fenster zugreifen, wenn Sie die Optionen „Details“, „Vorschau“ oder „Ausführen“ auswählen. 
+---
+= Überwachungsfenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Fenster Überwachung zeigt Details zu den Ergebnissen der Planungs- oder Ausführungsphase des Workflows an. Auf den Registerkarten im Fenster wird nur lesbare Inhalte angezeigt. Sie können aus verschiedenen Bereichen der WFA Anwendung auf dieses Fenster zugreifen, wenn Sie die Optionen *Details*, *Vorschau* oder *Ausführen* auswählen.
+
+* Statusbereich
+* Registerkarte „Flow“
+* Registerkarte „Details“
+* Registerkarte Ausführungsplan
+* Benutzereingaben
+* Rückgabeparameter
+* Registerkarte „Verlauf“
+
+
+
+
+== Statusbereich
+
+Im Statusbereich über den Registerkarten werden detaillierte Informationen über das Ergebnis des Planungs- oder Ausführungsprozesses angezeigt.
+
+* *Workflow-Status*
++
+Im oberen Bereich des Fensters zeigt eine farblich kodierte Kopfzeile das Ergebnis des Planungs- oder Ausführungsprozesses an:
+
++
+** Grün zeigt eine erfolgreiche Aktion an, z. B. „Planung abgeschlossen“ oder „Ausführung abgeschlossen“.
+** Rot zeigt Fehler an, z. B. Planung fehlgeschlagen oder Ausführung fehlgeschlagen.
+
+
+* *Weniger/Mehr Info Aktion*
++
+Dieser Aktionslink ist verfügbar, wenn die Vorschau oder Ausführung fehlschlägt. Über den Aktionslink können Sie zwischen *weniger Info* und *Mehr Info* wechseln. Je nach Aktion öffnet oder schließt der Link das Informationsfeld, um mehr oder weniger Informationen über das fehlgeschlagene Ergebnis anzuzeigen.
+
+* *Detaillierter Status*
++
+Dieses Feld ist verfügbar, wenn die Vorschau oder Ausführung fehlschlägt. Hier werden Details zum Planungs- oder Testsuitesprozess angezeigt. Wenn ein Prozess fehlschlägt, ist dieses Feld standardmäßig geöffnet und enthält Details über die Ursache des Fehlers.
+
+
+
+
+
+== Registerkarte „Flow“
+
+Die Registerkarte „Flow“ bietet eine grafische Darstellung des Workflows.
+
+Befehle und untergeordnete Workflows werden in der oberen Zeile mit den unten angezeigten Objekten und Variablen angezeigt. Der Status der Befehlsdetails und untergeordneten Workflows während der Vorschau oder Ausführung wird in verschiedenen Farben angezeigt.
+
+Die folgende Tabelle zeigt Folgendes:
+
+* Das Farbschema, das zum Anzeigen des Status des Befehls oder der Workflow-Ausführung verwendet wird
+* Die Symbole, die im Fenster verwendet werden
+
+
+[cols="25h,~"]
+|===
+| Farbschema und Symbol | Status 
+
+
+ a| 
+image:../media/execution_successful.gif["Grüner Kasten"]
+ a| 
+Ausführung erfolgreich
+
+
+
+ a| 
+image:../media/execution_failed.gif["Roter Kasten"]
+ a| 
+Ausführung fehlgeschlagen
+
+
+
+ a| 
+image:../media/execution_in_progress.gif["Blauer Kasten"]
+ a| 
+Ausführung läuft
+
+
+
+ a| 
+image:../media/execution_skipped.gif["Graue Box"]
+ a| 
+Ausführung übersprungen
+
+
+
+ a| 
+image:../media/waiting_for_approval.gif["Blauer Kasten"]
+ a| 
+Untergeordneter Workflow-Header
+
+
+
+ a| 
+image:../media/info_icon_execute_wfa.gif[""]
+ a| 
+Öffnet die Protokolle
+
+
+
+ a| 
+image:../media/approval_point_icon.gif["Symbol für den Genehmigungspunkt"]
+ a| 
+Der untergeordnete Workflow enthält einen Genehmigungspunkt
+
+|===
+
+
+== Registerkarte „Details“
+
+Auf der Registerkarte Details finden Sie ausführlichere Informationen zum Workflow. Die Informationen werden im Tabellenformat bereitgestellt, wobei die Befehle in der Kopfzeile sowie die unten aufgeführten zugehörigen Objekte und Variablen aufgeführt sind. Diese Registerkarte enthält jeden Befehl mit allen Argumenten und Parametern.
+
+Diese Registerkarte eignet sich zum Debuggen einer fehlgeschlagenen Vorschau oder Ausführung des Workflows.
+
+
+
+== Registerkarte Ausführungsplan
+
+Die Registerkarte Ausführungsplan enthält eine übersetzte Liste der Workflow-Befehle und deren ausgeführten Argumente (Skripte oder Befehle).
+
+Sie können diese Registerkarte zum Debuggen einer fehlgeschlagenen Vorschau oder Ausführung des Workflows verwenden.
+
+
+
+== Registerkarte Benutzereingaben
+
+Auf der Registerkarte Benutzereingaben werden Werte angezeigt, die von Benutzern während der Vorschau oder Ausführung des Workflows eingegeben wurden.
+
+Sie können die Sortierpfeile (image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Oder image:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"]) In der Spaltenüberschrift, um die Spalteneinträge in aufsteigender oder absteigender Reihenfolge zu sortieren.
+
+
+
+== Rückgabeparameter
+
+Auf der Registerkarte Rückgabeparameter werden die Ausgabe des Workflows nach Parametername und Parameterwert angezeigt.
+
+Sie können über Webdienste auf diese Rückgabeparameter zugreifen.
+
+
+
+== Registerkarte „Verlauf“
+
+Auf der Registerkarte Verlauf werden Änderungen in den Status für den Workflow, bei der Statusänderung, bei der Initiierung der Aktion und der mit der Statusänderung verknüpften Meldung aufgeführt.
+
+
+
+== Befehlsschaltflächen
+
+* *Protokolle Herunterladen*
++
+Hier können Sie ein herunterladen `zip` Datei aller Protokolldateien, einschließlich der spezifischen Testprotokolle.
+
+* *Sichtbarkeit Der Spalten*
++
+Ermöglicht das ein- oder Ausblenden von Spalten auf der Registerkarte Details.
+
+* *OK*
++
+Schließt das Überwachungsfenster.
+
+

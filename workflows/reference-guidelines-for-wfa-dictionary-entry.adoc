@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-dictionary-entry.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, dictionary, entries, oncommand, workflow, automation 
+summary: 'Beim Erstellen von Wörterbucheinträgen in OnCommand Workflow Automation (WFA) müssen Sie die Richtlinien kennen.' 
+---
+= Richtlinien für Einträge im WFA Wörterbuch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beim Erstellen von Wörterbucheinträgen in OnCommand Workflow Automation (WFA) müssen Sie die Richtlinien kennen.
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Namen von Wörterbucheintragsnamen dürfen nur alphanumerische Zeichen und Unterstriche enthalten.
+ a| 
+Cluster_Lizenz
+
+Switch_23
+
+
+
+ a| 
+Die Namen der Wörterbucheingabe müssen mit einem Großbuchstaben beginnen. Beginnen Sie jedes Wort im Namen mit einem Großbuchstaben und trennen Sie jedes Wort mit einem Unterstrich (_).
+ a| 
+Datenmenge
+
+Array_Lizenz
+
+
+
+ a| 
+Attributnamen für Wörterbucheintrag sollten den Namen des Wörterbucheintrags nicht enthalten.
+ a| 
+Keine
+
+
+
+ a| 
+Attribute und Verweise in einem Wörterbucheintrag müssen in Kleinbuchstaben enthalten sein.
+ a| 
+Aggregat, Größe_mb
+
+
+
+ a| 
+Trennen Sie Wörter mit einem Unterstrich. Leerzeichen sind nicht zulässig.
+ a| 
+Ressourcen-Pool
+
+
+
+ a| 
+Wörterbucheinträge können keine Referenzen enthalten, die von einem anderen Schema stammen. Wenn ein Wörterbucheintrag einen Querverweis auf ein Objekt in einem anderen Schema erfordert, stellen Sie sicher, dass alle natürlichen Schlüssel des Objekts, auf das verwiesen wird, im Wörterbucheintrag vorhanden sind.
+ a| 
+Array_Performance-Wörterbuch-Eintrag erfordert alle natürlichen Schlüssel des Array-Wörterbuchs als direkte Attribute darin.
+
+
+
+ a| 
+Verwenden Sie die entsprechenden Datentypen für Attribute.
+ a| 
+Keine
+
+
+
+ a| 
+Verwenden Sie den langen Datentyp für die Größe oder die speicherbezogenen Attribute.
+ a| 
+Size_mb und Available_size_mb im Storage.Volume-Wörterbuch-Eintrag
+
+
+
+ a| 
+Verwenden Sie Enum, wenn ein Attribut einen festen Satz von Werten hat.
+ a| 
+raid_type in Storage.Volume-Wörterbuch-Eintrag
+
+
+
+ a| 
+Legen Sie „`to be gecached`“ für ein Attribut oder eine Referenz fest, wenn eine Datenquelle Wert für dieses Attribut oder diesen Verweis gibt.für die Active IQ Unified Manager Datenquelle fügen Sie Cache-fähige Attribute hinzu, wenn die Datenquelle den Wert für sie liefern kann.
+ a| 
+Keine
+
+
+
+ a| 
+Set „`kann Null`“ als wahr sein, wenn die Datenquelle, die den Wert für dieses Attribut oder diesen Verweis bereitstellt, Null zurückgeben kann.
+ a| 
+Keine
+
+
+
+ a| 
+Geben Sie jedem Attribut und jeder Referenz eine aussagekräftige Beschreibung an.die Beschreibung wird bei der Gestaltung eines Workflows in Befehlsdetails angezeigt.
+ a| 
+Keine
+
+
+
+ a| 
+Verwenden Sie „`id`“ nicht als Namen eines Attributs in Glossareinträgen. Es ist für die interne Verwendung von WFA reserviert.
+ a| 
+Keine
+
+|===
+*Verwandte Informationen*
+
+xref:reference-references-to-learning-material.adoc[Verweise auf Lernmaterial]

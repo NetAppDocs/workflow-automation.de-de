@@ -1,0 +1,63 @@
+---
+permalink: windows-install/task-create-a-certificate-signing-request-for-workflow-automation-windows.html 
+sidebar: sidebar 
+keywords: workflow, automation, wfa, windows, create, certificate, sign, request 
+summary: 'Sie können in Windows eine Zertifikatsignierungsanforderung (CSR) erstellen, sodass Sie das SSL-Zertifikat verwenden können, das von einer Zertifizierungsstelle (CA) anstelle des Standard-SSL-Zertifikats für Workflow Automation (WFA) signiert ist.' 
+---
+= Erstellen Sie eine Anfrage zum Signieren eines Zertifikats für Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können in Windows eine Zertifikatsignierungsanforderung (CSR) erstellen, sodass Sie das SSL-Zertifikat verwenden können, das von einer Zertifizierungsstelle (CA) anstelle des Standard-SSL-Zertifikats für Workflow Automation (WFA) signiert ist.
+
+* Sie müssen auf dem WFA Server über Windows-Administratorrechte verfügen.
+* Sie müssen das von WFA bereitgestellte Standard-SSL-Zertifikat ersetzt haben.
+
+
+In diesem Verfahren wird der WFA Standardinstallationspfad verwendet. Wenn Sie während der Installation den Standardpfad geändert haben, müssen Sie den benutzerdefinierten WFA Installationspfad verwenden.
+
+.Schritte
+. Melden Sie sich als Admin-Benutzer auf der WFA Host Machine an.
+. Öffnen Sie eine Eingabeaufforderung auf dem WFA-Server, und ändern Sie dann das Verzeichnis in den folgenden Speicherort: + <OpenJDK_install_location>\bin
+. CSR erstellen:
++
+`keytool -certreq -keystore WFA_install_location\WFA\jboss\standalone\configuration\keystore\wfa.keystore -alias "ssl keystore" -file C:\file_name.csr`
+
++
+File_Name ist der Name der CSR-Datei.
+
+. Geben Sie bei der entsprechenden Aufforderung das Kennwort ein (Standard oder neu).
++
+Das Standardpasswort ist ein zufällig generiertes verschlüsseltes Passwort.
+
++
+Um das Standardpasswort zu erhalten und zu entschlüsseln, befolgen Sie die Schritte im Knowledge Base-Artikel link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["Verlängern des selbstsignierten Zertifikats bei WFA 5.1.1.0.4"^]
+
++
+Um ein neues Passwort zu verwenden, befolgen Sie die Schritte im Knowledge Base-Artikel link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_update_a_new_password_for_the_keystore_in_WFA["So aktualisieren Sie ein neues Passwort für den Schlüsselspeicher in WFA."^]
+
+. Senden Sie die Datei file_Name.csr an die CA, um ein signiertes Zertifikat zu erhalten.
++
+Weitere Informationen finden Sie auf der CA-Website.
+
+. Laden Sie ein Kettenzertifikat von der CA herunter, und importieren Sie dann das Kettenzertifikat in Ihren Schlüsselspeicher: `keytool -import -alias "ssl keystore CA certificate" -keystore "WFA_install_location\WFA\jboss\standalone\configuration\keystore\wfa.keystore" -trustcacerts -file C:\chain_cert.cer`
++
+C:\Chain_cert.cer ist die von der CA empfangene Kettenzertifikat-Datei. Die Datei muss im X.509-Format vorliegen.
+
+. Importieren Sie das signierte Zertifikat, das Sie von der CA erhalten haben:
++
+`keytool -import -alias "ssl keystore" -keystore "WFA_install_location\WFA\jboss\standalone\configuration\keystore\wfa.keystore" -file C:\certificate.cer`
+
++
+C:\Certificate.cer ist die von der CA empfangene Kettenzertifikat-Datei.
+
+. Starten Sie die folgenden WFA Services:
++
+** NetApp WFA Datenbank
+** NetApp WFA Server
+
+
+

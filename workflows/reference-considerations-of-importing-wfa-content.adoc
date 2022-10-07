@@ -1,0 +1,44 @@
+---
+permalink: workflows/reference-considerations-of-importing-wfa-content.html 
+sidebar: sidebar 
+keywords: aware, certain, considerations, import, user-created, content, exported, oncommand, workflow, automation, installation, content, downloaded, storage, store, community 
+summary: 'Beachten Sie beim Importieren benutzererstellter Inhalte, Inhalte, die aus einer anderen OnCommand Workflow Automation-Installation (WFA) exportiert werden, oder Inhalte, die aus dem Storage Automation Store oder der WFA Community heruntergeladen werden.' 
+---
+= Überlegungen beim Importieren von OnCommand Workflow Automation-Inhalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beachten Sie beim Importieren benutzererstellter Inhalte, Inhalte, die aus einer anderen OnCommand Workflow Automation-Installation (WFA) exportiert werden, oder Inhalte, die aus dem Storage Automation Store oder der WFA Community heruntergeladen werden.
+
+* WFA Inhalte werden als gespeichert `.dar` Datei und kann den gesamten vom Benutzer erstellten Inhalt aus einem anderen System oder bestimmte Elemente wie Workflows, Finder, Befehle und Wörterbuchbegriffe enthalten.
+* Wenn eine vorhandene Kategorie aus einem importiert wird `.dar` Datei: Der importierte Inhalt wird mit dem vorhandenen Inhalt der Kategorie zusammengeführt.
++
+Nehmen wir beispielsweise im WFA Server zwei Workflows für WF1 und WF2 in Kategorie A vor. Werden Workflows WF3 und WF4 in Kategorie A auf den WFA Server importiert, enthält Kategorie A nach dem Import Workflows WF1, WF2, WF3 und WF4.
+
+* Wenn der `.dar` Datei enthält Wörterbucheinträge, dann werden die Cache-Tabellen, die den Wörterbucheinträgen entsprechen, automatisch aktualisiert.
++
+Wenn die Cache-Tabellen nicht automatisch aktualisiert werden, wird im eine Fehlermeldung protokolliert `wfa.log` Datei:
+
+* Beim Importieren eines `.dar` Datei, die von einem Paket abhängig ist, das nicht im WFA Server vorhanden ist, versucht WFA zu ermitteln, ob alle Abhängigkeiten von den Einheiten erfüllt sind.
++
+** Wenn eine oder mehrere Entitäten fehlen oder eine niedrigere Version einer Entität gefunden wird, schlägt der Import fehl und eine Fehlermeldung wird angezeigt.
++
+Die Fehlermeldung enthält Details zu den Paketen, die installiert werden sollten, um die Abhängigkeiten zu erfüllen.
+
+** Wenn eine höhere Version einer Entität gefunden wird oder sich die Zertifizierung geändert hat, wird ein generisches Dialogfeld über die nicht übereinstimmende Version angezeigt und der Import abgeschlossen.
++
+Die Details zur Versionsabweichung werden in A protokolliert `wfa.log` Datei:
+
+
+
+* Fragen und Support-Anfragen für folgende müssen an die WFA Community gerichtet sein:
++
+** Alle Inhalte werden von der WFA Community heruntergeladen
+** Sie haben benutzerdefinierte WFA Inhalte erstellt
+** Sie haben WFA Inhalte geändert
+
+
+

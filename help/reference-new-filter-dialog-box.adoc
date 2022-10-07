@@ -1,0 +1,84 @@
+---
+permalink: help/reference-new-filter-dialog-box.html 
+sidebar: sidebar 
+keywords: use, new, filter, dialog box, create, develop, finders 
+summary: Mit dem Dialogfeld Neuer Filter können Sie einen neuen Filter erstellen. Mit dem Filter können Sie Finder entwickeln. 
+---
+= Dialogfeld „Neuer Filter“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dem Dialogfeld Neuer Filter können Sie einen neuen Filter erstellen. Mit dem Filter können Sie Finder entwickeln.
+
+* Registerkarte Eigenschaften
+* Registerkarte Abfrage
+
+
+
+
+== Registerkarte Eigenschaften
+
+Auf der Registerkarte *Eigenschaften* können Sie einen Namen für den Filter festlegen, ein Wörterbuchobjekt auswählen und eine Beschreibung für den Filter eingeben.
+
+* *Name*
++
+Ermöglicht die Eingabe eines Namens für den Filter.
+
+* *Typ*
++
+Ermöglicht die Auswahl eines Wörterbuchobjekts aus der Liste.
+
+* *Entity Version*
++
+Ermöglicht die Eingabe der Versionsnummer für den Filter in `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Beschreibung*
++
+Ermöglicht die Eingabe einer Beschreibung für den Filter.
+
+
+
+
+
+== Registerkarte Abfrage
+
+Ermöglicht die Eingabe einer SQL-Abfrage und die Bearbeitung der Bezeichnung und der Beschreibung der Attribute.
+
+* *SQL Query*
++
+Ermöglicht die Eingabe einer SQL-Abfrage für den Filter.
+
+* *Eingabeparameter-Tabelle*
++
+Zeigt die Liste der Parameter aus der von Ihnen eingegebenen SQL-Abfrage an, die bei Verwendung des Filters Benutzereingaben erfordern. Sie können die Spalte *Etikett* oder *Beschreibung* eines Parameters anklicken, um die Beschriftung zu bearbeiten oder eine Beschreibung einzugeben.
+
+* *Tabelle Attribute zurückgegeben*
++
+Zeigt die Liste der zurückgegebenen Attribute aus der SQL-Abfrage an.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Test*
++
+Ermöglicht das Testen des definierten Filters.
+
+* *Aktualisieren*
++
+Füllt ggf. die Tabelle *Eingabeparameter* und die Tabelle *zurückgegebene Attribute* mit geänderten Werten aus.
+
+* *Speichern*
++
+Speichert den Filter und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Speichert den Filter nicht und schließt das Dialogfeld.
+
+

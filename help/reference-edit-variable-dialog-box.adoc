@@ -1,0 +1,119 @@
+---
+permalink: help/reference-edit-variable-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, variable, dialog box, enable, user, input, attributes, workflow 
+summary: 'Im Dialogfeld Edit Variable: <UserInputName> können Sie die Benutzereingabeattribute eines Workflows bearbeiten.' 
+---
+= Dialogfeld „Variable bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Edit Variable: <UserInputName> können Sie die Benutzereingabeattribute eines Workflows bearbeiten.
+
+
+
+== Eigenschaften
+
+* *Variablenname*
++
+Ermöglicht Ihnen die Bearbeitung des Namens der Benutzereingabe. Durch das Umbenennen der Benutzereingabe werden alle Verweise auf die Benutzereingaben im Workflow aktualisiert.
+
+* *Anzeigename*
++
+Ermöglicht das Festlegen oder Bearbeiten des Anzeigenamens für die Benutzereingabe. Sie können einen eindeutigen Anzeigenamen angeben, wenn Sie Benutzereingabeattribute mit einem ähnlichen Namen erstellt haben.
+
+* *Beschreibung*
++
+Ermöglicht das Festlegen oder Bearbeiten einer Beschreibung für die Benutzereingabe. Die Beschreibung wird als Tooltip angezeigt, wenn Sie den Workflow ausführen oder in der Vorschau anzeigen.
+
+* *Typ*
++
+Ermöglicht die Auswahl der Benutzereingabe. Felder oder ein Link zu einem Dialogfeld wird auf Grundlage der ausgewählten Optionen angezeigt. Zu den verfügbaren Optionen gehören:
+
++
+** String: Ermöglicht die Eingabe eines regulären Ausdrucks für gültige Werte im Feld RegEx, z. B. A*.
+** Zahl: Ermöglicht die Eingabe eines numerischen Bereichs im Bereichsfeld, z. B. 1 bis 15.
+** Enum: Ermöglicht die Eingabe einer geschlossenen Liste von Werten in das Feld „Enum values“.
+** Abfrage: Ermöglicht die Eingabe einer einfachen SQL-Abfrage, um das Ergebnis zu erhalten.
++
+Benutzer können nur die Werte aus der ersten Spalte des Ergebnisses auswählen.
+
+** Abfrage (Multi-select): Ermöglicht die Eingabe einer SQL-Abfrage, die eine Liste von Werten erhält.
++
+Benutzer können bei der Ausführung des Workflows einen einzelnen oder mehrere Werte auswählen, z. B. können Sie ein einzelnes Volume, mehrere Volumes oder Volumes mit ihren Freigaben und Exporten auswählen.
+
++
+Sie können Werte aus jeder Spalte auswählen, die im Ergebnis angezeigt wird. Wenn Sie eine Zeile auswählen, werden die Werte aus allen Spalten der ausgewählten Zeile ausgewählt.
+
+** Boolean: Ermöglicht Ihnen, ein Kontrollkästchen im Dialogfeld Benutzereingaben anzuzeigen.
+** Tabelle: Ermöglicht die Angabe der Spaltenköpfe der Tabelle, mit denen mehrere Werte während der Ausführung des Workflows eingegeben werden können, z. B. eine Tabelle, mit der eine Liste der Knotennamen und Portnamen angegeben werden kann.
++
+Sie können auch den Typ der Benutzereingabe für Spalten und die Eigenschaften konfigurieren, die der Benutzereingabe in der Spalte zugeordnet sind. Ein Dialogfeld wird auf der Grundlage des ausgewählten Benutzereingabetyps angezeigt. Zu den verfügbaren Optionen gehören:
+
++
+*** String: Ermöglicht die Eingabe eines regulären Ausdrucks für gültige Werte im Feld RegEx, z. B. A*.
+*** Zahl: Ermöglicht die Eingabe eines numerischen Bereichs im Bereichsfeld, z. B. 1 bis 15.
+*** Enum: Ermöglicht die Eingabe einer geschlossenen Liste von Werten in das Feld „Enum values“.
+*** Abfrage: Ermöglicht die Eingabe einer einfachen SQL-Abfrage, um das Ergebnis zu erhalten.
++
+Benutzer können nur die Werte aus der ersten Spalte des Ergebnisses auswählen. Eine Abfrage innerhalb der Spalte der Benutzereingabe in der Tabelle kann keine anderen Benutzereingaben innerhalb der Abfrage referenzieren.
+
+*** Boolean: Ermöglicht Ihnen, "`true`" oder "`false`" als booleschen Wert aus der Dropdown-Liste auszuwählen.
+
+
+** Passwort: Hiermit können Sie ein Passwort verschlüsseln, das vom Benutzer als Eingabe angegeben wird.
++
+Wenn das Passwort verschlüsselt ist, wird es in der WFA-Anwendung und in den Protokolldateien als eine Reihe von Sternchen angezeigt.
+
+** Wörterbuch: Ermöglicht das Hinzufügen der Tabellendaten für den ausgewählten Wörterbucheintrag.
++
+Das Eingabeattribut Wörterbuch wählt das Attribut aus, das zurückgegeben werden soll. Sie können einen einzelnen oder mehrere Werte auswählen, während Sie den Workflow ausführen. Sie können beispielsweise ein einzelnes Volume, mehrere Volumes oder Volumes mit ihren Shares und Exporten auswählen. Standardmäßig sind einzelne Werte ausgewählt. Sie können auch Regeln für die Filterung auswählen. Eine Regel besteht aus einem Eingabeattribut für das Wörterbuch, einem Operator und einem Wert. Das Attribut kann auch Attribute seiner Referenzen enthalten. Sie können zum Beispiel eine Regel für Aggregate angeben, indem Sie alle Aggregate mit Namen, beginnend mit der Zeichenfolge "`aggr`", auflisten und eine verfügbare Größe größer als 5 GB haben. Die erste Regel in der Gruppe ist das Attribut `name`, Mit dem Betreiber `starts-with`, Und der Wert kaggr. Die zweite Regel für dieselbe Gruppe ist das Attribut `available_size_mb`, Mit dem Betreiber `>` Und den Wert 5000.
+
+
+
+* *Werte Sperren*
++
+Hier können Sie festlegen, ob der Benutzer einen anderen Wert als die Werte für die Abfrage eingeben darf. Wenn Sie das Kontrollkästchen aktivieren, kann der Benutzer keinen Wert angeben. Es können nur die Werte ausgewählt werden, die von der Abfrage zurückgegeben werden. Diese Option wird zusammen mit den Optionen „Enum“ und „Query“ verwendet.
+
+* *Standardwert*
++
+Hiermit können Sie den Standardwert der Benutzereingabe festlegen.
+
+* * Obligatorisch*
++
+Hiermit können Sie festlegen, ob Benutzereingaben für die Ausführung des Workflows erforderlich sind.
+
+
+
+
+
+== Gruppieren
+
+* *Gruppenname*
++
+Ermöglicht Ihnen, die zugehörigen Benutzereingabeattribute zu gruppieren. Die Benutzereingabeattribute werden in Gruppen angezeigt, die Sie beim Voranzeigen oder Ausführen des Workflows definiert haben. Sie können beispielsweise die Benutzereingabeattribute für Volume-Details gruppieren.
+
+* *Gruppe standardmäßig erweitern*
++
+Ermöglicht die Anzeige aller in einer Gruppe angegebenen Benutzereingabeattribute als erweiterte Liste. Wenn das Kontrollkästchen nicht aktiviert ist, wird die Eingabegruppe des Benutzers ausgeblendet angezeigt.
+
+
+
+
+
+== Abhängigkeit
+
+Ermöglicht die Aktivierung einer Benutzereingabe auf der Grundlage des für eine andere Benutzereingabe eingegebenen Werts. In einem Workflow, der das NAS-Protokoll konfiguriert, können Sie beispielsweise die erforderlichen Benutzereingaben für das Protokoll als „`NFS`“ festlegen, um die Benutzereingabe für `read-write Host Lists`“ oder „`CIFS`“ zu aktivieren, um die Konfiguration der „`CIFS ACL Configuration`“ zu aktivieren.
+
+* *Wählen Sie die Benutzereingabe, die von* abhängig ist
++
+Ermöglicht die Auswahl der erforderlichen Benutzereingaben zur Aktivierung der Benutzereingaben im Feld Variablenname.
+
+* *Anwendbare Werte (durch Komma getrennt)*
++
+Ermöglicht die Angabe des Werts der bedingten Benutzereingabe, die die im Feld Variablenname angezeigte Benutzereingabe ermöglicht.
+
+

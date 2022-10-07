@@ -1,0 +1,35 @@
+---
+permalink: workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html 
+sidebar: sidebar 
+keywords: customize, workflows, requirements, example, modify, predefined, create, volume, share, include, deduplication, compression 
+summary: Sie können Ihre Workflows an Ihren Anforderungen anpassen. Sie können beispielsweise den vordefinierten Workflow „Create a Volume“ und einen CIFS Share ändern, um Deduplizierung und Komprimierung einzuschließen. 
+---
+= Passen Sie den Workflow „Create a Volume“ und „CIFS Share“ an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ihre Workflows an Ihren Anforderungen anpassen. Sie können beispielsweise den vordefinierten Workflow _Create a Volume und CIFS Share_ ändern, um Deduplizierung und Komprimierung einzuschließen.
+
+Die Anpassungen und Abbildungen in dieser Aufgabe sind Beispiele; Sie können die WFA Workflows je nach Ihren Anforderungen anpassen.
+
+.Schritte
+. Klicken Sie Auf *Workflow Design* > *Workflows*.
+. Wählen Sie den Workflow *Volume erstellen und einen CIFS Share* aus, und klicken Sie dann auf image:../media/clone_wfa_icon.gif["Klon-Symbol"] In der Symbolleiste.
+. Klicken Sie auf die Registerkarte *Details* und bearbeiten Sie die Beschreibung des Workflows im Feld *Workflow-Name*.
+. Klicken Sie auf die Registerkarte *Workflow*, erweitern Sie das *Storage*-Schema und ziehen Sie dann den Befehl *Setup Deduplizierung und Komprimierung* zwischen den Befehlen *Create Volume* und *Create CIFS Share*.
+. Platzieren Sie den Cursor in der ersten Zeile unter dem Befehl *Setup Deduplizierung und Komprimierung* und klicken Sie dann auf image:../media/add_object_wfa_icon.gif[""].
+. Wählen Sie im Dialogfeld *Volume* des Dialogfelds *Parameter für 'Setup Deduplizierung und Komprimierung'* die Option *mit einem zuvor definierten Volume* aus und wählen Sie dann im Feld *Define Volume* die Option *share_Volume* aus, die durch den Befehl *Create Volume* im Workflow erzeugt wird.
+. Klicken Sie auf die Registerkarte *andere Parameter* und führen Sie die folgenden Schritte aus:
++
+.. Wählen Sie im Feld *StartNow* die Option *True* aus.
+.. Wählen Sie im Feld *Komprimierung* * die Option *Inline* aus.
+.. Eingabe `'sun-sat@1'` Ausdruck im Feld *Schedule*, das Deduplizierung und Komprimierung für alle Wochentage um 1 Uhr morgens plant
+
+
+. Klicken Sie auf *OK*.
+. Klicken Sie auf *Vorschau*, um sicherzustellen, dass die Planung des Workflows erfolgreich abgeschlossen wurde, und klicken Sie dann auf *OK*.
+. Klicken Sie Auf *Speichern*.
+

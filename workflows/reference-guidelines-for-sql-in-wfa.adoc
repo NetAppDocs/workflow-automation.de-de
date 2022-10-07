@@ -1,0 +1,135 @@
+---
+permalink: workflows/reference-guidelines-for-sql-in-wfa.html 
+sidebar: sidebar 
+keywords: aware, guidelines, use, sql, oncommand, workflow, automation, write, sql, queries, wfa 
+summary: 'Sie müssen die Richtlinien zur Verwendung von SQL in OnCommand Workflow Automation (WFA) kennen, um SQL-Abfragen für WFA zu schreiben.' 
+---
+= Richtlinien für SQL in WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Richtlinien zur Verwendung von SQL in OnCommand Workflow Automation (WFA) kennen, um SQL-Abfragen für WFA zu schreiben.
+
+SQL wird an folgenden Stellen in WFA verwendet:
+
+* SQL-Abfragen zum Befüllen der Benutzereingaben zur Auswahl
+* SQL-Abfragen zum Erstellen von Filtern zum Filtern von Objekten eines bestimmten Wörterbucheingabetyps
+* Statische Daten in Tabellen in der Spielplatzdatenbank
+* Ein benutzerdefinierter Quelltyp des SQL-Typs, bei dem die Daten aus einer externen Datenquelle extrahiert werden müssen, z. B. aus einer benutzerdefinierten Configuration Management Database (CMDB).
+* SQL fragt nach Reservierungs- und Verifikationsskripten ab
+
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+SQL-reservierte Schlüsselwörter müssen in Großbuchstaben enthalten sein.
+ a| 
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.vserver vserver
+----
+
+
+ a| 
+Tabelle- und Spaltennamen müssen in Kleinbuchstaben enthalten sein.
+ a| 
+Tabelle: Aggregat
+
+Spalte: Used_space_mb
+
+
+
+ a| 
+Trennen Sie Wörter mit einem Unterstrich (_) Zeichen. Leerzeichen sind nicht zulässig.
+ a| 
+Array_Performance
+
+
+
+ a| 
+Tabellenname wird in Singular definiert. Eine Tabelle ist eine Sammlung von einem oder mehreren Einträgen.
+ a| 
+„`Funktion`“, nicht „`Funktionen`“
+
+
+
+ a| 
+Verwenden Sie in AUSGEWÄHLTEN Abfragen Tabellenaliase mit aussagekräftigen Namen.
+ a| 
+[listing]
+----
+SELECT
+	vserver.name
+FROM
+	cm_storage.cluster cluster,
+	cm_storage.vserver vserver
+WHERE
+	vserver.cluster_id = cluster.id
+	AND cluster.name = '${ClusterName}'
+	AND vserver.type = 'cluster'
+ORDER BY
+	vserver.name ASC
+----
+
+
+ a| 
+Wenn Sie in einer Filterabfrage oder Benutzerabfrage auf einen Filtereingabeparameter oder Benutzereingabeparameter verweisen müssen, verwenden Sie die Syntax als '€\{inputVariableName}.Sie können die Syntax auch verwenden, um in Reservierungsskripten und Verifikationsskripten auf einen Parameter der Befehlsdefinition zu verweisen.
+ a| 
+[listing]
+----
+SELECT
+	volume.name AS Name,
+	aggregate.name as Aggregate,
+	volume.size_mb AS 'Total Size (MB)',
+	voulme.used_size_mb AS 'Used Size (MB)',
+	volume.space_guarantee AS 'Space Guarantee'
+FROM
+	cm_storage.cluster,
+	cm_storage.aggregate,
+	cm_storage.vserver,
+	cm_storage.volume
+WHERE
+	cluster.id = vserver.cluster_id
+	AND aggregate.id = volume.aggregate_id
+	AND vserver.id = voulme.vserver_id
+	AND vserver.name = '${VserverName}'
+	AND cluster.name = '${ClusterName}'
+ORDER BY
+	volume.name ASC
+----
+
+
+ a| 
+Verwenden Sie Kommentare für komplexe Abfragen. Einige der unterstützten Kommentarstile in Abfragen sind wie folgt:
+
+* „`--`“ bis zum Ende der Zeile
++
+Nach dem zweiten Bindestrich in diesem Kommentarstil ist ein Leerzeichen erforderlich.
+
+* Von einem "`#`" Zeichen bis zum Ende der Zeile
+* Von einem „`/*`" to the following "`*/`„Sequenz
+
+ a| 
+[listing]
+----
+/*
+multi-line
+comment
+*/
+--line comment
+SELECT
+	ip as ip, # comment till end of this line
+	NAME as name
+FROM --end of line comment
+	storage.array
+----
+|===

@@ -1,0 +1,74 @@
+---
+permalink: help/reference-new-category-dialog-box.html 
+sidebar: sidebar 
+keywords: new, category, dialog box, enable, create, workflow 
+summary: Im Dialogfeld Neue Kategorie können Sie eine neue Workflow-Kategorie erstellen. 
+---
+= Dialogfeld „Neue Kategorie“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Neue Kategorie können Sie eine neue Workflow-Kategorie erstellen.
+
+* *Name*
++
+Hier können Sie einen Namen für die Kategorie eingeben. Sie müssen einen Namen eingeben, um die Kategorie zu speichern.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung für die Kategorie eingeben.
+
+* *Verfügbare Workflows*
++
+Zeigt alle verfügbaren Workflows an, die nicht in das Feld *Ausgewählte Workflows* verschoben werden.
+
+* *Ausgewählte Workflows*
++
+Zeigt alle Workflows an, die für die Kategorie ausgewählt wurden.
+
+* *Kategorie für Workflow-Autorisierung*
++
+Ermöglicht Ihnen die Auswahl von Benutzern mit Bedienerrolle, die die Kategorie ausführen können. Standardmäßig ist das Kontrollkästchen nicht aktiviert und die Kategorie für alle Benutzer verfügbar.
+
+* *Zugriff auf Workflows in dieser Kategorie auf folgende Benutzer und Active Directory-Gruppen* beschränken
++
+Hiermit können Sie den Zugriff auf Workflows in der ausgewählten Kategorie auf ausgewählte Benutzer und Active Directory-Gruppen beschränken.
+
+* * Verfügbare Genehmiger und Operatoren*
++
+Zeigt alle Benutzer mit Genehmiger- und Bedienerrollen an.
+
+* *Ausgewählte Genehmiger und Operatoren*
++
+Zeigt die Benutzer an, die die Kategorie ausführen dürfen.
+
+* *Verfügbare Genehmiger- und Operatorgruppen*
++
+Zeigt alle Gruppen mit Genehmiger- und Operatorrollen an.
+
+* *Ausgewählte Genehmiger- und Operatorgruppen*
++
+Zeigt die Gruppen an, die die Kategorie ausführen dürfen.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Auswahltasten*
++
+Ermöglicht das Verschieben des ausgewählten Eintrags von einem Feld in ein anderes.
+
+* *Speichern*
++
+Speichert die Kategorie und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Speichert die Kategorie nicht und schließt das Dialogfeld.
+
+

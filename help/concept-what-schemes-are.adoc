@@ -1,0 +1,48 @@
+---
+permalink: help/concept-what-schemes-are.html 
+sidebar: sidebar 
+keywords: scheme, represent, data, model, system, collection, dictionary, entries, define, source, type, acquire, populate, example, virtual, environment, machines, hosts, datastores 
+summary: Ein Schema repräsentiert das Datenmodell für ein System. Ein Datenmodell ist eine Sammlung von Wörterbucheinträgen. Sie können ein Schema definieren und dann einen Datenquelltyp definieren. Die Datenquelle legt fest, wie die Daten erfasst und das Schema gefüllt wird. beispielsweise erfasst ein vc-Schema Daten zu virtuellen Umgebungen, wie z. B. Virtual Machines, Hosts und Datastores. 
+---
+= Welche Schemata sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Schema repräsentiert das Datenmodell für ein System. Ein Datenmodell ist eine Sammlung von Wörterbucheinträgen. Sie können ein Schema definieren und dann einen Datenquelltyp definieren. Die Datenquelle legt fest, wie die Daten erfasst und das Schema gefüllt wird. beispielsweise erfasst ein vc-Schema Daten zu virtuellen Umgebungen, wie z. B. Virtual Machines, Hosts und Datastores.
+
+Sie können Daten auch direkt mit Hilfe von Workflows befüllt werden, die bei spezifischen Problemen angepasst sind.
+
+Wörterbucheinträge sind bei der Erstellung der Wörterbucheinträge mit einem vorhandenen Schema verknüpft. Wörterbucheinträge werden auch mit Cache-Abfragen verknüpft, und Cache-Abfragen umfassen SQL-Abfragen.
+
+Schemata können Daten entweder über Skript-basierten Datenquelltyp oder über den SQL-Datenquelltyp erfassen. Die Skripte werden beim Erstellen des Datenquelltyps definiert und SQL-Abfragen werden in den Cache-Abfragen definiert.
+
+Die folgenden Schemata werden in WFA enthalten:
+
+* *7-Mode (Lagerung)*
++
+Schema zur Erfassung von Daten durch Active IQ Unified Manager aus Data ONTAP im 7-Mode
+
+* * Clustered Data ONTAP (cm_Storage)*
++
+Schemas zur Erfassung von Daten über Active IQ Unified Manager von Clustered Data ONTAP.
+
+* *7-Mode Leistung (Leistung)*
++
+Schema zur Erfassung der Performance-Daten von Data ONTAP im 7-Mode durch Performance Advisor
+
+* * Clustered Data ONTAP Performance (cm_Performance)*
++
+Regelung zur Erfassung von Performance-Daten von Clustered Data ONTAP über Performance Advisor
+
+* *VMware vCenter (vc)*
++
+Schema zur Beschaffung von Daten aus VMware vCenter.
+
+* *Spielplatz (Spielplatz)*
++
+Schema, das direkt mit Daten füllen kann.
+
+

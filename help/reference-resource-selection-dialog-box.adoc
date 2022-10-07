@@ -1,0 +1,109 @@
+---
+permalink: help/reference-resource-selection-dialog-box.html 
+sidebar: sidebar 
+keywords: resource, selection, dialog box, enable, search, map, command 
+summary: Im Dialogfeld „Ressourcenauswahl“ können Sie nach Ressourcen suchen und die Ressourcen einem Befehl zuordnen. 
+---
+= Dialogfeld „Ressourcenauswahl“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Ressourcenauswahl“ können Sie nach Ressourcen suchen und die Ressourcen einem Befehl zuordnen.
+
+* Wählen Sie <dictionary object> by tab
+* Registerkarte „Erweiterter“
+
+
+
+
+== Wählen Sie <dictionary object> by tab
+
+Auf dieser Registerkarte können Sie einen Finder oder Filter als Suchkriterien festlegen und Attribute für die ausgewählten Suchkriterien eingeben. Sie können die ausgewählten Filter auch als Finder speichern.
+
+* *Filterregeln definieren*
++
+Ermöglicht die Definition eines Regelwerks für Ressourcen mit Wörterbucheingabentregien, wie vFiler-Einheiten, Aggregate und Virtual Machines.
+
++
+Die Filterregeln können eine oder mehrere Regelgruppen enthalten.
+
++
+Eine Regel besteht aus einem Eingabeattribut für das Wörterbuch, einem Operator und einem Wert. Das Attribut kann auch Attribute seiner Referenzen enthalten. Zum Beispiel können Sie eine Regel für Aggregate wie folgt angeben: Listen Sie alle Aggregate mit Namen beginnend mit der Zeichenfolge "`aggr`" und haben eine verfügbare Größe größer als 5 GB. Die erste Regel in der Gruppe ist das Attribut „`Name`“, mit dem Operator "`starts-with`" und dem Wert „`aggr`“. Die zweite Regel für dieselbe Gruppe ist das Attribut „`Available_size_mb`“ mit dem Operator „`>`“ und dem Wert „`5000`“.
+
++
+Die Option *Filterregeln definieren* ist deaktiviert, wenn Sie einen Finder ausgewählt haben.
+
++
+Sie können die angegebenen Werte durch Klicken auf die Schaltfläche *Zurücksetzen* löschen.
+
+* *Wählen Sie eine Ressource durch ihre natürlichen Schlüssel*
++
+Ermöglicht die Auswahl einer Ressource basierend auf den natürlichen Schlüsseln der Ressource.
+
+* *Finder*
++
+Ermöglicht Ihnen die Auswahl eines Finder aus der Liste. *Keine* ist standardmäßig ausgewählt.
+
++
+Filter werden unter der Sucherliste angezeigt. Sie können keine Filter auswählen, wenn Sie einen Finder ausgewählt haben.
+
+* *Parameter*
++
+Ermöglicht die Eingabe der Werte für den ausgewählten Finder oder Filter. Sie müssen alle erforderlichen Werte eingeben, um die Suchkriterien abzuschließen.
+
+* *Befehlsschaltflächen*
++
+** *Als Finder Speichern*
++
+Speichert die ausgewählten Filter als Finder.
+
+** *Test*
++
+Ermöglicht Ihnen, die Parameter für die ausgewählten Filter zu testen, bevor Sie die Werte im Bereich Parameter angeben.
+
+** *OK*
++
+Speichert die Konfigurationseinstellungen und schließt das Dialogfeld.
+
+** *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+
+
+
+
+
+
+== Registerkarte „Erweiterter“
+
+Auf dieser Registerkarte können Sie festlegen, wann die Suche durchgeführt werden soll, und Sie können die Ressourcenattribute und den Status der Ressourcenattribute sortieren.
+
+* *Diese Suche immer durchführen*
++
+Führt die Suche bei Ausführung des Befehls ohne Einschränkung aus.
+
+* *Suche nur ausführen, wenn der folgende Ausdruck in TRUE* ausgewertet wird
++
+Die Suche wird nur ausgeführt, wenn der Wert des im Feld angegebenen optionalen Attributs „`true`“ lautet. Sie können die MVFLEX-Syntax (Expression Language) verwenden, um das optionale Attribut anzugeben.
+
+* *Sortiertisch*
++
+Zeigt die Attribute und die Sortierreihenfolge für die Filter an, die auf der Registerkarte *Select <dictionary Object> by* ausgewählt wurden. Die Sortierreihenfolge ist für die Ressourcenauswahl von Bedeutung - wenn Sie z. B. „absteigend“ als Sortierreihenfolge für Aggregate ausgewählt haben, das Aggregat mit dem Maximum `available_space` Als Ressource ausgewählt. Um die Sortierreihenfolge für ein Attribut zu ändern, können Sie auf die Statusspalte des Attributs klicken und die gewünschte Sortierreihenfolge aus der Liste auswählen.
+
+* *Befehlsschaltflächen*
++
+** *Auf*
++
+Verschiebt den ausgewählten Eintrag eine Zeile in der Sortiertabelle nach oben.
+
+** *Down*
++
+Verschiebt den ausgewählten Eintrag eine Zeile in der Sortiertabelle nach unten.
+
+
+
+

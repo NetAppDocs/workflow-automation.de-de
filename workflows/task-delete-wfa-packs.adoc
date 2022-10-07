@@ -1,0 +1,32 @@
+---
+permalink: workflows/task-delete-wfa-packs.html 
+sidebar: sidebar 
+keywords: delete, pack, oncommand, workflow, automation, require, entities, associated 
+summary: 'Sie können ein Paket aus OnCommand Workflow Automation (WFA) löschen, wenn Sie es nicht mehr benötigen. Wenn Sie ein Paket löschen, werden alle mit dem Paket verknüpften Einheiten gelöscht.' 
+---
+= OnCommand Workflow Automation Packs löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Paket aus OnCommand Workflow Automation (WFA) löschen, wenn Sie es nicht mehr benötigen. Wenn Sie ein Paket löschen, werden alle mit dem Paket verknüpften Einheiten gelöscht.
+
+.Über diese Aufgabe
+* Sie können ein Paket nicht löschen, wenn Abhängigkeiten zu den Einheiten vorhanden sind, die Teil des Pakets sind.
++
+Wenn Sie beispielsweise versuchen, ein Paket zu löschen, das einen Befehl enthält, der Teil eines benutzerdefinierten Workflows ist, schlägt der Löschvorgang fehl, da der benutzerdefinierte Workflow vom Paket abhängt. Sie können das Paket erst löschen, nachdem Sie den benutzerdefinierten Workflow gelöscht haben.
+
+* Einheiten, die Teil eines Pakets sind, können nicht einzeln gelöscht werden.
++
+Um eine Entität zu löschen, die Teil eines Pakets ist, müssen Sie das Paket mit dieser Entität löschen. Wenn eine Einheit Teil mehrerer Pakete ist, wird sie nur dann vom WFA Server gelöscht, wenn alle Pakete mit dieser Einheit gelöscht werden.
+
+
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Administrator bei WFA an.
+. Klicken Sie Auf *Content Management* > *Packs*.
+. Wählen Sie das Paket aus, das Sie löschen möchten, und klicken Sie auf image:../media/delete_wfa_icon.gif["Symbol Löschen"].
+. Klicken Sie im Bestätigungsdialogfeld *Paket löschen* auf *OK*.
+

@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-templates.html 
+sidebar: sidebar 
+keywords: can, use, templates, workflows, reference, adhering, usage policies 
+summary: WFA Vorlagen lassen sich in Ihren Workflows als Referenz oder zur Erfüllung von Nutzungsrichtlinien verwenden. 
+---
+= Wie Sie Vorlagen verwenden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+WFA Vorlagen lassen sich in Ihren Workflows als Referenz oder zur Erfüllung von Nutzungsrichtlinien verwenden.
+
+Eine WFA Vorlage fungiert als Entwurf einer Objektdefinition. Sie können eine Vorlage definieren, indem Sie die Eigenschaften eines Objekts und die Werte für die Eigenschaften des Objekts angeben. Anschließend können Sie die Eigenschaften einer Objektdefinition in Ihren Workflows mit der Vorlage füllen.
+
+Wenn Sie eine Vorlage verwenden, können Sie die Felder, die die Werte enthalten, die aus der Vorlage abgerufen wurden, nicht bearbeiten. Daher können Sie Vorlagen für das Einrichten von Nutzungsrichtlinien und das Erstellen von Objekten verwenden. Wenn Sie die Verknüpfung einer Vorlage mit dem Workflow entfernen, nachdem Sie die Vorlage angewendet haben, bleiben die Werte, die aus der Vorlage gefüllt sind, Sie können die Felder jedoch bearbeiten.

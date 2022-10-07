@@ -1,0 +1,161 @@
+---
+permalink: help/reference-commands-window.html 
+sidebar: sidebar 
+keywords: commands, window, display, available, alphabetical order, access, select, workflow, design 
+summary: Das Befehlsfenster zeigt die verfügbaren Befehle in alphabetischer Reihenfolge an. Sie können auf dieses Fenster zugreifen, indem Sie Workflow Design-Befehle auswählen. 
+---
+= Befehlsfenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Befehlsfenster zeigt die verfügbaren Befehle in alphabetischer Reihenfolge an. Sie können auf dieses Fenster zugreifen, indem Sie *Workflow Design* > *Befehle* wählen.
+
+
+NOTE: Abhängig von Ihren Rollen- und Kontoberechtigungen wird dieses Fenster möglicherweise nicht angezeigt.
+
+Ein Befehl wird als Aktion definiert, die im Rahmen eines Workflows ausgeführt wird.
+
+* Befehlstabelle
+* Symbolleiste
+
+
+
+
+== Befehlstabelle
+
+In der Befehlstabelle werden die verfügbaren Befehle aufgeführt.
+
+Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+Die Befehlstabelle enthält die folgenden Spalten:
+
+* * Zertifizierung*
++
+Gibt an, ob der Befehl vom Benutzer erstellt wurde (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), Gemeinschaft (image:../media/community_certification.gif[""]), Benutzer-gesperrt (image:../media/lock_icon_wfa.gif[""]) Oder NetApp zertifiziert (image:../media/netapp_certified.gif[""]).
+
+* *Name*
++
+Zeigt den Namen des Befehls an.
+
+* *Schema*
++
+Zeigt das Schema an, das mit Befehlen verknüpft ist. Ein Schema repräsentiert das Datenmodell für ein System. beispielsweise enthält ein vc-Schema Daten, die für Ihre virtuelle Umgebung relevant sind, wie z. B. Virtual Machines, Hosts und Datastores.
+
+* *Entity Version*
++
+Zeigt die Versionsnummer des Objekts in an `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Befehls an.
+
++
+Sie können nach Befehlen suchen, indem Sie die Beschreibung in das Textfeld * Search* Filter eingeben.
+
+* *OS-Kompatibilität*
++
+Gibt an, ob der Befehl mit dem Host-Betriebssystem kompatibel ist.
+
+* *Zuletzt Aktualisiert Am*
++
+Zeigt das Datum und die Uhrzeit der letzten Aktualisierung des Befehls an.
+
+* *Aktualisiert Von*
++
+Zeigt den Benutzer an, der den Befehl aktualisiert hat.
+
+* *Gesperrt Von*
++
+Zeigt den Benutzer an, der den Befehl gesperrt hat.
+
++
+Sie können nach Befehlen suchen, indem Sie den Benutzernamen in das Textfeld * Suchen* eingeben.
+
+* *Befehlssprache*
++
+Zeigt die Programmiersprache an, in der der Befehl geschrieben wird (Perl oder PowerShell).
+
+* *Min. Software-Versionen*
++
+Gibt die Mindestversionen der Software an, die zum Ausführen des Workflows erforderlich sind. Die Software bietet beispielsweise Clustered Data ONTAP 8.2.0 und vCenter 6.0. Die Versionen werden als kommagetrennte Werte angezeigt.
+
+* *Obligatorische Parameter*
++
+Zeigt die für den Befehl ausgewählten Parameter an.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/new_wfa_icon.gif["Neues Symbol"] (Neu)*
++
+Öffnet das Fenster Neue Befehlsdefinition, in dem Sie einen Befehl erstellen können.
+
+* *image:../media/edit_wfa_icon.gif["Symbol bearbeiten"] (Bearbeiten)*
++
+Öffnet das Fenster Befehlsdefinition bearbeiten für den ausgewählten Befehl, mit dem Sie den Befehl bearbeiten können. Sie können auch auf den Befehl doppelklicken, um das Fenster Befehlsdefinition bearbeiten zu öffnen.
+
+* *image:../media/clone_wfa_icon.gif["Klon-Symbol"] (Klon)*
++
+Öffnet das Fenster Edit Command Definition <Command_Name> - copy, in dem Sie einen Klon oder eine Kopie des ausgewählten Befehls erstellen können.
+
+* *image:../media/lock_wfa_icon.gif["Symbol sperren"] (Sperre)*
++
+Öffnet das Dialogfeld Befehlsbestätigung sperren, in dem Sie den ausgewählten Befehl sperren können. Diese Option ist nur für die von Ihnen erstellten Befehle aktiviert.
+
+* *image:../media/unlock_wfa_icon.gif["Symbol entsperren"] (Entsperren)*
++
+Öffnet das Dialogfeld Befehlsbestätigung entsperren, in dem Sie den ausgewählten Befehl entsperren können. Diese Option ist nur für die von Ihnen gesperrten Befehle aktiviert. Administratoren können jedoch Befehle freischalten, die von anderen Benutzern gesperrt sind.
+
+* *image:../media/delete_wfa_icon.gif["Symbol Löschen"] (Löschen)*
++
+Öffnet das Bestätigungsdialogfeld Befehl löschen, in dem Sie den ausgewählten vom Benutzer erstellten Befehl löschen können.
+
++
+
+NOTE: Sie können einen WFA- oder PS-Befehl nicht löschen.
+
+* *image:../media/export_wfa_icon.gif["Symbol „Exportieren“"] (Export)*
++
+Ermöglicht Ihnen den Export des ausgewählten vom Benutzer erstellten Befehls.
+
++
+
+NOTE: Sie können keinen WFA- oder PS-Befehl exportieren.
+
+* *image:../media/test_wfa_icon.gif["Testsymbol"] (Test)*
++
+Öffnet das Dialogfeld Testbefehl <CommandName> im Dialogfeld <ScriptLanguage>, in dem Sie den ausgewählten Befehl testen können.
+
+* *image:../media/add_to_pack.png["Zum Pack-Symbol hinzufügen"] (Zum Paket Hinzufügen)*
++
+Öffnet das Dialogfeld Befehl zu Paket hinzufügen, in dem Sie den Befehl und seine zuverlässigen Einheiten zu einem Paket hinzufügen können, das bearbeitbar ist.
+
++
+
+NOTE: Die Funktion Add to Pack ist nur für Befehle aktiviert, für die die Zertifizierung auf *Keine.* eingestellt ist
+
+* *image:../media/remove_from_pack.png["Aus Packungssymbol entfernen"] (Aus Packung Entfernen)*
++
+Öffnet das Dialogfeld Befehl aus Pack entfernen für den ausgewählten Befehl, mit dem Sie den Befehl aus dem Paket löschen oder entfernen können.
+
++
+
+NOTE: Die Funktion „von Pack entfernen“ ist nur für Befehle aktiviert, für die die Zertifizierung auf *Keine.* eingestellt ist
+
+

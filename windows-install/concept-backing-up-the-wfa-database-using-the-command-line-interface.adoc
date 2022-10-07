@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, cli 
+summary: 'Wenn Sie die OnCommand Workflow Automation (WFA) Datenbank häufig sichern möchten, können Sie die WFA Befehlszeilenschnittstelle (CLI) verwenden, die Sie beim WFA Installationspaket erhalten haben.' 
+---
+= Sichern der WFA Datenbank mit der CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die OnCommand Workflow Automation (WFA) Datenbank häufig sichern möchten, können Sie die WFA Befehlszeilenschnittstelle (CLI) verwenden, die Sie beim WFA Installationspaket erhalten haben.
+
+Es gibt zwei Backup-Typen:
+
+* Vollständiges Backup
+* Regelmäßige Sicherung
+

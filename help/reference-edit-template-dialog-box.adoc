@@ -1,0 +1,50 @@
+---
+permalink: help/reference-edit-template-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, template, dialog box, enable 
+summary: Im Dialogfeld Vorlage bearbeiten können Sie eine Vorlage bearbeiten. 
+---
+= Dialogfeld „Vorlage bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Vorlage bearbeiten können Sie eine Vorlage bearbeiten.
+
+* *Name*
++
+Ermöglicht Ihnen die Bearbeitung des Namens der Vorlage.
+
+* *Typ*
++
+Ermöglicht die Auswahl eines Wörterbuchobjekts aus der Liste.
+
+* *Entity Version*
++
+Hier können Sie die Versionsnummer für die Vorlage in eingeben `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Beschreibung*
++
+Hier können Sie die Beschreibung der Vorlage bearbeiten.
+
+* *Attribute*
++
+Zeigt die Attribute für das ausgewählte Wörterbuchobjekt an und ermöglicht die Eingabe eines Werts für jedes Attribut, z. B. enum und Funktion.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die Änderungen und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Speichert die Änderungen nicht, falls vorhanden, und schließt das Dialogfeld.
+
+

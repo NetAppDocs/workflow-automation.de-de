@@ -1,0 +1,114 @@
+---
+permalink: workflows/reference-guidelines-for-logging.html 
+sidebar: sidebar 
+keywords: aware, guidelines, logging, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'Sie müssen die Richtlinien für die Protokollierung beim Schreiben eines PowerShell oder Perl Skripts für OnCommand Workflow Automation (WFA) kennen.' 
+---
+= Richtlinien für die Protokollierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Richtlinien für die Protokollierung beim Schreiben eines PowerShell oder Perl Skripts für OnCommand Workflow Automation (WFA) kennen.
+
+
+
+== PowerShell-Protokollierung
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Verwenden Sie das Cmdlet "Get-WFALogger" zur Protokollierung.
+ a| 
+[listing]
+----
+Get-WFALogger -Info -message “Creating volume”
+----
+
+
+ a| 
+Protokollieren jeder Aktion, die Interaktion mit internen Paketen wie Data ONTAP, VMware und PowerCLI erfordert.Alle Protokollmeldungen stehen in Ausführungsprotokollen im Ausführungsstatus-Verlauf von Workflows zur Verfügung.
+ a| 
+Keine
+
+
+
+ a| 
+Protokollieren Sie alle relevanten Argumente, die an interne Pakete übergeben werden.
+ a| 
+Keine
+
+
+
+ a| 
+Verwenden Sie je nach Nutzungskontext die entsprechenden Protokollebenen, wenn Sie das Cmdlet "Get-WFALogger" verwenden. -Info, -Error, -warn und -Debug sind die verschiedenen verfügbaren Protokollebenen. Wenn keine Protokollebene angegeben wird, ist die Standard-Protokollebene Debug.
+ a| 
+Keine
+
+|===
+
+
+== Perl-Protokollierung
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Verwenden Sie das WFAUtil sendLog zur Protokollierung.
+ a| 
+[listing]
+----
+my wfa_util = WFAUtil->new();
+eval {
+$wfa_util->sendLog('INFO', "Connecting to the
+cluster: $DestinationCluster");
+}
+----
+
+
+ a| 
+Protokollieren jeder Aktion, die eine Interaktion mit anderen externen Aktionen wie Data ONTAP, VMware und WFA erfordert Alle Log-Nachrichten, die Sie mit der WFAUtil sendLog-Routine erstellen, werden in der WFA-Datenbank gespeichert. Diese Protokollmeldungen stehen für den ausgeführten Workflow und Befehl zur Verfügung.
+ a| 
+Keine
+
+
+
+ a| 
+Protokollieren Sie alle relevanten Argumente, die an die Routine übergeben wurden, die aufgerufen wurde.
+ a| 
+Keine
+
+
+
+ a| 
+Verwenden Sie die entsprechenden Protokollebenen.-Info, -Error, -warn und -Debug sind die verschiedenen verfügbaren Protokollebenen.
+ a| 
+Keine
+
+
+
+ a| 
+Wenn Sie sich auf der -Info-Ebene anmelden, seien Sie präzise und präzise. Geben Sie keine Implementierungsdetails wie Klassenname und Funktionsname in Protokollmeldungen an. Beschreiben Sie den genauen Schritt oder den genauen Fehler in einfachem Englisch.
+ a| 
+Der folgende Code-Snippet zeigt ein Beispiel für eine gute Nachricht und eine schlechte Nachricht:
+
+[listing]
+----
+$wfa_util->sendLog('WARN', "Removing volume:
+'.$VolumeName);
+# Good Message
+----
+[listing]
+----
+$wfa_util->sendLog('WARN', 'Invoking volume-
+destroy ZAPI: '.$VolumeName);
+# Bad message
+----
+|===

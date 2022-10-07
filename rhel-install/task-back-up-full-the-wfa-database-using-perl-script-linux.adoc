@@ -1,0 +1,38 @@
+---
+permalink: rhel-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, cli 
+summary: 'Sie können ein vollständiges Backup der WFA-Datenbank (OnCommand Workflow Automation) über die WFA-Befehlszeilenschnittstelle (CLI) durchführen. In einem vollständigen Backup werden die WFA Datenbank, die WFA Konfiguration und der Schlüssel gesichert.' 
+---
+= Sichern Sie die WFA Datenbank mithilfe der CLI (vollständig)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein vollständiges Backup der WFA-Datenbank (OnCommand Workflow Automation) über die WFA-Befehlszeilenschnittstelle (CLI) durchführen. In einem vollständigen Backup werden die WFA Datenbank, die WFA Konfiguration und der Schlüssel gesichert.
+
+Sie müssen über Anmeldedaten für Admin-Benutzer oder Systemarchitekten verfügen.
+
+In einer Hochverfügbarkeitsumgebung sollten geplante Backups mithilfe VON REST APIs erstellt werden. Sie können keine Backups über die CLI erstellen, wenn WFA sich im Failover-Modus befindet.
+
+Weitere Informationen finden Sie in DER REST-Dokumentation.
+
+.Schritte
+. Navigieren Sie an der Shell-Eingabeaufforderung zum folgenden Verzeichnis auf dem WFA Server: `WFA_install_location/wfa/bin/`
++
+WFA_install_location ist das WFA Installationsverzeichnis.
+
+. Backup der WFA Datenbank: `.\wfa --backup --user=USER [--password=PASS] [--location=PATH] [--full]`
++
+** Benutzer ist der Benutzername des Backup-Benutzers.
+** Passwort ist das Passwort des Backup-Benutzers.
++
+Falls Sie kein Passwort angegeben haben, müssen Sie das Passwort eingeben, wenn Sie dazu aufgefordert werden.
+
+** Der Pfad ist der vollständige Verzeichnispfad zur Sicherungsdatei.
+
+
+. Vergewissern Sie sich, dass die Sicherungsdatei am angegebenen Speicherort erstellt wurde.
+

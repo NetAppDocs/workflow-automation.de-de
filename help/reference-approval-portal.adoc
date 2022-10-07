@@ -1,0 +1,46 @@
+---
+permalink: help/reference-approval-portal.html 
+sidebar: sidebar 
+keywords: approval, portal, window, enable, reject, workflow 
+summary: Im Fenster Genehmigungsportal können Sie einen Workflow genehmigen oder ablehnen. 
+---
+= Fenster „Approval Portal“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster Genehmigungsportal können Sie einen Workflow genehmigen oder ablehnen.
+
+Sie können sich über den in der E-Mail-Benachrichtigung angegebenen Link im Fenster „Genehmigungsportal“ einloggen, um den Workflow zu genehmigen.
+
+* *Zurück zu WFA*
++
+Führt Sie zurück zur WFA Applikation vom Fenster „Approval Portal“.
+
+
+
+
+
+== Genehmigungsportal
+
+* *Kommentar Eingeben*
++
+Ermöglicht Ihnen die Eingabe Ihres Kommentars für die Genehmigung oder Ablehnung des Workflows.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Genehmigen Und Wiederaufnehmen*
++
+Ermöglicht Ihnen, den Workflow zu genehmigen, der den Workflow wieder aufnimmt.
+
+* *Ablehnen & Abbrechen*
++
+Ermöglicht Ihnen, den Workflow abzulehnen, der den Workflow abbricht.
+
+

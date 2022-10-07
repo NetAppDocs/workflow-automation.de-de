@@ -1,0 +1,52 @@
+---
+permalink: help/reference-new-schedule-dialog-box.html 
+sidebar: sidebar 
+keywords: use, new, schedule, dialog box, create, workflow, execute, specified, frequency, monday 
+summary: Über das Dialogfeld Neuer Zeitplan können Sie einen neuen Zeitplan für jeden Workflow erstellen, sodass der Workflow in einer bestimmten Frequenz ausgeführt wird. Sie können beispielsweise jeden Montag einen Workflow planen, der ausgeführt werden soll. 
+---
+= Dialogfeld „Neuer Zeitplan“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Dialogfeld Neuer Zeitplan können Sie einen neuen Zeitplan für jeden Workflow erstellen, sodass der Workflow in einer bestimmten Frequenz ausgeführt wird. Sie können beispielsweise jeden Montag einen Workflow planen, der ausgeführt werden soll.
+
+
+
+== Neue Eigenschaften für die Terminplankonfiguration
+
+* *Name*
++
+Ermöglicht Ihnen, einen Namen für den Zeitplan anzugeben.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung für den Zeitplan eingeben.
+
+* *Frequenz*
++
+Hier können Sie die Häufigkeit angeben, mit der der Workflow, der dem Zeitplan zugeordnet ist, ausgeführt werden muss. Standardmäßig ist die Option stündlich ausgewählt. Häufigkeit kann stündlich, täglich, wöchentlich oder monatlich erfolgen.
+
++
+Wenn Sie beispielsweise möchten, dass jeden Dienstag um 9 UHR ein Workflow ausgeführt wird, müssen Sie die wöchentliche Option auswählen und die Uhrzeit eingeben als `9:00` Und Tag as `Tuesday.` Sie müssen einen Doppelpunkt verwenden, wenn Sie die Uhrzeit angeben.
+
++
+Das 24-Stunden-Format wird unterstützt. Die eingegebenen Daten basieren auf der Serverzeit.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *OK*
++
+Speichert die Konfigurationseinstellungen und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

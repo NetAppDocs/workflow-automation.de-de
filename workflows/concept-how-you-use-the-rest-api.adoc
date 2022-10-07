@@ -1,0 +1,36 @@
+---
+permalink: workflows/concept-how-you-use-the-rest-api.html 
+sidebar: sidebar 
+keywords: use, provided, rest api, workflow, automation, invoke, workflows, external, portals, data center, orchestration, software, support, xml, json, content types 
+summary: 'ÜBER REST-APIs von Workflow Automation (WFA) können Workflows von externen Portalen aus und über die Orchestrierungssoftware des Datacenters aufgerufen werden. WFA unterstützt XML- und JSON-Inhaltstypen für alle REST APIs.' 
+---
+= Verwendung VON REST-APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ÜBER REST-APIs von Workflow Automation (WFA) können Workflows von externen Portalen aus und über die Orchestrierungssoftware des Datacenters aufgerufen werden. WFA unterstützt XML- und JSON-Inhaltstypen für alle REST APIs.
+
+Mit WFA können externe Services auf verschiedene Ressourcensammlungen, beispielsweise Workflows, Benutzer, Filter und Suchfunktionen, zugreifen. Über URI-Pfade. Die externen Services können HTTP-Methoden wie GET, PUT, POST und DELETE verwenden. Auf diesen URIs zur Durchführung von CRUD-Vorgängen an den Ressourcen.
+
+Sie können mehrere Aktionen über die WFA REST APIs ausführen. Dazu gehören:
+
+* Zugreifen auf Workflow-Definitionen und Metadaten
+* Durchführen von Workflows und Überwachen der Ausführung
+* Anzeigen von Benutzern und Rollen und Ändern von Passwörtern
+* Ausführen und Testen von Filtern zur Ressourcenauswahl
+* Ausführen und Testen von Suchfunktionen für Ressourcen
+* Managen der Zugangsdaten für Storage oder andere Datacenter-Objekte
+* Anzeigen von Datenquellen und Datenquelltypen
+
+
+_REST Dokumentation_ hat weitere Informationen zu REST-APIs:
+
+_Https_://wfa_Server_ip:Port/Rest/docs
+
+`wfa_server_ip` Die IP-Adresse Ihres WFA-Servers und der Port ist die TCP-Portnummer, die Sie für den WFA-Server während der Installation verwendet haben.
+
+
+NOTE: WFA überprüft Cross-Site Request Forgery (CSRF) Token für Anforderungen der Web-Benutzeroberfläche. WFA überprüft jedoch keine CSRF Token für eingehende REST-Anforderungen von REST-Clients oder Orchestrierungssoftware.

@@ -1,0 +1,40 @@
+---
+permalink: help/concept-how-you-define-constants.html 
+sidebar: sidebar 
+keywords: create, use, constants, define, value, single, workflow, level 
+summary: Sie können Konstanten erstellen und verwenden, um einen Wert zu definieren, der in einem einzelnen Workflow verwendet werden kann. Konstanten werden auf Workflow-Ebene definiert. 
+---
+= Wie Sie Konstanten definieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Konstanten erstellen und verwenden, um einen Wert zu definieren, der in einem einzelnen Workflow verwendet werden kann. Konstanten werden auf Workflow-Ebene definiert.
+
+Die im Workflow verwendeten Konstanten und deren Wert werden im Überwachungsfenster des Workflows während der Planung und Ausführung angezeigt. Sie müssen eindeutige Namen für Konstanten verwenden.
+
+Sie können die folgenden Namenskonventionen verwenden, um Konstanten zu definieren:
+
+* Großbuchstabe für den ersten Buchstaben jedes Wortes, ohne Unterstriche oder Leerzeichen zwischen Wörtern
++
+Alle Begriffe und Abkürzungen sollten Großbuchstaben verwenden, z. B. `ActualVolumeSizeInMB`.
+
+* Großbuchstaben für alle Buchstaben
++
+Sie können Unterstriche verwenden, um Wörter voneinander zu trennen, z. B. `AGGREGATE_USED_SPACE_THRESHOLD`.
+
+
+
+Folgende Werte können Sie als Werte für Workflow-Konstanten angeben:
+
+* Ziffern Enthalten
+* Zeichenfolgen
+* MVEL-Ausdrücke
++
+Ausdrücke werden während der Planungs- und Ausführungsphase der Workflows bewertet. In den Ausdrücken dürfen Sie keine Variablen referenzieren, die in einer Schleife definiert sind.
+
+* Benutzereingaben
+* Variablen
+

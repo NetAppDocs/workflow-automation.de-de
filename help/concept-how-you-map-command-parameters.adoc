@@ -1,0 +1,133 @@
+---
+permalink: help/concept-how-you-map-command-parameters.html 
+sidebar: sidebar 
+keywords: parameter, workflow, automation, commands, specific, attribute, dictionary, entry, reference, certain, rule, aware, edit 
+summary: 'Die Parameter in den Befehlen Workflow Automation (WFA) werden basierend auf bestimmten Regeln spezifischen Attributen und Referenzen für Glossareintrag zugeordnet. Beim Erstellen oder Bearbeiten eines WFA Befehls müssen Sie die Regeln kennen, um Befehlsparameter zuzuordnen.' 
+---
+= Zuordnung von Befehlsparametern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Parameter in den Befehlen Workflow Automation (WFA) werden basierend auf bestimmten Regeln spezifischen Attributen und Referenzen für Glossareintrag zugeordnet. Beim Erstellen oder Bearbeiten eines WFA Befehls müssen Sie die Regeln kennen, um Befehlsparameter zuzuordnen.
+
+Über die Befehlsparameter-Zuordnung wird definiert, wie in den Workflows Befehlsdetails definiert werden. Zugeordnete Befehlsparameter eines Befehls werden in Registerkarten angezeigt, wenn Sie die Befehlsdetails für Befehle in Workflows angeben. Die Namen der Registerkarten basieren auf dem Gruppennamen, der in der Spalte Objektname der Registerkarte Parameterzuordnung angegeben ist. Die Parameter, die nicht zugeordnet sind, werden auf der Registerkarte andere Parameter angezeigt, wenn Sie die Befehlsdetails in Workflows angeben.
+
+Die Regeln für die Befehlsparameter-Zuordnung werden basierend auf der Befehlskategorie und der Darstellung der Befehle im Workflow-Editor angewendet.
+
+Im Folgenden sind die Befehlskategorien:
+
+* Befehle, die Objekte erstellen
+* Befehle, die Objekte aktualisieren
+* Befehle, die Objekte entfernen
+* Befehle, die optionale übergeordnete und untergeordnete Objekte enthalten
+* Befehle, die Zuordnungen zwischen Objekten aktualisieren
+
+
+Die Regeln für jede Kategorie sind unten aufgeführt:
+
+
+
+== Alle Befehlskategorien
+
+Beim Zuordnen eines Befehlsparameters sollten Sie den natürlichen Pfad verwenden, basierend auf der Verwendung des Befehls in Workflows.
+
+Die folgenden Beispiele zeigen, wie Sie einen natürlichen Pfad definieren können:
+
+* Für das `ArrayIP` Parameter, abhängig vom Befehl, sollten Sie den verwenden `aggregate.array.ip` Attribut des `Volume` Eintrag vom Wörterbuch und nicht vom `array.ip` Attribut.
++
+Das ist wichtig, wenn ein Workflow ein Volume erstellt und dann mit dem erstellten Volume einen zusätzlichen Schritt weiterführt. Im Folgenden finden Sie ähnliche Beispiele:
+
++
+** `volume.aggregate.array.ip` Des `Qtree` Eintrag vom Wörterbuch
+** `volume.aggregate.array.ip` Des `LUN` Eintrag vom Wörterbuch
+
+
+* Für `Cluster` Wenn Sie in Befehlen verwendet werden, sollten Sie einen der folgenden verwenden:
++
+** `vserver.cluster.primary_address` Des `Volume` Eintrag vom Wörterbuch
+** `volume.vserver.cluster.primary_address` Des `Qtree` Eintrag vom Wörterbuch
+
+
+
+
+
+
+== Befehle, die Objekte erstellen
+
+Diese Befehlskategorie wird für eine der folgenden Befehle verwendet:
+
+* Suchen eines übergeordneten Objekts und Definieren neuer Objekte
+* Sucht nach einem Objekt und erstellt das Objekt, wenn das Objekt nicht vorhanden ist
+
+
+Sie sollten für diese Befehlskategorie die folgenden Parameterzuordnungsregeln verwenden:
+
+* Ordnen Sie die relevanten Parameter des Objekts dem Wörterbucheintrag des Objekts zu.
+* Ordnen Sie das übergeordnete Objekt anhand der Referenzen des erstellten Wörterbucheintrags zu.
+* Beim Hinzufügen eines neuen Parameters muss das entsprechende Attribut im Glossareintrag vorhanden sein.
++
+Die folgenden Ausnahmeszenarien gelten für diese Regel:
+
++
+** Einige erstellte Objekte haben keinen entsprechenden Wörterbucheintrag und nur das übergeordnete Objekt ist dem entsprechenden Eintrag des übergeordneten Wörterbuchs zugeordnet, zum Beispiel dem Befehl *VIF erstellen*, in dem lediglich ein Array dem Eintrag des Array-Wörterbuchs zugeordnet werden kann.
+** Die Parameterzuordnung ist nicht erforderlich
++
+Beispiel: Der `ExecutionTimeout` Parameter im Befehl *Create or resize Aggregate* ist ein nicht erstellener Parameter.
+
+
+
+
+
+Folgende zertifizierte Befehle sind Beispiele für diese Kategorie:
+
+* Volume erstellen
+* LUN erstellen
+
+
+
+
+== Befehle, die Objekte aktualisieren
+
+Diese Befehlskategorie wird verwendet, um ein Objekt zu finden und die Attribute zu aktualisieren.
+
+Sie sollten für diese Befehlskategorie die folgenden Parameterzuordnungsregeln verwenden:
+
+* Ordnen Sie die Objekte zu, die dem Eintrag des Wörterbuchs aktualisiert werden.
+* Ordnen Sie die Parameter, die für das Objekt aktualisiert werden, nicht zu.
++
+Im Befehl *Set Volume State* wird z. B. der Befehl `Volume` Parameter ist zugeordnet, jedoch der neue `State` Wird nicht zugeordnet.
+
+
+
+
+
+== Befehle, die Objekte entfernen
+
+Diese Befehlskategorie wird verwendet, um ein Objekt zu finden und zu löschen.
+
+Sie sollten das Objekt, das vom Befehl gelöscht wird, seinem Wörterbucheintrag zuordnen. Im Befehl *Volume* entfernen wird z. B. der Befehl angezeigt `Volume` Zu löschende Attribute werden den entsprechenden Attributen und Referenzen des zugeordnet `Volume` Eintrag vom Wörterbuch.
+
+
+
+== Befehle, die optionale übergeordnete und untergeordnete Objekte enthalten
+
+Sie sollten für diese Befehlskategorie die folgenden Parameterzuordnungsregeln verwenden:
+
+* Ordnen Sie einen obligatorischen Parameter eines Befehls nicht als Referenz von einem optionalen Parameter des Befehls zu.
++
+Diese Regel ist relevanter, wenn ein Befehl optionale untergeordnete Objekte eines bestimmten übergeordneten Objekts behandelt. In diesem Fall sollte das untergeordnete und das übergeordnete Objekt explizit zugeordnet werden. Beispielsweise stoppt der Befehl im Befehl *Stop Deduplication Jobs* einen laufenden Deduplizierungsauftrag auf einem bestimmten Volume, wenn er gemeinsam mit festgelegt wird `Array` Oder auf allen Bänden der angegebenen `Array`. In diesem Fall sollte der Array-Parameter direkt dem zugeordnet werden `array` Wörterbuch-Eintrag und nicht zu `Volume.Array` Weil `Volume` Ist ein optionaler Parameter in diesem Befehl.
+
+* Wenn eine übergeordnete und untergeordnete Beziehung zwischen Wörterbucheinträgen auf logischer Ebene, jedoch nicht zwischen den eigentlichen Instanzen in einem bestimmten Befehl besteht, sollten diese Objekte separat zugeordnet werden.
++
+Beispiel: Im Befehl *Move Volume* `Volume` Wird vom aktuellen übergeordneten Aggregat in ein neues Zielaggregat verschoben. Daher Können Wir `Volume` Die Parameter sind einem zugeordnet `Volume` Der Eintrag des Wörterbuchs und die Parameter des Zielaggregats werden separat dem zugeordnet `Aggregate` Eintrag vom Wörterbuch, aber nicht wie `volume.aggregate.name.`
+
+
+
+
+
+== Befehle, die Zuordnungen zwischen Objekten aktualisieren
+
+Für diese Kategorie von Befehlen sollten Sie sowohl die Verknüpfung als auch die Objekte den entsprechenden Wörterbucheinträgen zuordnen. Beispiel: In `Add Volume to vFiler` Befehl, das `Volume` Und `vFiler` Die Parameter werden den relevanten Attributen des zugeordnet `Volume` Und `vFiler` Wörterbucheinträge.

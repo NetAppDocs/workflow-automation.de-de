@@ -1,0 +1,303 @@
+---
+permalink: workflows/reference-guidelines-for-variables.html 
+sidebar: sidebar 
+keywords: aware, guidelines, powershell, perl, variables, oncommand, automation, create, command, data, source, type 
+summary: 'Bei der Erstellung eines Befehls oder eines Datenquelltyps müssen Sie die Richtlinien für PowerShell und Perl-Variablen in OnCommand Workflow Automation (WFA) kennen.' 
+---
+= Richtlinien für Variablen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Erstellung eines Befehls oder eines Datenquelltyps müssen Sie die Richtlinien für PowerShell und Perl-Variablen in OnCommand Workflow Automation (WFA) kennen.
+
+
+
+== PowerShell Variablen
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Für Skript-Eingabeparameter:
+
+* Verwenden Sie Pascal Case.
+* Keine Unterstriche verwenden.
+* Verwenden Sie keine Abkürzungen.
+
+ a| 
+`$VolumeName`
+
+`$AutoDeleteOptions`
+
+`$Size`
+
+
+
+ a| 
+Für interne Skriptvariablen:
+
+* Verwenden Sie die Camel-Hülle.
+* Keine Unterstriche verwenden.
+* Verwenden Sie keine Abkürzungen.
+
+ a| 
+`$newVolume`
+
+`$qtreeName`
+
+`$time`
+
+
+
+ a| 
+Für Funktionen:
+
+* Verwenden Sie Pascal Case.
+* Keine Unterstriche verwenden.
+* Verwenden Sie keine Abkürzungen.
+
+ a| 
+`GetVolumeSize`
+
+
+
+ a| 
+Bei Variablennamen wird die Groß-/Kleinschreibung nicht beachtet. Um die Lesbarkeit zu verbessern, sollten Sie jedoch für denselben Namen keine andere Großschreibung verwenden.
+ a| 
+`$variable` Ist das gleiche wie `$Variable.`
+
+
+
+ a| 
+Variablennamen sollten in einfachem Englisch sein und sich auf die Funktionalität des Skripts beziehen.
+ a| 
+Nutzung `$name` Und nicht `$a.`
+
+
+
+ a| 
+Erklären Sie den Datentyp für jede Variable explizit.
+ a| 
+[String]Name
+
+[Int]Größe
+
+
+
+ a| 
+Verwenden Sie keine Sonderzeichen (! @ # & % , .) und Leerzeichen.
+ a| 
+Keine
+
+
+
+ a| 
+Verwenden Sie keine PowerShell reservierten Schlüsselwörter.
+ a| 
+Keine
+
+
+
+ a| 
+Gruppieren Sie die Eingabeparameter, indem Sie zunächst die obligatorischen Parameter, gefolgt von den optionalen Parametern platzieren.
+ a| 
+[listing]
+----
+param(
+[parameter(Mandatory=$true)]
+[string]$Type,
+
+[parameter(Mandatory=$true)]
+[string]$Ip,
+
+[parameter(Mandatory=$false)]
+[string]$VolumeName
+)
+----
+
+
+ a| 
+Kommentieren Sie alle Eingabevariablen mit `_HelpMessage_` Anmerkung mit einer aussagekräftigen Hilfemeldung.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="LUN to map")]
+[string]$LUNName
+----
+
+
+ a| 
+Verwenden Sie „`Filer`“ nicht als Variablenname, sondern verwenden Sie „`Array`“.
+ a| 
+Keine
+
+
+
+ a| 
+Nutzung `_ValidateSet_` Anmerkung in Fällen, in denen das Argument aufzählen wird. Damit wird automatisch der Datentyp „Enum“ für den Parameter angezeigt.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="Volume state")]
+[ValidateSet("online","offline","restricted")]
+[string]$State
+----
+
+
+ a| 
+Fügen Sie einem Parameter, der mit „`_Capacity`“ endet, einen Alias hinzu, um anzugeben, dass der Parameter vom Kapazitätstyp ist.
+ a| 
+Der Befehl „`Create Volume`“ verwendet Aliase wie folgt:
+
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="Volume increment size in MB")]
+[Alias("AutosizeIncrementSize_Capacity")]
+[int]$AutosizeIncrementSize
+----
+
+
+ a| 
+Fügen Sie einem Parameter, der mit „`_Password`“ endet, einen Alias hinzu, um anzugeben, dass der Parameter einen Kennworttyp hat.
+ a| 
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="In order to create an Active Directory machine account for the CIFS server or setup CIFS service for Storage Virtual Machine, you must supply the password of a Windows account with sufficient privileges")]  [Alias("Pwd_Password")]  [string]$ADAdminPassword
+)
+----
+|===
+
+
+== Perl-Variablen
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Für Skript-Eingabeparameter:
+
+* Verwenden Sie Pascal Case.
+* Keine Unterstriche verwenden.
+* Verwenden Sie keine Abkürzungen.
+
+ a| 
+`$VolumeName`
+
+`$AutoDeleteOptions`
+
+`$Size`
+
+
+
+ a| 
+Verwenden Sie keine Abkürzungen für interne Skriptvariablen.
+ a| 
+`$new_volume`
+
+`$qtree_name`
+
+`$time`
+
+
+
+ a| 
+Verwenden Sie keine Abkürzungen für Funktionen.
+ a| 
+`get_volume_size`
+
+
+
+ a| 
+Bei Variablennamen wird die Groß-/Kleinschreibung beachtet. Um die Lesbarkeit zu verbessern, sollten Sie für denselben Namen keine andere Groß-/Kleinschreibung verwenden.
+ a| 
+`$variable` Ist nicht dasselbe wie `$Variable.`
+
+
+
+ a| 
+Variablennamen sollten in einfachem Englisch sein und sich auf die Funktionalität des Skripts beziehen.
+ a| 
+Nutzung `$name` Und nicht `$a.`
+
+
+
+ a| 
+Gruppieren Sie die Eingabeparameter, indem Sie zuerst die obligatorischen Parameter, gefolgt von den optionalen Parametern platzieren.
+ a| 
+Keine
+
+
+
+ a| 
+In GetOptions Funktion, deklarieren Sie explizit den Datentyp jeder Variable für Eingabeparameter.
+ a| 
+[listing]
+----
+GetOptions(
+	"Name=s"=>\$Name,
+	"Size=i"=>\$Size
+)
+----
+
+
+ a| 
+Verwenden Sie „`Filer`“ nicht als Variablenname, sondern verwenden Sie „`Array`“.
+ a| 
+Keine
+
+
+
+ a| 
+Perl schließt nicht das ein `_ValidateSet_` Anmerkung für Aufzählungswerte. Verwenden Sie die expliziten „`if`“-Anweisungen für Fälle, in denen das Argument aufgezählte Werte erhält.
+ a| 
+[listing]
+----
+if
+(defined$SpaceGuarantee&&!($SpaceGuaranteeeq'none'||$SpaceGuaranteeeq'volume'||$SpaceGuaranteeeq'file'))
+{
+	die'Illegal SpaceGuarantee argument: \''.$SpaceGuarantee.'\'';
+}
+----
+
+
+ a| 
+Alle Perl WFA Befehle müssen das Pragma „`strict`“ verwenden, um die Verwendung unsicherer Konstrukte für Variablen, Referenzen und Unterroutinen zu entmutigen.
+ a| 
+[listing]
+----
+use strict;
+# the above is equivalent to
+use strictvars;
+use strictsubs;
+use strictrefs;
+----
+
+
+ a| 
+Alle Perl WFA Befehle müssen die folgenden Perl Module verwenden:
+
+* Getopt
++
+Dies wird zur Angabe von Eingabeparametern verwendet.
+
+* WFAUtil
++
+Dies wird für Dienstprogrammfunktionen verwendet, die für die Protokollierung von Befehlen, für die Meldung des Befehlsfortschritts, für die Verbindung zu Array-Controllern usw. bereitgestellt werden.
+
+
+ a| 
+[listing]
+----
+use Getopt::Long;
+use NaServer;
+use WFAUtil;
+----
+|===

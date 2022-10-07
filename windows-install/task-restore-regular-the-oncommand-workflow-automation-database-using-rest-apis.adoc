@@ -1,0 +1,36 @@
+---
+permalink: windows-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, regular, wfa, database, rest, apis 
+summary: 'Sie können die WFA-Datenbank (OnCommand Workflow Automation) regelmäßig wiederherstellen, indem SIE REST-APIs verwenden. In einer normalen Wiederherstellung ist es nur möglich, die WFA Datenbank wiederherzustellen.' 
+---
+= Stellen Sie die WFA Datenbank mithilfe VON REST-APIs wieder her (regelmäßig)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die WFA-Datenbank (OnCommand Workflow Automation) regelmäßig wiederherstellen, indem SIE REST-APIs verwenden. In einer normalen Wiederherstellung ist es nur möglich, die WFA Datenbank wiederherzustellen.
+
+* Sie müssen eine ZIP-Sicherung der WFA Datenbank erstellt haben.
+* Sie müssen über Administrator- oder Architekturdaten verfügen.
+* Wenn Sie die Datenbank im Rahmen des Migrationsvorgangs wiederherstellen, müssen Sie eine vollständige Wiederherstellung durchführen.
+
+
+.Schritte
+. Geben Sie in den Browser DES REST-Clients die folgende URL ein: `+https://IP address of WFA server/rest/backups+`
+. Wählen Sie im Backup-Fenster die Methode *POST* aus.
+. Wählen Sie in der Dropdown-Liste *Teil* die Option *mehrteiligem Körper* aus.
+. Geben Sie im Feld *Datei* die folgenden Informationen ein:
++
+.. Wählen Sie in der Dropdown-Liste *Inhaltstyp* die Option *mehrteilige/Formulardaten* aus.
+.. Wählen Sie in der Dropdown-Liste *Charset* die Option *ISO-8859-1* aus.
+.. Geben Sie im Feld **Dateiname**den Namen der Sicherungsdatei als Backupdatei ein.
+.. Klicken Sie Auf *Durchsuchen*.
+.. Wählen Sie den Speicherort der ZIP-Sicherungsdatei aus.
+
+
+. Navigieren Sie zum Verzeichnis WFA_install_location\wfa\bin und starten Sie die WFA Services neu:
+. Vergewissern Sie sich, dass der Wiederherstellungsvorgang erfolgreich ist und WFA zugänglich ist.
+

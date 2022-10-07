@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-tasks-involved-in-creating-workflows.html 
+sidebar: sidebar 
+keywords: create, storage, automation, workflows, define, steps, perform, building blocks, commands, finders, filters, dictionary, entries 
+summary: 'Zur Erstellung von Workflows zur Storage-Automatisierung in OnCommand Workflow Automation (WFA) gehören die Definition der einzelnen Schritte eines Workflows und die Erstellung des Workflows mithilfe der WFA Bausteine, z. B. Befehle, Suchfunktionen, Filter und Einträge zum Wörterbuch.' 
+---
+= Aufgaben zum Erstellen von Workflows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zur Erstellung von Workflows zur Storage-Automatisierung in OnCommand Workflow Automation (WFA) gehören die Definition der einzelnen Schritte eines Workflows und die Erstellung des Workflows mithilfe der WFA Bausteine, z. B. Befehle, Suchfunktionen, Filter und Einträge zum Wörterbuch.
+
+Im folgenden Flussdiagramm ist der Prozess der Workflow-Erstellung dargestellt:
+
+image::../media/designing_wfa_workflows_flowchart.gif[Flussdiagramm der wfa Workflows entwerfen]

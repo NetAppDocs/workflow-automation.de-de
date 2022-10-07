@@ -1,0 +1,52 @@
+---
+permalink: windows-install/concept-overview-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: overview, oncommand, workflow, automation 
+summary: 'OnCommand Workflow Automation (WFA) ist eine Softwarelösung zur Automatisierung von Storage-Managementaufgaben, u. a. für Provisionierung, Migration, Ausmusterung, Datensicherung, Und Klonen-Storage. Mit WFA können Workflows zum Erstellen von Aufgaben erstellt werden, die von Ihren Prozessen festgelegt werden. WFA unterstützt sowohl ONTAP als auch Data ONTAP in 7-Mode.' 
+---
+= Übersicht über OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) ist eine Softwarelösung zur Automatisierung von Storage-Managementaufgaben, u. a. für Provisionierung, Migration, Ausmusterung, Datensicherung, Und Klonen-Storage. Mit WFA können Workflows zum Erstellen von Aufgaben erstellt werden, die von Ihren Prozessen festgelegt werden. WFA unterstützt sowohl ONTAP als auch Data ONTAP in 7-Mode.
+
+Ein Workflow ist eine sich wiederholende und prozedurale Aufgabe, die aus sequenziellen Schritten besteht, einschließlich der folgenden Arten von Aufgaben:
+
+* Bereitstellung, Migration oder Dekommissionierung von Storage für Datenbanken oder Dateisysteme
+* Einrichtung einer neuen Virtualisierungsumgebung inklusive Storage Switches und Datastores
+* Einrichtung von Storage für eine Applikation im Rahmen einer End-to-End-Orchestrierung
+
+
+Storage-Architekten können Workflows definieren, um Best Practices einzuhalten und geschäftliche Anforderungen zu erfüllen. Beispiele dafür sind:
+
+* Verwendung der erforderlichen Namenskonventionen
+* Festlegen einzigartiger Optionen für Speicherobjekte
+* Auswählen von Ressourcen
+* Integration interner Konfigurationsmanagement-Datenbanken (CMDB) und Ticketapplikationen
+
+
+
+
+== WFA Funktionen herunter
+
+* Workflow-Designportal zum Erstellen von Workflows
++
+Das Workflow-Designportal enthält mehrere Bausteine, wie Befehle, Vorlagen, Suchgeräte, Filter, Und -Funktionen, die zum Erstellen von Workflows verwendet werden. Der Designer ermöglicht es Ihnen, erweiterte Funktionen in Workflows wie automatische Ressourcenauswahl, Zeilenwiederholung (Looping) und Freigabestellen zu integrieren.
+
++
+Das Workflow-Designportal enthält auch Bausteine wie Wörterbucheinträge, Cache-Abfragen und Datenquelltypen zum Caching von Daten aus externen Systemen.
+
+* Ausführungsportal zum Ausführen von Workflows, zum Überprüfen des Status der Workflow-Ausführung und der Zugriffsprotokolle
+* Administrations-/Einstellungsoption für Aufgaben wie Einrichten von WFA, Verbinden mit Datenquellen und Konfigurieren von Benutzeranmeldeinformationen
+* Web-Service-Schnittstellen zum Aufrufen von Workflows von externen Portalen und Orchestrierungssoftware für Datacenter
+* Storage Automation Store zum Herunterladen der WFA Pakete. Das ONTAP 9.7.0 Paket wird mit WFA 5.1 ausgeliefert.
+
+
+
+
+== WFA Lizenzinformationen
+
+Für die Verwendung des OnCommand Workflow Automation-Servers ist keine Lizenz erforderlich.

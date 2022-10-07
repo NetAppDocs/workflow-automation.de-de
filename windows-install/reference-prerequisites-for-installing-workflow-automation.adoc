@@ -1,0 +1,151 @@
+---
+permalink: windows-install/reference-prerequisites-for-installing-workflow-automation.html 
+sidebar: sidebar 
+keywords: prerequisites, install, workflow, automation 
+summary: 'Vor der Installation von OnCommand Workflow Automation (WFA) müssen Sie sicherstellen, dass Sie über die erforderlichen Informationen verfügen und bestimmte Aufgaben abgeschlossen haben.' 
+---
+= Voraussetzungen für die Installation von Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vor der Installation von OnCommand Workflow Automation (WFA) müssen Sie sicherstellen, dass Sie über die erforderlichen Informationen verfügen und bestimmte Aufgaben abgeschlossen haben.
+
+Bevor Sie WFA auf einem System installieren, müssen Sie die folgenden Aufgaben ausführen:
+
+* Laden Sie die WFA Installationsdatei von der NetApp Support Site herunter und kopieren Sie die Datei auf den Server, auf dem WFA installiert werden soll
++
+
+NOTE: Zur Anmeldung auf der NetApp Support Site müssen Sie über gültige Zugangsdaten verfügen. Wenn Sie keine gültigen Zugangsdaten besitzen, können Sie sich auf der NetApp Support Site registrieren, um damit die entsprechenden Anmeldedaten zu erhalten.
+
+* Überprüfen, ob das System ggf. Zugriff auf die folgenden Ressourcen hat:
++
+** Storage Controller
+** Active IQ Unified Manager
+** VMware vCenter
+
+
+
+
+[NOTE]
+====
+Wenn in Ihrer Umgebung der Zugriff auf Secure Shell (SSH) erforderlich ist, müssen Sie sicherstellen, dass SSH auf den Ziel-Controllern aktiviert ist.
+
+====
+* Es wird sichergestellt, dass PowerShell 3.0 oder höher installiert wird
+* Sicherstellen, dass VMware Power CLI installiert ist, wenn Sie WFA zur Ausführung von Workflows auf VMware vSphere verwenden
+* Erfassen der erforderlichen Konfigurationsinformationen
+* Stellen Sie sicher, dass der MySQL .Net-Anschluss installiert ist, wenn Sie das Cmdlet "Invoke-MysqlQuery" verwenden
+
+
+
+
+== Erforderliche Konfigurationsinformationen
+
+[cols="3*"]
+|===
+| Einheit oder System | Details | Zweck 
+
+
+ a| 
+Arrays
+ a| 
+* IP-Adresse
+* Benutzername und Passwort
+
+ a| 
+Betrieb auf Storage-Systemen durchführen
+
+[NOTE]
+====
+Anmeldedaten für das Root- oder Admin-Konto sind für den Speicher (Arrays) erforderlich.
+
+====
+
+
+ a| 
+VSphere
+ a| 
+* IP-Adresse
+* Benutzername und Passwort eines Administrators für vCenter Server
+
+ a| 
+Erwerben von Daten, die mittels VMware-APIs ausgeführt werden
+
+
+NOTE: Sie müssen VMware Power CLI installiert haben.
+
+
+
+ a| 
+Externe Repositorys wie OnCommand Balance und benutzerdefinierte Datenbanken
+ a| 
+* IP-Adresse
+* Benutzername und Passwort eines schreibgeschützten Benutzerkontos
+
+ a| 
+AnforderungSie müssen die relevanten WFA Inhalte wie beispielsweise Wörterbucheinträge und Cacheabfragen für die externen Repositorys erstellen, um Daten aus den externen Repositorys zu erhalten.
+
+
+
+ a| 
+Mailserver
+ a| 
+* IP-Adresse
+* Benutzername und Passwort
+
+
+
+NOTE: Benutzername und Passwort sind erforderlich, wenn Ihr Mailserver eine Authentifizierung erfordert.
+ a| 
+WFA Benachrichtigungen erhalten Sie per E-Mail
+
+
+
+ a| 
+AutoSupport Server
+ a| 
+* Mail-Host
+
+ a| 
+Senden von AutoSupport-Meldungen über SMTPFalls Sie keinen E-Mail-Host konfiguriert haben, können Sie HTTP oder HTTPS zum Senden von AutoSupport-Meldungen verwenden.
+
+
+
+ a| 
+Microsoft Active Directory (AD) LDAP-Server
+ a| 
+* IP-Adresse
+* Benutzername und Passwort
+* Gruppenname
+
+ a| 
+Authentifizieren und autorisieren Sie mit AD-LDAP oder AD-LDAPS
+
+
+
+ a| 
+SNMP-Managementapplikation
+ a| 
+* IP-Adresse
+* Port
+
+ a| 
+WFA SNMP-Benachrichtigungen erhalten
+
+
+
+ a| 
+Syslog-Server
+ a| 
+* IP-Adresse
+
+ a| 
+Protokolldaten senden
+
+|===
+*Verwandte Informationen*
+
+https://mysupport.netapp.com/site/["NetApp Support"^]

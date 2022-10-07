@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-configure-the-timeout-value-for-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: 'Sie können den Zeitüberschreitungswert für die Web-GUI (WFA) für Workflow Automation konfigurieren, anstatt den standardmäßigen Timeout-Wert zu verwenden.' 
+---
+= Konfigurieren Sie den Zeitüberschreitungswert für Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Zeitüberschreitungswert für die Web-GUI (WFA) für Workflow Automation konfigurieren, anstatt den standardmäßigen Timeout-Wert zu verwenden.
+
+Der Standardwert für die WFA Web GUI ist 180 Minuten. Sie können den Zeitüberschreitungswert konfigurieren, um Ihre Anforderungen über CLI zu erfüllen. Sie können den Zeitüberschreitungswert nicht über die WFA Web GUI einstellen.
+
+
+NOTE: Der von Ihnen eingestellte Timeout-Wert ist ein absolutes Timeout und nicht ein Timeout im Zusammenhang mit Inaktivität. Wenn Sie diesen Wert z. B. auf 30 Minuten setzen, werden Sie nach 30 Minuten abgemeldet, auch wenn Sie am Ende dieser Zeit aktiv sind.
+
+.Schritte
+. Melden Sie sich als Administrator auf der WFA Host-Maschine an.
+. Legen Sie den Zeitüberschreitungswert fest:
++
+`installdir bin/wfa -S=timeout value in minutes`
+
+

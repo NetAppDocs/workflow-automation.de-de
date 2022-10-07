@@ -1,0 +1,71 @@
+---
+permalink: workflows/concept-how-commands-work.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, commands, execution, blocks, step 
+summary: OnCommand Workflow Automation Befehle sind Ausführungsblöcke für Workflows. Sie können für jeden Schritt in Ihrem Workflow einen Befehl verwenden. 
+---
+= Funktionsweise von Befehlen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation Befehle sind Ausführungsblöcke für Workflows. Sie können für jeden Schritt in Ihrem Workflow einen Befehl verwenden.
+
+WFA Befehle werden mit PowerShell und Perl Skripte geschrieben. PowerShell Befehle verwenden das Data ONTAP PowerShell Toolkit und die VMware PowerCLI, sofern das Paket installiert ist. Perl-Befehle verwenden die Perl-Verteilung und die Perl-Module, die auf dem WFA-Server installiert sind. Wenn Sie mehrere Skriptsprachen wie PowerShell oder Perl in einen Befehl aufnehmen, wird das entsprechende Skript von WFA ausgewählt. Grundlage ist das Betriebssystem, auf dem es installiert ist, und die bevorzugte Reihenfolge der Sprache, die Sie im Konfigurationsmenü von WFA angegeben haben.
+
+Die Skripte für den WFA Befehl enthalten mehrere Parameter. Diese Parameter können den Attributen des Wörterbuchs zugeordnet werden.
+
+Beachten Sie, dass jeder WFA-Befehl mehrere Data ONTAP-Befehle enthalten kann.
+
+Einige der WFA Befehle werden als „Wait“-Befehle bezeichnet, da sie auf lange laufende Vorgänge warten und regelmäßig abfragen können – zum Beispiel den Befehl *Wait for Multiple Volume Moves*. Das Wartungsintervall, in dem der Abfragebefehl ausgeführt wird, kann so konfiguriert werden, dass überprüft wird, ob der Vorgang abgeschlossen wurde.
+
+Während sich der Workflow in seiner Ausführungsphase befindet, wird WFA ein Befehl initiiert. WFA führt die Befehle seriell, links nach rechts und unten aus. Die Planung des Workflows bestätigt die Verfügbarkeit und Gültigkeit der Parameter, die dem Befehl zur Verfügung gestellt werden. Der WFA-Server liefert alle Parameter, die vor der Ausführung der Befehle für die Befehle erforderlich sind.
+
+Die Parameter für Befehle werden während der Workflow-Planung vervollständigt. Der Workflow übergibt diese Parameter dann während der Ausführung an die Befehle. Die Befehle können Parameter nicht an den Workflow übergeben. Wenn Sie jedoch Informationen austauschen möchten, die während der Ausführung zwischen Befehlen in einem Workflow erhalten wurden, können Sie die zugewiesenen WFA PowerShell Cmdlets oder Perl Funktionen verwenden.
+
+WFA PowerShell Befehle verwenden nicht das -ErrorAction STOP-Flag für die PowerShell Cmdlets. Daher werden die Workflow-Ausführung auch dann fortgesetzt, wenn die Cmdlets aufgrund eines Fehlers ausfallen. Wenn Sie das Stoppflag -ErrorAction in einen bestimmten Befehl aufnehmen möchten, können Sie den Befehl klonen und das PowerShell Skript ändern, um das Flag hinzuzufügen.
+
+Die folgenden PowerShell cmdlets und Perl Funktionen sind in WFA enthalten, um den Austausch von Informationen zwischen Befehlen zu ermöglichen:
+
+[cols="2*"]
+|===
+| PowerShell Commandlets | Perl-Funktionen 
+
+
+ a| 
+Add-WfaWorkflowParameter
+ a| 
+AddWfaWorkflowParameter
+
+
+
+ a| 
+Get-WfaWorkflowParameter
+ a| 
+GetWfaWorkflowParameter
+
+|===
+Parameter, die von den Cmdlets „`add`“ hinzugefügt werden, können durch einen Befehl abgerufen werden, der anschließend ausgeführt wird und die`get`-Befehle oder -Funktionen verwendet. In einem PowerShell WFA-Befehl können Sie beispielsweise mithilfe des folgenden im Code einen Parameter namens „VolumeId“ hinzufügen: `Add-WfaWorkflowParameter -Name "VolumeUUID" -Value “12345” -AddAsReturnParameter $true`. Anschließend können Sie den Wert der VolumeId mit dem folgenden Befehl abrufen: `$volumeId = Get-WfaWorkflowParameter -Name volumeId`.
+
+WFA Befehle können die WFA Datenbank abfragen und das erforderliche Ergebnis erhalten. So können Sie einen Befehl erstellen, ohne Filter und Suchfilter zu verwenden. Sie können die Datenbank mit den folgenden Funktionen abfragen:
+
+[cols="2*"]
+|===
+| PowerShell Cmdlet | Perl-Funktion 
+
+
+ a| 
+Rufe-MySqlQuery zum Beispiel: `Invoke-MySqlQuery -Query "SELECT cluster.name AS 'Cluster Name' FROM cm_storage.cluster"`
+ a| 
+VokeMySqlQuery
+
+|===
+*Verwandte Informationen*
+
+xref:task-create-a-filter.adoc[Erstellen Sie einen Filter]
+
+xref:task-create-a-finder.adoc[Erstellen Sie einen Finder]
+
+xref:task-create-a-command.adoc[Erstellen Sie einen Befehl]

@@ -1,0 +1,109 @@
+---
+permalink: help/reference-parameters-for-commands-dialog-box.html 
+sidebar: sidebar 
+keywords: specify, parameters, settings, execution, commands, through, parameters, dialog box 
+summary: Über das Dialogfeld Parameter für Befehle können Sie Parameter und andere Einstellungen für die Ausführung von Befehlen festlegen. 
+---
+= Parameter für das Dialogfeld Befehle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Dialogfeld Parameter für Befehle können Sie Parameter und andere Einstellungen für die Ausführung von Befehlen festlegen.
+
+Im Dialogfeld werden eine oder mehrere Registerkarten des Wörterbuchs und die folgenden Registerkarten angezeigt:
+
+* Andere Parameter
+* Erweitert
+
+
+
+
+== <Dictionary Objects> Registerkarten
+
+* *Definieren <Wörterbuchobjekt>*
++
+Ermöglicht Ihnen die Angabe der Befehlsparameter, die dem Wörterbuchobjekt zugeordnet sind, indem Sie Attribute angeben, ein zuvor definiertes Objekt verwenden oder nach einem vorhandenen Objekt suchen.
+
++
+** * Durch Füllattribute*
++
+Ermöglicht die Eingabe von Attributen für diese Variable. Sie können das Dialogfeld „Ressourcenauswahl“ für mit gekennzeichnete Felder verwenden image:../media/resource_selection_icon_wfa.gif[""]. Optional können Sie eine Vorlage verwenden, die vordefinierte Werte für bestimmte Attribute des Objekts enthält. Sie können zusätzliche Attribute anzeigen und verwenden, indem Sie das Kontrollkästchen *nur Attribute anzeigen, die von <dictionary Object>* verwendet werden. Das Feld neben *define <dictionary object>* zeigt den Standardnamen der ausgewählten Variable an. Sie können den Namen der Variable bearbeiten. Die obligatorischen Attribute sind mit einem Sternchen (*) und einem roten Rahmen für das Feld markiert.
+
+** *Durch Verwendung eines zuvor definierten <Wörterbuchobjekts>*
++
+Ermöglicht Ihnen die Auswahl einer zuvor definierten Variable. Sie können das zuvor definierte Wörterbuchobjekt im Feld neben *Define <dictionary object>* auswählen.
+
+** *Durch Suche nach einem vorhandenen <Wörterbuchobjekt>*
++
+Ermöglicht das Definieren einer Variable durch die Suche nach einem vorhandenen Wörterbuchobjekt. Sie können die Suchkriterien für das Objekt des Wörterbuchs festlegen. Sie können eine der folgenden Aktionen angeben, wenn das Objekt vom Wörterbuch gefunden wird:
+
++
+*** Workflow abbrechen
+*** Und den Befehl deaktiviert
+*** Geben Sie Attribute für das Objekt <dictionary> ein, und führen Sie den Befehl aus
++
+
+NOTE: Diese Option ähnelt der Option *durch Einfüllen von Attributen*.
+
+
+
+
+
+
+
+
+
+== Andere Parameter
+
+Ermöglicht die Angabe der Befehlsparameter, die keinem Wörterbuchobjekt zur Ausführung des Befehls zugeordnet sind.
+
+
+
+== Erweitert
+
+Hier können Sie Bedingungen für die Ausführung des Befehls angeben und eine Beschreibung angeben. Sie können den Workflow auch so konfigurieren, dass die Workflow-Ausführung auch dann fortgesetzt wird, wenn ein oder mehrere Befehle im Workflow fehlgeschlagen sind.
+
+* *Ausführen dieses Befehls*
++
+** * Immer*
++
+Führt den Befehl bedingungslos aus.
+
+** *Wenn die folgende Variable gefunden wurde*
++
+Ermöglicht Ihnen die Ausführung eines Befehls nur, wenn die angegebene Variable gefunden wurde. Sie können die Variable im nebenstehenden Feld angeben.
+
+** *Wenn die folgende Variable nicht gefunden wurde*
++
+Ermöglicht Ihnen die Ausführung eines Befehls nur, wenn die angegebene Variable nicht gefunden wurde. Sie können die Variable im nebenstehenden Feld angeben.
+
+** *Wenn der folgende Ausdruck WAHR ist*
++
+Ermöglicht die Ausführung eines Befehls nur, wenn der angegebene MVFLEX-Ausdruck (Expression Language, MVEL) „`True`“ lautet. Sie können den Ausdruck im angrenzenden Feld angeben.
+
+
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung für den Befehl eingeben.
+
+* *Wenn die Ausführung fehlschlägt*
++
+** *Workflow-Ausführung abbrechen*
++
+Hiermit können Sie die Workflow-Ausführung beenden.
+
+** *Die Ausführung vom nächsten Schritt fortsetzen*
++
+Ermöglicht Ihnen, die Ausführung des Workflows vom nächsten Schritt aus fortzusetzen.
+
+** *Die Ausführung von der nächsten Zeile* fortsetzen
++
+Hiermit können Sie die Workflow-Ausführung in der nächsten Zeile fortsetzen.
+
+
+
+

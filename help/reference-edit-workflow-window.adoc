@@ -1,0 +1,273 @@
+---
+permalink: help/reference-edit-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, display, select, associated, commands, parameters, blue boxes, columns, arranged, sequential, order, execution, left, right, variables, objects, gray boxes 
+summary: Im Fenster Workflow <Workflow Name> werden der ausgewählte Workflow und die zugehörigen Befehle und Parameter angezeigt. Die dem Workflow zugeordneten Befehle werden in Spalten, die in der Reihenfolge der Ausführung in der Reihenfolge von links nach rechts angeordnet sind, als blaue Felder angezeigt. Die Variablen und Objekte für jeden Befehl werden als graue Felder unter dem Befehl angezeigt. 
+---
+= Workflow <Workflow Name> Fenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster Workflow <Workflow Name> werden der ausgewählte Workflow und die zugehörigen Befehle und Parameter angezeigt. Die dem Workflow zugeordneten Befehle werden in Spalten, die in der Reihenfolge der Ausführung von links nach rechts angeordnet sind, als blaue Felder angezeigt. Die Variablen und Objekte für jeden Befehl werden als graue Felder unter dem Befehl angezeigt.
+
+
+
+== Registerkarte Workflow
+
+Auf der Registerkarte Workflow können Sie untergeordnete Workflows und Befehle auswählen und verwenden sowie den Anzeigenamen anpassen.
+
+* * Verfügbare Schritte*
++
+Zeigt eine Liste der verfügbaren untergeordneten Workflows und Befehle an, die Sie zu Ihrem Workflow hinzufügen können.
+
++
+Sie können nach untergeordneten Workflows oder Befehlen suchen, indem Sie im Textfeld den Namen, das Schema und die minimale Softwareversion als Suchzeichenfolgen verwenden.
+
++
+Sie können die Workflow-Anzeige anpassen, indem Sie die Reihenfolge der Befehle neu anordnen. Um die Befehle neu anzuordnen, können Sie Befehle in der gewünschten Reihenfolge per Drag & Drop verschieben. Durch Doppelklicken auf einen Befehl wird dieser Befehl an das Ende der Liste verschoben. Sie können den Anzeigenamen ändern, indem Sie im blauen Feld auf den Anzeigenamen des Befehls doppelklicken. Sie können einen Befehl löschen, indem Sie den Cursor über das blaue Feld bewegen und dann rechts oben auf „`X`“ klicken.
+
++
+Sie können auf die Zeilennummer klicken, um verschiedene Funktionen in der Zeile auszuführen.
+
++
+** *Legen Sie eine Zeile* ein
++
+Fügt eine neue Zeile oberhalb oder unterhalb der ausgewählten Zeile in den Workflow ein.
+
+** *Zeile kopieren*
++
+Kopiert die ausgewählte Zeile aus dem Workflow und speichert sie in der Zwischenablage. Die für die Zeile eingestellten Wiederholungsdetails werden kopiert, wenn eine Zeile kopiert wird.
+
+** *Wiederhole die Reihe*
++
+Öffnet das Dialogfeld Zeilendestwiederholungsdetails, in dem Sie die Art der Wiederholung angeben können.
+
+** *Bedingung hinzufügen*
++
+Öffnet das Dialogfeld Bedingung für Zeile <row number>, in dem Sie eine Bedingung auswählen können. Die ausgewählte Bedingung gilt für alle Befehle in der Zeile. Alle Befehle in der Zeile werden nur ausgeführt, wenn die ausgewählte Bedingung erfüllt ist.
+
+** *Zeile entfernen*
++
+Löscht die ausgewählte Zeile aus dem Workflow.
+
+
+
+* *Zeile Einfügen*
++
+Fügt die kopierte Zeile oberhalb oder unterhalb der ausgewählten Zeile ein. Diese Option ist nach Auswahl der Funktion Zeile kopieren verfügbar.
+
+
+
+
+
+== Registerkarte „Details“
+
+Auf der Registerkarte Details können Sie allgemeine Informationen zum Workflow bereitstellen.
+
+* *Workflow-Name*
++
+Ermöglicht Ihnen die Angabe des Namens des Workflows mithilfe einer alphanumerischen Zeichenfolge.
+
+* *Entity Version*
++
+Ermöglicht die Eingabe einer Versionsnummer für den Workflow im `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Kategorien*
++
+Zeigt die zugehörige Kategorie für den Workflow an. Im Fenster Kategorie können Sie einen Workflow einer Kategorie zuweisen.
+
+* *Workflow Beschreibung*
++
+Ermöglicht die Eingabe einer Beschreibung des Workflows. Sie können in das Feld klicken, um das Dialogfeld Beschreibung bearbeiten zu öffnen.
+
+* *Bereit für die Produktion*
++
+Hiermit können Sie den Workflow für die Produktion markieren, der die Ausführung des Workflows ermöglicht und im Workflow-Fenster aufgelistet wird.
+
+* *Reservierte Elemente Berücksichtigen*
++
+Ermöglicht Ihnen die Verwendung der Reservierungsfunktion für den Workflow, wenn für den Workflow ausgewählte Ressourcen verfügbar sind, bis der von Ihnen konfigurierte Zeitraum für die Reservierung abgelaufen ist. Mit der Reservierungsfunktion können Sie während der Ressourcenauswahl Ressourcen ausschließen, die von anderen Workflows reserviert wurden.
+
++
+
+NOTE: Sie dürfen dieses Kontrollkästchen nicht aktivieren, wenn Sie die Filter benötigen, um nur den Inhalt des persistenten Caches zu durchsuchen, ohne dabei die von anderen Workflows festgelegten Reservierungen zu berücksichtigen.
+
+* *Validierung der Elementexistenz aktivieren*
++
+Ermöglicht Ihnen, das Vorhandensein von Elementen zu validieren und Fehler bestimmter Aktionen während der Ausführung von Workflows zu vermeiden. Sie können beispielsweise vermeiden, ein neues Volume in einem Array mit demselben Namen wie ein vorhandenes Volume zu erstellen.
+
+* *Mindestversion Der Software*
++
+Gibt die Mindestversionen der Software an, die zum Ausführen des Workflows erforderlich sind. Die Software bietet beispielsweise Clustered Data ONTAP 8.2.0 und vCenter 6.0. Die Versionen werden als kommagetrennte Werte angezeigt.
+
+
+
+
+
+== Registerkarte Benutzereingaben
+
+Auf der Registerkarte Benutzereingaben können Sie die Benutzereingabeattribute anzeigen und bearbeiten, die Sie beim Erstellen der Workflow-Objekte und Benutzereingaben erstellt haben. Die Werte für die Benutzereingabeattribute werden ausgefüllt, wenn Sie den Workflow in der Vorschau anzeigen oder ausführen.
+
+Sie können auf die Benutzereingabe, die Sie bearbeiten möchten, doppelklicken. Dadurch wird das Dialogfeld Edit Variable: <user_Input> geöffnet, in dem Sie die Benutzereingabe bearbeiten können.
+
+Sie können die Tabellenanzeige anpassen, indem Sie die Spaltenreihenfolge neu anordnen. Um die Spalten neu anzuordnen, können Sie Spalten in der gewünschten Reihenfolge ziehen und ablegen. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+
+* *Name*
++
+Zeigt den Namen des Benutzereingabeattributs an.
+
+* *Anzeigename*
++
+Zeigt den Namen an, der dem Workflow-Benutzer angezeigt wird.
+
+* *Typ*
++
+Zeigt den Benutzereingangstyp an, z. B. String, Abfrage, boolescher Wert, Tabelle, Oder Passwort.
+
+* *Werte*
++
+Zeigt die zulässigen Werte für die Benutzereingabe an, z. B. den Bereich für Zahlen und den regulären Ausdruck für Zeichenfolgen.
+
+* *Standardwert*
++
+Zeigt den Standardwert der Benutzereingabe an.
+
+* *Input Dependency*
++
+Zeigt eine weitere Benutzereingabe aus der Liste an, die einen Wert für die ausgewählte Benutzereingabe bereitstellt.
+
+* *Gruppe*
++
+Zeigt den Namen der Gruppe für die Benutzereingabeattribute an.
+
+* * Obligatorisch*
++
+Zeigt den Status der Benutzereingabe an. Wenn das Kontrollkästchen als ausgewählt angezeigt wird, sind die Benutzereingabeattribute für die Ausführung des Workflows obligatorisch.
+
+* *Befehlsschaltflächen*
++
+** *Auf*
++
+Verschiebt den ausgewählten Eintrag eine Zeile in der Tabelle nach oben.
+
+** *Down*
++
+Verschiebt den ausgewählten Eintrag eine Zeile in der Tabelle nach unten.
+
+
+
+
+
+
+
+== Registerkarte Konstanten
+
+Auf der Registerkarte Konstanten können Sie den Wert der Konstanten definieren, die im Workflow mehrfach verwendet werden können. Als Wert von Konstanten können Sie Folgendes angeben:
+
+* Ziffern Enthalten
+* Zeichenfolgen
+* MVEL-Ausdrücke
+* Funktionen
+* Benutzereingaben
+* Variablen
+
+
+Sie können die Tabellenanzeige anpassen, indem Sie jede Spalte sortieren und die Spaltenreihenfolge neu anordnen.
+
+* *Name*
++
+Zeigt den Namen der Konstante an.
+
+* *Beschreibung*
++
+Ermöglicht die Angabe einer Beschreibung für die Konstante.
+
+* *Wert*
++
+Ermöglicht die Angabe eines Werts für die Konstante.
+
+* *Befehlsschaltflächen*
++
+** *Hinzufügen*
++
+Fügt eine neue Zeile in der Tabelle Konstanten hinzu.
+
+** *Entfernen*
++
+Löscht die ausgewählte Zeile aus der Tabelle Konstanten.
+
+
+
++
+Sie können auch mit der rechten Maustaste auf die Konstanten klicken, um die Kopier- und Einfügefunktion zu nutzen.
+
+
+
+
+
+== Rückgabeparameter
+
+Auf der Registerkarte Rückgabeparameter können Sie die Rückgabeparameter für den Workflow definieren und angeben, der im Überwachungsfenster oder über Webservices angezeigt werden kann.
+
+* *Parameterwert*
++
+Ermöglicht Ihnen die Angabe des Parameterwerts.
+
+* *Parametername*
++
+Ermöglicht Ihnen die Angabe des Parameternamens.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung für den ausgewählten Parameter angeben.
+
+* *Befehlsschaltflächen*
++
+** *Zeile Hinzufügen*
++
+Fügt in der Tabelle Rückgabeparameter eine neue Zeile hinzu.
+
+** *Zeile Entfernen*
++
+Löscht die ausgewählte Zeile aus der Tabelle Rückgabeparameter.
+
+
+
+
+
+
+
+== Registerkarte „Hilfeinhalt“
+
+Auf der Registerkarte Hilfeinhalt können Sie den Hilfeinhalt für den Workflow hinzufügen, anzeigen und entfernen. Der Inhalt der Workflow-Hilfe enthält Informationen über den Workflow für Speicherbetreiber.
+
+
+
+== Registerkarte „Erweiterter“
+
+Auf der Registerkarte Erweitert können Sie einen benutzerdefinierten URI-Pfad für die Workflow-Ausführung durch API-Aufrufe konfigurieren. Jedes Segment im URI-Pfad kann ein String oder ein gültiger Name der Benutzereingabe des Workflows in Klammern sein.
+
+Beispiel: /devops/\{ProjectName}/Clone. Der Workflow kann als Aufruf von _https:_//WFA-Server:HTTPS_PORT/Rest/devops/Project1/Klon/Jobs aufgerufen werden.
+
+
+
+== Befehlsschaltflächen
+
+Die Befehlsschaltflächen sind unten im Workflow-Fenster verfügbar. Die Befehle können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *Vorschau*
++
+Öffnet das Dialogfeld „Workflow-Vorschau“, in dem Sie Benutzereingabeattribute festlegen können.
+
+* *Speichern Unter*
++
+Ermöglicht Ihnen, den Workflow mit einem neuen Namen zu speichern.
+
+* *Speichern*
++
+Speichert die Konfigurationseinstellungen.
+
+

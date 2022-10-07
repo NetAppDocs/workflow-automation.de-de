@@ -1,0 +1,59 @@
+---
+permalink: help/task-configure-email-notifications-for-data-source-acquisition-failures.html 
+sidebar: sidebar 
+keywords: control, notifications, generate, oncommand, workflow, automation, data, source, acquisition, fail, configure, threshold, interval, factor, notifications 
+summary: 'Sie können festlegen, welche Benachrichtigungen in OnCommand Workflow Automation (WFA) generiert werden, wenn eine Datenquellenerfassung fehlschlägt. Sie können den Schwellenwert- und Intervallfaktor für die Benachrichtigungen konfigurieren.' 
+---
+= Konfigurieren Sie E-Mail-Benachrichtigungen für Fehler bei der Erfassung der Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können festlegen, welche Benachrichtigungen in OnCommand Workflow Automation (WFA) generiert werden, wenn eine Datenquellenerfassung fehlschlägt. Sie können den Schwellenwert- und Intervallfaktor für die Benachrichtigungen konfigurieren.
+
+*Was Sie brauchen*
+
+Sie müssen E-Mail-Benachrichtigungen in OnCommand Workflow Automation (WFA) konfiguriert haben.
+
+.Schritte
+. Melden Sie sich als Administrator über einen Webbrowser bei WFA an.
+. Konfigurieren des Benachrichtigungsschwellenwerts:
++
+.. Klicken Sie auf *Einstellungen* und klicken Sie unter *Setup* auf *Workflow-Einstellungen*.
+.. Scrollen Sie nach unten zum Abschnitt * Erweitert*.
+.. Geben Sie im Feld * Erfassungsbenachrichtigung Schwellenwert* den erforderlichen Wert ein.
++
+Der Standardwert ist 2.
+
++
+Wenn der angegebene Wert 2 ist, wartet WFA auf zwei aufeinander folgende Fehler bei der Datenerfassung in der Datenquelle, bevor es eine E-Mail-Benachrichtigung sendet.
+
+
+
+. Klicken Sie Auf *Speichern*.
+. Konfigurieren Sie den Faktor für das Benachrichtigungsintervall:
++
+.. Klicken Sie auf *Einstellungen* und klicken Sie unter *Setup* auf *Datenquellen*.
+.. Beachten Sie das für die erforderliche Datenquelle angegebene Intervall.
++
+Der Standardwert ist 30. Sie können die Datenquelle bearbeiten, um die Intervallzeit zu ändern.
+
+.. Klicken Sie auf *Einstellungen* und klicken Sie unter *Setup* auf *Workflow-Einstellungen*.
+.. Scrollen Sie nach unten zum Abschnitt * Erweitert*.
+.. Geben Sie im Feld *Erfassungsnotification interval Factor* den erforderlichen Wert ein.
++
+Der Standardwert ist 6.
+
++
+Wenn das für eine Datenquelle angegebene Intervall 30 Minuten beträgt und der Multiplikationsfaktor 6 ist, wird eine E-Mail-Benachrichtigung gesendet, wenn die Datenquellenerfassung für die Datenquelle nicht 180 Minuten lang stattfindet.
+
++
+
+NOTE: Wenn Sie als Erfassungsintervall für eine Datenquelle 12 Stunden oder mehr angeben, berücksichtigt WFA den Intervallfaktor als 1 und sendet eine Benachrichtigung nach dem angegebenen Erfassungsintervall für die Datenquelle.
+
+
+
+. Klicken Sie Auf *Speichern*.
+

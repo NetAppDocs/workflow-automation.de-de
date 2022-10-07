@@ -1,0 +1,76 @@
+---
+permalink: help/reference-edit-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, remote, system, type, dialog box, enable, modify, name, description, version, protocol, default port, timeout, existing, certified 
+summary: Im Dialogfeld „Remote-Systemtyp bearbeiten“ können Sie den Namen, die Beschreibung, die Version, das Protokoll, den Standardport, Und die standardmäßige Zeitüberschreitung eines vorhandenen Remote-Systems. Sie können einen für NetApp zertifizierten Remote-Systemtyp nicht ändern. 
+---
+= Dialogfeld „Remote-Systemtyp bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Remote-Systemtyp bearbeiten“ können Sie den Namen, die Beschreibung, die Version, das Protokoll, den Standardport, Und die standardmäßige Zeitüberschreitung eines vorhandenen Remote-Systems. Sie können einen für NetApp zertifizierten Remote-Systemtyp nicht ändern.
+
+* Registerkarte „Details“
+* Registerkarte Validierungs-Skript
+
+
+
+
+== Registerkarte „Details“
+
+Ermöglicht die Bearbeitung der Details des Remote-Systemtyps, z. B. Name, Beschreibung, Version und Verbindungsprotokoll.
+
+* *Name*
++
+Ermöglicht Ihnen, den Namen des Remote-Systemtyps zu bearbeiten.
+
+* *Beschreibung*
++
+Ermöglicht das Ändern der Beschreibung des Remote-Systemtyps.
+
+* *Version*
++
+Ermöglicht die Bearbeitung der Versionsnummer des Remote-Systemtyps in `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Verbindungsprotokoll*
++
+Ermöglicht Ihnen die Auswahl eines der folgenden Protokolle, die von OnCommand Workflow Automation (WFA) bei der Verbindung zum Remote-System verwendet werden sollen:
+
++
+** HTTPS mit Fallback zu HTTP
++
+Die Verbindung verwendet in erster Linie HTTPS. Wenn die Verbindung über HTTPS fehlschlägt, wird HTTP verwendet. Falls auch die Verbindung über HTTP fehlschlägt, wird der Verbindungsversuch abgebrochen.
+
+** Nur HTTPS
+** Nur HTTP
+** Individuell
+
+
+
+
+Wenn Sie ein Verbindungsprotokoll auswählen, werden die Felder Protokoll, Standardport und Standard-Timeout (s) mit Daten gefüllt.
+
+
+
+== Registerkarte Validierungs-Skript
+
+Ermöglicht die Bereitstellung eines Validierungsskripts zum Testen der Konnektivität des Remote-Systems. Das Validierungs-Skript muss in Perl geschrieben werden und muss die folgende Funktion enthalten: CheckCredentials `($host, $user, $password, $protocol, $port, $timeout).` Während der Validierung ruft WFA die CheckCredentials-Funktion auf, wobei die Werte angegeben werden, die für den Remote-Systemtyp und das Verbindungsprotokoll konfiguriert sind. Die Funktion gibt den Wert „`1`“ bei der erfolgreichen Validierung der Verbindung oder „`0`“ bei Ausfall der Verbindungsvalidierung zurück.
+
+Sie können auf *Perl-Skript testen* klicken, um das Skript zum Testen der Konnektivität auszuführen.
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die geänderten Konfigurationseinstellungen des Remote-Systemtyps und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

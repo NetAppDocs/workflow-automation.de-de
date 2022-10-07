@@ -1,0 +1,31 @@
+---
+permalink: help/task-delete-a-scheme.html 
+sidebar: sidebar 
+keywords: delete, scheme, create, oncommand, workflow, automation, require 
+summary: 'Sie können ein von Ihnen erstelltes Schema aus OnCommand Workflow Automation (WFA) löschen, wenn Sie es nicht mehr benötigen.' 
+---
+= Löschen Sie ein Schema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein von Ihnen erstelltes Schema aus OnCommand Workflow Automation (WFA) löschen, wenn Sie es nicht mehr benötigen.
+
+*Was Sie brauchen*
+
+* Sie müssen WFA installiert haben.
+* Sie müssen über Administratorrechte oder Anmeldedaten für den Systemarchitekten für WFA verfügen.
+
+
+*Über diese Aufgabe*
+
+Sie können vordefinierte Schemata nicht löschen.
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Administrator oder Architekt bei WFA an.
+. Klicken Sie Auf *Datenquellendesign* > *Schemas*.
+. Wählen Sie das Schema aus, das Sie löschen möchten, und klicken Sie dann auf image:../media/delete_wfa_icon.gif["Symbol Löschen"] In der Symbolleiste.
+. Klicken Sie im Bestätigungsdialogfeld *Schema löschen* auf *Ja*.
+

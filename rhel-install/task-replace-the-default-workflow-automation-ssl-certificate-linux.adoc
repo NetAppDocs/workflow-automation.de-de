@@ -1,0 +1,59 @@
+---
+permalink: rhel-install/task-replace-the-default-workflow-automation-ssl-certificate-linux.html 
+sidebar: sidebar 
+keywords: replace, default, workflow, automation, ssl, certificate 
+summary: 'Sie können das Standard-SSL-Zertifikat der Workflow Automation (WFA) ersetzen, wenn das Zertifikat abgelaufen ist oder Sie die Gültigkeitsdauer des Zertifikats erhöhen möchten.' 
+---
+= Ersetzen Sie das Standard-SSL-Zertifikat der Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Standard-SSL-Zertifikat der Workflow Automation (WFA) ersetzen, wenn das Zertifikat abgelaufen ist oder Sie die Gültigkeitsdauer des Zertifikats erhöhen möchten.
+
+Sie müssen Root-Rechte für das Linux-System besitzen, auf dem WFA installiert ist.
+
+In diesem Verfahren wird der WFA Standardinstallationspfad verwendet. Wenn Sie während der Installation den Standardspeicherort geändert haben, müssen Sie auch den benutzerdefinierten WFA Installationspfad verwenden.
+
+.Schritte
+. Melden Sie sich als Root-Benutzer auf der WFA Host Machine an.
+. Navigieren Sie an der Shell-Eingabeaufforderung zum folgenden Verzeichnis auf dem WFA Server: WFA_install_location/wfa/bin
+. Stoppen Sie die WFA Datenbank- und Serverdienste:
++
+`./wfa --stop=WFA`
+
++
+`./wfa --stop=DB`
+
+. Löschen Sie die datei wfa.keystore aus dem folgenden Verzeichnis: WFA_install_location/wfa/jboss/Standalone/Configuration/keystore.
+. Öffnen Sie eine Shell-Eingabeaufforderung auf dem WFA-Server, und ändern Sie dann das Verzeichnis in den folgenden Speicherort: <OpenJDK_install_Location>/bin
+. Erhalten Sie den Datenbankschlüssel:
++
+`keytool -keysize 2048 -genkey -alias "ssl keystore" -keyalg RSA -keystore "WFA_install_location/wfa/jboss/standalone/configuration/keystore/wfa.keystore" -validity xxxx`
+
++
+Xxxx ist die Anzahl der Tage für die Gültigkeit des neuen Zertifikats.
+
+. Geben Sie bei der entsprechenden Aufforderung das Kennwort ein (Standard oder neu).
++
+Das Standardpasswort ist ein zufällig generiertes verschlüsseltes Passwort.
+
++
+Um das Standardpasswort zu erhalten und zu entschlüsseln, befolgen Sie die Schritte im Knowledge Base-Artikel link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["Verlängern des selbstsignierten Zertifikats bei WFA 5.1.1.0.4"^]
+
++
+Um ein neues Passwort zu verwenden, befolgen Sie die Schritte im Knowledge Base-Artikel link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_update_a_new_password_for_the_keystore_in_WFA["So aktualisieren Sie ein neues Passwort für den Schlüsselspeicher in WFA."^]
+
+. Geben Sie die erforderlichen Details für das Zertifikat ein.
+. Überprüfen Sie die angezeigten Informationen, und geben Sie dann ein `Yes`.
+. Drücken Sie *Enter*, wenn Sie dazu aufgefordert werden: Geben Sie das Schlüsselpasswort für <SSL keystore> <ZURÜCK, wenn das gleiche wie das Schlüsselspeicherkennwort> ein.
+. Starten Sie die WFA Services neu:
++
+`./wfa --start=DB`
+
++
+`./wfa --start=WFA`
+
+

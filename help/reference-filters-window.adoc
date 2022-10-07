@@ -1,0 +1,183 @@
+---
+permalink: help/reference-filters-window.html 
+sidebar: sidebar 
+keywords: filter, window, display, available, alphabetical, order, access, select, workflow, design 
+summary: Das Fenster Filter zeigt die verfügbaren Filter in alphabetischer Reihenfolge an. Sie können auf dieses Fenster zugreifen, indem Sie Workflow-Design > Filter auswählen. 
+---
+= Fenster Filter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Fenster Filter zeigt die verfügbaren Filter in alphabetischer Reihenfolge an. Sie können auf dieses Fenster zugreifen, indem Sie *Workflow-Design* > *Filter* wählen.
+
+
+NOTE: Abhängig von Ihren Rollen- und Kontoberechtigungen wird dieses Fenster möglicherweise nicht angezeigt.
+
+Filter sind Abfrageregeln, die irrelevante Ressourcen während der Abfragebasierten Suche nach Ressourcensuche entfernen. Mit Filtern wird ein Finder entwickelt.
+
+* Filtertabelle
+* Symbolleiste
+
+
+
+
+== Filtertabelle
+
+In der Tabelle Filter werden die verfügbaren Filter aufgelistet. Jeder Eintrag ist wie folgt gekennzeichnet:
+
+* image:../media/community_certification.gif[""] - Inhalt von Nutzern erstellt
+* image:../media/ps_certified_icon_wfa.gif[""] - Von Professional Services (PS) entwickelter Inhalt, der nur bei eigenen PS-Installationen verfügbar ist
+* image:../media/community_certification.gif[""] - Pakete von Benutzern entwickelt
+* image:../media/lock_icon_wfa.gif[""] - Inhalt, der von Benutzern erstellt wurde, die gesperrt sind
+* image:../media/netapp_certified.gif[""] - NetApp zertifizierter Inhalte
+
+
+Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+Die Tabelle Filter enthält die folgenden Spalten:
+
+* * Zertifizierung*
++
+Gibt an, ob der Filter vom Benutzer erstellt wurde (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), Gemeinschaft (image:../media/community_certification.gif[""]), Benutzer-gesperrt (image:../media/lock_icon_wfa.gif[""]) Oder NetApp zertifiziert (image:../media/netapp_certified.gif[""]).
+
++
+Sie können nach Filtern suchen, indem Sie ein oder mehrere Kontrollkästchen in der Filterliste auswählen.
+
+* *Name*
++
+Zeigt den Namen des Filters an.
+
++
+Sie können nach einem Filter suchen, indem Sie seinen Namen in das Textfeld Filter suchen eingeben.
+
+* *Schema*
++
+Zeigt das mit den Filtern verknüpfte Schema an. Ein Schema repräsentiert das Datenmodell für ein System. beispielsweise enthält ein vc-Schema Daten, die für Ihre virtuelle Umgebung relevant sind, wie z. B. Virtual Machines, Hosts und Datastores.
+
++
+Sie können nach einem Filter suchen, indem Sie das entsprechende Schema in das Textfeld Filter suchen eingeben.
+
+* *Typ*
++
+Zeigt den Objekttyp des Wörterbuchs des Filters an (z. B. Aggregat-Array oder CIFS).
+
++
+Sie können nach Filtern suchen, indem Sie den Typ in das Textfeld Filter suchen eingeben.
+
+* *Entity Version*
++
+Zeigt die Versionsnummer des Objekts in an `major.minor.revision` Format – z. B. 1.0.0.
+
++
+Sie können nach einem Filter suchen, indem Sie die Versionsnummer in das Textfeld Filter suchen eingeben.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Filters an.
+
++
+Sie können nach einem Filter suchen, indem Sie dessen Beschreibung in das Textfeld Filter suchen eingeben.
+
+* *Zuletzt Aktualisiert Am*
++
+Zeigt das Datum und die Uhrzeit an, zu der der Filter zuletzt aktualisiert wurde.
+
++
+Sie können nach Filtern suchen, indem Sie in der Dropdown-Liste Filter die Zeitkategorie auswählen.
+
+* *Aktualisiert Von*
++
+Zeigt den Benutzer an, der den Filter aktualisiert hat.
+
++
+Sie können nach Filtern suchen, indem Sie den Benutzernamen in das Textfeld Filter suchen eingeben.
+
+* *Gesperrt Von*
++
+Zeigt den Benutzer an, der den Filter gesperrt hat.
+
++
+Sie können nach Filtern suchen, indem Sie den Benutzernamen in das Textfeld Filter suchen eingeben.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/new_wfa_icon.gif["Neues Symbol"] (Neu)*
++
+Öffnet das Fenster Neuer Filter, in dem Sie einen Filter erstellen können.
+
+* *image:../media/edit_wfa_icon.gif["Symbol bearbeiten"] (Bearbeiten)*
++
+Öffnet das Fenster Filter <Filter_Name> für den ausgewählten Filter, mit dem Sie den Filter bearbeiten können.
+
++
+Sie können auch auf den Filter doppelklicken, um das Fenster Filter bearbeiten zu öffnen.
+
+* *image:../media/clone_wfa_icon.gif["Klon-Symbol"] (Klon)*
++
+Öffnet das Fenster Neuer Filter <Filter_Name>_copy, in dem Sie eine Kopie des ausgewählten Filters erstellen können.
+
+* *image:../media/lock_wfa_icon.gif["Symbol sperren"] (Sperre)*
++
+Öffnet das Bestätigungsdialogfeld Filter sperren, in dem Sie den ausgewählten Filter sperren können.
+
+* *image:../media/unlock_wfa_icon.gif["Symbol entsperren"] (Entsperren)*
++
+Öffnet das Dialogfeld „Filter entsperren“, in dem Sie den ausgewählten Filter entsperren können.
+
++
+Diese Option ist nur für die gesperrten Filter aktiviert. Administratoren können Filter freischalten, die von anderen Benutzern gesperrt wurden.
+
+* *image:../media/delete_wfa_icon.gif["Symbol Löschen"] (Löschen)*
++
+Öffnet das Bestätigungsdialogfeld Filter löschen, in dem Sie den ausgewählten vom Benutzer erstellten Filter löschen können.
+
++
+
+NOTE: Sie können keinen WFA Filter, PS-Filter oder Beispielfilter löschen.
+
+* *image:../media/export_wfa_icon.gif["Symbol „Exportieren“"] (Export)*
++
+Ermöglicht Ihnen den Export des ausgewählten vom Benutzer erstellten Filters.
+
++
+
+NOTE: Sie können keinen WFA Filter, PS-Filter oder Beispielfilter exportieren.
+
+* *image:../media/test_wfa_icon.gif["Testsymbol"] (Test)*
++
+Öffnet das Dialogfeld Testfilter, in dem Sie den ausgewählten Filter testen können.
+
+* *image:../media/add_to_pack.png["Zum Pack-Symbol hinzufügen"] (Zum Paket Hinzufügen)*
++
+Öffnet das Dialogfeld Add to Pack Filters, in dem Sie den Filter und seine zuverlässigen Einheiten zu einem Paket hinzufügen können, das bearbeitbar ist.
+
++
+
+NOTE: Die Funktion Add to Pack ist nur für Filter aktiviert, für die die Zertifizierung auf Keine eingestellt ist.
+
+* *image:../media/remove_from_pack.png["Aus Packungssymbol entfernen"] (Aus Packung Entfernen)*
++
+Öffnet das Dialogfeld „aus Packungsfiltern entfernen“ für den ausgewählten Filter, in dem Sie den Filter löschen oder aus dem Paket entfernen können.
+
++
+
+NOTE: Die Funktion „aus Pack entfernen“ ist nur für Filter aktiviert, für die die Zertifizierung auf „Keine“ eingestellt ist.
+
+

@@ -1,0 +1,55 @@
+---
+permalink: help/task-configure-snmp-version-3.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, simple, network, management, protocol, version 3, traps, about, status, operations 
+summary: 'Sie können auch OnCommand Workflow Automation (WFA) konfigurieren, um SNMP-Traps (Simple Network Management Protocol) Version 3 über den Status von Workflow-Operationen zu senden.' 
+---
+= Konfigurieren Sie SNMP-Version 3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können auch OnCommand Workflow Automation (WFA) konfigurieren, um SNMP-Traps (Simple Network Management Protocol) Version 3 über den Status von Workflow-Operationen zu senden.
+
+*Über diese Aufgabe*
+
+Version 3 bietet zwei zusätzliche Sicherheitsoptionen:
+
+* Version 3 mit Authentifizierung
++
+Traps werden unverschlüsselt über das Netzwerk gesendet. SNMP-Verwaltungsanwendungen, die mit denselben Authentifizierungsparametern wie SNMP-Trap-Nachrichten konfiguriert sind, können Traps empfangen.
+
+* Version 3 mit Authentifizierung und Verschlüsselung
++
+Traps werden über das Netzwerk verschlüsselt gesendet. Um diese Traps zu empfangen und zu entschlüsseln, müssen Sie SNMP-Verwaltungsanwendungen mit denselben Authentifizierungsparametern und Verschlüsselungsschlüsseln wie die SNMP-Traps konfigurieren.
+
+
+
+.Schritte
+. Melden Sie sich bei WFA über einen Webbrowser als Admin-Benutzer an und greifen Sie dann auf den WFA Server zu.
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Setup* auf *SNMP*.
+. Aktivieren Sie das Kontrollkästchen *SNMP aktivieren*.
+. Wählen Sie in der Dropdown-Liste *Version* eine der folgenden Optionen aus:
++
+** Version 3
+** Version 3 mit Authentifizierung
+** Version 3 mit Authentifizierung und Verschlüsselung
+
+
+. Wählen Sie die SNMP-Konfigurationsoptionen aus, die der spezifischen SNMP-Version 3 entsprechen, die Sie in Schritt 4 gewählt haben.
+. Geben Sie eine IPv4- oder IPv6-Adresse oder den Hostnamen und die Portnummer des Management-Hosts ein. WFA sendet SNMP-Traps an die angegebene Portnummer. Die Standardanschlussnummer ist 162.
+. Wählen Sie im Abschnitt *Benachrichtigen bei* ein oder mehrere der folgenden Kontrollkästchen aus:
++
+** Workflow-Planung gestartet/fehlgeschlagen/abgeschlossen
+** Workflow-Ausführung gestartet
+** Workflow-Ausführung erfolgreich abgeschlossen
+** Ausführung des Workflows fehlgeschlagen/teilweise erfolgreich
+** Workflow-Ausführung wartet auf Genehmigung
+** Erfassungsfehler
+
+
+. Klicken Sie auf *Testbenachrichtigung senden*, um die Einstellungen zu überprüfen.
+. Klicken Sie Auf *Speichern*.
+

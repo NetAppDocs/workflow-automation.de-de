@@ -1,0 +1,131 @@
+---
+permalink: help/reference-packs-window.html 
+sidebar: sidebar 
+keywords: pack, window, display, oncommand, automation, pack, imported, available, server, contain, information, file, workflow, commands, filters, functions, finders, templates 
+summary: Im Fenster „Pakete“ werden die OnCommand Workflow Automation WFA Pakete angezeigt, die importiert und im WFA Server verfügbar sind. Jedes Paket enthält die Packungsinformationdatei sowie WFA Inhalte, z. B. Workflows, Befehle, Filter, Funktionen, Finder und Templates. 
+---
+= Packfenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster „Pakete“ werden die OnCommand Workflow Automation WFA Pakete angezeigt, die importiert und im WFA Server verfügbar sind. Jedes Paket enthält die Packungsinformationdatei sowie WFA Inhalte, z. B. Workflows, Befehle, Filter, Funktionen, Finder und Templates.
+
+* Verpackt den Tisch
+* Symbolleiste
+
+
+
+
+== Verpackt den Tisch
+
+In der Packungstabelle sind die WFA Packs im Tabellenformat aufgeführt, die im WFA Server verfügbar sind. Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+Die Packungstabelle enthält die folgenden Spalten:
+
+* * Zertifizierung*
++
+Gibt an, ob das Paket vom Benutzer erstellt wurde (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), Gemeinschaft (image:../media/community_certification.gif[""]), Benutzer-gesperrt (image:../media/lock_icon_wfa.gif[""]) Oder NetApp zertifiziert (image:../media/netapp_certified.gif[""])
+
++
+Sie können nach Packungen suchen, indem Sie die gewünschten Optionsfelder aus der Filterliste auswählen.
+
+* *Name*
++
+Zeigt den Namen des Pakets an.
+
++
+Sie können nach einem Paket suchen, indem Sie seinen Namen in das Textfeld * Suchen* eingeben.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Pakets an.
+
++
+Sie können nach einem Paket suchen, indem Sie die Beschreibung in das Textfeld * Suchen* eingeben.
+
+* *Entity Version*
++
+Zeigt die Versionsnummer des Pakets in an `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Zuletzt Aktualisiert Am*
++
+Zeigt das Datum und die Uhrzeit an, zu der das Paket aktualisiert wurde.
+
++
+Sie können nach Packungen suchen, indem Sie die gewünschte Zeitkategorie aus der Dropdown-Liste Filter auswählen.
+
+* *Aktualisiert Von*
++
+Zeigt den Namen des Benutzers an, der das Paket aktualisiert hat.
+
++
+Sie können nach einem Paket suchen, indem Sie den Benutzernamen in das Textfeld * Suchen* eingeben.
+
+* *Details*
++
+Zeigt die Details des Pakets auf der Storage Automation Store-Website an.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/new_pack.png[""](Neu)*
++
+Öffnet das Dialogfeld „Neues Paket“, in dem Sie ein neues Paket erstellen können.
+
+* *image:../media/details_wfa_icon.gif["Details-Symbol"] (Bearbeiten)*
++
+Öffnet das Dialogfeld Packungsinhalt, das die folgenden Registerkarten enthält, um detaillierte Informationen über den Inhalt der Pakete zu erhalten:
+
++
+** Workflows
+** Finder
+** Filter
+** Befehle
+** Funktionen
+** Vorlagen
+** Wörterbuch
+** Schemata
+** Cache-Abfragen
+** SQL-Datenquelltypen
+** Quelltypen Der Skriptdaten
+** Remote-Systemtypen
+** Kategorien
+
+
+* *image:../media/delete_wfa_icon.gif["Symbol Löschen"] (Löschen)*
++
+Öffnet das Dialogfeld „Paket löschen“, in dem Sie das ausgewählte Paket löschen können.
+
+* *image:../media/unlock_wfa_icon.gif["Symbol entsperren"] (Entsperren)*
++
+Öffnet das Dialogfeld „Paket entsperren“, in dem Sie das ausgewählte Paket entsperren können. Diese Option ist nur für die von Ihnen gesperrten Packs aktiviert. Administratoren können Pakete, die von anderen Benutzern gesperrt sind, jedoch entsperren.
+
+* *image:../media/export_wfa_icon.gif["Symbol „Exportieren“"] (Export)*
++
+Öffnet das Dialogfeld „Exportieren“, in dem Sie das ausgewählte Paket exportieren können.
+
+* *image:../media/import_from_server_folder.png[""] (Import Aus Serverordner)*
++
+Öffnet das Dialogfeld Import from Server Folder, in dem Sie das Paket vom ausgewählten Ordnerspeicherort im Serversystem importieren können.
+
+* *image:../media/export_to_server_folder.png[""] (In Serverordner Exportieren)*
++
+Öffnet das Dialogfeld „in Serverordner exportieren“, in dem Sie das Paket in den ausgewählten Ordner im Serversystem exportieren können.
+
+

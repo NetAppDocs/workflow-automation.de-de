@@ -1,0 +1,111 @@
+---
+permalink: help/reference-schedules-window.html 
+sidebar: sidebar 
+keywords: schedules, window, enable, create, edit, delete, schedule, workflow, particular, date, time, execution 
+summary: Im Fenster „Zeitpläne“ können Sie den Zeitplan eines Workflows erstellen, bearbeiten und löschen. Sie können die Ausführung eines Workflows zu einem bestimmten Datum und einer bestimmten Uhrzeit planen. Sie können auf dieses Fenster zugreifen, indem Sie „Ausführung“ > „Zeitpläne“ auswählen. 
+---
+= Zeitplanfenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster „Zeitpläne“ können Sie den Zeitplan eines Workflows erstellen, bearbeiten und löschen. Sie können die Ausführung eines Workflows zu einem bestimmten Datum und einer bestimmten Uhrzeit planen. Sie können auf dieses Fenster zugreifen, indem Sie *Ausführung* > *Zeitpläne* wählen.
+
+* Zeitpläne Tabelle
+* Symbolleiste
+
+
+
+
+== Zeitpläne Tabelle
+
+In der Tabelle „Zeitpläne“ werden die vorhandenen Zeitpläne für die Workflow-Ausführung in einem Tabellenformat aufgeführt. Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+In der folgenden Tabelle sind die unterstützten Operatoren für alphabetische und numerische Spalten in der Tabelle „Zeitpläne“ aufgeführt, die im Textfeld * Suchen* verfügbar sind.
+
+[cols="2*"]
+|===
+| Alphabetisch | Numerisch 
+
+
+ a| 
+* Enthält
+* Enthält nicht
+* Beginnt mit
+* Endet mit
+* Gleich
+* Ist nicht gleich
+* Zurücksetzen
+
+ a| 
+* Gleich
+* Ist nicht gleich
+* Kleiner als
+* Größer als
+* Kleiner oder gleich
+* Größer oder gleich
+* Zwischen
+* Zurücksetzen
+
+
+|===
+Die Tabelle Zeitpläne enthält die folgenden Spalten:
+
+* *ID*
++
+Zeigt die Kennung des Zeitplans an.
+
+* *Name*
++
+Zeigt den Namen des Zeitplans an.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Zeitplans an.
+
+* *Anzahl Der Assoziation*
++
+Zeigt die Anzahl der Workflows an, die mit dem Zeitplan verknüpft sind.
+
+* *Aktualisiert Um*
++
+Zeigt das Datum und die Uhrzeit an, zu der der Zeitplan geändert wurde.
+
++
+Klicken Sie im Textfeld * Suchen* auf das Kalender-Symbol, um nach Terminplänen zu suchen, die an einem bestimmten Datum aktualisiert wurden.
+
+* *Aktualisiert Von*
++
+Zeigt den Namen des Benutzers an, der den Zeitplan geändert hat.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/new_wfa_icon.gif["Neues Symbol"] (Neu)*
++
+Öffnet das Dialogfeld Neuer Zeitplan, in dem Sie einen neuen Zeitplan hinzufügen können.
+
+* *image:../media/edit_wfa_icon.gif["Symbol bearbeiten"] (Bearbeiten)*
++
+Öffnet das Dialogfeld Zeitplan bearbeiten, in dem Sie den ausgewählten Zeitplan bearbeiten können.
+
+* *image:../media/delete_wfa_icon.gif["Symbol Löschen"] (Löschen)*
++
+Öffnet das Dialogfeld Terminbestätigung löschen, in dem Sie den ausgewählten Zeitplan löschen können.
+
+

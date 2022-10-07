@@ -1,0 +1,181 @@
+---
+permalink: help/concept-how-entity-versioning-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, wfa, entity, command, version, manage, change 
+summary: 'OnCommand Workflow Automation (WFA) Einheiten wie Befehle und Workflows sind versioniert. Mit den Versionsnummern können Sie Änderungen an den WFA Einheiten einfach managen.' 
+---
+= Funktionsweise der Versionierung von Einheiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) Einheiten wie Befehle und Workflows sind versioniert. Mit den Versionsnummern können Sie Änderungen an den WFA Einheiten einfach managen.
+
+Jede WFA Einheit enthält eine Versionsnummer in `major.minor.revision` Format z. B. 1.1.20. Sie können bis zu drei Ziffern in jedem Teil der Versionsnummer eingeben.
+
+Bevor Sie die Versionsnummer einer WFA Einheit ändern, müssen Sie die folgenden Regeln beachten:
+
+* Versionsnummern können nicht von der aktuellen Version auf eine frühere Version geändert werden.
+* Jeder Teil der Version muss eine Zahl zwischen 0 und 999 sein.
+* Neue WFA Entitäten sind standardmäßig als 1.0 versioniert.
+* Die Versionsnummer einer Entität wird beim Klonen oder beim Speichern von *Speichern unter* beibehalten, um eine Kopie der Entität zu speichern.
+* In einer WFA Installation können keine verschiedenen Versionen einer Entität vorhanden sein.
+
+
+Wenn Sie die Version einer WFA Einheit aktualisieren, wird die Version ihrer unmittelbaren übergeordneten Einheit automatisch aktualisiert. So aktualisiert zum Beispiel die Aktualisierung der Version des Befehls *Create Volume* den Workflow *Create an NFS Volume*, da der Workflow *Create an NFS Volume* eine unmittelbare übergeordnete Entität des Befehls *Create Volume* ist. Die automatische Aktualisierung auf Versionen wird wie folgt angewendet:
+
+* Durch Ändern der Hauptversion einer Entität wird die Nebenversion ihrer unmittelbaren übergeordneten Einheiten aktualisiert.
+* Durch Ändern der Nebenversion einer Entität wird die Revisionsversion ihrer unmittelbaren übergeordneten Einheiten aktualisiert.
+* Durch das Ändern der Revisionsversion einer Entität wird kein Teil der Version ihrer unmittelbaren übergeordneten Entitäten aktualisiert.
+
+
+In der folgenden Tabelle werden die WFA Einheiten und ihre unmittelbaren übergeordneten Einheiten aufgeführt.
+
+[cols="2*"]
+|===
+| Einheit | Unmittelbare übergeordnete Einheit 
+
+
+ a| 
+Cache-Abfrage
+ a| 
+* Typ der Datenquelle
+
+
+
+
+ a| 
+Vorlage
+ a| 
+* Workflow
+
+
+
+
+ a| 
+Funktion
+ a| 
+* Workflow
+* Vorlage
+
+
+
+NOTE: Wenn eine Funktion Sonderzeichen aus speziellen oder gemischten Groß-/Kleinschreibung enthält, wird die Version ihrer unmittelbaren übergeordneten Einheiten möglicherweise nicht aktualisiert.
+
+
+
+ a| 
+Wörterbuch
+ a| 
+* Vorlage
+* Filtern
+* Cache-Abfrage
+* Befehl
+* Datenquelltypen, die Skriptmethode verwenden
+
+
+
+
+ a| 
+Befehl
+ a| 
+* Workflow
+
+
+
+
+ a| 
+Filtern
+ a| 
+* Finder
+* Workflow
+
+
+
+
+ a| 
+Finder
+ a| 
+* Workflow
+
+
+
+
+ a| 
+Typ der Datenquelle
+ a| 
+Keine
+
+
+
+ a| 
+Workflow
+ a| 
+Keine
+
+|===
+Sie können in WFA nach einer Entität suchen, entweder unter Verwendung der Teile der Versionsnummer oder der vollständigen Versionsnummer.
+
+Wenn Sie eine übergeordnete Entität löschen, werden die untergeordneten Entitäten beibehalten und ihre Version zum Löschen nicht aktualisiert.
+
+
+
+== Funktionsweise der Versionierung beim Importieren von Einheiten
+
+Wenn Sie Entitäten aus Versionen vor Workflow Automation 2.2 importieren, werden die Entitäten standardmäßig als 1.0 versioniert. Wenn die importierte Einheit bereits im WFA-Server vorhanden ist, wird die vorhandene Einheit mit der importierten Einheit überschrieben.
+
+Nachfolgend sind die potenziellen Änderungen an WFA Einheiten während eines Imports aufgeführt:
+
+* Upgrade von Einheiten
++
+Die Einheiten werden durch eine neuere Version ersetzt.
+
+* Rollback von Einheiten
++
+Die Entitäten werden durch eine frühere Version ersetzt.
+
++
+
+NOTE: Wenn Sie ein Rollback einer Entität durchführen, wird die Version ihrer unmittelbaren übergeordneten Einheiten aktualisiert.
+
+* Import neuer Elemente
+
+
+
+NOTE: Elemente können nicht selektiv aus einem importiert werden `.dar` Datei:
+
+Wird eine neuere Version einer Entität importiert, wird die Version ihrer unmittelbaren übergeordneten Entitäten aktualisiert.
+
+Wenn die importierte übergeordnete Entität mehrere untergeordnete Elemente enthält, wird nur der höchste Grad der Änderung (Major, Minor oder Revision) an die untergeordneten Entitäten auf die übergeordnete Entität angewendet. Die folgenden Beispiele erklären, wie diese Regel funktioniert:
+
+* Bei einer importierten übergeordneten Einheit wird die untergeordnete Einheit mit einer geringfügigen Änderung und einer anderen untergeordneten Einheit mit einer Revisionsänderung auf die übergeordnete Entität angewendet.
++
+Der Revisionsteil der Version des Elternteils wird erhöht.
+
+* Bei einer importierten übergeordneten Einheit wird die Hauptänderung auf die übergeordnete Entität angewendet, wenn eine untergeordnete Einheit mit einer wesentlichen Änderung und eine andere untergeordnete Einheit mit einer geringfügigen Änderung vorhanden ist.
++
+Der kleine Teil der Elternversion wird erhöht.
+
+
+
+
+
+== Beispiel, wie sich die Versionen der importierten untergeordneten Elemente auf die Version des Elternteils auswirken
+
+Berücksichtigen Sie folgenden Workflow in WFA: „`Create Volume and Export Using NFS - Custom`“ 1.0.0.
+
+Folgende Befehle sind im Workflow enthalten:
+
+* „`Exportrichtlinie Erstellen - Benutzerdefiniert`“ 1.0.0
+* „`Create Volume - Custom`“ 1.0.0
+
+
+Die Befehle der .dar-Datei, die importiert werden soll, sind wie folgt:
+
+* „`Exportrichtlinie Erstellen - Benutzerdefiniert`“ 1.1.0
+* „`Create Volume - Custom`“ 2.0.0
+
+
+Wenn Sie diese dar-Datei importieren, wird die Nebenversion des Workflows „`Create Volume and Export Using NFS - Custom`“ auf 1.1 erhöht.

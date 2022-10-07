@@ -1,0 +1,104 @@
+---
+permalink: help/reference-row-repetition-details-dialog-box.html 
+sidebar: sidebar 
+keywords: row, repetition, details, dialog box, enable, specify, parameters, row, repeated 
+summary: Im Dialogfeld Zeilendestwiederholungsdetails können Sie festlegen, wie die Parameter in der Zeile wiederholt werden sollen. 
+---
+= Dialogfeld „Zeilendwiederholungsdetails“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Zeilendestwiederholungsdetails können Sie festlegen, wie die Parameter in der Zeile wiederholt werden sollen.
+
+
+
+== Wiederholungen
+
+Ermöglicht die Auswahl der gewünschten Wiederholungsoption. Die Option *Anzahl der Zeiten* ist standardmäßig ausgewählt.
+
+* * Anzahl der Zeiten*
++
+Ermöglicht Ihnen die Angabe folgender Optionen:
+
++
+** Die Anzahl der Male, die die bestimmte Zeile ausgeführt werden soll
+** Indexvariable
+** Variablen
+** * Anzahl der Zeiten*
++
+Ermöglicht die Angabe einer Ziffer für die Anzahl der Male, die die bestimmte Zeile ausgeführt werden soll.
+
+** *Indexvariable*
++
+Ermöglicht die Angabe des Namens der Indexvariable für die Zeilenwiederholung.
+
+** *Variablen*
++
+Ermöglicht die Verwendung zusätzlicher Variablen, die während der Zeilenwiederholung verwendet werden müssen.
+
++
+*** *Hinzufügen*
++
+Fügt eine neue Zeile in der Variablentabelle hinzu.
+
+*** *Entfernen*
++
+Entfernt die ausgewählte Zeile aus der Variablentabelle.
+
+
+
+
+
+* * Für jede Ressource in einer Gruppe*
++
+Ermöglicht Ihnen die Angabe folgender Optionen:
+
++
+** Ressourcentyp
+** Kriterien Für Die Ressourcensuche
+** Ressourcenvariable
+** Indexvariable
+** Variable Gruppengröße
+** Variablen
+** *Ressourcentyp*
++
+Ermöglicht die Auswahl des Ressourcentyps.
+
+** *Kriterien Für Die Ressourcensuche*
++
+Öffnet das Dialogfeld Ressourcenauswahl, in dem Sie die Kriterien für die Suche nach Ressourcen des ausgewählten Ressourcentyps festlegen können. Die Schleife wird für jede gesuchte Ressource basierend auf den angegebenen Kriterien ausgeführt.
+
+** *Ressourcenvariable*
++
+Ermöglicht die Eingabe eines Namens für die Ressourcenvariable.
+
+** *Indexvariable*
++
+Ermöglicht die Angabe des Index für die Zeilenwiederholung.
+
+** *Gruppengröße Variable*
++
+Ermöglicht die Eingabe eines Namens für die Gruppengröße-Variable.
+
+** *Variablen*
++
+Ermöglicht die Verwendung zusätzlicher Variablen, die während der Zeilenwiederholung verwendet werden müssen.
+
+
+
+* *Befehlsschaltflächen*
++
+** *OK*
++
+Speichert die Einstellungen und schließt das Dialogfeld.
+
+** *Abbrechen*
++
+Speichert ggf. keine Änderungen und schließt das Dialogfeld.
+
+
+
+

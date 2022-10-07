@@ -1,0 +1,84 @@
+---
+permalink: help/reference-edit-filter-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, filter, dialog box, enable 
+summary: Im Dialogfeld Filter bearbeiten können Sie einen Filter bearbeiten. 
+---
+= Dialogfeld „Filter bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Filter bearbeiten können Sie einen Filter bearbeiten.
+
+* Registerkarte Eigenschaften
+* Registerkarte Abfrage
+
+
+
+
+== Registerkarte Eigenschaften
+
+Auf der Registerkarte *Eigenschaften* können Sie den Namen des Filters bearbeiten, ein Wörterbuchobjekt auswählen und die Beschreibung des Filters bearbeiten.
+
+* *Name*
++
+Ermöglicht Ihnen die Bearbeitung des Filternamens.
+
+* *Typ*
++
+Ermöglicht die Auswahl eines Wörterbuchobjekts aus der Liste.
+
+* *Entity Version*
++
+Ermöglicht die Eingabe der Versionsnummer für den Filter in `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Beschreibung*
++
+Ermöglicht Ihnen die Bearbeitung der Beschreibung für den Filter.
+
+
+
+
+
+== Registerkarte Abfrage
+
+Hier können Sie die SQL-Abfrage, die Beschriftung und die Beschreibung der Attribute bearbeiten.
+
+* *SQL Query*
++
+Ermöglicht Ihnen die Bearbeitung der SQL-Abfrage des Filters.
+
+* *Eingabeparameter-Tabelle*
++
+Zeigt die Liste der Parameter aus der von Ihnen eingegebenen SQL-Abfrage an, die bei Verwendung des Filters Benutzereingaben erfordern. Sie können die Spalte *Etikett* oder die Spalte *Beschreibung* eines Parameters anklicken, um die Bezeichnung oder die Beschreibung zu bearbeiten.
+
+* *Tabelle Attribute zurückgegeben*
++
+Zeigt die Liste der zurückgegebenen Attribute aus der SQL-Abfrage an.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Test*
++
+Ermöglicht das Testen des Filters.
+
+* *Aktualisieren*
++
+Füllt ggf. die Tabelle *Eingabeparameter* und die Tabelle *zurückgegebene Attribute* mit geänderten Werten aus.
+
+* *Speichern*
++
+Speichert den Filter und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Speichert die Änderungen nicht, falls vorhanden, und schließt das Dialogfeld.
+
+

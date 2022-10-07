@@ -1,0 +1,121 @@
+---
+permalink: help/reference-new-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: new, data, source, dialog box, enable, add 
+summary: Im Dialogfeld Neue Datenquelle können Sie eine neue Datenquelle hinzufügen. 
+---
+= Dialogfeld „Neue Datenquelle“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Neue Datenquelle können Sie eine neue Datenquelle hinzufügen.
+
+
+
+== Eigenschaften der Datenquellenkonfiguration
+
+* *Name*
++
+Ermöglicht die Angabe eines Namens für die Datenquelle.
+
+* *Datenquellentyp*
++
+Ermöglicht die Auswahl des Datenquelltyps, z. B. Active IQ Unified Manager - 6.0 (MYSQL).
+
++
+Wenn Sie einen Datenquellentyp auswählen, den Port, das Schema, den Benutzernamen, das Passwort, Die Felder Intervall (Minuten) und Timeout (s) werden mit Daten gefüllt.
+
++
+
+NOTE: Wenn Sie OnCommand Workflow Automation (WFA) Datensicherungs-Workflows über einen Active IQ Unified Manager Server ausführen möchten, müssen Sie WFA auf dem Active IQ Unified Manager Server einrichten.
+
++
+Weitere Informationen finden Sie in der Online-Hilfe _OnCommand Unified Manager_.
+
+* *Hostname*
++
+Ermöglicht die Angabe des Host-Namens oder der IP-Adresse (IPv4 oder IPv6) für die Datenquelle.
+
++
+
+NOTE: Der Active IQ Unified Manager-Datenquellentyp unterstützt keine IPv6-Adressen.
+
+* *Port*
++
+Zeigt ggf. die zugehörige Portnummer für den ausgewählten Datenquelltyp an.
+
++
+Sie können den Standardport ändern und einen anderen Port für die Datenquelle angeben.
+
+* *Schema*
++
+Zeigt das Schema an, das dem ausgewählten Datenquelltyp zugeordnet ist - z. B. _cm_Storage_ für Active IQ Unified Manager - 6.0 (MYSQL).
+
++
+Diese Eigenschaft kann nicht geändert werden.
+
+* *Benutzername*
++
+Zeigt ggf. den zugeordneten Benutzernamen für den ausgewählten Datenquelltyp an.
+
++
+Sie müssen den entsprechenden Benutzernamen für diese Datenquelle angeben, um den Standardbenutzernamen zu überschreiben:
+
++
+** Bei Active IQ Unified Manager-Versionen vor 6.0 müssen Sie den Benutzernamen eingeben, den Sie bei der Ausführung von ocsetup zum Überschreiben der Standardanmeldeinformationen verwendet haben.
+** Für Active IQ Unified Manager 6.0 und höher müssen Sie den Benutzernamen des Datenbankbenutzerkontos eingeben, das Sie auf dem Active IQ Unified Manager-Server erstellt haben.
+** Für Performance Advisor müssen Sie den Benutzernamen eines Active IQ Unified Manager-Benutzers mit einer Mindestrolle von GlobalRead eingeben.
+
+
+* *Passwort*
++
+Ermöglicht die Angabe eines Kennworts für den ausgewählten Datenquelltyp.
+
++
+Sie müssen ein Passwort angeben, um das Standardpasswort für den Benutzernamen dieser Datenquelle zu überschreiben:
+
++
+** Bei Active IQ Unified Manager-Versionen vor 6.0 müssen Sie das Kennwort eingeben, das Sie beim Ausführen von ocsetup zum Überschreiben der Standardanmeldeinformationen verwendet haben.
+** Für Active IQ Unified Manager 6.0 und höher müssen Sie das Passwort des Datenbank-Benutzerkontos eingeben, das Sie auf dem Active IQ Unified Manager-Server erstellt haben.
+** Für Performance Advisor müssen Sie das Passwort eines Active IQ Unified Manager-Benutzers mit einer Mindestrolle von GlobalRead eingeben.
+
+
+* * Datenbank*
+* *Intervall (Minuten)*
++
+Mit dieser Option können Sie auf den Wert klicken und ein Intervall (in Minuten) mithilfe der nach-oben- und nach-unten-Pfeile auswählen.
+
++
+
+NOTE: Wenn das Intervall auf Null (0) gesetzt ist, ist die automatische Probenahme deaktiviert.
+
++
+Das Standardintervall für die Datenprobe lautet:
+
++
+** Script-basierte Datenquelle: 1440 (Performance und vc)
+** SQL-basierter Datenquelltyp: 30 (cm_Storage, Storage und cm_Performance)
+
+
+* *Siehe Setup-Bedienungsanleitung*
++
+Öffnet das Dialogfeld „Setup Instruction Guide“, in dem Sie die Anweisungen zum Einrichten der Datenquelle angeben können.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die Konfigurationseinstellungen und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

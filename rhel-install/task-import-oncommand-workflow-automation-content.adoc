@@ -1,0 +1,37 @@
+---
+permalink: rhel-install/task-import-oncommand-workflow-automation-content.html 
+sidebar: sidebar 
+keywords: import, oncommand, workflow, automation, content 
+summary: 'Sie können WFA Inhalte (User-created OnCommand Workflow Automation) wie Workflows, Finder und Befehle importieren. Sie können auch Inhalte importieren, die von einer anderen WFA Installation exportiert werden, Inhalte, die aus dem Storage Automation Store oder der WFA Community heruntergeladen werden, sowie Pakete einschließlich Data ONTAP PowerShell Toolkits und Perl NMSDK Toolkits.' 
+---
+= Importieren Sie OnCommand Workflow Automation-Inhalte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können WFA Inhalte (User-created OnCommand Workflow Automation) wie Workflows, Finder und Befehle importieren. Sie können auch Inhalte importieren, die von einer anderen WFA Installation exportiert werden, Inhalte, die aus dem Storage Automation Store oder der WFA Community heruntergeladen werden, sowie Pakete einschließlich Data ONTAP PowerShell Toolkits und Perl NMSDK Toolkits.
+
+* Sie benötigen Zugriff auf den WFA Inhalt, den Sie importieren möchten.
+* Der zu importierende Inhalt muss auf einem System erstellt worden sein, das dieselbe oder eine frühere Version von WFA ausführt.
++
+Wenn beispielsweise WFA 2.2 ausgeführt wird, können Sie keine Inhalte importieren, die mit WFA 3.0 erstellt wurden.
+
+* Sie können in N-2-Versionen von WFA entwickelte Inhalte nur in WFA 5.1 importieren.
+* Wenn die .dar-Datei auf NetApp zertifizierte Inhalte verweist, müssen die NetApp-zertifizierten Content-Packs importiert werden.
++
+Die NetApp zertifizierten Content Packs können im Storage Automation Store heruntergeladen werden. Überprüfen Sie in der Dokumentation des Pakets, ob alle Anforderungen erfüllt sind.
+
+
+
+.Schritte
+. Melden Sie sich über einen Webbrowser bei WFA an.
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Wartung* auf *Workflows importieren*.
+. Klicken Sie auf *Datei*, um die .dar-Datei auszuwählen, die Sie importieren möchten, und klicken Sie dann auf *Import*.
+. Klicken Sie im Dialogfeld Erfolg importieren auf *OK*.
+
+
+*Verwandte Informationen*
+
+http://community.netapp.com/t5/OnCommand-Storage-Management-Software-Articles-and-Resources/tkb-p/oncommand-storage-management-software-articles-and-resources/label-name/workflow%20automation%20%28wfa%29?labels=workflow+automation+%28wfa%29["NetApp Community: OnCommand Workflow Automation"^]

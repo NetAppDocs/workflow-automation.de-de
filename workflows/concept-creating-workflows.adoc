@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-workflows.html 
+sidebar: sidebar 
+keywords: predefined, workflows, match, requirements, create, understand, capabilities, available, designer, checklist 
+summary: Wenn die vordefinierten Workflows Ihren Anforderungen nicht entsprechen, können Sie den erforderlichen Workflow erstellen. Bevor Sie Ihre Workflows erstellen, sollten Sie sich über die im WFA Designer verfügbaren Funktionen informieren und eine Workflow-Checkliste erstellen. 
+---
+= Workflows werden erstellt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die vordefinierten Workflows Ihren Anforderungen nicht entsprechen, können Sie den erforderlichen Workflow erstellen. Bevor Sie Ihre Workflows erstellen, sollten Sie sich über die im WFA Designer verfügbaren Funktionen informieren und eine Workflow-Checkliste erstellen.

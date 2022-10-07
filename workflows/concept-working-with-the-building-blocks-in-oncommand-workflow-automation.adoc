@@ -1,0 +1,28 @@
+---
+permalink: workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: workflow, automation, consist, several, building, blocks, include, library, predefined, provide, create, requirements, organization 
+summary: 'Die Workflow Automation (WFA) Workflows bestehen aus mehreren Bausteinen. WFA enthält eine Bibliothek mit vordefinierten Bausteinen. Sie können die Bausteine verwenden, die WFA zur Erstellung von Workflows bietet, die den Anforderungen Ihres Unternehmens entsprechen.' 
+---
+= Arbeiten mit den Bausteinen in OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Workflow Automation (WFA) Workflows bestehen aus mehreren Bausteinen. WFA enthält eine Bibliothek mit vordefinierten Bausteinen. Sie können die Bausteine verwenden, die WFA zur Erstellung von Workflows bietet, die den Anforderungen Ihres Unternehmens entsprechen.
+
+WFA bietet die Struktur für Storage-Automatisierungsprozesse. Die Flexibilität von WFA hängt davon ab, wie die Workflows mithilfe der Workflow-Bausteine erstellt werden.
+
+Die WFA Bausteine lauten wie folgt:
+
+* Wörterbucheinträge
+* Befehle
+* Filter
+* Finder
+* Funktionen
+* Vorlagen
+
+
+Um Sie beim Erstellen Ihrer Workflows zu unterstützen, sollten Sie verstehen, wie die Bausteine in WFA verwendet werden.

@@ -1,0 +1,175 @@
+---
+permalink: help/reference-workflows-window.html 
+sidebar: sidebar 
+keywords: workflow, window, display, available, workflow, alphabetical order, access, design 
+summary: Das Fenster Workflows zeigt alle verfügbaren Workflows in alphabetischer Reihenfolge an. Sie können auf dieses Fenster zugreifen, indem Sie Workflow-Design > Workflows auswählen. 
+---
+= Workflows-Fenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Fenster Workflows zeigt alle verfügbaren Workflows in alphabetischer Reihenfolge an. Sie können auf dieses Fenster zugreifen, indem Sie *Workflow-Design* > *Workflows* wählen.
+
+Abhängig von Ihren Rollen- und Kontoberechtigungen wird dieses Fenster möglicherweise nicht angezeigt.
+
+* Workflow-Tabelle
+* Symbolleiste
+
+
+
+
+== Workflow-Tabelle
+
+In der Tabelle Workflows werden die verfügbaren Workflows aufgeführt. Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+Die Workflow-Tabelle enthält die folgenden Spalten:
+
+* * Zertifizierung*
++
+Gibt an, ob der Workflow vom Benutzer erstellt wurde (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), Gemeinschaft (image:../media/community_certification.gif[""]), Benutzer-gesperrt (image:../media/lock_icon_wfa.gif[""]) Oder NetApp zertifiziert (image:../media/netapp_certified.gif[""]).
+
++
+Sie können nach Workflows suchen, indem Sie die gewünschten Optionsfelder aus der Filterliste auswählen.
+
+* *Name*
++
+Zeigt den Namen des Workflows an.
+
++
+Sie können nach einem Workflow suchen, indem Sie seinen Namen in das Textfeld * Suchen* eingeben.
+
+* *Schema*
++
+Zeigt die Schemata an, die mit Workflows verknüpft sind. Ein Schema repräsentiert das Datenmodell für ein System. beispielsweise enthält ein vc-Schema Daten, die für Ihre virtuelle Umgebung relevant sind, wie z. B. Virtual Machines, Hosts und Datastores.
+
++
+Sie können nach einem Workflow suchen, indem Sie eines seiner Schemata in das Textfeld * Suchen* eingeben.
+
+* *Entity Version*
++
+Zeigt die Versionsnummer des Objekts in an `major.minor.revision` Format – z. B. 1.0.0.
+
++
+Sie können nach einem Workflow suchen, indem Sie die Versionsnummer in das Textfeld * Suchen* eingeben.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Workflows an.
+
++
+Sie können nach einem Workflow suchen, indem Sie dessen Beschreibung in das Textfeld * Suchen* eingeben.
+
+* *OS-Kompatibilität*
++
+Gibt an, ob der Workflow mit dem Host-Betriebssystem kompatibel ist.
+
+* *Min. Software-Versionen*
++
+Gibt die Mindestversionen der Software an, die zum Ausführen des Workflows erforderlich sind. Die Software bietet beispielsweise Clustered Data ONTAP 8.2.0 und vCenter 6.0. Die Versionen werden als kommagetrennte Werte angezeigt.
+
+* *Kategorien*
++
+Zeigt die benutzerdefinierten Beschriftungen an, die zu Workflows zugeordnet sind.
+
++
+Sie können die Kategorien verwenden, um Sammlungen von Workflows zu organisieren. Um beispielsweise Workflows besser zu unterscheiden, kann es eine separate Kategorie für Bereitstellungsaufgaben, eine Kategorie für Wartungsaufgaben und eine Kategorie für Ausmusterungsaufgaben geben. Zusätzlich werden Kategorien verwendet, um die Workflow-Ausführung für bestimmte Operatoren einzuschränken.
+
++
+Sie können nach Workflows suchen, indem Sie eine Kategorie im Textfeld * Suchen* eingeben.
+
+* *Zuletzt Aktualisiert Am*
++
+Zeigt das Datum und die Uhrzeit an, zu der der Workflow zuletzt aktualisiert wurde.
+
++
+Sie können nach Workflows suchen, indem Sie die gewünschte Zeitkategorie aus der Filter-Dropdown-Liste auswählen.
+
+* *Aktualisiert Von*
++
+Zeigt den Namen des Benutzers an, der den Workflow aktualisiert hat.
+
++
+Sie können nach Workflows suchen, indem Sie den Benutzernamen in das Textfeld * Suchen* eingeben.
+
+* *Gesperrt Von*
++
+Zeigt den Namen des Benutzers an, der den Workflow gesperrt hat.
+
++
+Sie können nach Workflows suchen, indem Sie den Benutzernamen in das Textfeld * Suchen* eingeben.
+
+* *Bereit für die Produktion*
++
+Gibt an, ob der Workflow als bereit für die Produktion markiert ist (wahr oder falsch).
+
++
+Sie können nach Workflows suchen, indem Sie in der Filterliste das Kontrollkästchen gewünschte Produktionsoption auswählen.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/new_wfa_icon.gif["Neues Symbol"] (Neu)*
++
+Öffnet das Fenster Neuer Workflow, in dem Sie die Details für den neuen Workflow eingeben können.
+
+* *image:../media/edit_wfa_icon.gif["Symbol bearbeiten"] (Bearbeiten)*
++
+Öffnet den Workflow-Editor für den ausgewählten Workflow, mit dem Sie den Workflow bearbeiten können. Sie können auch auf den Workflow doppelklicken, um den Workflow-Editor zu öffnen.
+
+* *image:../media/clone_wfa_icon.gif["Klon-Symbol"] (Klon)*
++
+Öffnet das Fenster Neuer Workflow <Selected_Workflow_Name> - Copy, in dem Sie einen Klon oder eine Kopie des ausgewählten Workflows erstellen können.
+
+* *image:../media/lock_wfa_icon.gif["Symbol sperren"] (Sperre)*
++
+Öffnet das Dialogfeld Workflow-Bestätigung sperren, in dem Sie den ausgewählten Workflow sperren können. Diese Option ist nur für die von Ihnen erstellten Workflows aktiviert.
+
+* *image:../media/unlock_wfa_icon.gif["Symbol entsperren"] (Entsperren)*
++
+Öffnet das Dialogfeld Workflow-Bestätigung entsperren, in dem Sie den ausgewählten Workflow entsperren können. Diese Option ist nur für die von Ihnen gesperrten Workflows aktiviert. Administratoren können jedoch Workflows freischalten, die von anderen Benutzern gesperrt sind.
+
+* *image:../media/delete_wfa_icon.gif["Symbol Löschen"] (Löschen)*
++
+Öffnet das Dialogfeld Workflow-Bestätigung löschen, in dem Sie den ausgewählten Workflow löschen können. Diese Option ist nur für die von Ihnen erstellten Workflows aktiviert.
+
+* *image:../media/export_wfa_icon.gif["Symbol „Exportieren“"] (Export)*
++
+Öffnet das Dialogfeld Datei-Download, in dem Sie den ausgewählten Workflow als .dar-Datei speichern können. Diese Option ist nur für die von Ihnen erstellten Workflows aktiviert.
+
+* *image:../media/execute_wfa_icon.gif["Symbol „Ausführen“"] (Ausführen)*
++
+Öffnet das Dialogfeld Workflow ausführen <Selected_Workflow_Name> für den ausgewählten Workflow, in dem Sie den Workflow ausführen können.
+
+* *image:../media/add_to_pack.png["Zum Pack-Symbol hinzufügen"] (Zum Paket Hinzufügen)*
++
+Öffnet das Dialogfeld zu Pack-Workflow hinzufügen, in dem Sie den Workflow und seine zuverlässigen Elemente einem Paket hinzufügen können, das bearbeitbar ist.
+
++
+
+NOTE: Die Funktion Add to Pack ist nur für Workflows aktiviert, für die die Zertifizierung auf *Keine.* eingestellt ist
+
+* *image:../media/remove_from_pack.png["Aus Packungssymbol entfernen"] (Aus Packung Entfernen)*
++
+Öffnet das Dialogfeld aus Pack-Workflow entfernen für den ausgewählten Workflow, in dem Sie den Workflow löschen oder aus dem Paket entfernen können.
+
++
+
+NOTE: Die Funktion „aus Pack entfernen“ ist nur für Workflows aktiviert, für die die Zertifizierung auf *Keine.* eingestellt ist
+
+

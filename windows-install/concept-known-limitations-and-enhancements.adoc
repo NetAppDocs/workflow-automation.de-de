@@ -1,0 +1,23 @@
+---
+permalink: windows-install/concept-known-limitations-and-enhancements.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations, enhancements 
+summary: 'OnCommand Workflow Automation (WFA) 5.1 umfasst einige Einschränkungen und nicht unterstützte Funktionen, auf die Sie vor dem Installieren und Konfigurieren von WFA achten sollten.' 
+---
+= Bekannte Einschränkungen und Verbesserungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) 5.1 umfasst einige Einschränkungen und nicht unterstützte Funktionen, auf die Sie vor dem Installieren und Konfigurieren von WFA achten sollten.
+
+* *Erstellen von Kategorienamen*
++
+** Wenn ein Bindestrich (-) in einem Kategorienamen verwendet wird, wird er nach dem Speichern der Kategorie durch ein Leerzeichen ersetzt. Wenn beispielsweise der Kategoriename "abc-xyz" angegeben wird, wird der Kategoriename als "abc xyz" gespeichert, wobei der Bindestrich entfernt wird. Um dieses Problem zu vermeiden, verwenden Sie keine Bindestriche in Kategorienamen.
+** Wenn ein Doppelpunkt (:) in einem Kategorienamen verwendet wird, wird die Textzeichenfolge vor dem Doppelpunkt nach dem Speichern der Kategorie ignoriert. Wenn beispielsweise der Kategoriename "abc : xyz" angegeben wird, wird der Kategoriename als "xyz" gespeichert, wobei die "abc"-Zeichenfolge entfernt wird. Um dieses Problem zu vermeiden, verwenden Sie keine Doppelpunkte in Kategorienamen.
+** Es gibt keine Prüfung, um zu verhindern, dass zwei Kategorien denselben Namen haben. Dies führt jedoch zu einem Problem bei der Auswahl dieser Kategorien im Navigationsbereich. Um dieses Problem zu vermeiden, stellen Sie sicher, dass jeder Kategoriename eindeutig ist.
+
+
+

@@ -1,0 +1,33 @@
+---
+permalink: windows-install/concept-restoring-the-wfa-database.html 
+sidebar: sidebar 
+keywords: restore, oncommand, workflow, automation, database 
+summary: 'Zur Wiederherstellung der OnCommand Workflow Automation Datenbank (WFA) gehören auch die Wiederherstellung der Systemkonfigurationseinstellungen und der Cacheinformationen, einschließlich der Playground-Datenbank.' 
+---
+= Wiederherstellen der OnCommand Workflow Automation-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zur Wiederherstellung der OnCommand Workflow Automation Datenbank (WFA) gehören auch die Wiederherstellung der Systemkonfigurationseinstellungen und der Cacheinformationen, einschließlich der Playground-Datenbank.
+
+* Durch Wiederherstellen einer WFA Datenbank wird die aktuelle WFA Datenbank gelöscht.
+* Sie können ein Backup einer WFA Datenbank nur auf einem System wiederherstellen, auf dem dieselbe oder eine höhere Version von WFA ausgeführt wird.
++
+Wenn Sie beispielsweise ein Backup auf einem System erstellt haben, auf dem WFA 4.2 ausgeführt wird, kann das Backup nur auf Systemen wiederhergestellt werden, auf denen WFA 4.2 oder höher ausgeführt wird.
+
+* Nach Abschluss des Wiederherstellungsvorgangs wird das WFA SSL-Zertifikat durch das SSL-Zertifikat in der Backup-Datei ersetzt.
+
+
+[NOTE]
+====
+* Während der Disaster Recovery ist ein umfassender Restore von WFA Datenbanken und Konfigurationen erforderlich und kann sowohl in Standalone- als auch in Hochverfügbarkeitsumgebungen eingesetzt werden.
+* Ein umfassendes Backup kann nicht über die Web UI erstellt werden.
++
+Sie können die WFA Datenbank während des Disaster Recovery nur mit den CLI-Befehlen oder REST-APIs sichern und wiederherstellen.
+
+
+
+====

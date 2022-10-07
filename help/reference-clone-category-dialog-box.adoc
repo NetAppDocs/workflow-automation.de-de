@@ -1,0 +1,62 @@
+---
+permalink: help/reference-clone-category-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, category, dialog box, enable, copy, workflow 
+summary: Im Dialogfeld Kategorie klonen können Sie eine Workflow-Kategorie kopieren und die Kategorie bearbeiten. 
+---
+= Dialogfeld „Kategorie klonen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Kategorie klonen können Sie eine Workflow-Kategorie kopieren und die Kategorie bearbeiten.
+
+* *Name*
++
+Ermöglicht Ihnen die Bearbeitung des Namens für die Kategorie. Der Name der Kategorie, die Sie zum Klonen ausgewählt haben, wird als Name für den Klon verwendet und standardmäßig mit - copy angehängt.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung für die Kategorie eingeben.
+
+* *Verfügbare Workflows*
++
+Zeigt alle verfügbaren Workflows an, die nicht in das Feld Ausgewählte Workflows verschoben werden.
+
+* *Ausgewählte Workflows*
++
+Zeigt alle Workflows an, die Sie für die Kategorie ausgewählt haben.
+
+* *Kategorie für Workflow-Autorisierung*
++
+Ermöglicht Ihnen die Auswahl von Benutzern mit Bedienerrolle, die die Kategorie ausführen können. Standardmäßig ist das Kontrollkästchen nicht aktiviert und die Kategorie für alle Benutzer verfügbar.
+
+* *Verfügbare Operatoren*
++
+Zeigt alle Benutzer mit Operatorrolle an.
+
+* *Ausgewählte Operatoren*
++
+Zeigt die Benutzer an, die die Kategorie ausführen dürfen.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Auswahltasten*
++
+Ermöglicht das Verschieben des ausgewählten Eintrags von einem Feld in ein anderes.
+
+* *Speichern*
++
+Speichert die Kategorie und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Speichert die Kategorie nicht und schließt das Dialogfeld.
+
+

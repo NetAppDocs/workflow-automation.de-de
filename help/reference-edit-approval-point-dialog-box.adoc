@@ -1,0 +1,64 @@
+---
+permalink: help/reference-edit-approval-point-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, approval, point, dialog box, enable, modify, check point, workflow, execution, resume 
+summary: Im Dialogfeld Genehmigungspunkt bearbeiten können Sie einen Genehmigungspunkt ändern, der als Prüfpunkt in einem Workflow hinzugefügt wurde, um die Ausführung des Workflows anzuhalten und auf Grundlage Ihrer Genehmigung fortzusetzen. 
+---
+= Dialogfeld „Genehmigungspunkt bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Genehmigungspunkt bearbeiten können Sie einen Genehmigungspunkt ändern, der als Prüfpunkt in einem Workflow hinzugefügt wurde, um die Ausführung des Workflows anzuhalten und auf Grundlage Ihrer Genehmigung fortzusetzen.
+
+* *Kommentar eingeben (optional)*
++
+Ermöglicht die Bereitstellung von Informationen wie Änderungszeitpunkt, Benutzer und Kommentaren, sodass Sie sehen können, wann und warum die Workflow-Ausführung angehalten oder fortgesetzt wurde.
+
++
+Die Kommentare zu den Genehmigungspunktpunkten können MVFLEX Expression Language (MVEL)-Ausdrücke enthalten.
+
+* *Geben Sie die Ausführungsbedingung (falls vorhanden)* ein
++
+Hier können Sie die folgenden Bedingungen für die Ausführung eines Befehls angeben:
+
++
+** Immer
++
+Führt den Befehl bedingungslos aus.
+
+** Wenn die folgende Variable gefunden wurde
++
+Ermöglicht Ihnen die Ausführung eines Befehls nur, wenn die angegebene Variable gefunden wurde. Sie können die Variable im Feld angeben.
+
+** Wenn die folgende Variable nicht gefunden wurde
++
+Ermöglicht Ihnen die Ausführung eines Befehls nur, wenn die angegebene Variable nicht gefunden wurde. Sie können die Variable im Feld angeben.
+
+** Wenn der folgende Ausdruck WAHR ist
++
+Ermöglicht die Ausführung eines Befehls nur, wenn der angegebene MVEL-Ausdruck „`true`“ lautet. Sie können den Ausdruck im Feld angeben.
+
+
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Genehmigung Entfernen*
++
+Hiermit können Sie den Genehmigungspunkt entfernen, bevor der Befehl ausgeführt wird.
+
+* *OK*
++
+Ermöglicht Ihnen, die Änderungen an den Einstellungen des Genehmigungspunkts zu ändern.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

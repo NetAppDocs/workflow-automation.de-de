@@ -1,0 +1,94 @@
+---
+permalink: help/reference-new-dictionary-entry-dialog-box.html 
+sidebar: sidebar 
+keywords: new, dictionary, entry, dialog box, enable, create, object, specify, definition 
+summary: Im Dialogfeld Eintrag Neues Wörterbuch können Sie ein neues Wörterbuchobjekt erstellen und eine Definition für das Objekt angeben. 
+---
+= Dialogfeld „Neue Wörterbucheingabe“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Eintrag Neues Wörterbuch können Sie ein neues Wörterbuchobjekt erstellen und eine Definition für das Objekt angeben.
+
+* *Name des Objekttyps*
++
+Ermöglicht die Angabe eines Namens für das Wörterbuchobjekt.
+
+* *Beschreibung*
++
+Ermöglicht die Angabe einer Beschreibung für das Objekt des Wörterbuchs.
+
+* *Schema*
++
+Hiermit können Sie ein Schema auswählen, das dem Objekt zugeordnet werden soll. Sie können benutzerdefinierte Wörterbucheinträge zu den zertifizierten Schemata hinzufügen.
+
+* *Entity Version*
++
+Ermöglicht die Eingabe der Versionsnummer für den Eintrag des Wörterbuchs in `major.minor.revision` Format – z. B. 1.0.0.
+
+
+
+
+
+== Attributtabelle
+
+Hier können Sie eine Liste von Attributen angeben, die das Wörterbuchobjekt definieren.
+
+* *Name*
++
+Ermöglicht die Eingabe eines Namens für das Attribut.
+
+* *Typ*
++
+Hier können Sie den Typ des Attributs auswählen, z. B. String, boolescher Wert und Integer- für die Typüberprüfung. Sie können auch auf einen Wörterbucheintrag aus dem ausgewählten Schema verweisen.
+
+* *String-Länge*
++
+Ermöglicht die Angabe der Länge des Strings in Zahlen, wenn für das Attribut der String ausgewählt ist.
+
+* *Werte*
++
+Hier können Sie eine Liste mit kommagetrennten Werten angeben, wenn der Enum-Typ für das Attribut ausgewählt ist.
+
+* * Natürlicher Schlüssel*
++
+Hier können Sie festlegen, ob das Attribut des Wörterbuchs Teil des natürlichen Schlüssels des Wörterbuchs ist.
+
++
+Ein natürlicher Schlüssel ist die eindeutige Kennung eines Wörterbuchobjekts. Beispielsweise werden qtrees vom qtree-Namen, dem Volume-Namen und der Array-IP-Adresse identifiziert.
+
+* *Gecachte*
++
+Hier können Sie festlegen, ob das Attribut zwischengespeichert werden soll.
+
++
+Ein Wörterbucheintrag kann sowohl zwischengespeicherte Attribute als auch Attribute enthalten, die nicht zwischengespeichert werden. Eine Cache-Tabelle wird erstellt und mit den Attributen gefüllt, die während der Cache-Erfassung des Schemas zum Caching markiert sind. Für ein Wörterbuchobjekt wird eine Cache-Tabelle erstellt, wenn mindestens ein Attribut für den Cache ausgewählt ist.
+
+* *Kann null* sein
++
+Ermöglicht die Angabe, ob der Wert des Attributs null sein kann. Diese Einstellung ist nur für Attribute gültig, die für den Cache ausgewählt wurden.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung für das Attribut angeben.
+
+* *Werte in natürlichen Schlüsselspalten sind Groß- und Kleinschreibung*
++
+Ermöglicht die Angabe, dass die natürlichen Schlüssel Groß- und Kleinschreibung beachten.
+
+* *Befehlsschaltflächen*
++
+** *Zeile hinzufügen*
++
+Ermöglicht das Hinzufügen einer Zeile zur Tabelle, die zum Festlegen eines Attributs verwendet wird.
+
+** *Zeile entfernen*
++
+Ermöglicht das Löschen der ausgewählten Zeile.
+
+
+
+

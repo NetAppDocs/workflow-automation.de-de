@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, cli 
+summary: 'Bei einem Ausfall können Sie die OnCommand Workflow Automation (WFA) Datenbank und die unterstützten Konfigurationen wiederherstellen, die Sie zuvor über die Befehlszeilenschnittstelle (CLI) gesichert haben. Zu den unterstützten Konfigurationen gehören Datenzugriff, HTTP Timeout und SSL-Zertifikate.' 
+---
+= Wiederherstellen der WFA Datenbank über die CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei einem Ausfall können Sie die OnCommand Workflow Automation (WFA) Datenbank und die unterstützten Konfigurationen wiederherstellen, die Sie zuvor über die Befehlszeilenschnittstelle (CLI) gesichert haben. Zu den unterstützten Konfigurationen gehören Datenzugriff, HTTP Timeout und SSL-Zertifikate.
+
+Die folgenden zwei Arten der Wiederherstellung:
+
+* Vollständige Wiederherstellung
+* Regelmäßige Wiederherstellung
+

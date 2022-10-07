@@ -1,0 +1,45 @@
+---
+permalink: windows-install/task-migrate-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: migrate, oncommand, workflow, automation, installation 
+summary: 'Sie können eine Installation von OnCommand Workflow Automation (WFA) migrieren, um den eindeutigen WFA Datenbankschlüssel zu erhalten, der während der WFA Installation installiert ist. Sie können beispielsweise die WFA Installation von einem Windows 2012 Server zu einem Windows 2016 Server migrieren.' 
+---
+= Migrieren der OnCommand Workflow Automation Installation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Installation von OnCommand Workflow Automation (WFA) migrieren, um den eindeutigen WFA Datenbankschlüssel zu erhalten, der während der WFA Installation installiert ist. Sie können beispielsweise die WFA Installation von einem Windows 2012 Server zu einem Windows 2016 Server migrieren.
+
+* Sie müssen diese Vorgehensweise nur durchführen, wenn Sie eine WFA Installation, die den WFA Datenbankschlüssel enthält, auf einen anderen Server migrieren möchten.
+* Beim Wiederherstellen einer WFA Datenbank wird der WFA Schlüssel nicht migriert.
+* Die Migration einer WFA Installation führt keine Migration der SSL-Zertifikate durch.
+* In diesem Verfahren wird der WFA Standardinstallationspfad verwendet.
++
+Wenn Sie während der Installation den Standardspeicherort geändert haben, müssen Sie den geänderten WFA Installationspfad verwenden.
+
+
+
+.Schritte
+. Zugriff auf WFA über einen Webbrowser als Administrator
+. Sichern der WFA Datenbank
+. Öffnen Sie eine Eingabeaufforderung auf dem WFA-Server, und ändern Sie die Verzeichnisse an den folgenden Speicherort: `c:\Program Files\NetApp\WFA\bin`
+. Geben Sie an der Eingabeaufforderung Folgendes ein, um den Datenbankschlüssel abzurufen:
++
+`wfa.cmd -key`
+
+. Notieren Sie den angezeigten Datenbankschlüssel.
+. WFA deinstallieren.
+. Installation von WFA auf dem erforderlichen System
+. Öffnen Sie die Eingabeaufforderung auf dem neuen WFA-Server, und ändern Sie die Verzeichnisse an den folgenden Speicherort: `c:\Program Files\NetApp\WFA\bin`
+. Geben Sie an der Eingabeaufforderung Folgendes ein, um den Datenbankschlüssel zu installieren:
++
+`wfa.cmd -key=yourdatabasekey`
+
++
+Yourdatabasekey ist der Schlüssel, den Sie in der früheren WFA Installation angegeben haben.
+
+. Stellen Sie die WFA Datenbank aus dem von Ihnen erstellten Backup wieder her.
+

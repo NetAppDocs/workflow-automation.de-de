@@ -1,0 +1,48 @@
+---
+permalink: rhel-install/concept-unsupported-features-for-wfa-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations 
+summary: 'OnCommand Workflow Automation (WFA) 5.1 umfasst einige Einschränkungen und nicht unterstützte Funktionen, auf die Sie vor dem Installieren und Konfigurieren von WFA achten sollten.' 
+---
+= Bekannte Einschränkungen für OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) 5.1 umfasst einige Einschränkungen und nicht unterstützte Funktionen, auf die Sie vor dem Installieren und Konfigurieren von WFA achten sollten.
+
+* *LDAP-Authentifizierung*
++
+** Sie können nur den LDAP-Server (Lightweight Directory Access Protocol) für die LDAP-Authentifizierung verwenden.
+** Sie müssen Mitglied einer LDAP-Gruppe sein, um die LDAP-Authentifizierung verwenden zu können.
+** Sie dürfen keinen LDAP-Benutzernamen verwenden, der Teil einer hierarchischen Struktur mehrerer Domänen zur Authentifizierung oder Benachrichtigung ist.
+
+
+
+
+[NOTE]
+====
+Microsoft Active Directory Lightweight Directory Services (AD LDS) wird nicht unterstützt.
+
+====
+* *WFA Datenquellen Typen*
++
+OnCommand Unified Manager 6.0, 6.1 und 6.2 Datenquellen sind in der WFA 4.1 Version veraltet. Diese Datenquellen werden in zukünftigen Versionen nicht unterstützt.
+
+* *WFA installiert auf Linux*
++
+** Zertifizierte Inhalte von Data ONTAP 7-Mode sind im Moment nicht verfügbar.
+** Befehle, die nur PowerShell Code enthalten, sind nicht mit Linux kompatibel.
+** Zertifizierte Befehle für 7-Mode und VMware werden derzeit nicht auf Perl portiert und sind daher nicht mit Linux kompatibel.
+
+
+* *Erstellen von Kategorienamen*
++
+** Wenn ein Bindestrich (-) in einem Kategorienamen verwendet wird, wird er nach dem Speichern der Kategorie durch ein Leerzeichen ersetzt. Wenn beispielsweise der Kategoriename "abc-xyz" angegeben wird, wird der Kategoriename als "abc xyz" gespeichert, wobei der Bindestrich entfernt wird. Um dieses Problem zu vermeiden, verwenden Sie keine Bindestriche in Kategorienamen.
+** Wenn ein Doppelpunkt (:) in einem Kategorienamen verwendet wird, wird die Textzeichenfolge vor dem Doppelpunkt nach dem Speichern der Kategorie ignoriert. Wenn beispielsweise der Kategoriename "abc : xyz" angegeben wird, wird der Kategoriename als "xyz" gespeichert, wobei die "abc"-Zeichenfolge entfernt wird. Um dieses Problem zu vermeiden, verwenden Sie keine Doppelpunkte in Kategorienamen.
+** Es gibt keine Prüfung, um zu verhindern, dass zwei Kategorien denselben Namen haben. Dies führt jedoch zu einem Problem bei der Auswahl dieser Kategorien im Navigationsbereich. Um dieses Problem zu vermeiden, stellen Sie sicher, dass jeder Kategoriename eindeutig ist.
+
+
+

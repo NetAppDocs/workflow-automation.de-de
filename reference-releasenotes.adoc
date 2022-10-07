@@ -1,0 +1,15 @@
+---
+permalink: reference-releasenotes.html 
+sidebar: sidebar 
+keywords: release, notes, new, features, fixed, issues, known, limitations, oncommand, workflow, automation, netapp, 5.1 5.1.1 
+summary: Beschreibt neue Funktionen, Upgrade-Hinweise, feste Probleme, bekannte Einschränkungen und bekannte Probleme. 
+---
+= Versionshinweise zu OnCommand Workflow Automation
+:allow-uri-read: 
+
+
+In den Versionshinweisen werden neue Funktionen, Upgrade-Hinweise, feste Probleme, bekannte Einschränkungen und bekannte Probleme beschrieben.
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2875021["Versionshinweise zu OnCommand Workflow Automation 5.1.1"^]
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2856585["Versionshinweise zu OnCommand Workflow Automation 5.1"^]

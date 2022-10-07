@@ -1,0 +1,110 @@
+---
+permalink: help/reference-new-workflow-window.html 
+sidebar: sidebar 
+keywords: new, workflow, window, display, created, associated, command 
+summary: Im Fenster Neuer Workflow wird ein neu erstellter Workflow und die zugehörigen Befehle angezeigt. 
+---
+= Neues Workflow-Fenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster *Neuer Workflow* wird ein neu erstellter Workflow und die zugehörigen Befehle angezeigt.
+
+
+
+== Neuer Workflow
+
+Im Fenster *Neuer Workflow* wird der Name des Workflows in der Kopfzeile des Fensters angezeigt. Die zugehörigen Befehle werden in Spalten als blaue Felder angezeigt, die in der sequenziellen Reihenfolge der Ausführung dargestellt werden - von links nach rechts, von oben nach unten. Die Variablen und Objekte für jeden Befehl werden als graue Felder in der Spalte des Befehls angezeigt.
+
+* *Legen Sie eine Zeile* ein
++
+Fügt eine neue Zeile über oder unter der ausgewählten Zeile im Workflow hinzu.
+
++
+Klicken Sie auf image:../media/add_row2_wfa_icon.gif[""] Um eine Zeile unter der letzten verfügbaren Zeile hinzuzufügen.
+
+* *Zeile kopieren*
++
+Kopiert die ausgewählte Zeile aus dem Workflow und speichert sie in der Zwischenablage. Beim Kopieren einer Zeile werden die für die Zeile eingestellten Wiederholungsdetails nicht kopiert.
+
+* *Zeile einfügen*
++
+Platziert das letzte in der Zwischenablage gespeicherte Element in einer neuen Zeile unter der ausgewählten Zeile. Für Variablen werden eindeutige Namen verwendet, Variablen in Ausdrücken werden jedoch nicht geändert.
+
+* *Wiederhole die Reihe*
++
+Öffnet das Dialogfeld *Zeilenwiederholungsdetails*.
+
+* *Zeilenwiederholung bearbeiten*
++
+Öffnet das Dialogfeld *Reihenwiederholungsdetails*, in dem Sie den Aktionssatz *Wiederholungsreihe* für die ausgewählte Zeile ändern können.
+
+* *Zeilenwiederholung entfernen*
++
+Bricht die Aktion *Wiederholungsreihe* ab, die im Dialogfeld *Wiederholungsdetails* für die ausgewählte Zeile festgelegt wurde.
+
+* *Bedingung hinzufügen*
++
+Öffnet das Dialogfeld Bedingungen für Zeile <row number>, in dem Sie eine Bedingung auswählen können. Die ausgewählte Bedingung gilt für alle Befehle in der Zeile. Alle Befehle in der Zeile werden nur ausgeführt, wenn die ausgewählte Bedingung erfüllt ist.
+
+* *Zeile entfernen*
++
+Löscht die ausgewählte Zeile aus dem Workflow.
+
+* *Neuer Genehmigungspunkt*
++
+Klicken Sie auf image:../media/approval_point_disabled.gif[""] Öffnen des Dialogfelds *Neuer Genehmigungspunkt*, in dem Sie vor der Ausführung des Befehls einen Genehmigungspunkt hinzufügen können.
+
+* *Genehmigungspunkt Bearbeiten*
++
+Klicken Sie auf image:../media/approval_point_enabled.gif[""] Öffnen des Dialogfelds *Genehmigungspunkt bearbeiten*, in dem Sie den Kommentar zum Genehmigungspunkt bearbeiten können.
+
+* *Befehlsparameter Hinzufügen*
++
+Fügt Parameter für einen Befehl in der ausgewählten Zeile hinzu.
+
++
+Sie können den Cursor unterhalb des ausgewählten Befehls in der gewünschten Zeile platzieren und auf klicken image:../media/add_object_wfa_icon.gif[""] So öffnen Sie das Dialogfeld Parameter für das Dialogfeld <Command_Name>.
+
+* *Befehlsparameter Bearbeiten*
++
+Öffnet das Dialogfeld Parameter für <Command_Name>, mit dem Sie die ausgewählten Parameter für einen Befehl ändern können.
+
++
+Sie können den Cursor über das graue Feld platzieren, das Sie bearbeiten möchten, und auf klicken, um das Dialogfeld Parameter für <Command_Name> zu öffnen.
+
+* *Befehlsparameter Löschen*
++
+Entfernt den Parameter.
+
++
+Sie können den Cursor über das graue Feld bewegen, das Sie löschen möchten, und auf „`X`“ rechts oben im grauen Feld klicken.
+
+
+
+
+
+== Befehlsschaltflächen
+
+Die Befehlsschaltflächen sind unten im Workflow-Fenster verfügbar. Die Befehle können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *Vorschau*
++
+Öffnet das Dialogfeld *Vorschau Workflow*, in dem Sie Benutzereingabeattribute festlegen können.
+
+* *Speichern Unter*
++
+Ermöglicht Ihnen, den Workflow mit einem neuen Namen zu speichern.
+
+* *Speichern*
++
+Speichert den Workflow.
+
+* *Schließen*
++
+Schließt das Fenster. Wenn im Prozess Änderungen an der Konfiguration vorgenommen wurden, wird ein Dialogfeld mit der Bestätigung von *Änderungen speichern* geöffnet, in dem Sie aufgefordert werden, die Änderungen zu speichern, das Fenster zu schließen, ohne Änderungen zu speichern oder den Schließvorgang abzubrechen.
+
+

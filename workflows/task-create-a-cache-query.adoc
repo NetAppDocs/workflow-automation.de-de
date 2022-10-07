@@ -1,0 +1,59 @@
+---
+permalink: workflows/task-create-a-cache-query.html 
+sidebar: sidebar 
+keywords: define, cache, query, cache, information, dictionary, object, wfa database, data source, create, associate, entry, active iq, unified manager 
+summary: Sie können eine Cache-Abfrage definieren, wenn Sie Informationen zu einem Wörterbuchobjekt in der WFA Datenbank von einem Datenquelltyp zwischenspeichern möchten. Sie können eine Cache-Abfrage erstellen und sie einem Wörterbucheintrag und einem oder mehreren Datenquelltypen, wie z. B. Active IQ Unified Manager 6.1, zuordnen. 
+---
+= Erstellen Sie eine Cache-Abfrage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Cache-Abfrage definieren, wenn Sie Informationen zu einem Wörterbuchobjekt in der WFA Datenbank von einem Datenquelltyp zwischenspeichern möchten. Sie können eine Cache-Abfrage erstellen und sie einem Wörterbucheintrag und einem oder mehreren Datenquelltypen, wie z. B. Active IQ Unified Manager 6.1, zuordnen.
+
+Sie müssen die entsprechenden SQL-Syntax kennen, um eine Cache-Abfrage zu erstellen.
+
+.Schritte
+. Klicken Sie Auf *Datenquellendesign* > *Cache-Abfragen*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Wählen Sie im Dialogfeld *Cache-Abfrage hinzufügen* den erforderlichen Eintrag und den Typ der Datenquelle aus.
+. Geben Sie im Abschnitt „`SQL select query`“ die entsprechende SQL-Abfrage ein.
++
+Die folgende SQL-Abfrage speichert Informationen über das Festplattenwörterbuch-Objekt aus dem Datenquelltyp Active IQ Unified Manager 6.1:
+
++
+[listing]
+----
+SELECT
+    disk.objId AS id,
+    disk.name AS NAME,
+    disk.uid AS uid,
+    disk.effectiveInterfaceType AS TYPE,
+    disk.rpm AS rpm,
+    disk.homeNodeId AS home_node_id,
+    disk.ownerNodeId AS owner_node_id,
+    disk.model AS model,
+    disk.serialNumber AS serial_number,
+    disk.totalBytes/1024/1024 AS size_mb,
+    disk.shelf AS shelf,
+    disk.shelfBay AS shelf_bay,
+    disk.pool AS pool,
+    disk.vendor AS vendor,
+    LOWER(disk.raidPosition) AS raid_position,
+    disk.containerTypeRaw AS container_type,
+    disk.clusterId AS cluster_id
+FROM
+    netapp_model_view.disk disk
+----
+. Wenn Sie die SQL-Abfrage testen möchten, klicken Sie auf *Test*.
++
+Wenn Sie mehr als einen Datenquelltyp ausgewählt haben, wird das Dialogfeld „Abfrage des Test-Cache“ geöffnet, in dem Sie den erforderlichen Datenquelltyp auswählen können.
+
++
+Das Testergebnis wird angezeigt.
+
+. Schließen Sie das Dialogfeld.
+. Klicken Sie Auf *Speichern*.
+

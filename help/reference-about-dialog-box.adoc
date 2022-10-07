@@ -1,0 +1,40 @@
+---
+permalink: help/reference-about-dialog-box.html 
+sidebar: sidebar 
+keywords: about, dialog, box, display, details, current, version, install, application 
+summary: Im Dialogfeld Info werden Details zur aktuellen Version der installierten WFA Applikation angezeigt. 
+---
+= Dialogfeld „Info“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Info werden Details zur aktuellen Version der installierten WFA Applikation angezeigt.
+
+
+
+== Informationen zur WFA Version
+
+* *Version*
++
+Zeigt die aktuelle Versionsnummer der installierten WFA Applikation an.
+
++
+Die Versionsnummer hat das folgende Format: `A.B.C.`
+
++
+`A.B.C` Gibt die Versionsnummern von Major.Minor.Maintenance wieder.
+
++
+Beispiel: `2.0.0`.
+
+* *System-ID*
++
+Identifiziert die WFA Systeminstallation für Tracking- und AutoSupport-Zwecke.
+
++
+Dies ist eine eindeutige, vom System generierte Kennung.
+
+

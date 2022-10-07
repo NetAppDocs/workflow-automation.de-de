@@ -1,0 +1,39 @@
+---
+permalink: workflows/task-create-a-finder.html 
+sidebar: sidebar 
+keywords: create, wfa, finder, search, resources, predefined, suitable, required 
+summary: Es lässt sich ein WFA Finder erstellen, der nach Ressourcen sucht, wenn es keinen vordefinierten WFA Finder zur Suche nach den erforderlichen Ressourcen gibt. 
+---
+= Erstellen Sie einen Finder
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es lässt sich ein WFA Finder erstellen, der nach Ressourcen sucht, wenn es keinen vordefinierten WFA Finder zur Suche nach den erforderlichen Ressourcen gibt.
+
+Sie müssen die erforderlichen Filter erstellt haben, die im Finder verwendet werden.
+
+.Schritte
+. Klicken Sie Auf *Workflow-Design* > *Flinders*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Geben Sie auf der Registerkarte *Eigenschaften* des Dialogfelds *Neuer Finder* die erforderlichen Details in die Felder *Name*, *Typ* und *Beschreibung* ein oder wählen Sie diese aus.
+. Wählen Sie auf der Registerkarte *Filter* die gewünschten Filter aus der Liste *Verfügbare Filter* aus und klicken Sie auf image:../media/right_arrow_button.gif["Nach-rechts-Taste"].
++
+Sie können je nach Anforderung Filter hinzufügen oder entfernen.
+
+. Wählen Sie auf der Registerkarte zurückgegebene Attribute die erforderlichen Attribute für den Filter aus der Liste *verfügbar* aus, und klicken Sie auf image:../media/right_arrow_button.gif["Nach-rechts-Taste"].
+. *Optional:* Klicken Sie auf *Test*, um den Finder zu testen.
++
+.. Geben Sie im Dialogfeld *Test Finder <FinderName>* die erforderlichen Testparameter ein.
+.. Deaktivieren Sie das Kontrollkästchen *Reservierungsdaten im Test* verwenden, wenn Sie die Reservierungsdaten nicht zum Testen des Finder verwenden möchten.
+.. Klicken Sie Auf *Test*.
++
+Das Testergebnis wird angezeigt.
+
+.. Schließen Sie das Dialogfeld.
+
+
+. Klicken Sie Auf *Speichern*.
+

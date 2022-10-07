@@ -1,0 +1,79 @@
+---
+permalink: workflows/task-define-filter-rules.html 
+sidebar: sidebar 
+keywords: define, set, rules, filtering, dictionary, entry, resources, units, aggregates, virtual, machines, customize, existing, workflows, create 
+summary: Sie können einen Regelsatz zum Filtern von Ressourcen für Wörterbucheingabentressourcen wie vFiler-Einheiten, Aggregate und Virtual Machines definieren. Sie können die Regeln für vorhandene Workflows und neue Workflows während der Erstellung anpassen. 
+---
+= Definieren Sie Filterregeln
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Regelsatz zum Filtern von Ressourcen für Wörterbucheingabentressourcen wie vFiler-Einheiten, Aggregate und Virtual Machines definieren. Sie können die Regeln für vorhandene Workflows und neue Workflows während der Erstellung anpassen.
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Administrator bei WFA an.
+. Klicken Sie Auf *Workflow Design* > *Workflows*.
+. Doppelklicken Sie im Fenster *Workflows* auf den Workflow, den Sie ändern möchten.
++
+Das Fenster Workflow <Workflow Name> wird angezeigt.
+
+. Definieren Sie einen Regelsatz, indem Sie eine der folgenden Optionen auswählen:
++
+[cols="2*"]
+|===
+| Ihr Ziel ist | Dann tun Sie das... 
+
+
+ a| 
+Suchen Sie nach Ressourcen, wenn die Befehle in einer Zeile wiederholt werden
+ a| 
+.. Klicken Sie auf eine Zeilennummer, und wählen Sie *Zeile wiederholen* aus.
+.. Wählen Sie im Dialogfeld Zeilenwiederholungen aus der Dropdown-Liste *Wiederholungen* die Option *für jede Ressource in der Gruppe* aus.
+.. Wählen Sie einen Ressourcentyp aus.
+.. Klicken Sie auf den Link *Suchkriterien eingeben*.
+
+
+
+
+ a| 
+Suchen Sie nach den in den Befehlseingaben benötigten Ressourcen
+ a| 
+.. Klicken Sie Auf image:../media/add_object_wfa_icon.gif["Symbol zum Hinzufügen eines Befehls"].
+.. Wählen Sie im Dialogfeld Parameter für <command_Name> die Option *aus der Dropdown-Liste *define <dictionary object>* aus, indem Sie nach einem vorhandenen <dictionary Object>* suchen.
+.. Klicken Sie auf den Link *Suchkriterien eingeben*.
+
+
+
+
+ a| 
+Suchen Sie in den Befehlseingaben nach Ressourcen, auf die Variablen verweisen
+ a| 
+.. Klicken Sie Auf image:../media/add_object_wfa_icon.gif["Symbol zum Hinzufügen eines Befehls"].
+.. Wählen Sie im Dialogfeld Parameter für <command_Name> die Option *durch Ausfüllen von Attributen* aus der Dropdown-Liste *define <dictionary object>* aus.
+.. Klicken Sie Auf image:../media/ellipses.gif[""] Für ein mit gekennzeichneter Feld image:../media/resource_selection_icon_wfa.gif["Symbol für Referenzobjekte"].
+
+
+
+
+ a| 
+Name-Befehl-Eingaben des Zeichenfolgentyps
+ a| 
+.. Klicken Sie Auf image:../media/add_object_wfa_icon.gif["Symbol zum Hinzufügen eines Befehls"].
+.. Wählen Sie im Dialogfeld Parameter für <command_Name> die Option *durch Ausfüllen von Attributen* aus der Dropdown-Liste *define <dictionary object>* aus.
+.. Klicken Sie Auf image:../media/ellipses.gif["Symbol für Ellipsen"] Für ein Zeichenfolgenfeld.
+
+
+|===
+. Aktivieren Sie im Dialogfeld * Ressourcenauswahl* das Kontrollkästchen *Filterregeln definieren*.
++
+Wenn Sie eine der Optionen im Dropdown-Dialogfeld Finder der Ressourcenauswahl ausgewählt haben, ist das Kontrollkästchen Filterregeln definieren deaktiviert. Der Wert für den Finder muss auf „`Keine`“ gesetzt werden, damit die Filterregeln definieren aktiviert werden kann.
+
+. Geben Sie das Attribut, den Operator und den Wert für die Regel ein.
++
+Der Wert muss innerhalb einzelner Anführungszeichen angegeben werden. Die Filterregeln können eine oder mehrere Gruppen enthalten.
+
+. Klicken Sie auf *OK*.
+

@@ -1,0 +1,45 @@
+---
+permalink: workflows/reference-guidelines-for-data-source-type.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, data, source, type, use, define, custom, oncommand, workflow, automation 
+summary: 'Beachten Sie die Richtlinien zum Erstellen von Datenquelltypen, die zum Definieren benutzerdefinierter Datenquellen für OnCommand Workflow Automation (WFA) verwendet werden.' 
+---
+= Richtlinien zum Erstellen von Datenquelltypen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beachten Sie die Richtlinien zum Erstellen von Datenquelltypen, die zum Definieren benutzerdefinierter Datenquellen für OnCommand Workflow Automation (WFA) verwendet werden.
+
+Sie können einen Datenquelltyp mit einer der folgenden Methoden definieren:
+
+* SQL: Sie können mithilfe der WFA SQL Richtlinien Abfragen aus Datenquellen definieren, die auf einer externen Datenbank basieren.
+* SKRIPT: Sie können ein PowerShell-Skript schreiben, das die Daten für ein bestimmtes Schema von Wörterbucheinträgen bereitstellt.
+
+
+Die Richtlinien zum Erstellen von Datenquelltypen sind wie folgt:
+
+* Sie sollten PowerShell-Sprache verwenden, um ein Skript zu erstellen.
+* Das PowerShell-Skript sollte die Ausgabe für jeden Glossareintrag in seinem aktuellen Arbeitsverzeichnis bereitstellen.
+* Die Datendateien sollten benannt werden `dictionary_entry.csv,` Der Name des Wörterbucheintrags sollte in Kleinbuchstaben enthalten sein.
++
+Der vordefinierte Quelltyp der Daten, der Informationen von Performance Advisor erfasst, verwendet einen SKRIPTBASIERTEN Datenquelltyp. Die Ausgabedateien werden benannt `array_performance.csv` Und `aggregate_performance.csv.`
+
+* Der `.csv` Die Datei sollte den Inhalt in der genauen Reihenfolge wie die Attribute des Wörterbucheintrags enthalten.
++
+Ein Eintrag aus dem Wörterbuch enthält Attribute in der folgenden Reihenfolge: Array_ip, Datum, Tag, Stunde, cpu_beschäftigt, Total_OPS_per_sec, Disk_Throughput_per_sec
+
++
+Das PowerShell Skript fügt dem Daten hinzu `.csv` Datei in derselben Reihenfolge.
+
++
+[listing]
+----
+$values = get-Array-CounterValueString ([REF]$data)
+Add-Content $arrayFile ([byte[]][char[]] "\N t$arrayIP't$date't$day't$hour't$values'n")
+----
+* Sie sollten Encoding verwenden, um sicherzustellen, dass die Datenausgabe aus dem Skript exakt in den WFA Cache geladen ist.
+* Sie sollten \N verwenden, wenn Sie einen Null-Wert in das eingeben `.csv` Datei:
+

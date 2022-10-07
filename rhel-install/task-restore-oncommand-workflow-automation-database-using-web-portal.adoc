@@ -1,0 +1,33 @@
+---
+permalink: rhel-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database 
+summary: 'Sie können die zuvor gesicherte OnCommand Workflow Automation-Datenbank (WFA) wiederherstellen.' 
+---
+= WFA Datenbank wiederherstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die zuvor gesicherte OnCommand Workflow Automation-Datenbank (WFA) wiederherstellen.
+
+* Sie müssen ein Backup der WFA Datenbank erstellt haben.
+* Sie müssen über Administrator- oder Architekturdaten verfügen.
+* Durch Wiederherstellen einer WFA Datenbank wird die aktuelle Datenbank gelöscht.
+* Sie können ein WFA Datenbank-Backup nur auf einem System wiederherstellen, auf dem dieselbe oder eine neuere Version von OnCommand Workflow Automation ausgeführt wird.
++
+Wenn Sie beispielsweise ein Backup auf einem System mit OnCommand Workflow Automation 4.2 erstellt haben, kann das Backup nur auf Systemen mit OnCommand Workflow Automation 4.2 oder höher wiederhergestellt werden.
+
+
+
+.Schritte
+. Melden Sie sich als Administrator bei der WFA Web-GUI an.
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Wartung* auf *Sicherung & Wiederherstellung*.
+. Klicken Sie auf *Datei auswählen*.
+. Wählen Sie im daraufhin angezeigten Dialogfeld die WFA Backup-Datei aus und klicken Sie auf *Öffnen*.
+. Klicken Sie Auf *Wiederherstellen*.
+
+
+Sie können den wiederhergestellten Inhalt auf Vollständigkeit in der Funktionalität prüfen, z. B. die Funktion Ihrer benutzerdefinierten Workflows.

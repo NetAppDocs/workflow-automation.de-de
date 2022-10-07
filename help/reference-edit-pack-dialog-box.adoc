@@ -1,0 +1,112 @@
+---
+permalink: help/reference-edit-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, pack, dialog, enable 
+summary: Im Dialogfeld „Paket bearbeiten“ können Sie das Paket bearbeiten. 
+---
+= Dialogfeld „Paket bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Paket bearbeiten“ können Sie das Paket bearbeiten.
+
+* Registerkarte „Details“
+* Registerkarte Inhalt packen
+
+
+
+
+== Registerkarte „Details“
+
+* *Name*
++
+Hier können Sie einen Namen eingeben und das Paket speichern.
+
+* *Version*
++
+Ermöglicht die Eingabe einer Version und das Speichern des Pakets.
+
+* *Autor*
++
+Hier können Sie den Namen des Autors eingeben und das Paket speichern.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung eingeben und das Paket speichern.
+
+
+
+
+
+== Registerkarte Inhalt packen
+
+* *Arbeitsablauf*
++
+Mit der Option *Workflow* können Sie die *Name*- und *Entity-Version* des Workflows anzeigen.
+
+* *Flinders*
++
+Mit der Option *Finders* können Sie die *Name*- und *Entity-Version* des Finder anzeigen.
+
+* *Filter*
++
+Mit der Option *Filter* können Sie die *Name*- und *Entity-Version* des Filters anzeigen.
+
+* *Befehle*
++
+Mit der Option *befiehlt* können Sie die *Name*- und *Entity-Version* des Befehls anzeigen.
+
+* *Funktionen*
++
+Mit der Option *functions* können Sie die *Name*- und *Entity-Version* der Funktion anzeigen.
+
+* *Vorlagen*
++
+Mit der Option *Templates* können Sie die *Name*- und *Entity-Version* der Vorlage anzeigen.
+
+* *Wörterbuch*
++
+Mit der Option *Dictionary* können Sie die *Name*- und *Entity-Version* des Wörterbuchs anzeigen.
+
+* * Schemata*
++
+Mit der Option *Schemas* können Sie die *Name* und die *Entity Version* des Schemas anzeigen.
+
+* *Cacheabfragen*
++
+Mit der Option *Cache-Abfragen* können Sie die *Name*- und *Entity-Version* der Cache-Abfrage anzeigen.
+
+* *SQL Datenquellenarten*
++
+Mit der Option *SQL Data Source Types* können Sie die *Name* und *Entity Version* des SQL-Datenquelltyps anzeigen.
+
+* *Script-Datenquellenarten*
++
+Mit der Option *Script Data Source Types* können Sie die *Name* und *Entity Version* des Quelltyps der Skriptdaten anzeigen.
+
+* *Kategorien*
++
+Mit der Option *Categories* können Sie die *Name*- und *Entity-Version* der Kategorie anzeigen.
+
+* *Remote-Systemtypen*
++
+Mit der Option *Remote System Types* können Sie die *Name* und die *Entity Version* des Remote-Systemtyps anzeigen.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert das Paket und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Schließt das Dialogfeld, ohne zu speichern.
+
+

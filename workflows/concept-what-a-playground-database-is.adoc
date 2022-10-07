@@ -1,0 +1,85 @@
+---
+permalink: workflows/concept-what-a-playground-database-is.html 
+sidebar: sidebar 
+keywords: playground, database, mysql, include, Workflow, automation, server, installation, add, tables, information, filters, queries, user, input 
+summary: 'Die Playground-Datenbank ist eine MySQL-Datenbank, die in der Workflow Automation (WFA) Server-Installation enthalten ist. Sie können der Playground-Datenbank Tabellen hinzufügen, um Informationen einzuschließen, die von Filtern und SQL-Abfragen für Benutzereingaben verwendet werden können.' 
+---
+= Was ist eine Spielplatzdatenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Playground-Datenbank ist eine MySQL-Datenbank, die in der Workflow Automation (WFA) Server-Installation enthalten ist. Sie können der Playground-Datenbank Tabellen hinzufügen, um Informationen einzuschließen, die von Filtern und SQL-Abfragen für Benutzereingaben verwendet werden können.
+
+Auf die Playground-Datenbank kann nicht über das WFA Webportal zugegriffen werden. Für den Zugriff auf die Datenbank können Sie einen MySQL-Client wie SQLyog, Toad for MySQL und MySQL Workbench oder eine Befehlszeilenschnittstelle (CLI) verwenden.
+
+Für den Zugriff auf die Playground-Datenbank müssen Sie die folgenden Anmeldedaten verwenden:
+
+* Benutzername: wfa
+* Passwort: Wfa123
+
+
+Die Anmeldeinformationen bieten vollständigen Zugriff auf die Playground-Datenbank und schreibgeschützten Zugriff auf andere Schemata, die in der WFA MySQL Datenbank definiert sind. Sie können die erforderlichen Tabellen in der Spielplatzdatenbank erstellen.
+
+Sie können die Tags oder Metadaten, die Sie für Speicherobjekte in Ihrer Umgebung verwenden, zu einer Tabelle in der Playground-Datenbank hinzufügen. Tags oder Metadaten können dann zusammen mit den Informationen in anderen WFA Cache-Tabellen durch WFA Filter und User Input-Abfragen verwendet werden.
+
+Sie können beispielsweise die Playground-Datenbank für folgende Anwendungsfälle verwenden:
+
+* Tagging von Aggregaten mit Business Unit-Namen (BU) und Zuordnung von Volumes zum Bus auf Grundlage dieser Tags
+* Tagging von vFiler Einheiten mit BU-Namen
+* Hinzufügen von Geografie- oder Standortdetails zu Speicherobjekten
+* Definieren des Zugriffs von Datenbankadministratoren auf Datenbanken
+
+
+Wenn Sie beispielsweise den Namen der BU als Tag für die Speicherobjekte wie Aggregate und vFiler-Einheiten verwenden, können Sie in der Playground-Datenbank eine Tabelle mit dem Namen der BU erstellen. Der BU-Name kann dann von Filtern und Benutzereingabeanfragen für Ihre Workflows verwendet werden.
+
+Das folgende ist ein Beispiel für eine Datenbank-Tabelle für den Spielplatz (Playground.Volume_BU):
+
+[cols="3*"]
+|===
+| Array_ip | Volume_Name | BU 
+
+
+ a| 
+10.225.126.23
+ a| 
+Daten_11
+ a| 
+Marketing
+
+
+
+ a| 
+10.225.126.28
+ a| 
+ARCH_11
+ a| 
+HR
+
+|===
+Im Folgenden finden Sie eine Beispiel-SQL-Abfrage, mit der Sie Volumes nach BU filtern können:
+
+[listing]
+----
+SELECT
+    vol.name,
+    array.ip AS 'array.ip'
+FROM
+    storage.volume AS vol,
+    storage.array AS array,
+    playground.volume_bu AS vol_bu
+WHERE
+    vol.array_id = array.id
+    AND array.ip = vol_bu.array_ip
+    AND vol.name = vol_bu.volume_name
+    AND vol_bu.bu = '{$bu}'
+----
+*Verwandte Informationen*
+
+https://www.webyog.com/["SQLyog"^]
+
+http://www.mysql.com/products/workbench/["MySQL Workbench"^]
+
+http://www.quest.com/toad-for-mysql/["Toad für MySQL"^]

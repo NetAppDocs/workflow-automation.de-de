@@ -1,0 +1,26 @@
+---
+permalink: help/task-add-approval-points.html 
+sidebar: sidebar 
+keywords: add, approval, point, checkpoint, workflow, pause, execution, resume, incremental, section, certain, condition, example, successful, validate 
+summary: Sie können einen Genehmigungspunkt als Checkpoint in einem Workflow hinzufügen, um die Workflow-Ausführung zu unterbrechen und basierend auf Ihrer Genehmigung wieder aufzunehmen. Sie können Genehmigungspunkte für die inkrementelle Ausführung eines Workflows verwenden, wobei Abschnitte des Workflows erst ausgeführt werden, wenn eine bestimmte Bedingung erfüllt ist – z. B. wenn der nächste Abschnitt genehmigt werden muss oder wenn die erfolgreiche Ausführung des ersten Abschnitts validiert wird. 
+---
+= Genehmigungspunkte hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Genehmigungspunkt als Checkpoint in einem Workflow hinzufügen, um die Workflow-Ausführung zu unterbrechen und basierend auf Ihrer Genehmigung wieder aufzunehmen. Sie können Genehmigungspunkte für die inkrementelle Ausführung eines Workflows verwenden, wobei Abschnitte des Workflows erst ausgeführt werden, wenn eine bestimmte Bedingung erfüllt ist – beispielsweise wenn der nächste Abschnitt genehmigt werden muss oder wenn die erfolgreiche Ausführung des ersten Abschnitts validiert wird.
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Architekt oder Administrator bei WFA an.
+. Klicken Sie Auf *Workflow Design* > *Workflows*.
+. Doppelklicken Sie im Fenster *Workflows* auf den Workflow, den Sie ändern möchten.
+. Klicken Sie im Fenster *Workflow <Workflow Name>* auf image:../media/approval_point_disabled.gif["Bild für Genehmigungspunkt"] Symbol links neben dem Schritt, für den Sie den Genehmigungspunkt hinzufügen möchten.
++
+Sie können Genehmigungspunkte für einen oder mehrere Schritte hinzufügen.
+
+. Geben Sie im Dialogfeld *Neuer Genehmigungspunkt* die Kommentar- und Bedingungsdetails an.
+. Klicken Sie auf *OK*.
+

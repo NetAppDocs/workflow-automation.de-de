@@ -1,0 +1,32 @@
+---
+permalink: help/concept-what-incremental-naming-is.html 
+sidebar: sidebar 
+keywords: incremental, naming, algorithm, enable, attribute, workflow, search, results, parameter, attribute, incremental, value, custom, expression, functionality, help, implement, convention, requirement 
+summary: Die inkrementelle Benennung ist ein Algorithmus, mit dem Sie die Attribute in einem Workflow basierend auf den Suchergebnissen für einen Parameter benennen können. Sie können die Attribute anhand eines inkrementellen Werts oder eines benutzerdefinierten Ausdrucks benennen. Die inkrementelle Namenskonvention zu implementieren, das auf Grundlage Ihrer Anforderungen basiert. 
+---
+= Wie sieht die inkrementelle Benennung aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die inkrementelle Benennung ist ein Algorithmus, mit dem Sie die Attribute in einem Workflow basierend auf den Suchergebnissen für einen Parameter benennen können. Sie können die Attribute anhand eines inkrementellen Werts oder eines benutzerdefinierten Ausdrucks benennen. Die inkrementelle Namenskonvention zu implementieren, das auf Grundlage Ihrer Anforderungen basiert.
+
+Sie können die inkrementelle Benennungsfunktion beim Design von Workflows verwenden, um die vom Workflow erstellten Objekte dynamisch zu benennen. Die Funktionalität ermöglicht die Festlegung von Suchkriterien für ein Objekt mithilfe der Funktion Ressourcenauswahl und der von den Suchkriterien zurückgegebene Wert wird für das Attribut des Objekts verwendet. Darüber hinaus können Sie einen Wert für das Attribut angeben, wenn kein Objekt mit den angegebenen Suchkriterien gefunden wurde.
+
+Sie können eine der folgenden Optionen verwenden, um die Attribute zu benennen:
+
+* Angabe eines Inkrementwerts und eines Suffix
++
+Sie können einen Wert angeben, der zusammen mit dem Wert des Objekts verwendet werden soll, der durch die Suchkriterien und das Inkrement mit der angegebenen Zahl gefunden wird. Wenn Sie beispielsweise Volumes mit der Namenskonvention von erstellen möchten `_filer name_unique number_environment,_` Mit einem Finder können Sie das letzte Volume anhand des Namenspräfixes suchen und die eindeutige Zahl um 1 erhöhen sowie den Suffix-Namen dem Volume-Namen hinzufügen. Wenn das letzte gefundene Volume-Namenspräfix _vf_023_Prod_ war und Sie drei Volumes erstellen, sind die Namen für die erstellten Volumes _vf_024_Prod, vf_025_Prod,_ und _vf_026_Prod._
+
+* Ein benutzerdefinierter Ausdruck wird bereitgestellt
++
+Sie können einen Wert angeben, der zusammen mit dem Wert des Objekts verwendet werden soll, das von den Suchkriterien gefunden wurde, und zusätzliche Werte hinzufügen, die auf dem von Ihnen eingegebenen Ausdruck basieren. Wenn Sie beispielsweise ein Volume mit der Namenskonvention von erstellen möchten `last volume name_environment name padded with 1,` Sie können den Ausdruck eingeben `last_volume.name + '_' + nextName("lab1")`. Wenn der letzte gefundene Volume-Name _vf_023 war,_ der Name für das erstellte Volume lautet _vf_023_lab2._
+
+
+
+Die folgende Abbildung zeigt, wie ein benutzerdefinierter Ausdruck zur Angabe einer Namenskonvention bereitgestellt werden kann:
+
+image::../media/incrmnmgwzd.png[Incrmnmgwzd]

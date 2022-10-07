@@ -1,0 +1,141 @@
+---
+permalink: help/reference-active-directory-groups-window.html 
+sidebar: sidebar 
+keywords: active, directory, group, window, enable, view, create, edit, delete, oncommand, workflow, automation, access, select, settings, management, click 
+summary: 'Im Fenster Active Directory Groups können Sie die OnCommand Workflow Automation (WFA) Active Directory Gruppen anzeigen, erstellen, bearbeiten und löschen. Sie können auf dieses Fenster zugreifen, indem Sie Einstellungen auswählen und unter Verwaltung auf Active Directory Groups klicken.' 
+---
+= Active Directory Groups -Fenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster Active Directory Groups können Sie die OnCommand Workflow Automation (WFA) Active Directory Gruppen anzeigen, erstellen, bearbeiten und löschen. Sie können auf dieses Fenster zugreifen, indem Sie *Einstellungen* und unter *Verwaltung* auf *Active Directory-Gruppen* klicken.
+
+
+NOTE: Abhängig von Ihren Rollen- und Kontoberechtigungen wird dieses Fenster möglicherweise nicht angezeigt.
+
+* Tabelle „Active Directory-Gruppen“
+* Symbolleiste
+
+
+
+
+== Tabelle „Active Directory Groups“
+
+Im Fenster Active Directory Groups werden vorhandene Active Directory Gruppen angezeigt. Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+In der folgenden Tabelle sind die unterstützten Operatoren für alphabetische und numerische Spalten in der Tabelle Active Directory Groups aufgeführt, die im Textfeld * Suchen* verfügbar sind.
+
+[cols="2*"]
+|===
+| Alphabetisch | Numerisch 
+
+
+ a| 
+* Enthält
+* Enthält nicht
+* Beginnt mit
+* Endet mit
+* Gleich
+* Ist nicht gleich
+* Zurücksetzen
+
+ a| 
+* Gleich
+* Ist nicht gleich
+* Kleiner als
+* Größer als
+* Kleiner oder gleich
+* Größer oder gleich
+* Zwischen
+* Zurücksetzen
+
+
+|===
+Die Tabelle Active Directory Groups enthält die folgenden Spalten:
+
+* *Gruppenname*
++
+Zeigt den Gruppennamen für das Active Directory an.
+
+* * Rolle*
++
+Zeigt die zugewiesene Rolle für die Gruppe an. Rollen können eine der folgenden Optionen enthalten:
+
++
+** *Gast*
++
+Diese Gruppe kann nur den Status einer Workflow-Ausführung anzeigen oder über eine Änderung im Status einer Workflow-Ausführung benachrichtigt werden.
+
+** *Betreiber*
++
+Diese Gruppe darf Workflows anzeigen und ausführen, für die die Gruppe Zugriff erhält.
+
+** *Genehmiger*
++
+Diese Gruppe kann Workflows anzeigen, ausführen, genehmigen und ablehnen, für die die Gruppe Zugriff erhält.
+
++
+
+NOTE: Sie müssen die E-Mail-ID des Genehmigers und den Status des Workflows angeben, der dem Genehmiger mitgeteilt werden soll. Wenn es mehrere Genehmiger gibt, können Sie im Feld *E-Mail* eine Gruppen-E-Mail-ID angeben.
+
+** * Architekt*
++
+Diese Gruppe hat vollen Zugriff auf die Erstellung von Workflows, ist aber durch das Ändern globaler WFA Servereinstellungen eingeschränkt.
+
+** *Admin*
++
+Diese Gruppe hat vollständigen Zugriff auf den WFA Server.
+
+
+
+* *Kategorien*
++
+Zeigt die Workflow-Kategorie an, die einem Operator zugewiesen ist und dem angegebenen Operator Workflow-Berechtigungen und -Berechtigungen zur Verfügung stellt.
+
++
+Sie können diese Berechtigungseinstellung festlegen, indem Sie auf *Content Management* > *Kategorien* klicken.
+
+* *E-Mail*
++
+Zeigt die E-Mail-Adresse für die Gruppe an. Sie können diese E-Mail zur Benachrichtigung über den Workflow-Status verwenden.
+
+* *Benachrichtigungen Aktiviert*
++
+Gibt an, ob die Gruppe E-Mail-Benachrichtigungen (wahr oder falsch) über den Status der Workflow-Ausführungen erhalten kann, die von dieser Gruppe ausgelöst wurden.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/new_wfa_icon.gif["Neues Symbol"] (Neu)*
++
+Öffnet das Dialogfeld Neue Active Directory-Gruppe, in dem Sie eine neue Active Directory-Gruppe hinzufügen können.
+
++
+
+NOTE: Bevor Sie die Active Directory-Gruppe hinzufügen, müssen Sie die Active Directory-Gruppe aktivieren oder konfigurieren.
+
+* *image:../media/edit_wfa_icon.gif["Symbol bearbeiten"] (Bearbeiten)*
++
+Öffnet das Dialogfeld Active Directory-Gruppe bearbeiten, in dem Sie die ausgewählte Active Directory-Gruppe bearbeiten können.
+
+* *image:../media/delete_wfa_icon.gif["Symbol Löschen"] (Löschen)*
++
+Öffnet das Bestätigungsdialogfeld „Active Directory Group löschen“, in dem Sie die ausgewählte Active Directory-Gruppe löschen können.
+
+

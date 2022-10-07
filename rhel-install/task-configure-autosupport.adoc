@@ -1,0 +1,62 @@
+---
+permalink: rhel-install/task-configure-autosupport.html 
+sidebar: sidebar 
+keywords: configure, autoSupport 
+summary: Sie können mehrere AutoSupport-Einstellungen konfigurieren, z. B. Zeitplan, Inhalt der AutoSupport-Meldungen und Proxyserver. AutoSupport sendet wöchentliche Protokolle der Inhalte, die Sie ausgewählt haben, an den technischen Support, um sie zu archivieren und Probleme zu analysieren. 
+---
+= Konfigurieren Sie AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können mehrere AutoSupport-Einstellungen konfigurieren, z. B. Zeitplan, Inhalt der AutoSupport-Meldungen und Proxyserver. AutoSupport sendet wöchentliche Protokolle der Inhalte, die Sie ausgewählt haben, an den technischen Support, um sie zu archivieren und Probleme zu analysieren.
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Administrator bei WFA an.
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Einstellungen* auf *AutoSupport*.
+. Vergewissern Sie sich, dass das Feld *AutoSupport* aktivieren ausgewählt ist.
+. Geben Sie die erforderlichen Informationen ein.
+. Wählen Sie eine der folgenden Optionen aus der Liste * Content* aus:
++
+[cols="2*"]
+|===
+| Wenn Sie Folgendes einschließen möchten: | Wählen Sie dann diese Option... 
+
+
+ a| 
+Nur Konfigurationsdetails, wie Benutzer, Workflows und Befehle Ihrer WFA Installation
+ a| 
+Nur Konfigurationsdaten senden
+
+
+
+ a| 
+Details zur WFA Konfiguration sowie Daten in WFA Cache-Tabellen wie z. B. dem Schema
+ a| 
+Senden von Konfigurations- und Cache-Daten (Standard)
+
+
+
+ a| 
+Details zur WFA Konfiguration, Daten in WFA Cache-Tabellen und Daten im Installationsverzeichnis
+ a| 
+Senden von Konfigurations- und Zwischenspeichern erweiterter Daten
+
+|===
++
+[NOTE]
+====
+Das Passwort eines WFA Benutzers ist in den AutoSupport-Daten „_Not_“ enthalten.
+
+====
+. Testen, dass Sie eine AutoSupport Nachricht herunterladen können:
++
+.. Klicken Sie Auf *Download*.
+.. Wählen Sie im Dialogfeld, das geöffnet wird, den Speicherort für die .7z-Datei aus.
+
+
+. Testen Sie das Senden einer AutoSupport-Nachricht an das angegebene Ziel, indem Sie auf *Jetzt senden* klicken.
+. Klicken Sie Auf *Speichern*.
+

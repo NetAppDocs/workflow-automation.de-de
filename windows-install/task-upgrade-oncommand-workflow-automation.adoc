@@ -1,0 +1,47 @@
+---
+permalink: windows-install/task-upgrade-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: upgrade, oncommand, workflow, automation 
+summary: 'Wenn Sie eine ältere Version von OnCommand Workflow Automation (WFA) installiert haben, können Sie ein Upgrade auf die aktuelle Version von WFA durchführen, um die neuen Funktionen und Verbesserungen zu nutzen.' 
+---
+= Upgrade von OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine ältere Version von OnCommand Workflow Automation (WFA) installiert haben, können Sie ein Upgrade auf die aktuelle Version von WFA durchführen, um die neuen Funktionen und Verbesserungen zu nutzen.
+
+* Sie können nur von WFA 5.0 oder 4.2 ein Upgrade auf WFA 5.1 durchführen.
++
+Wenn WFA 4.1 oder ältere Versionen von WFA ausgeführt werden, müssen Sie zuerst ein Upgrade auf WFA 5.0 oder 4.2 durchführen und dann auf WFA 5.1 upgraden.
+
+* Sie können ein Backup von WFA 5.0 oder 4.2 unter WFA 5.1 wiederherstellen. Ein Backup von WFA Datenbanken kann nur auf einem System wiederhergestellt werden, auf dem dieselbe oder eine höhere Version von WFA ausgeführt wird.
++
+Wenn Sie beispielsweise ein Backup auf einem System erstellt haben, auf dem WFA 4.2 ausgeführt wird, kann das Backup nur auf Systemen wiederhergestellt werden, auf denen WFA 4.2 oder höher ausgeführt wird.
+
+* Sie können MySQL nicht eigenständig installieren, wenn Sie ein Upgrade von Versionen vor WFA 4.2 durchführen.
++
+Sie können MySQL jedoch selbst installieren:
+
++
+** Während einer Neuinstallation von WFA 4.2 und höher oder
+** Wenn Sie ein Upgrade von WFA 4.2 auf neuere Versionen von WFA durchführen.
++
+... Sichern Sie die WFA Datenbank mit einer der folgenden Optionen:
+
+
+** WFA Webportal
+** PowerShell-Skript Wenn Sie dieselbe Version von WFA wiederherstellen möchten, können Sie das von Ihnen erstellte Backup zum Wiederherstellen der WFA-Datenbank verwenden.
++
+... Deinstallieren Sie die vorhandene Version von WFA.
+... Installieren der neuesten Version von WFA
+... WFA Datenbank wiederherstellen.
+
+
+
+
+
+
+Sie können den wiederhergestellten Inhalt auf Vollständigkeit in der Funktionalität prüfen, z. B. können Sie die Funktion Ihrer benutzerdefinierten Workflows überprüfen.

@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-dictionary-entries-are.html 
+sidebar: sidebar 
+keywords: dictionary, entries, oncommand, workflow, automation, building, blocks, use, represent, object, types, relationships, storage, environments, filters, return, value, natural, keys 
+summary: 'Einträge aus dem Wörterbuch sind eines der OnCommand Workflow Automation (WFA) Bausteine. Sie können Einträge aus dem Wörterbuch verwenden, um Objekttypen und deren Beziehungen in Ihren Storage- und Storage-Umgebungen darzustellen. Sie können dann Filter in Workflows verwenden, um den Wert der natürlichen Schlüssel der Wörterbucheinträge zurückzugeben.' 
+---
+= Welche Wörterbucheinträge sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Einträge aus dem Wörterbuch sind eines der OnCommand Workflow Automation (WFA) Bausteine. Sie können Einträge aus dem Wörterbuch verwenden, um Objekttypen und deren Beziehungen in Ihren Storage- und Storage-Umgebungen darzustellen. Sie können dann Filter in Workflows verwenden, um den Wert der natürlichen Schlüssel der Wörterbucheinträge zurückzugeben.
+
+Ein Glossareintrag ist die Definition eines Objekttyps, der von WFA unterstützt wird. Jeder Eintrag aus dem Wörterbuch stellt einen Objekttyp und seine Beziehung in den unterstützten Storage- und Storage-Umgebungen dar. Ein Wörterbuchobjekt besteht aus einer Liste von Attributen, die möglicherweise vom Typ geprüft werden. Ein Wörterbuchobjekt mit vollständigen Werten beschreibt eine Objektinstanz eines Typs. Zudem beschreiben die Referenzattribute die Beziehung des Objekts mit der Umgebung. So enthält beispielsweise ein Volume-Wörterbuch-Objekt viele Attribute, z. B. Name, Größe_mb und Volume_guarantee. Außerdem enthält das Volume-Wörterbuch Verweise auf das Aggregat und das Array mit dem Volume in Form von Array_id und Aggregate_ID
+
+Die Cache-Tabelle eines Objekts ist eine Datenbank, die einige oder alle Attribute des Wörterbucheintrags enthält, die für das Caching markiert sind. Damit ein Wörterbucheintrag eine Cache-Tabelle enthält, müssen mindestens eines der Attribute des Wörterbucheintrags für das Caching markiert sein. Wörterbucheinträge enthalten natürliche Schlüssel, bei denen es sich um eindeutige Kennungen für die Objekte handelt. Beispielsweise werden 7-Mode-Volumes eindeutig durch ihren Namen und die IP-Adresse des Arrays identifiziert, in dem sie enthalten sind. Qtrees werden durch den qtree-Namen, den Volume-Namen und die Array-IP-Adresse identifiziert. Beim Erstellen von Wörterbucheinträgen müssen Sie die Attribute identifizieren, die Teil der natürlichen Schlüssel des Wörterbucheintrags sind.

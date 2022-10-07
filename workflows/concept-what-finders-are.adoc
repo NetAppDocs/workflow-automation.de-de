@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-finders-are.html 
+sidebar: sidebar 
+keywords: finders, combination, filters, together, identify, common, results, workflows, select, required, resources, execution 
+summary: Ein Finder ist eine Kombination aus einem oder mehreren Filtern, die zusammen verwendet werden, um gemeinsame Ergebnisse zu identifizieren. Über eine Suche in Ihren Workflows können Sie die zur Ausführung des Workflows erforderlichen Ressourcen auswählen. 
+---
+= Welche Finder sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Finder ist eine Kombination aus einem oder mehreren Filtern, die zusammen verwendet werden, um gemeinsame Ergebnisse zu identifizieren. Über eine Suche in Ihren Workflows können Sie die zur Ausführung des Workflows erforderlichen Ressourcen auswählen.
+
+Finder wenden möglicherweise eine Sortierreihenfolge an, um die entsprechenden Ergebnisse zu differenzieren. Die Finder liefern die beste Ressource basierend auf den Auswahlkriterien und der Sortierung.
+
+Die Finder geben entweder ein Ergebnis oder kein Ergebnis zurück. Sie können daher verwendet werden, um das Vorhandensein bestimmter Speicherelemente zu überprüfen. Wenn ein Finder jedoch als Teil einer Zeilenumformung für Wiederholungen verwendet wird, werden die Ergebnissets verwendet, um die Liste der Mitglieder in der Gruppe zu bilden. Filter, die in Findern verwendet werden, geben den natürlichen Schlüssel des Wörterbuchtyps mindestens zurück, können aber zusätzliche Felder zurückgeben, deren Wert referenziert werden kann. Eine Sortierreihenfolge kann auf jedes zurückgegebene Feld der SQL-Abfrage eines Filters angewendet werden.
+
+Sie können die Ergebnisse eines Suchers testen. Beim Testen eines Finder können Sie die allgemeinen Ergebnisse aller WFA Filter anzeigen, wobei das effektive Ergebnis des Finder in den Ergebnissen hervorgehoben wird. Wenn Sie einen Finder in einem Workflow verwenden, können Sie eine individuelle Fehlermeldung erstellen, um dem Storage-Operator aussagekräftige Informationen zu vermitteln.

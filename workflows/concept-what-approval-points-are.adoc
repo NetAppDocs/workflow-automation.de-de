@@ -1,0 +1,43 @@
+---
+permalink: workflows/concept-what-approval-points-are.html 
+sidebar: sidebar 
+keywords: approval, points, check, inputs, workflow, pause, execution, resume, based, user 
+summary: Genehmigungspunkte sind Prüfpunkte, die in einem Workflow zum Unterbrechen der Workflow-Ausführung verwendet werden, und setzen diese basierend auf einer Benutzergenehmigung wieder ein. 
+---
+= Welche Genehmigungspunkte sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Genehmigungspunkte sind Prüfpunkte, die in einem Workflow zum Unterbrechen der Workflow-Ausführung verwendet werden, und setzen diese basierend auf einer Benutzergenehmigung wieder ein.
+
+Der blaue vertikale Balken, der in der folgenden Abbildung dargestellt ist, ist ein Freigabepunkt:
+
+image::../media/approval_point.png[Genehmigungspunkt]
+
+Sie können Genehmigungspunkte für die inkrementelle Ausführung eines Workflows verwenden, wobei Abschnitte des Workflows erst ausgeführt werden sollten, wenn eine bestimmte Bedingung erfüllt ist. Beispiel: Wenn der nächste Abschnitt genehmigt werden muss, oder wenn die erste Sektion erfolgreich ausgeführt wurde, wird sie validiert. Genehmigungspunkte verarbeiten keinen Prozess zwischen der Unterbrechung und Wiederaufnahme eines Workflows. E-Mail- und SNMP-Benachrichtigungen werden gemäß den Angaben in der WFA Konfiguration gesendet und der Storage Operator kann gebeten werden, bestimmte Aktionen nach Erhalt der Benachrichtigung zur Workflow-Pause durchzuführen. Beispielsweise kann der Storage Operator Planungsdetails zur Genehmigung an den Administrator, Genehmiger oder Betreiber senden und den Workflow nach Eingang der Genehmigung fortsetzen.
+
+Genehmigungen sind möglicherweise nicht immer erforderlich. In manchen Szenarien kann die Genehmigung nur erforderlich sein, wenn eine bestimmte Bedingung erfüllt und die Bedingungen konfiguriert werden können, wenn ein Genehmigungspunkt hinzugefügt wird. Nehmen Sie beispielsweise einen Workflow vor, der darauf ausgelegt ist, die Größe eines Volumes zu erhöhen. Sie können zu Beginn des Workflows einen Freigabepunkt hinzufügen, damit der Storage-Operator die Genehmigung durch die Manager einholen kann, wenn die Erhöhung der Volume-Größe zu einer 85%igen Auslastung des Speicherplatzes im Aggregat, das das Volume enthält, führt. Während der Workflow-Ausführung und bei der Auswahl eines Volumens, das zu dieser Bedingung führt, wird die Ausführung angehalten, bis sie genehmigt wird.
+
+Die für den Genehmigungspunkt festgelegte Bedingung kann eine der folgenden Optionen haben:
+
+* Ohne Bedingung
+* Wenn die angegebene Variable gefunden wird
+* Wenn die angegebene Variable nicht gefunden wurde
+* Wenn der angegebene Ausdruck als wahr bewertet wird
+
+
+Die Anzahl der Genehmigungspunkte in einem Workflow ist nicht begrenzt. Sie können Genehmigungspunkte vor Befehlen in einen Workflow einfügen und die Befehle nach dem Genehmigungspunkt vor der Ausführung auf die Genehmigung warten. Genehmigungspunkte liefern Informationen wie Änderungszeitpunkt, Benutzer und Kommentare, so dass Sie sehen können, wann und warum die Workflow-Ausführung angehalten oder fortgesetzt wurde. Die Kommentare zu den Genehmigungspunktpunkten können MVEL-Ausdrücke enthalten.
+
+
+
+== Beispiele für Genehmigungspunkt in vordefinierten Workflows
+
+Sie können die folgenden vordefinierten Workflows im Designer öffnen, um zu verstehen, wie Genehmigungspunkte verwendet werden:
+
+* Entfernen eines Clustered Data ONTAP Volumes
+* Controller und Shelf-Upgrade eines HA-Paars
+* Migration Von Volumes
+

@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-building-blocks-for-workflows.html 
+sidebar: sidebar 
+keywords: workflow, automation, include, several, building, blocks, use, construct, workflow, create, require 
+summary: 'Workflow Automation (WFA) umfasst mehrere Bausteine, die zur Erstellung von Workflows verwendet werden. Sie können die für Ihre Workflows erforderlichen WFA Bausteine erstellen.' 
+---
+= Erstellung von Bausteinen für Workflows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Workflow Automation (WFA) umfasst mehrere Bausteine, die zur Erstellung von Workflows verwendet werden. Sie können die für Ihre Workflows erforderlichen WFA Bausteine erstellen.

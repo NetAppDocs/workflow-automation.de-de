@@ -1,0 +1,23 @@
+---
+permalink: rhel-install/task-configure-snmp.html 
+sidebar: sidebar 
+keywords: configure, snmp 
+summary: 'Sie können OnCommand Workflow Automation (WFA) konfigurieren, um SNMP-Traps (Simple Network Management Protocol) zum Status von Workflow-Vorgängen zu senden.' 
+---
+= Konfigurieren Sie SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können OnCommand Workflow Automation (WFA) konfigurieren, um SNMP-Traps (Simple Network Management Protocol) zum Status von Workflow-Vorgängen zu senden.
+
+WFA unterstützt jetzt SNMP v1- und SNMP v3-Protokolle. SNMP v3 bietet zusätzliche Sicherheitsfunktionen.
+
+Die WFA .mib-Datei bietet Informationen zu den Traps die vom WFA Server gesendet werden. Die mib-Datei befindet sich im Verzeichnis <WFA_install_location>\wfa\bin\wfa.mib auf dem WFA Server.
+
+
+NOTE: Der WFA Server sendet alle Trap-Benachrichtigungen über eine generische Objektkennung (1.3.6.1.4.1.789.1.1.12.0).
+
+Sie können SNMP-Community-Strings wie Community_string@SNMP_Host nicht für die SNMP-Konfiguration verwenden.

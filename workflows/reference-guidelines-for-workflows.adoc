@@ -1,0 +1,304 @@
+---
+permalink: workflows/reference-guidelines-for-workflows.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, modify, predefined, workflow, oncommand, workflow, automation 
+summary: 'Sie müssen die Richtlinien zum Erstellen oder Ändern eines vordefinierten Workflows für OnCommand Workflow Automation (WFA) kennen.' 
+---
+= Richtlinien für Workflows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Richtlinien zum Erstellen oder Ändern eines vordefinierten Workflows für OnCommand Workflow Automation (WFA) kennen.
+
+
+
+== Allgemeine Richtlinien
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Benennen Sie den Workflow, sodass er den Vorgang wiedergibt, der vom Storage Operator ausgeführt wird.
+ a| 
+`Create a CIFS Share`
+
+
+
+ a| 
+Für Workflow-Namen, setzen Sie den Anfangsbuchstaben des ersten Wortes und jedes Wort, das ein Objekt ist. Buchstaben für Abkürzungen und Akronyme schreiben.
+ a| 
+Datenmenge
+
+Qtree
+
+Erstellen Sie eine Clustered Data ONTAP Qtree CIFS Share
+
+
+
+ a| 
+Fügen Sie bei Workflow-Beschreibungen alle wichtigen Schritte des Workflows ein, einschließlich aller Voraussetzungen, Ergebnisse des Workflows oder bedingter Aspekte der Ausführung.
+ a| 
+Siehe Beschreibung des Beispielworkflows `Create VMware NFS Datastore on Clustered Data ONTAP Storage,` Dazu gehören die Voraussetzungen.
+
+
+
+ a| 
+Setzen Sie „`bereit für die Produktion`“ auf `true` Nur wenn der Workflow für die Produktion bereit ist und auf der Portalseite angezeigt werden kann.
+ a| 
+Keine
+
+
+
+ a| 
+Setzen Sie standardmäßig „`chaue reserved Elements`“ auf true. Bei der Vorschau eines Workflows für die Ausführung berücksichtigt der WFA Planner alle Objekte, die zusammen mit den bestehenden Objekten in der Cache-Datenbank reserviert sind. Wenn diese Option auf festgelegt ist, werden die Auswirkungen anderer parallel ausgeführter geplanter Workflows oder Arbeitsschritte bei der Planung eines bestimmten Workflows berücksichtigt `true.`
+ a| 
+* Szenario 1
++
+Workflow 1 erstellt ein Volume und wird für eine Woche später ausgeführt. Workflow 2 erstellt qtrees oder LUNs in Volumes, nach denen gesucht wird. Falls Workflow 2 innerhalb eines Tages oder so ausgeführt wird, sollten Sie für Workflow 2 „`chaltest reservierte Elemente`“ deaktivieren, um zu verhindern, dass das Volume, das innerhalb einer Woche erstellt werden soll, berücksichtigt wird.
+
+* Szenario 2
++
+Workflow 1 verwendet den `Create Volume` Befehl. Wenn ein geplanter Workflow 2 100 GB in einem Aggregat verbraucht, muss Workflow 1 die Anforderungen für Workflow 2 während der Planung berücksichtigen.
+
+
+
+
+
+ a| 
+Standardmäßig ist „`Enable Element Existenzvalidierung`“ auf festgelegt `true.`
+ a| 
+* Szenario 1
++
+Wenn Sie einen Workflow erstellen, der zuerst ein Volume mit dem Namen entfernt, verwenden Sie den Befehl `Remove Volume` Nur wenn das Volume vorhanden ist und das Volume mit einem anderen Befehl wie z. B. neu erstellt wird `Create Volume` Oder `Clone Volume,` Dann sollte der Workflow dieses Flag nicht verwenden. Der Effekt des Entfernens des Volumens steht dem nicht zur Verfügung `Create volume` Befehl, wodurch der Workflow fehlschlagen wird.
+
+* Szenario 2
++
+Der `Create Volume` Befehl wird in einem Workflow mit einem bestimmten Namen als „`vol198`“ verwendet.
+
++
+Wenn diese Option auf „true“ gesetzt ist, überprüft WFA Planner bei der Planung, ob ein Volume mit diesem Namen im angegebenen Array vorhanden ist. Wenn das Volume vorhanden ist, schlägt der Workflow während der Planung fehl.
+
+
+
+
+
+ a| 
+Wenn derselbe Befehl mehr als einmal in einem Workflow ausgewählt ist, geben Sie entsprechende Anzeigenamen für die Befehlsinstanzen an.
+ a| 
+Im Beispiel-Workflow „`Erstellen, Zuordnen und Schützen von LUNs mit SnapVault`“ wird der verwendet `Create Volume` Zweimal Befehl. Die Anzeigenamen werden jedoch als verwendet `Create Primary Volume` Und `Create Secondary Volume` Entsprechend für das primäre Volume und das gespiegelte Ziel-Volume.
+
+|===
+
+
+== Benutzereingaben
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Namen:
+
+* Starten Sie den Namen mit dem Zeichen „` €`“.
+* Verwenden Sie einen Großbuchstaben am Anfang jedes Wortes.
+* Verwenden Sie Großbuchstaben für alle Begriffe und Abkürzungen.
+* Keine Unterstriche verwenden.
+
+ a| 
+`$Array`
+
+`$VolumeName`
+
+
+
+ a| 
+Namen anzeigen:
+
+* Verwenden Sie einen Großbuchstaben am Anfang jedes Wortes.
+* Trennen Sie Wörter mit Leerzeichen.
+* Wenn Eingänge bestimmte Einheiten haben, geben Sie die Einheit in Klammern im Anzeigenamen direkt an.
+
+ a| 
+`Volume Name`
+
+`Volume Size (MB)`
+
+
+
+ a| 
+Beschreibungen:
+
+* Geben Sie für jede Benutzereingabe eine aussagekräftige Beschreibung an.
+* Stellen Sie bei Bedarf Beispiele bereit.
++
+Dies sollte insbesondere dann erfolgen, wenn die Benutzereingaben in einem bestimmten Format vorliegen sollen.
+
+
+
+Die Benutzereingabebeschreibungen werden als Tooltips für die Benutzereingaben bei der Workflow-Ausführung angezeigt.
+ a| 
+Initiatoren, die zu einer „`Initiatorgruppe`“ hinzugefügt werden sollen. Beispielsweise IQN oder WWPN des Initiators.
+
+
+
+ a| 
+Typ: Wählen Sie als Typ Enum aus, wenn Sie die Eingabe auf einen bestimmten Satz von Werten beschränken möchten.
+ a| 
+Protokoll: „`iscsi`“, „`fcp`“, „`mixed`“
+
+
+
+ a| 
+Typ: Wählen Sie Query als Typ aus, wenn der Benutzer aus Werten auswählen kann, die im WFA Cache verfügbar sind.
+ a| 
+Array USD: ABFRAGETYP mit Abfrage wie folgt:
+
+[listing]
+----
+SELECT
+	ip, name
+FROM
+	storage.array
+----
+
+
+ a| 
+Typ: Markieren Sie die Benutzereingabe als gesperrt, wenn die Benutzereingabe auf die Werte beschränkt werden soll, die von einer Abfrage erhalten werden oder nur auf die unterstützten Enum-Typen beschränkt sein sollten.
+ a| 
+Array: Gesperrt Abfragetyp: Es können nur Arrays im Cache ausgewählt werden. €Protokoll: Gesperrter Enum-Typ mit gültigen Werten wie iscsi, fcp, gemischt. Kein anderer Wert als der gültige Wert wird unterstützt.
+
+
+
+ a| 
+Typ: Abfrage-Typ zusätzliche Spalten als Rückgabewerte in der Abfrage hinzufügen, wenn es dem Speicherbetreiber hilft, die richtige Wahl der Benutzereingabe zu treffen.
+ a| 
+EUR Aggregat: Geben Sie Name, Gesamtgröße, verfügbare Größe, so dass der Betreiber die Attribute kennt, bevor Sie das Aggregat auswählen.
+
+
+
+ a| 
+Typ: Abfrage TypeSQL Abfrage für Benutzereingaben kann auf alle anderen Benutzer-Eingaben vor ihm beziehen. Dadurch können die Ergebnisse einer Abfrage auf Basis anderer Benutzereingaben wie z. B. vFiler Einheiten eines Arrays, Volumes eines Aggregats, LUNs in einer Storage Virtual Machine (SVM) begrenzt werden.
+ a| 
+Im Beispielworkflow `Create a Clustered Data ONTAP Volume,` Die Abfrage für VserverName lautet wie folgt:
+
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.cluster cluster,
+    cm_storage.vserver vserver
+WHERE
+    vserver.cluster_id = cluster.id
+    AND cluster.name = '${ClusterName}'
+    AND vserver.type = 'cluster'
+ORDER BY
+    vserver.name ASC
+----
+Die Abfrage bezieht sich auf €\{clusterName}, wobei USD clusterName der Name der Benutzereingaben vor der Benutzereingabe für VserverName ist.
+
+
+
+ a| 
+Typ: Verwenden Sie Booleschen Typ mit Werten als "`true, false`" für Benutzereingaben, die boolesch sind. Dies hilft beim Schreiben interner Ausdrücke im Workflow-Design mit der Benutzereingabe direkt. Beispiel: €UserInputName statt €UserInputName == '`Yes'.
+ a| 
+`$CreateCIFSShare`: Boolescher Typ mit gültigen Werten als „`true`“ oder „`false`“
+
+
+
+ a| 
+Typ:für String- und Zahlentyp verwenden Sie in der Spalte Werte reguläre Ausdrücke, wenn Sie den Wert mit bestimmten Formaten validieren möchten.
+
+Verwenden Sie regelmäßige Ausdrücke für IP-Adresse und Netzwerkmaskeneingaben.
+ a| 
+Ortsspezifische Benutzereingaben können als „`[A-Z][A-Z]\-0[1-9]`“ angegeben werden. Diese Benutzereingabe akzeptiert Werte wie „`US-01`“, „`NB-02`“, nicht jedoch „`nb-00`“.
+
+
+
+ a| 
+Typ: Für den Zahlentyp kann in der Spalte Werte eine Bereichsbasierte Validierung angegeben werden.
+ a| 
+Für Anzahl der zu erstellenden LUNs ist der Eintrag in der Spalte Werte 1-20.
+
+
+
+ a| 
+Gruppe: Gruppieren Sie die entsprechenden Benutzereingaben in den entsprechenden Buckets und benennen Sie die Gruppe.
+ a| 
+„`sStorage Details`“ für alle Storage-bezogenen Benutzereingaben. „`DatStore Details`“ für alle Eingaben von Benutzern, die mit VMware zusammenhängen.
+
+
+
+ a| 
+Obligatorisch: Wenn der Wert einer Benutzereingabe für die Ausführung des Workflows erforderlich ist, markieren Sie die Benutzereingabe als obligatorisch. Dadurch wird sichergestellt, dass die Eingabe des Benutzers vom Benutzer akzeptiert wird.
+ a| 
+„` Dollar VolumeName`“ im Workflow „`NFS-Volume erstellen`“.
+
+
+
+ a| 
+Standardwert: Wenn eine Benutzereingabe einen Standardwert hat, der für die meisten Workflow-Ausführungen arbeiten kann, geben Sie die Werte an. Dadurch kann der Benutzer während der Ausführung weniger Eingaben zur Verfügung stellen, wenn der Standardwert dem Zweck dient.
+ a| 
+Keine
+
+|===
+
+
+== Konstanten, Variablen und gibt Parameter zurück
+
+|===
+
+
+| Richtlinien | Beispiel 
+
+
+ a| 
+Konstanten: Definieren Sie Konstanten bei der Verwendung eines gemeinsamen Werts für die Definition von Parametern zu mehreren Befehlen.
+ a| 
+_AGGREGATE_OVERCOMMITMENT_THRESHOLD_ in `Create, map, and protect LUNs with SnapVault sample workflow`.
+
+
+
+ a| 
+Konstanten:Namen
+
+* Verwenden Sie einen Großbuchstaben am Anfang jedes Wortes.
+* Verwenden Sie Großbuchstaben für alle Begriffe und Abkürzungen.
+* Keine Unterstriche verwenden.
+* Verwenden Sie Großbuchstaben für alle Buchstaben konstanter Namen.
+
+ a| 
+_AGGREGATE_USED_SPACE_THRESHOLD_
+
+_ActuVolumeSizeInMB_
+
+
+
+ a| 
+Variablen: Geben Sie einem Objekt einen Namen an, das in einer der Befehlsparameter-Felder definiert ist. Variablen sind automatisch generierte Namen und können geändert werden.
+ a| 
+Keine
+
+
+
+ a| 
+Variablen: Namen verwenden Kleinbuchstaben für Variablennamen.
+ a| 
+volume1
+
+cifs_Freigabe
+
+
+
+ a| 
+Rückgabeparameter: Verwenden Sie Rückgabeparameter, wenn die Workflow-Planung und -Ausführung während der Planung einige berechnete oder ausgewählte Werte zurückgeben soll. Die Werte werden im Vorschaumodus verfügbar gemacht, wenn der Workflow auch von einem Webservice ausgeführt wird.
+ a| 
+Aggregat: Wenn das Aggregat mit der Ressourcenauswahllogik ausgewählt wird, kann das tatsächlich ausgewählte Aggregat als Rückgabeparameter definiert werden.
+
+|===

@@ -1,0 +1,142 @@
+---
+permalink: help/reference-reservations-window.html 
+sidebar: sidebar 
+keywords: reservations, window, display, workflow, marked, reservation, enable, manage, access, selecting, execution 
+summary: Im Fenster Reservierungen werden alle Workflows angezeigt, die für die Reservierung markiert sind, und Sie können die Reservierungen verwalten. Sie können auf dieses Fenster zugreifen, indem Sie „Ausführung“ > „Reservierungen“ auswählen. 
+---
+= Reservierungsfenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster Reservierungen werden alle Workflows angezeigt, die für die Reservierung markiert sind, und Sie können die Reservierungen verwalten. Sie können auf dieses Fenster zugreifen, indem Sie *Ausführung* > *Reservierungen* wählen.
+
+Durch eine Reservierung wird sichergestellt, dass eine ausgewählte Ressource für einen bestimmten geplanten Workflow zur Verfügung steht, wenn der Workflow ausgeführt wird.
+
+* Reservierungstabelle
+* Symbolleiste
+
+
+
+
+== Reservierungstabelle
+
+In der Tabelle Reservierungen werden die Workflows aufgeführt, die zur Reservierung übermittelt werden. Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+In der folgenden Tabelle sind die unterstützten Operatoren für alphabetische und numerische Spalten in der Tabelle Reservierungen aufgeführt, die im Textfeld * Suchen* verfügbar sind.
+
+[cols="2*"]
+|===
+| Alphabetisch | Numerisch 
+
+
+ a| 
+* Enthält
+* Enthält nicht
+* Beginnt mit
+* Endet mit
+* Gleich
+* Ist nicht gleich
+* Zurücksetzen
+
+ a| 
+* Gleich
+* Ist nicht gleich
+* Kleiner als
+* Größer als
+* Kleiner oder gleich
+* Größer oder gleich
+* Zwischen
+* Zurücksetzen
+
+
+|===
+Die Tabelle Reservierungen enthält die folgenden Spalten:
+
+* *Job #*
++
+Zeigt die Identifikationsnummer des Jobs an.
+
++
+Die Job-ID-Nummer ist eindeutig und wird vom Server beim Start des Jobs zugewiesen.
+
+* *Arbeitsablauf*
++
+Zeigt den Workflow-Namen an.
+
+* *Zeit der Ausführung*
++
+Zeigt die Zeit an, zu der der Job ausgeführt werden soll oder wann der Job ausgeführt wurde.
+
++
+Klicken Sie im Textfeld * Suchen* auf das Kalendersymbol, um nach einem bestimmten Ausführungsdatum zu suchen.
+
+* *Zeitpunkt der Reservierung*
++
+Zeigt die Zeit an, zu der der Auftrag geplant wurde, also den Zeitpunkt, zu dem die Reservierung erstellt wurde.
+
++
+Klicken Sie im Textfeld * Suchen* auf das Kalender-Symbol, um nach einem bestimmten Reservierungsdatum zu suchen.
+
+* *Befehlsname*
++
+Zeigt den Befehl an, für den die Reservierung vorgenommen wurde. Beispielsweise für einen Workflow mit der Ausführung des Befehls `Create Volume myVolume of size 20MB`, Volume erstellen wird angezeigt.
+
+* *Reservierung*
++
+Zeigt die Beschreibung der Reservierung an, die aus der String-Darstellung des Befehls generiert wird.
+
+* *Workflow-Status*
++
+Zeigt den Status des Workflow-Ausführungsauftrags an. Folgende Statusoptionen stehen zur Auswahl:
+
++
+** Alle
+** Fehlgeschlagen
+** Wird Ausgeführt
+** Erfolgreich
+** Storniert
+** Warten auf Genehmigung
+** Geplant
+** Wird Abgebrochen
+** Veraltet
+** Planung
+** Ausstehend
+** Teilweise Erfolgreich
+
+
+* *Cache Aktualisiert*
++
+Zeigt an, ob die Reservierung überprüft und in den zwischengespeicherten Daten wiedergegeben wurde (JA oder NEIN). Diese Cache-Aktualisierung wird durch den Datenerfassungsprozess durchgeführt.
+
+* *Letzter Fehler*
++
+Zeigt die Fehlermeldung an, die bei der Simulation der Reservierung erzeugt wird.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/delete_wfa_icon.gif["Symbol Löschen"] (Löschen)*
++
+Öffnet das Bestätigungsdialogfeld Reservierungen löschen, in dem Sie die ausgewählte Reservierung löschen können.
+
+* *image:../media/refresh_wfa_icon.gif["Symbol Refrech"] (Aktualisieren)*
++
+Aktualisiert den Inhalt der Tabelle Reservierungen.
+
+

@@ -1,0 +1,152 @@
+---
+permalink: workflows/reference-guidelines-for-commands.html 
+sidebar: sidebar 
+keywords: must, aware, guidelines, create, commands, oncommand, workflow, automation 
+summary: 'Zum Erstellen von Befehlen in OnCommand Workflow Automation (WFA) müssen Sie die Richtlinien kennen.' 
+---
+= Richtlinien für Befehle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zum Erstellen von Befehlen in OnCommand Workflow Automation (WFA) müssen Sie die Richtlinien kennen.
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Verwenden Sie einen leicht identifizierbaren Namen für Befehle.
+ a| 
+`Create Qtree`
+
+
+
+ a| 
+Verwenden Sie Leerzeichen, um Wörter zu begrenzen, und jedes Wort muss mit einem Großbuchstaben beginnen.
+ a| 
+`Create Volume`
+
+
+
+ a| 
+Geben Sie eine Beschreibung zur Erläuterung der Funktionalität des Befehls an, einschließlich des erwarteten Ergebnisses der optionalen Parameter.
+ a| 
+Keine
+
+
+
+ a| 
+Standardmäßig beträgt die Zeitüberschreitung für Standardbefehle 600 Sekunden. Die Standard-Zeitüberschreitung wird beim Erstellen des Befehls festgelegt. Ändern Sie den Standardwert nur, wenn der Befehl möglicherweise länger dauert.
+ a| 
+`Create Volume` Befehl
+
+
+
+ a| 
+Erstellen Sie bei langlebigen Vorgängen zwei Befehle: Einen, um den lang ausgeführten Vorgang aufzurufen, und einen anderen, um den Fortschritt des Vorgangs regelmäßig zu melden. Der erste Befehl sollte ein sein `Standard Execution` Befehlstyp und die zweite sollte sein `Wait for Condition` Befehlstyp.
+ a| 
+`Create VSM` Und `Wait for VSM` Befehle
+
+
+
+ a| 
+Setzen Sie das ein `Wait for condition` Befehlsnamen mit „`wait`“ zur einfachen Identifizierung.
+ a| 
+`Wait for CM Volume Move`
+
+
+
+ a| 
+Verwenden Sie ein geeignetes Wartungsintervall für die Befehle „`Wait for Condition`“. Der angegebene Wert bestimmt das Intervall, in dem der Abfragebefehl ausgeführt wird, um zu prüfen, ob der lang laufende Vorgang abgeschlossen ist.
+ a| 
+Abtastintervall 60er für das `Wait for VSM` Befehl
+
+
+
+ a| 
+Für das `Wait for condition` Verwenden Sie Befehle eine angemessene Zeitüberschreitung auf der Grundlage der erwarteten Zeit, während der lange laufende Vorgang abgeschlossen wird. Die erwartete Zeit kann erheblich länger sein, wenn der Vorgang die Datenübertragung über ein Netzwerk umfasst.
+ a| 
+Ein VSM-Basistransfer kann viele Tage in Anspruch nehmen. Daher beträgt die angegebene Zeitüberschreitung 6 Tage.
+
+|===
+
+
+== Zeichenfolgendarstellung
+
+Die Zeichenfolgendarstellung für einen Befehl zeigt die Details eines Befehls in einem Workflow-Design während der Planung und Ausführung an. In der String-Darstellung für einen Befehl können nur die Befehlsparameter verwendet werden.
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Vermeiden Sie die Verwendung von Attributen, die keinen Wert haben. Ein Attribut ohne Wert wird als NA angezeigt.
+ a| 
+VolName 10.68.66.212[NA]aggr1/testVol7
+
+
+
+ a| 
+Trennen Sie verschiedene Einträge in der String-Darstellung mit den folgenden Trennzeichen: [ ] , / :
+ a| 
+`_ArrayName[ArrayIp]_`
+
+
+
+ a| 
+Geben Sie jedem Wert in der Zeichenfolgendarstellung aussagekräftige Beschriftungen an.
+ a| 
+`_Volume name=VolumeName_`
+
+|===
+
+
+== Sprache der Befehlsdefinition
+
+Befehle können mithilfe der folgenden unterstützten Skriptsprachen geschrieben werden:
+
+* PowerShell
+* Perl
+
+
+
+
+== Definition von Befehlsparametern
+
+Die Befehlsparameter werden mit Name, Beschreibung, Typ und einem Standardwert für den Parameter beschrieben und ob der Parameter obligatorisch ist. Der Parametertyp kann String, Boolean, Integer, Long, Double, sein Enum, DateTime, Capacity, Array, Hashtable, Kennwort oder XmlDocument. Während die Werte für die meisten Typen intuitiv sind, sollten die Werte für Array und Hashtable in einem bestimmten Format vorliegen, wie in der folgenden Tabelle beschrieben:
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Stellen Sie sicher, dass der Wert für einen Array-Eingabetyp eine Liste von Werten ist, die durch Komma getrennt sind.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Months in which the schedule executes.")]
+[array]$CronMonths
+----
+Eingabe wird wie folgt übergeben: 0,3,6,9
+
+
+
+ a| 
+Stellen Sie sicher, dass der Wert für einen Hashtable-Eingabetyp eine Liste von Key=value pairs ist, getrennt durch Semikolon.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Volume names and size (in MB)")]
+[hashtable]$VolumeNamesAndSize
+----
+Eingabe wird wie folgt übergeben: Volume1=100;Volume2=250;Volume3=50
+
+|===

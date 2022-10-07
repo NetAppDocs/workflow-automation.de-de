@@ -1,0 +1,24 @@
+---
+permalink: workflows/reference-guidelines-for-adding-custom-powershell-modules-to-wfa.html 
+sidebar: sidebar 
+keywords: aware, certain, considerations, adding, custom, powershell, perl, modules, oncommand, workflow, automation, enable, commands, create 
+summary: 'Beachten Sie bestimmte Überlegungen, bevor Sie OnCommand Workflow Automation (WFA) benutzerdefinierte PowerShell und Perl-Module hinzufügen. Benutzerdefinierte PowerShell- und Perl-Module ermöglichen die Verwendung benutzerdefinierter Befehle zum Erstellen von Workflows.' 
+---
+= Überlegungen beim Hinzufügen benutzerdefinierter PowerShell und Perl Module
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beachten Sie bestimmte Überlegungen, bevor Sie OnCommand Workflow Automation (WFA) benutzerdefinierte PowerShell und Perl-Module hinzufügen. Benutzerdefinierte PowerShell- und Perl-Module ermöglichen die Verwendung benutzerdefinierter Befehle zum Erstellen von Workflows.
+
+* Während der Ausführung von WFA Befehlen werden alle benutzerdefinierten PowerShell Module zum WFA Installationsverzeichnis hinzugefügt `/Posh/modules` Automatisch importiert.
+* Alle benutzerdefinierten Perl-Module, die dem hinzugefügt wurden `WFA/perl` Das Verzeichnis ist in der Bibliothek _@Inc_ enthalten.
+* Individuelle PowerShell und Perl Module werden nicht als Teil des WFA Backups gesichert.
+* Benutzerdefinierte PowerShell und Perl Module werden im Rahmen der WFA Restore-Operation nicht wiederhergestellt.
+
+
+Sie müssen benutzerdefinierte PowerShell und Perl Module manuell sichern, um sie in eine neue WFA Installation zu kopieren.
+
+Der Ordnername im Modulverzeichnis muss mit dem des Modulnamens übereinstimmen.

@@ -1,0 +1,195 @@
+---
+permalink: help/reference-clone-command-definition-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, command, definition, dialog box, enable, copy, edit 
+summary: Im Dialogfeld Befehlsdefinition klonen können Sie einen Befehl kopieren und den geklonten Befehl bearbeiten. 
+---
+= Dialogfeld „Clone Command Definition“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Befehlsdefinition klonen können Sie einen Befehl kopieren und den geklonten Befehl bearbeiten.
+
+* Registerkarte Eigenschaften
+* Code-Registerkarte
+* Registerkarte Parameterdefinition
+* Registerkarte Parameterzuordnung
+* Registerkarte „Reservierung“
+* Registerkarte Verifikation
+
+
+
+
+== Registerkarte Eigenschaften
+
+Ermöglicht Ihnen, die Eigenschaften des geklonten Befehls zu bearbeiten, z. B. Name, Beschreibung und Entity-Version.
+
+* *Name*
++
+Ermöglicht Ihnen das Bearbeiten des Namens des geklonten Befehls. Standardmäßig wird der Name des Befehls, den Sie zum Klonen ausgewählt haben, als Name für den Klon verwendet, angehängt mit „`- copy`“.
+
+* *Entity Version*
++
+Ermöglicht Ihnen, die Versionsnummer des Befehls in zu bearbeiten `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Beschreibung*
++
+Ermöglicht Ihnen die Bearbeitung der Beschreibung des Befehls.
+
+* *Zeichenfolgendarstellung*
++
+Ermöglicht die Angabe einer Zeichenfolgendarstellung für den Befehl mithilfe der MVFLEX-Syntax (Expression Language, MVEL). Sie müssen die Zeichenfolgendarstellung angeben, um den Befehl zu speichern.
+
+* *Timeout(s)*
++
+Ermöglicht Ihnen, den Zeitüberschreitungswert (in Sekunden) für den Befehl anzugeben. Der Standardwert ist 600 Sekunden.
+
+* *Befehlstyp*
++
+Ermöglicht die Angabe des Ausführungstyps für den Befehl.
+
++
+** *Standardausführung*
++
+Ermöglicht die Ausführung des Befehls ohne Wartezeiten. Standardmäßig ist die Standardausführung ausgewählt.
+
+** *Auf Zustand warten*
++
+Hier können Sie die Zeit (in Sekunden) angeben, für die der Befehl vor der Ausführung warten muss. Der Standardwert ist 60 Sekunden.
+
+
+
+* *Mindestversion Der Software*
++
+Gibt die Mindestversionen der Software an, die für den Betrieb des Befehls erforderlich sind. Die Software bietet beispielsweise Clustered Data ONTAP 8.2.0 und vCenter 6.0. Die Versionen werden als kommagetrennte Werte angezeigt.
+
+* *Reservierungs- und Verifikationsskripte vom ursprünglichen Befehl* behalten
++
+Ermöglicht es Ihnen, die Reservierungs- und Verifikationsskripte beizubehalten, die ursprünglich für den Befehl angegeben wurden, den Sie klonen möchten.
+
+
+
+
+
+== Code-Registerkarte
+
+Ermöglicht Ihnen, den Code für den Befehl zu bearbeiten.
+
+* *Parameter Entdecken*
++
+Kopiert die im PowerShell-Code definierten Parameter in die Tabelle Parameterdefinition und in die Tabelle Parameterzuordnung.
+
+
+
+
+
+== Registerkarte Parameterdefinition
+
+Zeigt die Parameter an, die im Code definiert sind, den Sie auf der Registerkarte Code eingegeben haben.
+
+* *Name*
++
+Zeigt den Namen des Parameters an.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Parameters an.
+
+* * Obligatorisch*
++
+Zeigt ein ausgewähltes Kontrollkästchen für die obligatorischen Parameter an.
+
+* *Typ*
++
+Zeigt den Typ des Parameters an, z. B. String oder enum.
+
+* *Werte*
++
+Zeigt die für den Parameter festgelegten Werte an.
+
+* *Parameter Hinzufügen*
++
+Ermöglicht das Hinzufügen eines Parameters zum Befehl, wenn die ausgewählte Skriptsprache Perl ist.
+
+* *Parameter Entfernen*
++
+Ermöglicht das Entfernen eines Parameters aus dem Befehl, wenn die ausgewählte Skriptsprache Perl ist.
+
+
+
+
+
+== Registerkarte Parameterzuordnung
+
+Ermöglicht die Zuordnung der Parameter zu Wörterbuchobjekten und die Angabe des Attributs und des Objektnamens.
+
+* *Name*
++
+Zeigt den Namen des Parameters an.
+
+* *Typ*
++
+Ermöglicht die Auswahl eines Wörterbuchobjekts für den Parameter.
+
+* *Attribut*
++
+Hier können Sie das erforderliche Attribut angeben. Sie können entweder das Attribut auswählen (falls verfügbar) oder den Namen des Attributs eingeben.
+
+* *Objektname*
++
+Ermöglicht die Angabe eines Namens für das Wörterbuchobjekt.
+
+
+
+
+
+== Registerkarte „Reservierung“
+
+Sie können die vom Befehl erforderlichen Ressourcen reservieren.
+
+* *Reservierungsskript*
++
+Hiermit können Sie eine SQL-Abfrage eingeben, um die Ressourcen zu reservieren, die vom Befehl benötigt werden. Dadurch wird sichergestellt, dass die erforderlichen Ressourcen während der Ausführung eines geplanten Workflows zur Verfügung stehen.
+
+* *Reservierungsdarstellung*
++
+Ermöglicht die Angabe einer Zeichenfolgendarstellung für die Reservierung mit der MVEL-Syntax. Die Zeichenfolgendarstellung wird verwendet, um die Details der Reservierung im Fenster Reservierungen anzuzeigen.
+
+
+
+
+
+== Registerkarte Verifikation
+
+Ermöglicht Ihnen, eine Reservierung zu überprüfen und die Reservierung zu entfernen, nachdem der Befehl ausgeführt wurde.
+
+* *Prüfungsskript*
++
+Hiermit können Sie eine SQL-Abfrage eingeben, um die Nutzung der Ressourcen zu überprüfen, die vom Reservierungsskript reserviert wurden. Das Überprüfungsskript überprüft außerdem, ob der WFA Cache aktualisiert wird und entfernt die Reservierung nach einer Cache-Erfassung.
+
+* *Testverifizierung*
++
+Öffnet das Dialogfeld Überprüfung, in dem Sie die Parameter des Überprüfungsskripts testen können.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Test*
++
+Öffnet das Dialogfeld Testbefehl <CommandName> im Dialogfeld <ScriptLanguage>, in dem Sie den Befehl testen können.
+
+* *Speichern*
++
+Speichert den Befehl und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

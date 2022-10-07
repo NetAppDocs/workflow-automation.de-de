@@ -1,0 +1,16 @@
+---
+permalink: workflows/concept-what-filters-are.html 
+sidebar: sidebar 
+keywords: use, filters, workflows, select, required, resources 
+summary: Sie können WFA Filter in Ihren Workflows verwenden, um die erforderlichen Ressourcen auszuwählen. 
+---
+= Welche Filter sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können WFA Filter in Ihren Workflows verwenden, um die erforderlichen Ressourcen auszuwählen.
+
+Ein WFA Filter ist eine SQL-basierte Abfrage, die in der WFA Datenbank funktioniert. Jeder Filter gibt eine Liste mit Elementen eines bestimmten Wörterbuchtyps zurück. Die zurückgegebenen Elemente basieren auf den Auswahlkriterien, die in der SQL-Abfrage angegeben sind. Sie müssen SQL-Syntax kennen, um einen Filter zu erstellen oder zu bearbeiten.

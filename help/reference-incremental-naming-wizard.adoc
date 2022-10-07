@@ -1,0 +1,43 @@
+---
+permalink: help/reference-incremental-naming-wizard.html 
+sidebar: sidebar 
+keywords: incremental, naming, wizard, enable, define, value, attribute, search, existing, parameter 
+summary: Mit dem Assistenten für inkrementelle Benennung können Sie den Wert eines Attributs auf Basis einer Suche nach einem vorhandenen Parameter definieren. 
+---
+= Assistent Für Inkrementelle Benennung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dem Assistenten für inkrementelle Benennung können Sie den Wert eines Attributs auf Basis einer Suche nach einem vorhandenen Parameter definieren.
+
+* *Suchkriterien für vorhandenes <dictionary Object>*
++
+Öffnet das Dialogfeld *Ressourcenauswahl*, in dem Sie Suchkriterien für das Wörterbuchobjekt festlegen können.
+
+* *Geben Sie einen Wert für <attribut> ein, wenn kein <dictionary Object> mit den oben genannten Suchkriterien übereinstimmt*
++
+Ermöglicht die Angabe eines Werts für das Attribut <>, wenn das Objekt <dictionary> nicht anhand der angegebenen Suchkriterien gefunden wird.
+
+* *Wenn <dictionary object> anhand der oben genannten Suchkriterien gefunden wurde, setzen Sie den Wert für <attribut> von*
++
+Ermöglicht die Angabe eines Werts für das Attribut <>, wenn das Objekt <dictionary> nicht anhand der angegebenen Suchkriterien gefunden wird.
+
+* *Geben Sie einen Wert für <attribut> ein, wenn kein <dictionary Object> mit den oben genannten Suchkriterien übereinstimmt*
++
+Hier können Sie eine Methode zum Festlegen des Werts für das Attribut <> auswählen, wenn das Objekt <dictionary> anhand der angegebenen Suchkriterien gefunden wird.
+
++
+** *Angabe eines Schrittwerts und eines Suffix*
++
+Hier können Sie einen numerischen Wert für die Inkrements eingeben und optional ein Suffix des Attributnamens eingeben.
+
+** *Bereitstellung eines benutzerdefinierten Ausdrucks*
++
+Ermöglicht die Eingabe eines benutzerdefinierten Ausdrucks für den Wert des Attributs. Sie können MVFLEX-Syntax (MVEL) verwenden, um den Wert anzugeben.
+
+
+
+

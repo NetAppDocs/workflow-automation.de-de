@@ -1,0 +1,64 @@
+---
+permalink: workflows/reference-guidelines-for-indentation.html 
+sidebar: sidebar 
+keywords: aware, guidelines, indentation, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'Beim Schreiben eines PowerShell oder Perl Skripts für OnCommand Workflow Automation (WFA) müssen Sie die Richtlinien zum Einbinden kennen.' 
+---
+= Richtlinien für Einzüge
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beim Schreiben eines PowerShell oder Perl Skripts für OnCommand Workflow Automation (WFA) müssen Sie die Richtlinien zum Einbinden kennen.
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Eine Registerkarte entspricht vier leeren Leerzeichen.
+ a| 
+
+
+
+ a| 
+Verwenden Sie Laschen und Klammern, um den Anfang und das Ende eines Blocks anzuzeigen.
+ a| 
+PowerShell Skript
+
+[listing]
+----
+if
+($pair.length-ne 2)
+{
+throw "Got wrong input data"
+}
+----
+Perl-Skript
+
+[listing]
+----
+if
+(defined $MaxDirectorySize)
+{
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+}
+----
+
+
+ a| 
+Fügen Sie leere Zeilen zwischen Gruppen von Vorgängen oder Codebrocken hinzu.
+ a| 
+[listing]
+----
+$options=$option.trim();
+$pair=$option.split(" ");
+Get-WFAlogger -Info -messages $("split options: "+
+$Pair)
+----
+|===

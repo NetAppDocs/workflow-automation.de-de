@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-managing-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, create, part, managing, understand, relevant, concepts 
+summary: Sie können vordefinierte Workflows anpassen oder neue Workflows erstellen, um Ihre Workflows zu managen. Außerdem müssen Sie die entsprechenden Konzepte verstehen, bevor Sie mit der Verwaltung Ihrer Workflows beginnen. 
+---
+= Workflows managen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können vordefinierte Workflows anpassen oder neue Workflows erstellen, um Ihre Workflows zu managen. Außerdem müssen Sie die entsprechenden Konzepte verstehen, bevor Sie mit der Verwaltung Ihrer Workflows beginnen.

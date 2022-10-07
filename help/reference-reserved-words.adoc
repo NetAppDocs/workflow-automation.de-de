@@ -1,0 +1,95 @@
+---
+permalink: help/reference-reserved-words.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, include, reserved, words, use, attribute, parameters, variable name, user, input, constants, return parameters 
+summary: 'OnCommand Workflow Automation (WFA) enthält einige reservierte Wörter. Die reservierten Wörter in Workflows dürfen nicht für Attribute oder Parameter wie Variablennamen, Benutzereingabe, Konstanten und Rückgabeparameter verwendet werden.' 
+---
+= Reservierte Wörter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) enthält einige reservierte Wörter. Die reservierten Wörter in Workflows dürfen nicht für Attribute oder Parameter wie Variablennamen, Benutzereingabe, Konstanten und Rückgabeparameter verwendet werden.
+
+Im Folgenden finden Sie eine Liste der reservierten Wörter in WFA:
+
+[cols="3*"]
+|===
+
+
+ a| 
+* Und
+* Array Erledigen
+* Geltendmachung
+* Boolesch
+* boolesch
+* Byte
+* Byte
+* Zeichen
+* Zeichen
+* CharSequence
+* Klasse
+* Klassenlader
+* Compiler
+* Enthält
+* convertable_to
+* def
+* Tun
+* Doppelt
+* Doppelt
+* Sonst
+* Leer
+* Falsch
+
+ a| 
+* Schweben
+* Schweben
+* Für
+* Foreach
+* Funktion
+* Wenn
+* Importieren
+* Import_statisch
+* In
+* Instanceof
+* Int
+* Ganzzahl
+* Ist
+* isdef
+* Lang
+* Lang
+* Mathematik
+* Neu
+* Null
+* Nummer
+* Objekt
+* Oder
+
+ a| 
+* Proto
+* Zurück
+* Laufzeit
+* SecurityManager
+* Kurz
+* Kurz
+* soundslike
+* StrictMath
+* Zeichenfolge
+* StringBuffer
+* StringBuilder
+* Strsim
+* Switch
+* System
+* Thread
+* ThreadLocal
+* Richtig
+* Bis
+* Var
+* Ungültig
+* Während
+* Mit
+
+
+|===

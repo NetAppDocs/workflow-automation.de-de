@@ -1,0 +1,14 @@
+---
+permalink: windows-install/reference-configuring-a-database-user-on-datafabric-manager.html 
+sidebar: sidebar 
+keywords: configure, database, user, datafabric manager 
+summary: Sie müssen einen Datenbankbenutzer auf DataFabric Manager 5.x erstellen, um schreibgeschützten Zugriff auf die DataFabric Manager 5.x-Datenbank in OnCommand Workflow Automation zu konfigurieren. 
+---
+= Konfigurieren eines Datenbankbenutzers in DataFabric Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen einen Datenbankbenutzer auf DataFabric Manager 5.x erstellen, um schreibgeschützten Zugriff auf die DataFabric Manager 5.x-Datenbank in OnCommand Workflow Automation zu konfigurieren.

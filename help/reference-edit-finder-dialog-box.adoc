@@ -1,0 +1,117 @@
+---
+permalink: help/reference-edit-finder-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, finder, dialog box, enable 
+summary: Im Dialogfeld Suche bearbeiten können Sie den Finder bearbeiten. 
+---
+= Dialogfeld „Finder bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Suche bearbeiten können Sie den Finder bearbeiten.
+
+* Registerkarte Eigenschaften
+* Filter
+* Registerkarte Attribute zurückgegeben
+
+
+
+
+== Registerkarte Eigenschaften
+
+Über die Registerkarte *Properties* können Sie den Namen des Finder, den Typ des WFA Dictionary-Objekts und die Beschreibung des Finder bearbeiten. Auf der Registerkarte werden auch die Eingabeparameter des im Finder verwendeten Filters angezeigt.
+
+* *Name*
++
+Ermöglicht das Bearbeiten des Namens des Suchers.
+
+* *Typ*
++
+Ermöglicht Ihnen, aus der Liste wie Aggregat, Initiatorgruppe und Cluster den Typ des WFA Wörterbuchs auszuwählen. Die Filter für das ausgewählte Objekt werden auf der Registerkarte *Filter* angezeigt.
+
+* *Entity Version*
++
+Ermöglicht die Eingabe der Versionsnummer für den Finder in `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Beschreibung*
++
+Ermöglicht das Bearbeiten der Beschreibung für den Finder.
+
+* *Eingabeparameter-Tabelle*
++
+Zeigt die Eingabeparameter der ausgewählten Filter an.
+
+
+
+
+
+== Registerkarte Filter
+
+Ermöglicht Ihnen die Auswahl der gewünschten Filter aus der Liste der verfügbaren Filter.
+
+* *Verfügbare Filter*
++
+Zeigt die Liste der verfügbaren Filter für das ausgewählte Objekt auf der Registerkarte *Eigenschaften* an.
+
+* *Ausgewählte Filter*
++
+Zeigt die Liste der aus den verfügbaren Filtern ausgewählten Filter an.
+
+* *Auswahltasten*
++
+Verschiebt den ausgewählten Eintrag von einem Feld in ein anderes.
+
+
+
+
+
+== Registerkarte Attribute zurückgegeben
+
+Hier können Sie Details zu den verfügbaren Filtern anzeigen, die erforderlichen Attribute der verfügbaren Filter auswählen und die Sortierreihenfolge für die Attribute festlegen.
+
+* *Verfügbar*
++
+Zeigt die verfügbaren Filter und die Attribute für die Filter an.
+
+* *Ausgewählt*
++
+Zeigt die ausgewählten Filter und die Attribute, die Aliase und die Sortierreihenfolge für die ausgewählten Filter an.
+
+* *Befehlsschaltflächen*
++
+** *Auf*
++
+Verschiebt den ausgewählten Eintrag eine Zeile in der ausgewählten Tabelle nach oben.
+
+** *Down*
++
+Verschiebt den ausgewählten Eintrag in der ausgewählten Tabelle eine Zeile nach unten.
+
+** *Auswahltasten*
++
+Verschiebt den ausgewählten Eintrag von einer Tabelle in eine andere.
+
+
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Test*
++
+Ermöglicht es Ihnen, den Finder zu testen, den Sie zum Bearbeiten ausgewählt haben.
+
+* *Speichern*
++
+Speichert die Änderungen und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Speichert die Änderungen nicht, falls vorhanden, und schließt das Dialogfeld.
+
+

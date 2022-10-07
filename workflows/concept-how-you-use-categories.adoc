@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-categories.html 
+sidebar: sidebar 
+keywords: categorize, workflows, better, organize, apply, access, control, capability 
+summary: Workflows können kategorisiert werden, um Workflows besser zu organisieren und die Zugriffssteuerung auf die Workflows anzuwenden. 
+---
+= So verwenden Sie Kategorien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Workflows können kategorisiert werden, um Workflows besser zu organisieren und die Zugriffssteuerung auf die Workflows anzuwenden.
+
+Workflows können so kategorisiert werden, dass sie in bestimmten Gruppen im WFA Portal angezeigt werden. Sie können auch Zugriffskontrollfunktionen für Workflow-Kategorien anwenden. Beispielsweise können Sie nur bestimmten Speicheroperatoren oder Genehmigern erlauben, bestimmte Kategorien von Workflows anzuzeigen. Speicheroperatoren oder Genehmiger können nur die Workflows innerhalb der Kategorie ausführen, für die ihnen Zugriffsrechte gewährt wurden.
+
+Active Directory-Gruppen können auch zur Zugriffskontrolle für Kategorien verwendet werden.

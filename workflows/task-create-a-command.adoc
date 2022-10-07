@@ -1,0 +1,138 @@
+---
+permalink: workflows/task-create-a-command.html 
+sidebar: sidebar 
+keywords: create, wfa command, complete, specific, task, workflow, predefined, suitable 
+summary: Wenn kein vordefinierter WFA-Befehl vorhanden ist, der für die Aufgabe geeignet ist, können Sie einen WFA-Befehl zum Abschließen einer bestimmten Aufgabe erstellen. 
+---
+= Erstellen Sie einen Befehl
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn kein vordefinierter WFA-Befehl vorhanden ist, der für die Aufgabe geeignet ist, können Sie einen WFA-Befehl zum Abschließen einer bestimmten Aufgabe erstellen.
+
+Sie müssen wissen, wie der erforderliche Code für den Befehl über PowerShell oder Perl geschrieben wird.
+
+.Schritte
+. Klicken Sie Auf *Workflow Design* > *Befehle*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Geben Sie auf der Registerkarte *Eigenschaften* des Dialogfelds *Neue Befehlsdefinition* die erforderlichen Details in die Felder *Name*, *Beschreibung* und *Timeout* ein oder wählen Sie diese aus.
++
+.. Geben Sie im Feld *String-Darstellung* eine Zeichenfolgendarstellung für den Befehl mit MVEL-Syntax ein.
++
+`+VolumeName + "=>" + SnapshotName+`
+
++
+Die Zeichenfolgendarstellung für einen Befehl wird verwendet, um die Informationen anzuzeigen, die im Workflow-Design während der Planung und Ausführung angezeigt werden sollen. Sie müssen für einen Befehl nur die Parameter des Befehls in der String-Darstellung verwenden.
+
+.. *Optional:* Wenn Sie einen Wartebefehl erstellen, wählen Sie im Abschnitt *Befehlstyp* die Option *Wartezeit auf Bedingung* aus und legen Sie den erforderlichen Wert im Feld *Wartungsintervall (s)* fest.
+
+
+. Führen Sie auf der Registerkarte *Code* die folgenden Schritte aus:
++
+.. Wählen Sie die gewünschte Skriptsprache für den Befehl aus der Liste *Skriptsprache* aus.
++
+Sie können auf + klicken und eine zusätzliche Sprache für den Befehl auswählen.
+
+.. Geben Sie den entsprechenden Code für den Befehl auf der Registerkarte Ausgewählte Sprache ein.
++
+Wenn Sie einen Passworttyp für Benutzereingaben im PowerShell Skript verwenden möchten, müssen Sie einen Alias für den Parameter erstellen und einschließen `_Password` Im Attribut. Für Perl-Skript können Sie den Typ auf der Registerkarte *Parameterdefinition* als *Passwort* angeben.
+
++
+
+NOTE: Die folgenden Sonderzeichen werden im Befehlseditor nicht unterstützt: „<“, „&amp“ und XML-Tags „< >“.
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="Specify an AD administrator password.")]
+  [Alias("ADAdminPassword_Password")]  [string]$ADAdminPassword
+)
+----
+
+
+. Führen Sie auf der Registerkarte *Parameterdefinition* die folgenden Schritte aus:
++
+.. Klicken Sie auf *Parameter ermitteln*, um die Tabelle der Parameterdefinition zu füllen.
++
+Die Parameter und ihre Attribute werden aus dem Code extrahiert und in der Tabelle angezeigt. Beispielsweise werden die Parameter Array und VolumeName aus dem folgenden Code extrahiert:
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$true, HelpMessage="Array name or IP address")]
+  [string]$Array,
+
+  [parameter(Mandatory=$true, HelpMessage="Volume name")]
+  [string]$VolumeName,
+)
+----
+.. Klicken Sie auf die Spalte Beschreibung der Parameter, um die Beschreibung zu bearbeiten.
++
+Sie können in dieser Registerkarte keine anderen Felder bearbeiten.
+
+
+
+. Führen Sie auf der Registerkarte *Parameter Mapping* die folgenden Schritte für jeden Parameter durch:
++
+.. Wählen Sie in der Spalte *Typ* das entsprechende Wörterbuchobjekt aus.
+.. Geben Sie in der Spalte *Attribut* die entsprechenden Attribute für das Objekt aus der Liste ein oder wählen Sie sie aus.
++
+Nach der Eingabe eines Attributs können Sie einen Zeitraum (.) eingeben und ein weiteres Attribut dieses Objekts einschließen.
+
++
+Eingabe `cm_storage.volume` Als Typ und `aggregate.name` Als Attribut für den AggregateName Parameter.
+
+.. Geben Sie in der Spalte *Objektname* einen Objektnamen ein.
++
+Der Objektname wird zum Gruppieren der Parameter unter einer Registerkarte im Dialogfeld Parameter für <Command> verwendet, wenn Sie die Befehlsdetails in einem Workflow angeben.
+
+
+
++
+Die nicht zugeordneten Parameter werden im Dialogfeld Parameter für <Command> auf der Registerkarte *Sonstige Parameter* angezeigt, wenn Sie die Befehlsdetails in einem Workflow angeben.
+
+. Geben Sie auf der Registerkarte *Reservierung* ein Reservierungsskript mit SQL-Abfragen ein, um die Ressourcen zu reservieren, die der Befehl während einer geplanten Workflow-Ausführung benötigt:
++
+.. *Optional:* Geben Sie im Feld *Reservierungsdarstellung* eine Zeichenfolgendarstellung für die Reservierung mit MVEL-Syntax ein.
++
+`„Regel für SnapMirror-Label hinzufügen `
+
++
+`" + SnapMirrorLabel + "[.code]` In die SnapMirror-Richtlinie `
+
++
+`" + PolicyName + "`"`
+
++
+Die Zeichenfolgendarstellung wird verwendet, um die Details der im Fenster Reservierungen reservierten Ressourcen anzuzeigen.
+
+
+
++
+
+NOTE: Das Reservierungsskript darf keine Vorgänge auf Datenbanken ausführen außer dem cm_Storage, cm_Performance, Storage, Performance, vc, Und benutzerdefinierte Schemata.
+
+. *Optional:* Geben Sie auf der Registerkarte *Verifizierung* eine SQL-Abfrage ein, um zu überprüfen, ob der Befehl die Datenquellen und den WFA Cache wie erwartet beeinflusst hat, damit die Reservierung entfernt werden kann.
++
+Die SQL-Abfrage, die Sie eingeben, kann nur aus SQL SELECT-Anweisungen bestehen.
+
++
+.. Klicken Sie auf *Testverifizierung*, um das Überprüfungsskript zu testen.
+.. Geben Sie im Dialogfeld *Verifizierung* die erforderlichen Testparameter ein.
+.. Wenn Sie die Reservierungsdaten nicht zum Testen des Überprüfungsskripts verwenden möchten, deaktivieren Sie das Feld *Reservierungs-Daten im Test*.
+.. Klicken Sie Auf *Test*.
+.. Schließen Sie nach der Überprüfung des Testergebnisses das Dialogfeld.
+
+
+. Klicken Sie auf *Test*, um den Befehl zu testen.
+. Klicken Sie im Dialogfeld *Testbefehl <Befehlsname>* auf *Test*.
++
+Das Ergebnis des Tests wird im Abschnitt Protokollmeldungen des Dialogfelds angezeigt.
+
+. Klicken Sie Auf *Speichern*.
+

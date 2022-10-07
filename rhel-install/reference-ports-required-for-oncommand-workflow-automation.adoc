@@ -1,0 +1,184 @@
+---
+permalink: rhel-install/reference-ports-required-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: ports, required, workflow, automation 
+summary: 'Wenn Sie eine Firewall verwenden, müssen Sie die erforderlichen Ports für Workflow Automation (WFA) kennen.' 
+---
+= Für Workflow Automation erforderliche Ports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine Firewall verwenden, müssen Sie die erforderlichen Ports für Workflow Automation (WFA) kennen.
+
+In diesem Abschnitt werden die Standard-Port-Nummern aufgeführt. Wenn Sie eine nicht standardmäßige Portnummer verwenden möchten, müssen Sie diesen Port zur Kommunikation öffnen. Weitere Informationen finden Sie in der Dokumentation zu Ihrer Firewall.
+
+In der folgenden Tabelle sind die Standard-Ports aufgeführt, die auf dem WFA Server geöffnet sein sollen:
+
+[cols="4*"]
+|===
+| Port | Protokoll | Richtung | Zweck 
+
+
+ a| 
+80, 443
+ a| 
+HTTP, HTTPS
+ a| 
+Eingehend
+ a| 
+WFA öffnen und sich anmelden
+
+
+
+ a| 
+80, 443, 22
+ a| 
+HTTP, HTTPS, SSH
+ a| 
+Ausgehend
+ a| 
+Befehlsausführung (ZAPI, PowerCLI)
+
+
+
+ a| 
+445, 139, 389, 636
+ a| 
+Microsoft-DS, NetBIOS-ssn, AD LDAP, AD LDAPS
+ a| 
+Ausgehend
+ a| 
+Microsoft Active Directory LDAP-Authentifizierung
+
+
+
+ a| 
+161
+ a| 
+SNMP
+ a| 
+Ausgehend
+ a| 
+Senden von SNMP-Meldungen zum Status von Workflows
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+Eingehend
+ a| 
+Caching von schreibgeschützten Benutzern
+
+
+
+ a| 
+25
+ a| 
+SMTP
+ a| 
+Ausgehend
+ a| 
+E-Mail-Benachrichtigung
+
+
+
+ a| 
+80, 443, 25
+ a| 
+HTTP, HTTPS, SMTP
+ a| 
+Ausgehend
+ a| 
+Senden von AutoSupport Meldungen
+
+
+
+ a| 
+514
+ a| 
+Syslog
+ a| 
+Ausgehend
+ a| 
+Senden von Protokollen an einen Syslog-Server
+
+|===
+In der folgenden Tabelle sind die Standardports aufgeführt, die auf dem Unified Manager-Server geöffnet werden sollen:
+
+[cols="4*"]
+|===
+| Port | Protokoll | Richtung | Zweck 
+
+
+ a| 
+2638
+ a| 
+Sybase
+ a| 
+Eingehend
+ a| 
+Caching von Daten aus Active IQ Unified Manager vor 6.0
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+Eingehend
+ a| 
+Caching von Daten aus Active IQ Unified Manager 6.0 und höher
+
+
+
+ a| 
+8088, 8488
+ a| 
+HTTP, HTTPS
+ a| 
+Eingehend
+ a| 
+Caching von Daten aus Performance Advisor, einem Bestandteil von Active IQ Unified Manager vor 6.0
+
+|===
+In der folgenden Tabelle ist der Standardport aufgeführt, der auf VMware vCenter geöffnet werden soll:
+
+[cols="4*"]
+|===
+| Port | Protokoll | Richtung | Zweck 
+
+
+ a| 
+443
+ a| 
+HTTPS
+ a| 
+Eingehend
+ a| 
+Caching von Daten aus VMware vCenter
+
+|===
+In der folgenden Tabelle ist der Standardport aufgeführt, der auf dem SNMP-Hostcomputer geöffnet sein soll:
+
+[cols="4*"]
+|===
+| Port | Protokoll | Richtung | Zweck 
+
+
+ a| 
+162
+ a| 
+SNMP
+ a| 
+Eingehend
+ a| 
+Empfangen von SNMP-Meldungen zum Status von Workflows
+
+|===

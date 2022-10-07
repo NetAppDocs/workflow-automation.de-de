@@ -1,0 +1,45 @@
+---
+permalink: rhel-install/task-migrate-the-oncommand-workflow-automation-installation-linux.html 
+sidebar: sidebar 
+keywords: migrate, oncommand, workflow, automation, installation 
+summary: 'Sie können eine Installation von OnCommand Workflow Automation (WFA) migrieren, um den eindeutigen WFA Datenbankschlüssel zu erhalten, der während der WFA Installation installiert ist.' 
+---
+= Migrieren der OnCommand Workflow Automation Installation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Installation von OnCommand Workflow Automation (WFA) migrieren, um den eindeutigen WFA Datenbankschlüssel zu erhalten, der während der WFA Installation installiert ist.
+
+* Sie müssen diese Vorgehensweise nur durchführen, wenn Sie eine WFA Installation, die den WFA Datenbankschlüssel enthält, auf einen anderen Server migrieren möchten.
+* Beim Wiederherstellen einer WFA Datenbank wird der WFA Schlüssel nicht migriert.
+* Die Migration einer WFA Installation führt keine Migration der SSL-Zertifikate durch.
+* In diesem Verfahren wird der WFA Standardinstallationspfad verwendet.
++
+Wenn Sie während der Installation den Standardspeicherort geändert haben, müssen Sie den geänderten WFA Installationspfad verwenden.
+
+
+
+.Schritte
+. Zugriff auf WFA über einen Webbrowser als Administrator
+. Sichern der WFA Datenbank
+. Öffnen Sie eine Shell-Eingabeaufforderung auf dem WFA-Server, und ändern Sie das Verzeichnis in den folgenden Speicherort: WFA_install_location/wfa/bin/
+. Geben Sie an der Shell-Eingabeaufforderung Folgendes ein, um den Datenbankschlüssel zu erhalten:
++
+`./wfa -key`
+
+. Notieren Sie den angezeigten Datenbankschlüssel.
+. WFA deinstallieren.
+. Installation von WFA auf dem erforderlichen System
+. Öffnen Sie eine Shell-Eingabeaufforderung auf dem WFA-Server, und ändern Sie das Verzeichnis in den folgenden Speicherort: WFA_install_location/wfa/bin/
+. Installieren Sie an der Shell-Eingabeaufforderung den Datenbankschlüssel, indem Sie den folgenden Befehl eingeben:
++
+`./wfa -key=yourdatabasekey`
+
++
+Yourdatabasekey ist der Schlüssel, den Sie in der früheren WFA Installation angegeben haben.
+
+. Stellen Sie die WFA Datenbank aus dem von Ihnen erstellten Backup wieder her.
+

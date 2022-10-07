@@ -1,0 +1,51 @@
+---
+permalink: help/task-create-workflow-help-content.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, admins, architects, design, create, help, content, include 
+summary: 'OnCommand Workflow Automation (WFA) Administratoren und Architekten, die Workflows entwickeln, können Hilfs-Inhalte für die Workflows erstellen und in den Workflow einbinden.' 
+---
+= Erstellen von Inhalten für die Workflow-Hilfe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) Administratoren und Architekten, die Workflows entwickeln, können Hilfs-Inhalte für die Workflows erstellen und in den Workflow einbinden.
+
+*Was Sie brauchen*
+
+Sie müssen wissen, wie Webseiten mit HTML erstellt werden.
+
+*Über diese Aufgabe*
+
+Die Hilfe sollte dem Speicherbetreiber, der den Workflow ausführt, Informationen über den Workflow und die Benutzereingaben für den Workflow bereitstellen.
+
+.Schritte
+. Erstellen Sie einen Ordner mit dem folgenden Namen: Workflow-help.
+. Erstellen Sie den Hilfetext mit einem HTML-Editor oder einem Texteditor und speichern Sie ihn als `index.htm` Datei in der `workflow-help` Ordner.
++
+Sie dürfen JavaScript-Dateien nicht in den Hilfeinhalt integrieren. Die folgenden Dateierweiterungen werden unterstützt:
+
++
+** `.jpg`
+** `.jpeg`
+** `.gif`
+** `.png`
+** `.xml`
+** `.thmx`
+** `.htm`
+** `.html`
+** `.css`
+
+
++
+Sie können auch die einschließen `Thumbs.db` Datei, die von Windows erstellt wird.
+
+. Überprüfen Sie das `index.htm` Datei und andere Dateien, die mit dem Hilfsinhalt verknüpft sind, wie z. B. Bilder, sind im verfügbar `workflow-help` Ordner.
+. Erstellen Sie ein `.zip` Datei des Ordners und stellen Sie sicher, dass die Größe des `.zip` Die Datei ist nicht größer als 2 MB.
++
+*Beispiel:* `Create an NFS volume-help.zip`
+
+. Bearbeiten Sie den Workflow, für den Sie den Hilfeinhalt erstellt haben, und klicken Sie dann auf *Setup* > *Hilfeinhalt* > *Durchsuchen*, um die hochzuladen `.zip` Datei:
+

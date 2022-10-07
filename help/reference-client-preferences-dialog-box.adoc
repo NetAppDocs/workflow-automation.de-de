@@ -1,0 +1,61 @@
+---
+permalink: help/reference-client-preferences-dialog-box.html 
+sidebar: sidebar 
+keywords: preference, window, enable, view, modify, refresh, logging, options, client, associated specific, workflow, automation, server, access, settings, setup, click 
+summary: 'Im Fenster „Voreinstellungen“ können Sie die Aktualisierungs- und Protokollierungsoptionen für alle Clients anzeigen und ändern, die mit dem spezifischen Workflow Automation Server (WFA) verknüpft sind. Sie können auf dieses Fenster zugreifen, indem Sie „Einstellungen“ auswählen und unter „Einstellungen“ auf „Einstellungen“ klicken.' 
+---
+= Fenster „Einstellungen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster „Voreinstellungen“ können Sie die Aktualisierungs- und Protokollierungsoptionen für alle Clients anzeigen und ändern, die mit dem spezifischen Workflow Automation Server (WFA) verknüpft sind. Sie können auf dieses Fenster zugreifen, indem Sie *Einstellungen* und unter *Einstellungen* auf *Einstellungen* klicken.
+
+* *Automatische Aktualisierung Aktivieren*
++
+Ermöglicht die Auswahl der automatischen Aktualisierung des Clients, die vom Server ausgelöst wird. Diese Option ist standardmäßig ausgewählt. Wenn diese Option ausgewählt ist, werden die folgenden WFA Tabellen automatisch aktualisiert:
+
++
+** Ausführungsstatus
+** Datenquellen
+** Reservierungen
+
+
+
+
+Wenn diese Option nicht ausgewählt ist, werden die Tabellen erst aktualisiert, wenn Sie auf *Aktualisieren* klicken. Dieses Kontrollkästchen ist standardmäßig aktiviert.
+
+* *Aktualisierungsintervall (Sekunden)*
++
+Ermöglicht die Auswahl des Aktualisierungsintervalls. Der Standardwert ist 3 Sekunden.
+
+* *Maximale Anzahl der anzuzeigenden Zeilen*
++
+Ermöglicht es Ihnen, auf den Wert in der Spalte *Max Size* zu klicken und die Anzahl der Zeilen zu ändern, die der Server abruft und dem Benutzer pro Listenart angezeigt wird.
+
++
+So zeigt die Einstellung *Workflow-Ausführung* dem Benutzer beispielsweise die Anzahl der bisherigen Ausführungsausführungen an. Die Standardwerte:
+
++
+** Workflow-Ausführung: 100
+** Akquisitionsverlauf: 30
+** Reservierungen: 100
+** Bestandszeilen hinzufügen: 1000
++
+Ermöglicht die Angabe der maximalen Anzahl von Ergebnissen, die vom Bestand bezogen werden sollen. Der Standardwert ist 1000.
+
+
+
+
+
+
+
+== Befehlsschaltfläche
+
+* *Speichern*
++
+Speichert die Konfigurationseinstellungen.
+
+

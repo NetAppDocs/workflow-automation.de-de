@@ -1,0 +1,44 @@
+---
+permalink: help/reference-test-connectivity-dialog-box.html 
+sidebar: sidebar 
+keywords: test, connectivity, dialog box, enable, test, system, associated, credential, operation, trigger, search, path, first, look, exact, match, pattern, service, authentication 
+summary: Im Dialogfeld Konnektivität testen können Sie die Verbindung zum System testen, das mit Anmeldeinformationen verknüpft ist. Der Testverbindungsvorgang löst den Suchpfad aus und sucht zunächst nach einer genauen Übereinstimmung, dann nach einem Musterabgleich und schließlich nach der LDAP-Service-Authentifizierung. 
+---
+= Dialogfeld „Verbindung testen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Konnektivität testen können Sie die Verbindung zum System testen, das mit Anmeldeinformationen verknüpft ist. Der Testverbindungsvorgang löst den Suchpfad aus und sucht zunächst nach einer genauen Übereinstimmung, dann nach einem Musterabgleich und schließlich nach der LDAP-Service-Authentifizierung.
+
+Das Internet Control Message Protocol (ICMP) wird verwendet, um zu prüfen, ob das System ausgeführt wird, bevor die Konnektivität getestet wird.
+
+
+
+== Verbindungsparameter testen
+
+* *Typ*
++
+Ermöglicht Ihnen die Auswahl des Anmeldeinformationstyps aus der Dropdown-Liste.
+
+* *Name/IP*
++
+Ermöglicht die Angabe des Host-Namens oder der IP-Adresse für die Anmeldedaten.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Test*
++
+Öffnet einen Verbindungsversuch mit dem Hostnamen oder der IP-Adresse.
+
+* *Schließen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

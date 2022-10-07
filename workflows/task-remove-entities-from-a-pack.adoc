@@ -1,0 +1,48 @@
+---
+permalink: workflows/task-remove-entities-from-a-pack.html 
+sidebar: sidebar 
+keywords: remove, pack, entities, oncommand, workflow, automation, check, updated, source, control, management, server 
+summary: 'Sie können ein Paket aus den Entitäten in OnCommand Workflow Automation (WFA) entfernen und das aktualisierte Paket zum SCM Server (Source Control Management) einchecken.' 
+---
+= WFA Workflow Packs aus Einheiten entfernen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Paket aus den Entitäten in OnCommand Workflow Automation (WFA) entfernen und das aktualisierte Paket zum SCM Server (Source Control Management) einchecken.
+
+Das SCM muss eingerichtet sein und Sie müssen über Administrator- oder Architekturdaten verfügen.
+
+Sie können ein Paket aus den folgenden Elementen entfernen:
+
+* Workflow
+* Finder
+* Filter
+* Befehle
+* Funktionen
+* Vorlagen
+* Schemata
+* Wörterbuch
+* Datenquellentypen
+* Remote-Systemtypen
+* Cache-Abfragen
+* Kategorien
+
+
+.Schritte
+. Melden Sie sich über einen Webbrowser im *WFA*-Fenster an.
+. Navigieren Sie im *Workflow-Designportal* zu dem Element, das Sie entfernen möchten, und klicken Sie auf *<Entity>*.
+. Klicken Sie auf das Symbol *aus Packung entfernen*.
+. Wählen Sie im Dialogfeld *aus Paket entfernen <Entity>* das Paket aus, das Sie aus dieser Entität löschen möchten.
+. Klicken Sie auf *OK*.
+. Klicken Sie auf die Registerkarte *Packs*.
+. Klicken Sie auf das Symbol *Export to Server*.
+. Geben Sie im Dialogfeld *in Serverordner exportieren* im Feld *Speicherort des Ordners am Serversystem* den Speicherort des Serverordners ein, an dem das Paket im Server gespeichert wird.
++
+Damit wird das Paket in explodierter Form im Dateisystem exportiert, in dem der SCM-Client erstellt wird.
+
+. Überprüfen Sie im SCM-Client den Inhalt des Packs auf dem SCM-Server.
+. Mit den SCM-bereitgestellten Diff-Tools können Sie die Änderungen gegenüber der SCM-Version des Packs überprüfen.
+

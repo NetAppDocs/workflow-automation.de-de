@@ -1,0 +1,30 @@
+---
+permalink: workflows/task-create-a-template.html 
+sidebar: sidebar 
+keywords: create, template, use, blueprint, fill, attribute, command, details 
+summary: Sie können eine Vorlage erstellen, die als Vorlage zum Ausfüllen von Attributen in Befehlsdetails verwendet werden kann. 
+---
+= Erstellen einer Vorlage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Vorlage erstellen, die als Vorlage zum Ausfüllen von Attributen in Befehlsdetails verwendet werden kann.
+
+.Schritte
+. Klicken Sie Auf *Workflow-Design* > *Vorlagen*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Geben Sie im Dialogfeld *Neue Vorlage* die erforderlichen Angaben in die Felder *Name*, *Typ* und *Beschreibung* ein oder wählen Sie diese aus.
++
+Die Tabelle Attribute wird basierend auf dem Wörterbuch ausgefüllt, das Sie im Feld *Typ* ausgewählt haben.
+
+. Klicken Sie auf die Wertspalte jedes Attributs, und führen Sie eine der folgenden Schritte aus:
++
+** Geben Sie den gewünschten Wert in die Liste ein, oder wählen Sie ihn aus.
+** Geben Sie einen Benutzereingabeeintrag ein, z. B. `$size` Für Benutzereingabe in der Größe.
+
+
+. Klicken Sie Auf *Speichern*.
+

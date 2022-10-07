@@ -1,0 +1,185 @@
+---
+permalink: help/reference-finders-window.html 
+sidebar: sidebar 
+keywords: finders, window, display, available, alphabetical order, access, select, workflow, design 
+summary: Das Fenster Finders zeigt die verfügbaren Finder in alphabetischer Reihenfolge an. Sie können auf dieses Fenster zugreifen, indem Sie Workflow-Design > Finders auswählen. 
+---
+= Das Fenster „Finder“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Fenster Finders zeigt die verfügbaren Finder in alphabetischer Reihenfolge an. Sie können auf dieses Fenster zugreifen, indem Sie *Workflow Design* > *Finders* wählen.
+
+
+NOTE: Abhängig von Ihren Rollen- und Kontoberechtigungen wird dieses Fenster möglicherweise nicht angezeigt.
+
+Ein Finder ist ein Suchvorgang zum Suchen von Ressourcen. Ein Finder besteht aus Filterregeln, die irrelevante Ressourcen entfernen. Suchen nach Informationen zu WFA Objekten in den WFA gecachten Repositorys.
+
+* Findungstabelle
+* Symbolleiste
+
+
+
+
+== Findungstabelle
+
+In der Finders-Tabelle sind die verfügbaren Finder aufgeführt.
+
+Jeder Eintrag ist wie folgt gekennzeichnet:
+
+* image:../media/community_certification.gif[""] - Inhalt von Nutzern erstellt
+* image:../media/ps_certified_icon_wfa.gif[""] - Von Professional Services (PS) entwickelter Inhalt, der nur bei eigenen PS-Installationen verfügbar ist
+* image:../media/community_certification.gif[""] - Pakete von Benutzern entwickelt
+* image:../media/lock_icon_wfa.gif[""] - Inhalt, der von Benutzern erstellt wurde, die gesperrt sind
+* image:../media/netapp_certified.gif[""] - NetApp zertifizierter Inhalte
+
+
+Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+Die Tabelle Finders enthält die folgenden Spalten:
+
+* * Zertifizierung*
++
+Gibt an, ob der Finder vom Benutzer erstellt wurde (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), Gemeinschaft (image:../media/community_certification.gif[""]), Benutzer-gesperrt (image:../media/lock_icon_wfa.gif[""]) Oder NetApp zertifiziert (image:../media/netapp_certified.gif[""]).
+
++
+Sie können nach Suchvorgängen suchen, indem Sie die erforderlichen Kontrollkästchen aus der Filterliste auswählen.
+
+* *Name*
++
+Zeigt den Namen des Suchers an.
+
++
+Sie können nach einem Finder suchen, indem Sie seinen Namen in das Textfeld Filter suchen eingeben.
+
+* *Schema*
++
+Zeigt das Schema an, das mit den Suchfunktionen verknüpft ist. Ein Schema repräsentiert das Datenmodell für ein System. beispielsweise enthält ein vc-Schema Daten, die für Ihre virtuelle Umgebung relevant sind, wie z. B. Virtual Machines, Hosts und Datastores.
+
++
+Sie können nach einem Finder suchen, indem Sie das entsprechende Schema in das Textfeld Filter suchen eingeben.
+
+* *Typ*
++
+Zeigt den Objekttyp des Wörterbuchs des Finder an (z. B. Aggregat-Array oder CIFS).
+
++
+Sie können nach Suchvorgängen suchen, indem Sie den Typ in das Textfeld Filter suchen eingeben.
+
+* *Entity Version*
++
+Zeigt die Versionsnummer des Objekts in an `major.minor.revision` Format – z. B. 1.0.0.
+
++
+Sie können nach einem Finder suchen, indem Sie die Versionsnummer in das Textfeld Filter suchen eingeben.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Suchers an.
+
++
+Sie können nach einem Finder suchen, indem Sie dessen Beschreibung in das Textfeld Filter suchen eingeben.
+
+* *Zuletzt Aktualisiert Am*
++
+Zeigt das Datum und die Uhrzeit an, zu der der Finder zuletzt aktualisiert wurde.
+
++
+Sie können nach Suchvorgängen suchen, indem Sie die Zeitkategorie aus der Dropdown-Liste Filter auswählen.
+
+* *Aktualisiert Von*
++
+Zeigt den Benutzer an, der den Finder aktualisiert hat.
+
++
+Sie können nach Suchen suchen, indem Sie den Benutzernamen in das Textfeld Filter suchen eingeben.
+
+* *Gesperrt Von*
++
+Zeigt den Benutzer an, der den Finder gesperrt hat.
+
++
+Sie können nach Suchen suchen, indem Sie den Benutzernamen in das Textfeld Filter suchen eingeben.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/new_wfa_icon.gif["Neues Symbol"] (Neu)*
++
+Öffnet das Fenster Neuer Finder, in dem Sie einen Finder erstellen können.
+
+* *image:../media/edit_wfa_icon.gif["Symbol bearbeiten"] (Bearbeiten)*
++
+Öffnet das Fenster Finder <Finder_Name> für den ausgewählten Finder, mit dem Sie den Finder bearbeiten können.
+
++
+Sie können auch auf den Finder doppelklicken, um das Fenster Suche bearbeiten zu öffnen.
+
+* *image:../media/clone_wfa_icon.gif["Klon-Symbol"] (Klon)*
++
+Öffnet das Fenster Neuer Finder <Finder_Name> - copy, in dem Sie eine Kopie des ausgewählten Finder erstellen können.
+
+* *image:../media/lock_wfa_icon.gif["Symbol sperren"] (Sperre)*
++
+Öffnet das Bestätigungsdialogfeld für den Finder sperren, in dem Sie den ausgewählten Finder sperren können.
+
+* *image:../media/unlock_wfa_icon.gif["Symbol entsperren"] (Entsperren)*
++
+Öffnet das Bestätigungsdialogfeld zum Entsperren des Finder, in dem Sie den ausgewählten Finder entsperren können.
+
++
+Diese Option ist nur für die von Ihnen gesperrten Finder aktiviert. Administratoren können Finder freischalten, die von anderen Benutzern gesperrt wurden.
+
+* *image:../media/delete_wfa_icon.gif["Symbol Löschen"] (Löschen)*
++
+Öffnet das Bestätigungsdialogfeld Finder löschen, in dem Sie den ausgewählten vom Benutzer erstellten Finder löschen können.
+
++
+
+NOTE: Ein WFA Finder, PS Finder oder Sample Finder kann nicht gelöscht werden.
+
+* *image:../media/export_wfa_icon.gif["Symbol „Exportieren“"] (Export)*
++
+Ermöglicht das Exportieren des ausgewählten vom Benutzer erstellten Suchers.
+
++
+
+NOTE: Es ist nicht möglich, einen WFA Finder, PS Finder oder einen Sample Finder zu exportieren.
+
+* *image:../media/test_wfa_icon.gif["Testsymbol"] (Test)*
++
+Öffnet das Dialogfeld Test Finder, in dem Sie den ausgewählten Finder testen können.
+
+* *image:../media/add_to_pack.png["Zum Pack-Symbol hinzufügen"] (Zum Paket Hinzufügen)*
++
+Öffnet das Dialogfeld Add to Pack Finders, in dem Sie den Finder und seine zuverlässigen Einheiten zu einem Paket hinzufügen können, das bearbeitbar ist.
+
++
+
+NOTE: Die Funktion Add to Pack ist nur für Finder aktiviert, für die die Zertifizierung auf *Keine.* eingestellt ist
+
+* *image:../media/remove_from_pack.png["Aus Packungssymbol entfernen"] (Aus Packung Entfernen)*
++
+Öffnet das Dialogfeld aus Packungsfinders entfernen für den ausgewählten Finder, in dem Sie den Finder löschen oder aus dem Paket entfernen können.
+
++
+
+NOTE: Die Funktion „aus Pack entfernen“ ist nur für Finder aktiviert, für die die Zertifizierung auf *Keine.* eingestellt ist
+
+

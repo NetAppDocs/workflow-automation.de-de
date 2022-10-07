@@ -1,0 +1,122 @@
+---
+permalink: help/reference-recurring-executions-window.html 
+sidebar: sidebar 
+keywords: recurring, execution, window, enable, suspend, resume, delete, associate, workflow, specified, frequency, access 
+summary: Das Fenster wiederkehrende Ausführungsausführungen ermöglicht es Ihnen, eine wiederkehrende Ausführung, die einem Workflow zugeordnet ist, auszusetzen, fortzusetzen oder zu löschen. Ein Workflow mit wiederkehrender Ausführung wird wiederholt in einer bestimmten Frequenz ausgeführt. Sie können auf dieses Fenster zugreifen, indem Sie „Ausführung“ > „wiederkehrende Ausführung“ auswählen. 
+---
+= Fenster wiederkehrende Ausführungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster *wiederkehrende Ausführungsausführungen* können Sie eine wiederkehrende Ausführung, die einem Workflow zugeordnet ist, aussetzen, fortsetzen oder löschen. Ein Workflow mit wiederkehrender Ausführung wird wiederholt in einer bestimmten Frequenz ausgeführt. Sie können auf dieses Fenster zugreifen, indem Sie *Ausführung* > *wiederkehrende Ausführung* wählen.
+
+* Tabelle mit wiederkehrenden Ausführungen
+* Symbolleiste
+
+
+
+
+== Tabelle mit wiederkehrenden Ausführungen
+
+In der Tabelle „wiederkehrende Zeitpläne“ werden die vorhandenen wiederkehrenden Zeitpläne aufgeführt, die mit einem Workflow in Tabellenformat verknüpft sind. Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+In der folgenden Tabelle werden die unterstützten Operatoren für alphabetische und numerische Spalten in der Tabelle mit wiederkehrenden Ausführungen dargestellt, die im Textfeld * Suchen* verfügbar ist.
+
+[cols="2*"]
+|===
+| Alphabetisch | Numerisch 
+
+
+ a| 
+* Enthält
+* Enthält nicht
+* Beginnt mit
+* Endet mit
+* Gleich
+* Ist nicht gleich
+* Zurücksetzen
+
+ a| 
+* Gleich
+* Ist nicht gleich
+* Kleiner als
+* Größer als
+* Kleiner oder gleich
+* Größer oder gleich
+* Zwischen
+* Zurücksetzen
+
+
+|===
+Die Tabelle „wiederkehrende Zeitpläne“ enthält die folgenden Spalten:
+
+* *ID*
++
+Zeigt die Kennung des Zeitplans an.
+
+* *Workflow-Name*
++
+Zeigt den Namen des Workflows an.
+
+* *Benutzereingaben*
++
+Zeigt die Namen und Werte der dem Workflow zugeordneten Benutzereingaben an.
+
+* *Zeitplan*
++
+Zeigt den Namen des mit dem Workflow verknüpften Zeitplans an.
+
+* *Status*
++
+Zeigt den Status des Zeitplans an. Die möglichen Werte sind aktiv und ausgesetzt.
+
+* *Nächstes Ausführungsdatum*
++
+Zeigt das Datum und die Uhrzeit an, zu der der Terminplan zugeordnete Workflow als nächste ausgeführt wird.
+
++
+Sie können nach einem Zeitplan suchen, indem Sie das Datum und die Uhrzeit der Ausführung in das Textfeld * Suchen* eingeben.
+
+* *Aktualisiert Um*
++
+Zeigt das Datum und die Uhrzeit an, zu der die Verknüpfung des Workflows mit dem Zeitplan aktualisiert wurde.
+
++
+Klicken Sie im Textfeld * Suchen* auf das Kalendersymbol, um nach wiederkehrenden Zeitplänen an einem bestimmten Datum zu suchen.
+
+* *Aktualisiert Von*
++
+Zeigt den Namen des Benutzers an, der die Verknüpfung des Workflows mit dem Zeitplan geändert hat.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/suspend_icon.gif[""] (Aussetzen)*
++
+Öffnet das Dialogfeld „wiederkehrende Ausführung anhalten“, in dem Sie die Ausführung eines aktiven Workflows unterbrechen können.
+
+* *image:../media/resume_wfa_icon.gif["Symbol „Fortsetzen“"] (Fortsetzen)*
++
+Setzt die Ausführung eines gesperrten Workflows fort.
+
+* *image:../media/delete_wfa_icon.gif["Symbol Löschen"] (Löschen)*
++
+Öffnet das Dialogfeld „Bestätigung der wiederkehrenden Ausführung löschen“, in dem Sie den ausgewählten Zeitplan löschen können.
+
+

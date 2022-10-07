@@ -1,0 +1,37 @@
+---
+permalink: workflows/task-test-the-wfa-reservation-script-for-commands.html 
+sidebar: sidebar 
+keywords: test, reservation, scripts, written, oncommand, workflow, automation, commands, playground, database, ensure, affect, table 
+summary: 'Sie können die von Ihnen für OnCommand Workflow Automation (WFA) Befehle geschriebenen Reservierungsskripte in der Playground-Datenbank testen, um sicherzustellen, dass die Skripte ordnungsgemäß funktionieren und die WFA Datenbanktabellen nicht beeinträchtigen.' 
+---
+= Testen Sie das Reservierungsskript auf Befehle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die von Ihnen für OnCommand Workflow Automation (WFA) Befehle geschriebenen Reservierungsskripte in der Playground-Datenbank testen, um sicherzustellen, dass die Skripte ordnungsgemäß funktionieren und die WFA Datenbanktabellen nicht beeinträchtigen.
+
+In diesem Verfahren wird der WFA Standardinstallationspfad verwendet. Wenn Sie während der Installation den Standardspeicherort geändert haben, müssen Sie den geänderten WFA Installationspfad verwenden.
+
+.Schritte
+. Öffnen Sie eine Eingabeaufforderung auf dem WFA-Server, und ändern Sie die Verzeichnisse an den folgenden Speicherort: `c:\Program Files\NetApp\WFA\mysql\bin`
+. Erstellen Sie mit dem folgenden Befehl einen Dump der WFA-Datenbank: `mysqldump -u wfa -pWfa123 --single-transaction --skip-add-drop-table database_tables> dump_location`
++
+Befehl zum Erstellen eines Speicherauszugs der cm_Storage-Datenbanktabellen: `mysqldump -u wfa -pWfa123 --single-transaction --skip-add-drop-table cm_storage> c:\tmp\cmSt2.sql`
+
+. Stellen Sie den Dump wieder her, den Sie auf der WFA Playground-Datenbank erstellt haben, mit folgendem Befehl: `mysql -u wfa -pWfa123 playground < dump_location`
++
+`mysql -u wfa -pWfa123 playground < c:\tmp\cmSt2.sql`
+
+. Erstellen oder bearbeiten Sie einen WFA Befehl und schreiben Sie das Reservierungsskript auf der Registerkarte *Reservierung*.
++
+Sie müssen sicherstellen, dass die Reservierungs- und Verifikationsskripte nur die Playground-Datenbank verwenden.
+
+. Erstellen oder bearbeiten Sie einen Workflow, fügen Sie den Befehl im Workflow ein, und führen Sie den Workflow aus.
+. Überprüfen Sie, ob die Reservierungs- und Verifikationsskripte wie erwartet funktionieren.
++
+Der Erfassungsprozess für die WFA Datenquelle aktualisiert nicht die Playground-Datenbank. Sie müssen die Reservierungen, die mit dem Befehl erstellt wurden, manuell entfernen.
+
+

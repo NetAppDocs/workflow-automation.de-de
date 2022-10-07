@@ -1,0 +1,38 @@
+---
+permalink: workflows/concept-what-conditional-execution-is.html 
+sidebar: sidebar 
+keywords: condition, execution, help, design, workflows, execute, commands, specified, meet 
+summary: Die bedingte Ausführung unterstützt Sie beim Design von Workflows, die Befehle ausführen können, wenn bestimmte Bedingungen erfüllt werden. 
+---
+= Welche bedingte Ausführung ist
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die bedingte Ausführung unterstützt Sie beim Design von Workflows, die Befehle ausführen können, wenn bestimmte Bedingungen erfüllt werden.
+
+Die Ausführung von Befehlen in einem Workflow kann dynamisch sein. Sie können eine Bedingung für die Ausführung jedes Befehls oder eine Reihe von Befehlen in Ihrem Workflow angeben. Beispielsweise könnte der Befehl „`Volume zu Datensatz hinzufügen`“ nur dann ausgeführt werden, wenn ein bestimmter Datensatz gefunden wurde und der Workflow nicht ausfallen soll, wenn der Datensatz nicht gefunden wurde. In diesem Fall können Sie den Befehl „`Volume zu Datensatz hinzufügen`“ aktivieren, um nach einem bestimmten Datensatz zu suchen. Wenn dieser nicht gefunden wird, können Sie den Befehl im Workflow deaktivieren.
+
+Optionen für die bedingte Ausführung von Befehlen sind im verfügbar `Dictionary object` Registerkarte und Registerkarte Erweitert der Parameter für `commands` Dialogfeld.
+
+Sie können einen Workflow abbrechen oder einen bestimmten Befehl im Workflow deaktivieren. Darüber hinaus können Sie einen auszuführenden Befehl mithilfe einer der folgenden Optionen festlegen:
+
+* Ohne Bedingung
+* Wenn die angegebenen Variablen gefunden wurden
+* Wenn die angegebenen Variablen nicht gefunden wurden
+* Wenn der angegebene Ausdruck wahr ist
+
+
+Sie können außerdem einen Befehl so einstellen, dass er auf ein bestimmtes Zeitintervall wartet.
+
+
+
+== Beispiele für bedingte Ausführung in vordefinierten Workflows
+
+Sie können die Befehlsdetails der folgenden vordefinierten Workflows im Designer öffnen, um zu verstehen, wie bedingte Ausführung von Befehlen verwendet wird:
+
+* Erstellen Sie ein grundlegendes Clustered Data ONTAP Volume
+* Erstellen eines Clustered Data ONTAP-NFS-Volumes
+

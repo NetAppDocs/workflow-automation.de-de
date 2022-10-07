@@ -1,0 +1,149 @@
+---
+permalink: workflows/concept-how-you-define-user-input.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, user, input, data, options, available, during, execution, define, parameters, enhance, flexibility, usability 
+summary: 'Die Eingaben der OnCommand Workflow Automation (WFA) Benutzer sind Dateneingabeoptionen, die bei der Ausführung von Workflows zur Verfügung stehen. Sie müssen die Benutzereingabeparameter für Ihre Workflows definieren, um die Flexibilität und Benutzerfreundlichkeit Ihrer Workflows zu erhöhen.' 
+---
+= So werden Benutzereingaben definiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Eingaben der OnCommand Workflow Automation (WFA) Benutzer sind Dateneingabeoptionen, die bei der Ausführung von Workflows zur Verfügung stehen. Sie müssen die Benutzereingabeparameter für Ihre Workflows definieren, um die Flexibilität und Benutzerfreundlichkeit Ihrer Workflows zu erhöhen.
+
+Benutzereingaben werden als Eingabefelder angezeigt, die bei der Vorschau oder Ausführung von Workflows mit relevanten Daten ausgefüllt werden können. Sie können ein Benutzereingabefeld erstellen, wenn Sie die Befehlsdetails in einem Workflow angeben, indem Sie eine Beschriftung oder Variable mit dem Dollarzeichen (€) vorfixieren. Beispiel: Dollar VolumeName erstellt ein Benutzereingabefeld für Volume Name. WFA füllt die Registerkarte „Benutzereingaben“ im Workflow <Workflow Name> -Fenster automatisch mit den von Ihnen erstellten Benutzereingaben aus. Sie können auch den Typ der Benutzereingabe definieren und die Eingabefelder anpassen, indem Sie die Benutzereingabeattribute wie Typ, Anzeigename, Standardwerte und Validierungswerte ändern.
+
+
+
+== Optionen zur Benutzereingabe
+
+* *String*
++
+Sie können einen regulären Ausdruck für gültige Werte verwenden, z. B. A*.
+
++
+Zeichenfolgen, z. B. `0d` Und `0f`, Werden als Zahlen ähnlich bewertet `0d` Als 0 vom Typ Double bewertet.
+
+* *Nummer*
++
+Sie können einen numerischen Bereich definieren, der ausgewählt werden kann, z. B. 1 bis 15.
+
+* *Enum*
++
+Sie können Aufzählungswerte erstellen, die beim Ausfüllen des Benutzereingabefelds mithilfe des Enumtyps ausgewählt werden können. Sie können optional die von Ihnen erstellten enum-Werte sperren, um sicherzustellen, dass nur die von Ihnen erstellten Werte für die Benutzereingabe ausgewählt sind.
+
+* *Abfrage*
++
+Sie können den Abfragetyp auswählen, wenn die Benutzereingabe aus den im WFA Cache verfügbaren Werten ausgewählt werden soll. Mit der folgenden Abfrage können Sie beispielsweise die Benutzereingabefelder automatisch mit der IP-Adresse und den Namenswerten aus dem WFA Cache füllen: *`SELECT ip, name FROM storage.array.`* Sie können optional die von einer Abfrage abgerufenen Werte sperren, so dass nur die durch die Abfrage erneut versuchten Ergebnisse ausgewählt werden.
+
+* *Abfrage (Mehrfachauswahl)*
++
+Der Abfragetyp (Multi-select), der dem Abfragetyp ähnlich ist, ermöglicht die Auswahl mehrerer Werte während der Ausführung des Workflows. Benutzer können beispielsweise mehrere Volumes oder Volumes zusammen mit ihren Shares und Exporten auswählen. Sie können den Benutzern erlauben, mehrere Zeilen auszuwählen, oder die Auswahl auf eine einzelne Zeile beschränken. Wenn Sie eine Zeile auswählen, werden die Werte aus allen Spalten der ausgewählten Zeile ausgewählt.
+
+
+
+Sie können die folgenden Funktionen verwenden, wenn Sie den Typ der Benutzereingabe query (multi-select) verwenden:
+
+* GetSize
+* GetValueAt
+* GetValueAt2D
+* GetValueFrom2DByRowKey
++
+** *Boolesch*
++
+Sie können den Booleschen Typ verwenden, um ein Kontrollkästchen im Dialogfeld Benutzereingabe anzuzeigen. Sie müssen den Booleschen Typ für Benutzereingaben verwenden, die die möglichen Werte „`true`“ und „`false`“ aufweisen.
+
+** *Tisch*
++
+Sie können den Tabellentyp der Benutzereingabe verwenden, um die Spaltenköpfe einer Tabelle anzugeben, mit der mehrere Werte während der Ausführung des Workflows eingegeben werden können. Beispielsweise kann eine Tabelle verwendet werden, um eine Liste mit Node-Namen und Port-Namen anzugeben. Sie können auch einen der folgenden Benutzereingangstypen für die Spaltenüberschriften angeben, um die Werte zu validieren, die während der Laufzeit eingegeben wurden:
+
+
+
+* Zeichenfolge
+* Nummer
+* Enum
+* Boolesch
+* Abfrage
+`String` Ist der Standard-Benutzereingangstyp für die Spaltenüberschriften. Sie müssen auf die Spalte Typ doppelklicken, um einen anderen Benutzereingangstyp anzugeben.
++
+Im Designer können Sie den Workflow für die Erstellung von SnapMirror-Richtlinien und -Regeln öffnen, um zu sehen, wie die Benutzereingabetypen in der Benutzereingabe „`SnapMirrorPolicyRule`“ verwendet werden.
+
++
+Sie können die folgenden Funktionen verwenden, wenn Sie den Typ der Benutzereingabe in der Tabelle verwenden:
+
+* GetSize
+* GetValueAt
+* GetValueAt2D
+* GetValueFrom2DByRowKey Sie können den Workflow *Erstellen und Konfigurieren einer Storage Virtual Machine mit Infinite Volume* im Designer öffnen, um zu sehen, wie der Tabellentyp verwendet wird.
++
+** *Passwort*
++
+Sie können den Kennworttyp für Benutzereingaben verwenden, die zur Eingabe von Passwörtern gedacht sind. Das vom Benutzer eingegebene Passwort ist verschlüsselt und wird als Folge mit Sternchen-Zeichen für die gesamte WFA Anwendung und in den Protokolldateien angezeigt. Sie können das Kennwort mit den folgenden Funktionen entschlüsseln, die dann mit dem Befehl verwendet werden können:
+
+
+
+* Für Perl-Befehle: WFAUtil::getWfaInputPassword (Passwort USD)
+* Für PowerShell-Befehle: Get-WfaInputPassword -Verschlüsseltes Passwort €Passwort
++
+Bei diesem Passwort handelt es sich um das verschlüsselte Passwort, das von WFA an den Befehl übergeben wird.
+
++
+** *Wörterbuch*
++
+Sie können die Tabellendaten für den ausgewählten Wörterbucheintrag hinzufügen. Das Eingabeattribut Wörterbuch wählt das Attribut aus, das zurückgegeben werden soll. Sie können einen einzelnen oder mehrere Werte auswählen, während Sie den Workflow ausführen. Sie können beispielsweise ein einzelnes Volume oder mehrere Volumes auswählen. Standardmäßig sind einzelne Werte ausgewählt. Sie können auch Regeln für die Filterung auswählen. Eine Regel besteht aus einem Eingabeattribut für das Wörterbuch, einem Operator und einem Wert. Das Attribut kann auch Attribute seiner Referenzen enthalten.
+
++
+Sie können zum Beispiel eine Regel für Aggregate angeben, indem Sie alle Aggregate mit Namen, beginnend mit der Zeichenfolge "`aggr`", auflisten und eine verfügbare Größe größer als 5 GB haben. Die erste Regel in der Gruppe ist das Attribut `name`, Mit dem Betreiber `starts-with`, Und der Wert aggr. Die zweite Regel für dieselbe Gruppe ist das Attribut `available_size_mb`, Mit dem Betreiber `>` Und den Wert `5000.`
+
+
+
+
+
+In der folgenden Tabelle sind die Optionen aufgeführt, die Sie auf die Benutzereingangstypen anwenden können:
+
+[cols="2*"]
+|===
+| Option | Beschreibung 
+
+
+ a| 
+Validieren
+ a| 
+Sie können den Typ der Benutzereingaben überprüfen, sodass nur gültige Werte von Benutzern eingegeben werden:
+
+* Die Zeichenkette und die Anzahl der Benutzereingaben können mit den Werten validiert werden, die während der Laufzeit des Workflows eingegeben wurden.
+* Der String-Typ kann auch mit einem regulären Ausdruck validiert werden.
+* Der Zahlentyp ist ein numerisches Fließkommafeld und kann mit einem bestimmten numerischen Bereich validiert werden.
+
+
+
+
+ a| 
+Sperrwerte
+ a| 
+Sie können die Werte der Abfrage- und Enum-Typen sperren, um zu verhindern, dass der Benutzer die Dropdown-Werte überschreibt und um die Auswahl nur der angezeigten Werte zu aktivieren.
+
+
+
+ a| 
+Kennzeichnung als obligatorisch
+ a| 
+Sie können Benutzereingaben als obligatorisch markieren, damit die Benutzer bestimmte Benutzereingaben eingeben müssen, um mit der Ausführung des Workflows fortzufahren.
+
+
+
+ a| 
+Gruppierung
+ a| 
+Sie können zugehörige Benutzereingaben gruppieren und einen Namen für die Benutzereingabegruppe angeben. Die Gruppen können im Dialogfeld Benutzereingabe erweitert und ausgeblendet werden. Sie können eine Gruppe auswählen, die standardmäßig erweitert werden soll.
+
+
+
+ a| 
+Es gelten die Bedingungen
+ a| 
+Mit der Eingabemfunktion für bedingte Benutzer können Sie den Wert einer Benutzereingabe basierend auf dem Wert festlegen, der für eine andere Benutzereingabe eingegeben wird. In einem Workflow, der das NAS-Protokoll konfiguriert, können Sie beispielsweise die erforderliche Benutzereingabe für das Protokoll als NFS angeben, um die Benutzereingabe „`Read/Write Host Lists`“ zu aktivieren.
+
+|===

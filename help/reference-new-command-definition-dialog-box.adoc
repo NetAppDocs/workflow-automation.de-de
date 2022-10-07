@@ -1,0 +1,194 @@
+---
+permalink: help/reference-new-command-definition-dialog-box.html 
+sidebar: sidebar 
+keywords: new, command, definition, dialog box, enable, define, create, workflow, predefined, meet, requirements 
+summary: Im Dialogfeld Neue Befehlsdefinition können Sie einen neuen Befehl definieren. Sie können neue Befehle für Ihre Workflows erstellen, wenn die vordefinierten Befehle den Anforderungen nicht entsprechen. 
+---
+= Neues Dialogfeld „Befehlsdefinition“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Neue Befehlsdefinition können Sie einen neuen Befehl definieren. Sie können neue Befehle für Ihre Workflows erstellen, wenn die vordefinierten Befehle den Anforderungen nicht entsprechen.
+
+* Registerkarte Eigenschaften
+* Code-Registerkarte
+* Registerkarte Parameterdefinition
+* Registerkarte Parameterzuordnung
+* Registerkarte „Reservierung“
+* Registerkarte Verifikation
+
+
+
+
+== Registerkarte Eigenschaften
+
+Hier können Sie die Eigenschaften des Befehls angeben, z. B. Name, Beschreibung und Entity-Version.
+
+* *Name*
++
+Ermöglicht Ihnen die Angabe eines Namens für den Befehl. Sie müssen einen Namen angeben, um den Befehl zu speichern.
+
+* *Entity Version*
++
+Ermöglicht Ihnen die Angabe der Versionsnummer für den Befehl in `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung für den Befehl eingeben.
+
+* *Zeichenfolgendarstellung*
++
+Ermöglicht die Angabe einer Zeichenfolgendarstellung für den Befehl mithilfe der MVFLEX-Syntax (Expression Language, MVEL).
+
++
+Sie müssen die Zeichenfolgendarstellung angeben, um den Befehl zu speichern. Die Zeichenfolgendarstellung wird verwendet, um die Details des Befehls im Workflow-Design während der Planung und Ausführung anzuzeigen. Sie müssen für diesen Befehl nur die Parameter eines Befehls in der String-Darstellung verwenden.
+
+* *Timeout(s)*
++
+Ermöglicht Ihnen, den Zeitüberschreitungswert (in Sekunden) für den Befehl anzugeben. Der Standardwert ist 600 Sekunden.
+
+* *Befehlstyp*
++
+Ermöglicht die Angabe des Ausführungstyps für den Befehl.
+
++
+** *Standardausführung*
++
+Ermöglicht die Ausführung des Befehls ohne Wartezeiten. Standardmäßig ist die Standardausführung ausgewählt.
+
+** *Auf Zustand warten*
++
+Hier können Sie die Zeit (in Sekunden) angeben, für die der Befehl vor der Ausführung warten muss. Der Standardwert ist 60 Sekunden.
+
+
+
+* *Mindestversion Der Software*
++
+Gibt die Mindestversionen der Software an, die für den Betrieb des Befehls erforderlich sind. Die Software bietet beispielsweise Clustered Data ONTAP 8.2.0 und vCenter 6.0. Die Versionen werden als kommagetrennte Werte angezeigt.
+
+
+
+
+
+== Code-Registerkarte
+
+Ermöglicht die Eingabe des Codes für den Befehl in die ausgewählte Skriptsprache. Sie können eine neue Skriptsprache hinzufügen, indem Sie die gewünschte Sprache aus der Dropdown-Liste Skriptsprache auswählen.
+
+* *Parameter Entdecken*
++
+Kopiert die im PowerShell-Code definierten Parameter in die Tabelle Parameterdefinition und in die Tabelle Parameterzuordnung.
+
+
+
+
+
+== Registerkarte Parameterdefinition
+
+Zeigt die Parameter an, die im Code definiert sind, den Sie auf der Registerkarte Code eingegeben haben.
+
+* *Name*
++
+Zeigt den Namen des Parameters an.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Parameters an.
+
+* * Obligatorisch*
++
+Zeigt ein ausgewähltes Kontrollkästchen für die obligatorischen Parameter an.
+
+* *Typ*
++
+Zeigt den Typ des Parameters an, z. B. String, enum, Array oder Passwort.
+
+* *Werte*
++
+Zeigt den für den Parameter eingestellten Wert an.
+
+* *Parameter Hinzufügen*
++
+Ermöglicht das Hinzufügen eines Parameters zum Befehl, wenn die ausgewählte Skriptsprache Perl ist.
+
+* *Parameter Entfernen*
++
+Ermöglicht das Entfernen eines Parameters aus dem Befehl, wenn die ausgewählte Skriptsprache Perl ist.
+
+
+
+
+
+== Registerkarte Parameterzuordnung
+
+Ermöglicht die Zuordnung der Parameter zu Wörterbuchobjekten und die Angabe des Attributs und des Objektnamens.
+
+* *Name*
++
+Zeigt den Namen des Parameters an.
+
+* *Typ*
++
+Ermöglicht die Auswahl eines Wörterbuchobjekts für den Parameter.
+
+* *Attribut*
++
+Hier können Sie das erforderliche Attribut angeben. Sie können entweder das Attribut auswählen (falls verfügbar) oder das Attribut eingeben.
+
+* *Objektname*
++
+Ermöglicht die Angabe eines Namens für das Wörterbuchobjekt.
+
+
+
+
+
+== Registerkarte „Reservierung“
+
+Sie können die vom Befehl erforderlichen Ressourcen reservieren.
+
+* *Reservierungsskript*
++
+Hiermit können Sie eine SQL-Abfrage eingeben, um die Ressourcen zu reservieren, die vom Befehl benötigt werden. Dadurch wird sichergestellt, dass die Ressourcen während der Ausführung eines geplanten Workflows zur Verfügung stehen.
+
+* *Reservierungsdarstellung*
++
+Ermöglicht die Angabe einer Zeichenfolgendarstellung für die Reservierung mit der MVEL-Syntax. Die Zeichenfolgendarstellung wird verwendet, um die Details der Reservierung im Fenster Reservierungen anzuzeigen.
+
+
+
+
+
+== Registerkarte Verifikation
+
+Ermöglicht Ihnen, eine Reservierung zu überprüfen und die Reservierung zu entfernen, nachdem der Befehl ausgeführt wurde.
+
+* *Prüfungsskript*
++
+Hiermit können Sie eine SQL-Abfrage eingeben, um die Nutzung der Ressourcen zu überprüfen, die vom Reservierungsskript reserviert wurden. Das Überprüfungsskript überprüft außerdem, ob der WFA Cache aktualisiert wird und entfernt die Reservierung nach einer Cache-Erfassung.
+
+* *Testverifizierung*
++
+Öffnet das Dialogfeld Überprüfung, in dem Sie die Parameter des Überprüfungsskripts testen können.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Test*
++
+Öffnet das Dialogfeld Testbefehl <CommandName> im Dialogfeld <ScriptLanguage>, in dem Sie den Befehl testen können.
+
+* *Speichern*
++
+Speichert den Befehl und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

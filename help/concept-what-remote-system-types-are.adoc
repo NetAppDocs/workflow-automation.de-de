@@ -1,0 +1,26 @@
+---
+permalink: help/concept-what-remote-system-types-are.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, communicate, remote, system, types, remote, specify, configure, example, data, ontap, system 
+summary: 'OnCommand Workflow Automation (WFA) kommuniziert mit Remote-Systemtypen. Ein Remote-Systemtyp gibt den Typ der Remote-Systeme an, mit denen WFA kommunizieren kann. Sie können Remote-Systemtypen in WFA konfigurieren. Beispielsweise kann das Data ONTAP System als Remote-System-Typ konfiguriert werden.' 
+---
+= Welche Remote-Systemtypen sind vorhanden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) kommuniziert mit Remote-Systemtypen. Ein Remote-Systemtyp gibt den Typ der Remote-Systeme an, mit denen WFA kommunizieren kann. Sie können Remote-Systemtypen in WFA konfigurieren. Beispielsweise kann das Data ONTAP System als Remote-System-Typ konfiguriert werden.
+
+Ein Remote-Systemtyp weist folgende Attribute auf:
+
+* Name
+* Beschreibung
+* Version
+* Protokoll
+* Port
+* Zeitüberschreitung
+
+
+Sie können für jeden Remote-Systemtyp über ein Perl-Skript verfügen, um die Anmeldeinformationen des Remote-Systems zu validieren. Sie können die Anmeldedaten für die in WFA konfigurierten Remote-Systeme speichern. Sie können einen neuen benutzerdefinierten Remote-Systemtyp hinzufügen oder bearbeiten. Sie können auch einen vorhandenen Remote-Systemtyp klonen. Sie können einen Remotesystem-Typ nur löschen, wenn ihm keine Systeme zugeordnet sind.

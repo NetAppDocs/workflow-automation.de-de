@@ -1,0 +1,52 @@
+---
+permalink: workflows/task-create-a-filter.html 
+sidebar: sidebar 
+keywords: create, wfa, filter, search, resources, predefined, suitable, task 
+summary: Sie können einen WFA Filter erstellen, um nach Ressourcen zu suchen, falls kein vordefinierter WFA Filter für die Aufgabe geeignet ist. 
+---
+= Erstellen Sie einen Filter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen WFA Filter erstellen, um nach Ressourcen zu suchen, falls kein vordefinierter WFA Filter für die Aufgabe geeignet ist.
+
+Sie müssen die entsprechenden SQL-Syntax kennen, um den Filter zu erstellen.
+
+.Schritte
+. Klicken Sie Auf *Workflow-Design* > *Filter*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Geben Sie auf der Registerkarte *Eigenschaften* des Dialogfelds *Neuer Filter* die erforderlichen Details in die Felder *Name*, *Dictionary type* und *Beschreibung* ein oder wählen Sie diese aus.
+. Geben Sie auf der Registerkarte *Query* die entsprechende SQL-Abfrage für den Filter ein.
++
+Sie müssen eine einzelne SQL-Abfrage eingeben und optional Eingabeparameter verwenden. Sie sollten die folgende Syntax verwenden, um einen Eingabeparameter zu verwenden: `+${ParameterName}+`.
+
++
+[listing]
+----
+SELECT
+	array.ip
+FROM
+	storage.array
+WHERE
+	array.name = '${ArrayName}'
+----
+. Klicken Sie auf *Aktualisieren*, um die Tabelle *Eingabeparameter* und die Liste *zurückgegebene Attribute* auszufüllen.
++
+Diese Informationen werden aus der von Ihnen eingegebenen SQL-Abfrage abgerufen. Wenn Sie z. B. das Beispiel SQL-Abfrage aus dem vorherigen Schritt verwenden, wird die ip in zurückgegebenen Attributen angezeigt und in den Eingabeparametern wird ArrayName angezeigt. Sie können die Einträge in den Spalten *Etikett* und *Beschreibung* bearbeiten.
+
+. *Optional:* Klicken Sie auf *Test* um den Filter zu testen.
++
+.. Geben Sie im Dialogfeld *Testfilter <Filtername>* die erforderlichen Testparameter ein.
+.. Deaktivieren Sie das Kontrollkästchen *Reservierungsdaten im Test* verwenden, wenn Sie die Reservierungsdaten nicht zum Testen des Filters verwenden möchten.
+.. Klicken Sie Auf *Test*.
++
+Das Testergebnis wird angezeigt.
+
+.. Schließen Sie die Dialogfelder.
+
+
+. Klicken Sie Auf *Speichern*.
+

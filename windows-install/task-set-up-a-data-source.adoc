@@ -1,0 +1,150 @@
+---
+permalink: windows-install/task-set-up-a-data-source.html 
+sidebar: sidebar 
+keywords: set up, data source 
+summary: 'Sie müssen eine Verbindung mit einer Datenquelle in OnCommand Workflow Automation (WFA) einrichten, um Daten aus der Datenquelle zu erhalten.' 
+---
+= Richten Sie eine Datenquelle ein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Verbindung mit einer Datenquelle in OnCommand Workflow Automation (WFA) einrichten, um Daten aus der Datenquelle zu erhalten.
+
+* Für Active IQ Unified Manager-Versionen vor 6.0 müssen Sie die neueste Version des ocsetup-Tools auf dem Unified Manager-Server ausführen, um den schreibgeschützten Remote-Zugriff auf die Datenbank zu aktivieren und zu konfigurieren.
+* Für Active IQ Unified Manager6.0 und höher müssen Sie ein Datenbankbenutzerkonto auf dem Unified Manager Server erstellt haben.
++
+Weitere Informationen finden Sie in der Online-Hilfe zum _OnCommand Unified Manager_.
+
+* Der TCP-Port für eingehende Verbindungen auf dem Unified Manager-Server muss geöffnet sein.
++
+Weitere Informationen finden Sie in der Dokumentation Ihrer Firewall.
+
++
+Dies sind die Standardnummern für TCP-Ports:
+
++
+[cols="3*"]
+|===
+| TCP-Portnummer | Unified Manager Serverversion | Beschreibung 
+
+
+ a| 
+2638
+ a| 
+5.x
+ a| 
+Sybase SQL Anywhere Datenbankserver
+
+
+
+ a| 
+3306
+ a| 
+6.x
+ a| 
+MySQL-Datenbankserver
+
+|===
+* Für Performance Advisor müssen Sie ein Active IQ Unified Manager-Benutzerkonto mit einer Mindestrolle von GlobalRead erstellt haben.
++
+Weitere Informationen finden Sie in der Online-Hilfe zum _OnCommand Unified Manager_.
+
+* Für VMware vCenter Server müssen Sie ein Benutzerkonto auf dem vCenter Server erstellt haben.
++
+Details finden Sie in der Dokumentation zu VMware vCenter Server.
+
++
+[NOTE]
+====
+Sie müssen VMware PowerCLI installiert haben. Wenn Sie Workflows nur auf den Datenquellen von vCenter Server ausführen möchten, ist es nicht erforderlich, Unified Manager-Server als Datenquelle einzurichten.
+
+====
+* Der TCP-Port für eingehende Verbindungen auf dem VMware vCenter Server muss geöffnet sein.
++
+Die Standard-TCP-Portnummer lautet 443. Weitere Informationen finden Sie in der Dokumentation Ihrer Firewall.
+
+
+
+Mit diesem Verfahren können Sie WFA mehrere Unified Manager-Serverdatenquellen hinzufügen. Sie dürfen dieses Verfahren jedoch nicht verwenden, wenn Sie Unified Manager Server 6.3 und höher mit WFA koppeln und die Schutzfunktion in Unified Manager Server verwenden möchten.
+
+Weitere Informationen zum Pairing von WFA mit dem Unified Manager-Server 6.x finden Sie in der _OnCommand Unified Manager Online-Hilfe_.
+
+
+NOTE: Beim Einrichten einer Datenquelle mit WFA müssen Sie beachten, dass die Datentypen in der WFA 6.0 4.0 Version von Active IQ Unified Manager 6.1 und 6.2 veraltet sind, und diese Datenquelltypen werden in zukünftigen Versionen nicht unterstützt.
+
+.Schritte
+. Zugriff auf WFA über einen Webbrowser
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Setup* auf *Datenquellen*.
+. Wählen Sie die entsprechende Aktion aus:
++
+[cols="2*"]
+|===
+| An... | Tun Sie das... 
+
+
+ a| 
+Erstellen einer neuen Datenquelle
+ a| 
+Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+
+
+
+ a| 
+Bearbeiten Sie eine wiederhergestellte Datenquelle, wenn Sie WFA aktualisiert haben
+ a| 
+Wählen Sie den vorhandenen Datenquelleneintrag aus, und klicken Sie auf image:../media/edit_wfa_icon.gif["Symbol bearbeiten"] In der Symbolleiste.
+
+|===
++
+Wenn Sie WFA eine Unified Manager-Serverdatenquelle hinzugefügt und die Version des Unified Manager-Servers aktualisiert haben, wird WFA die aktualisierte Version des Unified Manager-Servers nicht erkennen. Sie müssen die vorherige Version des Unified Manager-Servers löschen und dann WFA die aktualisierte Version des Unified Manager-Servers hinzufügen.
+
+. Wählen Sie im Dialogfeld Neue Datenquelle den erforderlichen Datenquellentyp aus, und geben Sie einen Namen für die Datenquelle und den Hostnamen ein.
++
+Auf der Grundlage des ausgewählten Datenquelltyps werden die Felder Port, Benutzername, Passwort und Timeout möglicherweise automatisch mit den Standarddaten ausgefüllt, sofern verfügbar. Sie können diese Einträge nach Bedarf bearbeiten.
+
+. Wählen Sie eine geeignete Aktion:
++
+[cols="2*"]
+|===
+| Für... | Tun Sie das... 
+
+
+ a| 
+Active IQ Unified Manager Versionen vor 6.0
+ a| 
+Geben Sie den Benutzernamen und das Kennwort ein, die Sie beim Ausführen von ocsetup verwendet haben, um die Standardanmeldeinformationen zu überschreiben.
+
+
+
+ a| 
+Active IQ Unified Manager 6.3 und höher
+ a| 
+Geben Sie die Anmeldeinformationen des Datenbankbenutzerkontos ein, das Sie auf dem Unified Manager-Server erstellt haben. Weitere Informationen zum Erstellen eines Datenbankbenutzerkontos finden Sie in der Online-Hilfe von _OnCommand Unified Manager_.
+
+
+
+ a| 
+Performance Advisor für (Active IQ Unified Manager Versionen vor 6.0)
+ a| 
+Geben Sie die Anmeldedaten eines Active IQ Unified Manager-Benutzers mit einer Mindestrolle von GlobalRead ein.
+
+[NOTE]
+====
+Sie dürfen die Anmeldeinformationen eines Active IQ Unified Manager-Datenbankbenutzerkontos, das mit der Befehlszeilenschnittstelle oder dem ocsetup-Tool erstellt wurde, nicht bereitstellen.
+
+====
+
+
+ a| 
+VMware vCenter Server (nur für Windows)
+ a| 
+(Nur für Windows) Geben Sie den Benutzernamen und das Passwort des Benutzers ein, den Sie auf dem VMware vCenter Server erstellt haben.
+
+|===
+. Klicken Sie Auf *Speichern*.
+. Wählen Sie in der Tabelle Datenquellen die Datenquelle aus, und klicken Sie auf image:../media/acquire_now_wfa_icon.gif["Symbol „NOW erwerben“"] In der Symbolleiste.
+. Überprüfen Sie den Status des Datenerfassungsprozesses.
+

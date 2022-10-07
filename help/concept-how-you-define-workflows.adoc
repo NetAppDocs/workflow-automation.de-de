@@ -1,0 +1,32 @@
+---
+permalink: help/concept-how-you-define-workflows.html 
+sidebar: sidebar 
+keywords: goal, workflow, steps, execute, arrange, complete, workflow 
+summary: Sie müssen das Ziel eines Workflows in die Schritte untergliedern, die vom Workflow ausgeführt werden sollen. Anschließend können Sie die Schritte zum Abschließen des Workflows arrangieren. 
+---
+= So definieren Sie Workflows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen das Ziel eines Workflows in die Schritte untergliedern, die vom Workflow ausgeführt werden sollen. Anschließend können Sie die Schritte zum Abschließen des Workflows arrangieren.
+
+Ein Workflow ist ein Algorithmus, der mehrere Schritte enthält, die zum Abschließen eines End-to-End-Prozesses erforderlich sind. Der Umfang des Prozesses kann je nach Ziel des Workflows variieren. Ziel eines Workflows ist es möglicherweise, nur Storage-Vorgänge oder komplexere Prozesse wie die Handhabung von Netzwerk, Virtualisierung, IT-Systemen und anderen Applikationen im Rahmen eines einzigen Prozesses zu handhaben. OnCommand Workflow Automation Workflows (WFA) werden von Storage-Architekten entwickelt und von Storage-Betreibern ausgeführt.
+
+Bei der Definition Ihres Workflows werden das Ziel Ihres Workflows in eine Reihe von Schritten unterschritten, wie zum Beispiel das Erstellen eines NFS Volume umfasst die folgenden Schritte:
+
+. Erstellen eines Volume-Objekts
+. Erstellen einer neuen Exportrichtlinie und Verknüpfung der Richtlinie mit dem Volume
+
+
+Sie können für jeden Schritt im Workflow einen WFA-Befehl oder einen Workflow verwenden. WFA umfasst vordefinierte Befehle und Workflows, die auf gängigen Storage-Anwendungsfällen basieren. Wenn Sie keinen vordefinierten Befehl oder Workflow finden, der für einen bestimmten Schritt verwendet werden kann, können Sie einen der folgenden Schritte ausführen:
+
+* Sie wählen einen vordefinierten Befehl oder Workflow aus, der dem Schritt genau entspricht, und klonen und ändern den vordefinierten Befehl oder Workflow entsprechend den Anforderungen.
+* Erstellen Sie einen neuen Befehl oder neuen Workflow.
+
+
+Anschließend können Sie die Befehle oder Workflows in einem neuen Workflow so anordnen, dass der Workflow zum Erreichen Ihres Ziels erstellt wird.
+
+Zu Beginn der Workflow-Ausführung plant WFA die Ausführung und überprüft, ob der Workflow mittels Eingabe des Workflows und der Befehle ausgeführt werden kann. Bei der Planung des Workflows werden alle Ressourcen-Auswahl und Benutzereingaben gelöst, um einen Ausführungsplan zu erstellen. Nach Abschluss der Planung führt WFA den Ausführungsplan aus, der aus einer Reihe von WFA Befehlen mit entsprechenden Parametern besteht.

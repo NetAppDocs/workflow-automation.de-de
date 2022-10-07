@@ -1,0 +1,38 @@
+---
+permalink: workflows/task-customize-predefined-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, automation, suitable, requirement 
+summary: 'Sie können einen vordefinierten Workflow-Automatisierungs-Workflow (WFA) anpassen, wenn es keinen vordefinierten Workflow gibt, der Ihren Anforderungen entspricht.' 
+---
+= Vordefinierte Workflows werden angepasst
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen vordefinierten Workflow-Automatisierungs-Workflow (WFA) anpassen, wenn es keinen vordefinierten Workflow gibt, der Ihren Anforderungen entspricht.
+
+Sie müssen die erforderlichen Änderungen für den vordefinierten Workflow ermittelt haben.
+
+Fragen und Support-Anfragen für folgende müssen an die WFA Community gerichtet sein:
+
+* Alle Inhalte werden von der WFA Community heruntergeladen
+* Sie haben benutzerdefinierte WFA Inhalte erstellt
+* Sie haben WFA Inhalte geändert
+
+
+.Schritte
+. Klicken Sie Auf *Workflow Design* > *Workflows*.
+. Wählen Sie den vordefinierten Workflow aus, der Ihren Anforderungen genau entspricht, und klicken Sie dann auf image:../media/clone_wfa_icon.gif["Klon-Symbol"] In der Symbolleiste.
+. Nehmen Sie im Workflow-Designer die erforderlichen Änderungen auf den entsprechenden Registerkarten vor, z. B. das Bearbeiten der Beschreibung, das Hinzufügen oder Löschen eines Befehls, das Ändern der Befehlsdetails und das Ändern der Benutzereingabe.
+. Klicken Sie auf *Vorschau*, geben Sie die erforderlichen Benutzereingaben ein, um eine Vorschau der Workflow-Ausführung anzuzeigen, und klicken Sie dann auf *Vorschau*, um die Planungsdetails des Workflows anzuzeigen.
+. Klicken Sie auf *OK*, um das Vorschaufenster zu schließen.
+. Klicken Sie Auf *Speichern*.
+
+
+
+
+== Nachdem Sie fertig sind
+
+Sie können den von Ihnen geänderten Workflow in Ihrer Testumgebung testen und den Workflow anschließend als produktionsbereit markieren.

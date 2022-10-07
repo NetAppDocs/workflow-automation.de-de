@@ -1,0 +1,49 @@
+---
+permalink: reference-legal-notices.html 
+sidebar: sidebar 
+keywords: legal, notices, copyright, trademarks, patents 
+summary: Rechtliche Hinweise ermöglichen den Zugriff auf Copyright-Erklärungen, Marken, Patente und mehr. 
+---
+= Rechtliche Hinweise
+:allow-uri-read: 
+
+
+Rechtliche Hinweise ermöglichen den Zugriff auf Copyright-Erklärungen, Marken, Patente und mehr.
+
+
+
+== Urheberrecht
+
+http://www.netapp.com/us/legal/copyright.aspx[]
+
+
+
+== Marken
+
+NetApp, das NETAPP Logo und die auf der NetApp Markenseite aufgeführten Marken sind Marken von NetApp Inc. Andere Firmen- und Produktnamen können Marken der jeweiligen Eigentümer sein.
+
+http://www.netapp.com/us/legal/netapptmlist.aspx[]
+
+
+
+== Patente
+
+Eine aktuelle Liste der NetApp Patente finden Sie unter:
+
+https://www.netapp.com/us/media/patents-page.pdf[]
+
+
+
+== Datenschutzrichtlinie
+
+https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
+
+
+
+== Hinweis
+
+In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2875136["Hinweis zu Workflow Automation 5.1.1"^]
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2861741["Hinweis zu Workflow Automation 5.1"^]

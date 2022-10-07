@@ -1,0 +1,24 @@
+---
+permalink: rhel-install/task-configure-the-timeout-value-for-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: 'Sie können den Zeitüberschreitungswert für die Web-GUI (WFA) konfigurieren, anstatt den Standardwert für eine Zeitüberschreitung von 180 Sekunden zu verwenden.' 
+---
+= Konfigurieren Sie den Zeitüberschreitungswert für Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Zeitüberschreitungswert für die Web-GUI (WFA) konfigurieren, anstatt den Standardwert für eine Zeitüberschreitung von 180 Sekunden zu verwenden.
+
+Der von Ihnen eingestellte Timeout-Wert ist ein absolutes Timeout und nicht ein Timeout im Zusammenhang mit Inaktivität. Wenn Sie diesen Wert z. B. auf 30 Minuten setzen, werden Sie nach 30 Minuten abgemeldet, auch wenn Sie am Ende dieser Zeit aktiv sind. Sie können den Zeitüberschreitungswert nicht über die WFA Web GUI einstellen.
+
+.Schritte
+. Melden Sie sich als Root-Benutzer auf der WFA Host Machine an.
+. Legen Sie den Zeitüberschreitungswert fest:
++
+`installdir bin/wfa -S=timeout value in minutes`
+
+

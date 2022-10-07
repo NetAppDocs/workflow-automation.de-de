@@ -1,0 +1,119 @@
+---
+permalink: help/reference-edit-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, data, source, dialog box, enable, modify, existing 
+summary: Im Dialogfeld Datenquelle bearbeiten können Sie eine vorhandene Datenquelle ändern. 
+---
+= Dialogfeld „Datenquelle bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Datenquelle bearbeiten können Sie eine vorhandene Datenquelle ändern.
+
+
+
+== Eigenschaften der Datenquellenkonfiguration
+
+* *Name*
++
+Ermöglicht Ihnen, den Namen der Datenquelle zu ändern.
+
+* *Datenquellentyp*
++
+Zeigt den Datenquellentyp für die Datenquelle an. Dieses Feld kann nicht geändert werden.
+
+* *Hostname*
++
+Ermöglicht die Angabe des Host-Namens oder der IP-Adresse (IPv4 oder IPv6) für die Datenquelle.
+
++
+
+NOTE: Der Active IQ Unified Manager-Datenquellentyp unterstützt keine IPv6-Adressen.
+
+* *Port*
++
+Zeigt ggf. die zugehörige Portnummer für den ausgewählten Datenquelltyp an. Sie können die Standard-Portnummer für die Datenquelle ändern.
+
+* *Schema*
++
+Zeigt das Schema an, das dem ausgewählten Datenquelltyp zugeordnet ist, z. B. _cm_Storage_ für Unified Manager - 6.0 (MYSQL).
+
++
+Sie können diese Eigenschaft nicht ändern.
+
+* *Benutzername*
++
+Zeigt ggf. den zugeordneten Benutzernamen für den ausgewählten Datenquelltyp an.
+
++
+Sie müssen den entsprechenden Benutzernamen für diese Datenquelle angeben, um den Standardbenutzernamen zu überschreiben:
+
++
+** Bei Unified Manager-Versionen vor 6.0 müssen Sie den Benutzernamen eingeben, den Sie bei der Ausführung von ocsetup zum Überschreiben der Standardanmeldeinformationen verwendet haben.
+** Für Unified Manager 6.0 und höher müssen Sie den Benutzernamen des Datenbankbenutzerkontos eingeben, das Sie auf dem Unified Manager-Server erstellt haben.
+** Für Performance Advisor müssen Sie den Benutzernamen eines Active IQ Unified Manager-Benutzers mit einer Mindestrolle von GlobalRead eingeben.
+
+
+* *Passwort*
++
+Ermöglicht die Angabe eines Kennworts für den ausgewählten Datenquelltyp.
+
++
+Sie müssen ein Passwort angeben, um das Standardpasswort für den Benutzernamen dieser Datenquelle zu überschreiben:
+
++
+** Bei Unified Manager-Versionen vor 6.0 müssen Sie das Kennwort eingeben, das Sie bei der Ausführung von ocsetup zum Überschreiben der Standardanmeldeinformationen verwendet haben.
+** Für Unified Manager 6.0 und höher müssen Sie das Kennwort des Datenbankbenutzerkontos eingeben, das Sie auf dem Server erstellt haben.
+** Für Performance Advisor müssen Sie das Passwort eines Unified Manager-Benutzers mit einer Mindestrolle von GlobalRead eingeben.
+
+
+* * Datenbank*
++
+Zeigt ggf. den zugeordneten Datenbanknamen für den ausgewählten Datenquelltyp an.
+
+* *Intervall (Minuten)*
++
+Mit dieser Option können Sie auf den Wert klicken und ein Intervall (in Minuten) mithilfe der nach-oben- und nach-unten-Pfeile auswählen.
+
++
+
+NOTE: Wenn das Intervall auf Null (0) gesetzt ist, ist die automatische Probenahme deaktiviert.
+
++
+Das Standardintervall für die Datenprobe lautet:
+
++
+** Script-basierte Datenquellenart: 1440 (Performance und vc)
+** SQL-basierter Datenquelltyp: 30 (cm_Storage, Storage und cm_Performance)
+
+
+* *Siehe Setup-Bedienungsanleitung*
++
+Öffnet das Dialogfeld „Setup Instruction Guide“, in dem die Schritte zum Einrichten der Datenquelle erläutert werden.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Schema Zurücksetzen*
++
+Öffnet das Dialogfeld Bestätigung des Rücksetzschemas. In diesem Dialogfeld können Sie den Cache-Speicher für das ausgewählte Schema zurücksetzen, das während der nächsten Datenerfassung stattfindet.
+
++
+
+IMPORTANT: Beim Zurücksetzen werden alle zwischengespeicherten Daten, einschließlich aller Tabellen, gelöscht. Der gesamte Cache ist von Anfang an bei der nächsten Datenerfassung aufgebaut.
+
+* *Speichern*
++
+Speichert die Konfigurationseinstellungen und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

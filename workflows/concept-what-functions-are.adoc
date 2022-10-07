@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-functions-are.html 
+sidebar: sidebar 
+keywords: use, functions, workflows, complex, task, complete, during, planning, phase 
+summary: Sie können eine Funktion in Ihren Workflows für eine komplexe Aufgabe verwenden, die in der Planungsphase des Workflows ausgeführt werden muss. 
+---
+= Welche Funktionen sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Funktion in Ihren Workflows für eine komplexe Aufgabe verwenden, die in der Planungsphase des Workflows ausgeführt werden muss.
+
+Sie können Funktionen mit MVFLEX Expression Language (MVEL) schreiben. Sie können Funktionen verwenden, um häufig verwendete Logik sowie komplexere Logik in einer benannten Funktion zusammenzustellen und als Werte für Befehlsparameter oder Filterparameter zu verwenden. Sie können eine Funktion einmal schreiben und für alle Workflows verwenden. Mithilfe von Funktionen können Sie sich wiederholende Aufgaben und Aufgaben verarbeiten, die komplex sein können, z. B. die Definition einer komplexen Namenskonvention.
+
+Während der Ausführung können andere Funktionen verwendet werden.

@@ -1,0 +1,54 @@
+---
+permalink: windows-install/task-configure-authentication-settings.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, authentication settings 
+summary: 'Sie können OnCommand Workflow Automation (WFA) konfigurieren, um einen Microsoft Active Directory (AD) LDAP-Server (Lightweight Directory Access Protocol) zur Authentifizierung und Autorisierung zu verwenden.' 
+---
+= Konfigurieren Sie die Authentifizierungseinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können OnCommand Workflow Automation (WFA) konfigurieren, um einen Microsoft Active Directory (AD) LDAP-Server (Lightweight Directory Access Protocol) zur Authentifizierung und Autorisierung zu verwenden.
+
+Sie müssen einen Microsoft AD LDAP-Server in Ihrer Umgebung konfiguriert haben.
+
+Für WFA wird nur die Microsoft AD-LDAP-Authentifizierung unterstützt. Sie können keine anderen LDAP-Authentifizierungsmethoden verwenden, einschließlich Microsoft AD Lightweight Directory Services (AD LDS) oder Microsoft Global Catalog.
+
+
+NOTE: Während der Kommunikation sendet LDAP den Benutzernamen und das Passwort im Klartext. Allerdings ist die Kommunikation mit LDAPS (LDAP Secure) verschlüsselt und sicher.
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Administrator bei WFA an.
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Setup* auf *Authentifizierung*.
+. Aktivieren Sie das Kontrollkästchen * Active Directory aktivieren*.
+. Geben Sie die erforderlichen Informationen in die folgenden Felder ein:
++
+.. Wenn Sie das Domain-Format des Benutzers@für Domain-Benutzer verwenden möchten, ersetzen Sie sAMAccountName im Feld *User Name attribut* durch userPrincipalName.
+.. Wenn für Ihre Umgebung eindeutige Werte erforderlich sind, bearbeiten Sie die erforderlichen Felder.
+.. Geben Sie die URI des AD-Servers wie folgt ein: `ldap://active_directory_server_address\[:port\]`
++
+ldap://NB-T01.example.com[:389]
+
++
+Wenn Sie LDAP über SSL aktiviert haben, können Sie das folgende URI-Format verwenden: `ldaps://active_directory_server_address\[:port\]`
+
+.. Fügen Sie eine Liste mit AD-Gruppennamen der erforderlichen Rollen hinzu.
++
+
+NOTE: Im Fenster „Active Directory Groups“ können Sie den erforderlichen Rollen eine Liste mit AD-Gruppennamen hinzufügen.
+
+
+
+. Klicken Sie Auf *Speichern*.
+. Wenn eine LDAP-Konnektivität zu einem Array erforderlich ist, konfigurieren Sie den WFA Service zur Anmeldung als erforderlicher Domänenbenutzer:
++
+.. Öffnen Sie die Windows Services-Konsole über Services.msc.
+.. Doppelklicken Sie auf den *NetApp WFA Server* Service.
+.. Klicken Sie im Dialogfeld Eigenschaften von NetApp WFA Server auf die Registerkarte *Anmelden* und wählen Sie dann *Dieses Konto* aus.
+.. Geben Sie den Benutzernamen und das Kennwort der Domäne ein, und klicken Sie dann auf *OK*.
+
+
+

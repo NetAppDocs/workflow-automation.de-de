@@ -1,0 +1,64 @@
+---
+permalink: workflows/task-create-a-data-source-type.html 
+sidebar: sidebar 
+keywords: create, data, source, type, enable, acquisition, predefined, oncommand, workflow, automation 
+summary: 'Sie müssen einen Datenquelltyp erstellen, um die Datenerfassung von einer Datenquelle zu ermöglichen, die in OnCommand Workflow Automation (WFA) nicht vordefiniert ist.' 
+---
+= Erstellen eines Datenquelltyps
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen einen Datenquelltyp erstellen, um die Datenerfassung von einer Datenquelle zu ermöglichen, die in OnCommand Workflow Automation (WFA) nicht vordefiniert ist.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen den erforderlichen Glossareintrag und das erforderliche Schema erstellt haben, wenn Sie einen benutzerdefinierten Quelltyp erstellen, der in WFA nicht vordefiniert ist.
+* Um einen Datenquellentyp zu erstellen, der die Skriptmethode verwendet, muss PowerShell Scripting bekannt sein.
+
+
+.Schritte
+. Klicken Sie Auf *Datenquellendesign* > *Datenquellenarten*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Geben Sie im Dialogfeld *Neuer Datenquellentyp* die erforderlichen Details in die Felder *Datenquelle*, *Datenquellenversion* und *Schema* ein oder wählen Sie diese aus.
+. Geben Sie im Feld *Standard-Port* die Portnummer ein.
++
+`2638`
+
++
+Die eingegebene Portnummer wird ausgefüllt, wenn Sie diesen Datenquelltyp zur Datenerfassung hinzufügen. Standardmäßig wird der Port von WFA zur Kommunikation mit der Datenquelle verwendet, und der Port sollte auf dem Datenquellserver geöffnet sein.
+
+. Wählen Sie aus der Liste *Method* die Methode aus, die WFA zum Erfassen von Daten verwenden muss:
++
+[cols="2*"]
+|===
+| Wenn Sie ausgewählt haben... | Dann... 
+
+
+ a| 
+SQL SERVER GESCHULT SIND
+ a| 
+Wählen Sie aus der Liste *Treibertyp* einen der folgenden Treiber aus, der für die Datenquelle geeignet ist:
+
+** *Sybase jConnect3*
+** * MySQL Connector/J*
+** *MySQL Server JDBC-Treiber 3.0*
+** *Oracle JDBC-Treiber 11.2.0.3*
+
+
+
+
+ a| 
+SKRIPT
+ a| 
+Geben Sie im Feld *Skript* das PowerShell-Skript ein, mit dem Daten aus der Datenquelle verbunden und abgerufen werden können.
+
+[NOTE]
+====
+Die Daten in den entsprechenden CSV-Dateien des Wörterbuchs sollten Registerkarten als Feldtrennzeichen enthalten. Beispielsweise finden Sie im PowerShell-Skript den Datenquellentyp von VMware vCenter.
+
+====
+|===
+. Klicken Sie Auf *Speichern*.
+

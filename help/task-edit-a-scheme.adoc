@@ -1,0 +1,32 @@
+---
+permalink: help/task-edit-a-scheme.html 
+sidebar: sidebar 
+keywords: edit, display, name, description, entity, version, scheme, create 
+summary: Sie können den Anzeigenamen, die Beschreibung und die Entity-Version eines von Ihnen erstellten Schemas bearbeiten. 
+---
+= Bearbeiten Sie ein Schema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Anzeigenamen, die Beschreibung und die Entity-Version eines von Ihnen erstellten Schemas bearbeiten.
+
+*Was Sie brauchen*
+
+* Sie müssen WFA installiert haben.
+* Sie müssen über Administratorrechte oder Anmeldedaten für den Systemarchitekten für WFA verfügen.
+
+
+*Über diese Aufgabe*
+
+Sie können vordefinierte Schemata nicht ändern.
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Administrator oder Architekt bei WFA an.
+. Klicken Sie Auf *Datenquellendesign* > *Schemas*.
+. Wählen Sie das Schema aus, das Sie ändern möchten, und klicken Sie dann auf image:../media/edit_wfa_icon.gif["Symbol bearbeiten"] In der Symbolleiste.
+. Ändern Sie die erforderlichen Informationen im Dialogfeld *Schemas <SchemeName>*.
+. Klicken Sie Auf *Speichern*.
+

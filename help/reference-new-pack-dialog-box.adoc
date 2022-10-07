@@ -1,0 +1,46 @@
+---
+permalink: help/reference-new-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: new, pack, dialog box, enable, create 
+summary: Im Dialogfeld „Neues Paket“ können Sie ein neues Paket erstellen. 
+---
+= Dialogfeld „Neues Paket“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Neues Paket“ können Sie ein neues Paket erstellen.
+
+* *Name*
++
+Hier können Sie einen Namen eingeben und das Paket speichern.
+
+* *Version*
++
+Ermöglicht die Eingabe einer Version und das Speichern des Pakets.
+
+* *Autor*
++
+Hier können Sie den Namen des Autors eingeben und das Paket speichern.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung eingeben und das Paket speichern.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert das Paket und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Schließt das Dialogfeld, ohne zu speichern.
+
+

@@ -1,0 +1,34 @@
+---
+permalink: help/task-configure-resource-reservation-for-workflows.html 
+sidebar: sidebar 
+keywords: configure, resource, reservation, capability, oncommand, workflow, automation, ensure, required, available, successful, execution 
+summary: 'Sie können die Funktion zur Ressourcenreservierung für OnCommand Workflow Automation (WFA) Workflows konfigurieren, damit die erforderlichen Ressourcen für die erfolgreiche Ausführung von Workflows zur Verfügung stehen.' 
+---
+= Konfiguration der Ressourcenreservierung für Workflows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Funktion zur Ressourcenreservierung für OnCommand Workflow Automation (WFA) Workflows konfigurieren, damit die erforderlichen Ressourcen für die erfolgreiche Ausführung von Workflows zur Verfügung stehen.
+
+.Schritte
+. Melden Sie sich als Administrator über einen Webbrowser bei WFA an.
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Setup* auf *Workflow-Einstellungen*.
+. Stellen Sie sicher, dass das Kontrollkästchen * Reservierung für Befehle aktivieren* aktiviert ist.
+. Geben Sie im Feld *Reservierungsablauf (H)* den erforderlichen Wert ein.
++
+Der Standardwert ist 4.
+
+. Klicken Sie Auf *Speichern*.
+. Ressourcenreservierung in jedem erforderlichen Workflow aktivieren:
++
+.. Klicken Sie auf *Workflow* > *Details* des gewünschten Workflows.
++
+`Workflow` Ist der Workflow, für den Ressourcenreservierung erforderlich ist?
+
+.. Wählen Sie *Reservierte Elemente Berücksichtigen*.
+
+
+

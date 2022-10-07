@@ -1,0 +1,43 @@
+---
+permalink: windows-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html 
+sidebar: sidebar 
+keywords: configure, database, user, run, ocsetup, windows 
+summary: Sie können die ocSetup-Datei auf dem DataFabric Manager 5.x-Server ausführen, um schreibgeschützten Zugriff auf die DataFabric Manager 5.x-Datenbank in OnCommand Workflow Automation zu konfigurieren. 
+---
+= Konfigurieren Sie einen Datenbankbenutzer, indem Sie ocsetup unter Windows ausführen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die ocSetup-Datei auf dem DataFabric Manager 5.x-Server ausführen, um schreibgeschützten Zugriff auf die DataFabric Manager 5.x-Datenbank in OnCommand Workflow Automation zu konfigurieren.
+
+.Schritte
+. Laden Sie die Datei wfa_ocsetup.exe von folgendem Speicherort in ein Verzeichnis des DataFabric Manager 5.x Servers herunter: _Https_://WFA_Server_IP/download/wfa_ocsetup.exe.
++
+_WFA_Server_IP_ ist die IP-Adresse (IPv4 oder IPv6-Adresse) Ihres WFA Servers.
+
++
+Wenn Sie einen nicht standardmäßigen Port für WFA angegeben haben, müssen Sie die Portnummer wie folgt angeben: _Https_://wfa_Server_ip:Port/download/wfa_ocsetup.exe.
+
++
+_Port_ ist die TCP-Portnummer, die Sie bei der Installation für den WFA Server verwendet haben.
+
++
+Wenn Sie eine IPv6-Adresse angeben, müssen Sie sie mit eckigen Klammern schließen.
+
+. Doppelklicken Sie auf die Datei wfa_ocsetup.exe.
+. Lesen Sie die Informationen im Setup-Assistenten und klicken Sie auf *Weiter*.
+. Suchen Sie nach OpenJDK, oder geben Sie die Position ein, und klicken Sie auf *Weiter*.
+. Geben Sie einen Benutzernamen und ein Kennwort ein, um die Standardanmeldeinformationen zu überschreiben.
++
+Ein neues Datenbank-Benutzerkonto wird mit Zugriff auf die DataFabric Manager 5.x Datenbank erstellt.
+
++
+
+NOTE: Wenn Sie kein Benutzerkonto erstellen, werden die Standardanmeldeinformationen verwendet. Aus Sicherheitsgründen müssen Sie ein Benutzerkonto erstellen.
+
+. Klicken Sie auf *Weiter* und sehen Sie sich die Ergebnisse an.
+. Klicken Sie auf *Weiter* und dann auf *Fertig stellen*, um den Assistenten abzuschließen.
+

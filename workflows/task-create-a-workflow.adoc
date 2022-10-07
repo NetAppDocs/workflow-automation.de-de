@@ -1,0 +1,243 @@
+---
+permalink: workflows/task-create-a-workflow.html 
+sidebar: sidebar 
+keywords: use, workflow, automation, create, tasks, provisioning, migrate, decommissioning, storage, databases, file, systems, predefined, wfa, match, requirements 
+summary: 'Mit Workflow Automation (WFA) können Sie Workflows für Aufgaben erstellen, zum Beispiel beim Bereitstellen, Migrieren und Dekommissionierung von Storage für Datenbanken oder Filesysteme. Sie sollten Workflows erstellen, wenn die vordefinierten WFA-Workflows den Anforderungen nicht entsprechen.' 
+---
+= Erstellen Sie einen Workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Workflow Automation (WFA) können Sie Workflows für Aufgaben erstellen, zum Beispiel beim Bereitstellen, Migrieren und Dekommissionierung von Storage für Datenbanken oder Filesysteme. Sie sollten Workflows erstellen, wenn die vordefinierten WFA-Workflows den Anforderungen nicht entsprechen.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen die Konzepte für die Bausteine von WFA verstanden haben.
+* Sie müssen über Funktionen wie Wiederholungszeile, Genehmigungspunkte und Ressourcenauswahl verfügen, die für Ihren Workflow erforderlich sind.
+* Sie müssen die für Ihren Workflow erforderliche Planung einschließlich der Workflow-Anforderung-Checkliste abgeschlossen haben.
+* Sie sollten den Hillinhalt erstellt haben, der den Speicherbetreibern Informationen über den Workflow bereitstellt.
+
+
+Die Erstellung jedes Workflows kann je nach Ziel und Anforderungen des Workflows variieren. Diese Aufgabe enthält keine Anweisungen für einen bestimmten Workflow, sondern allgemeine Anweisungen zur Erstellung eines Workflows.
+
+.Schritte
+. Klicken Sie Auf *Workflow Design* > *Workflows*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Führen Sie auf der Registerkarte *Workflow* die folgenden Schritte aus:
++
+.. Erweitern Sie das erforderliche Schema, und doppelklicken Sie anschließend auf das gewünschte Schema image:../media/wfa_command_icon.gif["Befehlssymbol"] (Befehl) oder image:../media/wfa_workflow_icon.gif["Workflow-Symbol"] (Workflow) aus der Liste * Verfügbare Schritte*.
++
+Sie können diesen Schritt bei Bedarf wiederholen. Sie können die Schritte per Drag-and-Drop verschieben, um die Schritte im Workflow-Editor neu anzuordnen.
+
+.. *Optional:* Klicken image:../media/add_row2_wfa_icon.gif[""] Zum Hinzufügen der erforderlichen Anzahl von Zeilen, die zur Angabe von Details für die Ausführung von Schritten verwendet werden.
++
+Jeder Schritt wird basierend auf den angegebenen Schrittdetails in der angegebenen Zeile und Spalte ausgeführt. Die Schritte werden von links nach rechts und in der oberen bis unteren Reihenfolge ausgeführt.
+
+.. Positionieren Sie den Cursor unter dem Schritt, den Sie hinzugefügt haben, und klicken Sie auf image:../media/add_object_wfa_icon.gif["Symbol für Befehlsdetails"] Um Schrittdetails für die Schrittausführung in der gewünschten Zeile hinzuzufügen.
++
+[cols="2*"]
+|===
+| Für diesen Schritt... | Tun Sie das... 
+
+
+ a| 
+Workflow
+ a| 
+Geben Sie die erforderlichen Benutzereingaben auf der Registerkarte *Workflow* und die erforderliche Bedingung auf der Registerkarte *Erweitert* ein.
+
+
+
+ a| 
+Befehl
+ a| 
+Klicken Sie auf der Registerkarte Parameter für <Command> auf die Registerkarte Objekte, wählen Sie die gewünschte Option, um die Objektattribute zu definieren, und geben Sie anschließend die erforderlichen Details in die Registerkarte Erweitert und die Registerkarte andere Parameter ein.
+
+
+
+ a| 
+Suchen oder definieren
+ a| 
+Wählen Sie das Wörterbuch-Eintragsobjekt aus, nach dem gesucht oder definiert werden soll.
+
+|===
++
+Die folgende Abbildung zeigt die verfügbaren Optionen zum Definieren der Objektattribute:
+
++
+image::../media/define_object_options.gif[Definieren von Objektoptionen]
+
++
+Wählen Sie die entsprechende Aktion aus:
+
++
+[cols="2*"]
+|===
+| Für... | Tun Sie das... 
+
+
+ a| 
+Durch Einfüllen von Attributen
+ a| 
+Geben Sie den Wert für Attribute mithilfe der folgenden Optionen ein:
+
+*** Ausdrücke
+*** Variablen
+*** Benutzereingaben
+*** Ressourcenauswahl
+*** Inkrementelle Benennung
+
+
+Sie müssen den Cursor über die Attributfelder positionieren und auf klicken image:../media/elipsisicon.gif[""] Zur Verwendung der Ressourcenauswahl oder der inkrementellen Namensgebung.
+
+
+
+ a| 
+Durch die Verwendung eines zuvor definierten `_object_`
+ a| 
+Wählen Sie das zuvor definierte aus `object` Im Feld vor der Optionsliste.
+
+
+
+ a| 
+Indem Sie nach einer vorhandenen suchen `_object_`
+ a| 
+... Klicken Sie auf *Suchkriterien*, um mithilfe der Funktion zur Ressourcenauswahl nach dem Objekt zu suchen.
+... Wählen Sie eine der erforderlichen Optionen für die Ausführung aus, wenn das gewünschte Objekt nicht gefunden wird:
++
+**** Workflow abbrechen
++
+Diese Option bricht die Workflow-Ausführung ab, wenn das spezifische Objekt nicht gefunden wird.
+
+**** Deaktivieren Sie diesen Befehl
++
+ This option disables only the current step and executes the workflow.
+**** Füllattribute für `object` Und führen Sie den Befehl aus
++
+ This option enables you to enter the required attributes and execute the workflow.
+
+
+
+
+|===
+
+
+. Wenn Sie einen Genehmigungspunkt einfügen möchten, klicken Sie auf image:../media/approval_point_hover_icon.gif["Symbol für den Mauszeiger für den Genehmigungspunkt"] Und geben Sie den erforderlichen Kommentar für den Genehmigungspunkt ein.
++
+Kommentare zu Genehmigungspunktpunkten können MVEL-Ausdrücke enthalten.
+
+. Klicken Sie Auf image:../media/repeat_row_arrow.gif[""] Das ist neben den Zeilennummern, die folgende Aufgaben ausführen:
++
+** Eine Zeile einfügen.
+** Kopieren Sie die Zeile.
+** Wiederholen Sie die Zeile.
++
+Sie können eine der folgenden Optionen verwenden, um die Wiederholung der Befehlsparameter anzugeben:
+
++
+*** Anzahl der Mal
++
+Sie können diese Option verwenden, um die Befehlsausführung für die Anzahl der von Ihnen angegebenen Wiederholungen zu wiederholen. Beispielsweise können Sie angeben, dass der Befehl „`Create qtree`“ dreimal wiederholt werden sollte, um drei qtrees zu erstellen.
+
++
+Sie können diese Option auch für eine dynamische Anzahl von Befehlsausführungen verwenden. Sie können beispielsweise eine Benutzereingabevariable für die Anzahl der zu erstellenden LUNs erstellen und bei Ausführung oder Planung des Workflows die vom Storage Operator angegebene Nummer verwenden.
+
+*** Für jede Ressource in einer Gruppe
++
+Sie können diese Option verwenden und dann Suchkriterien für ein Objekt festlegen. Der Befehl wird so oft wiederholt, wie das Objekt von den Suchkriterien zurückgegeben wird. Beispielsweise können Sie in einem Cluster nach den Nodes suchen und den Befehl „`Create iSCSI Logical Interface`“ für jeden Node wiederholen.
+
+
+
+** Fügen Sie eine Bedingung für die Ausführung der Zeile hinzu.
+** Entfernen Sie die Zeile.
+
+
+. Führen Sie auf der Registerkarte *Details* die folgenden Schritte aus:
++
+.. Geben Sie die erforderlichen Informationen in den Feldern *Workflow-Name* und *Workflow-Beschreibung* an.
++
+Der Workflow-Name und die Beschreibung müssen für jeden Workflow eindeutig sein.
+
+.. *Optional:* Geben Sie die Entity-Version an.
+.. *Optional:* Löschen Sie das Kontrollkästchen *Reservierte Elemente berücksichtigen*, wenn Sie die Reservierungsfähigkeit nicht nutzen möchten.
+.. *Optional:* Legen Sie das Kontrollkästchen *Validierung der Elementexistenz aktivieren* aus, wenn Sie die Validierung für Elemente, die mit demselben Namen existieren, nicht aktivieren möchten.
+
+
+. Wenn Sie die Benutzereingaben bearbeiten möchten, führen Sie die folgenden Schritte aus:
++
+.. Klicken Sie auf die Registerkarte *Benutzereingaben*.
+.. Doppelklicken Sie auf die Benutzereingabe, die Sie bearbeiten möchten.
+.. Bearbeiten Sie im Dialogfeld *Edit Variable: <user input>* die Benutzereingabe.
+
+
+. Wenn Sie Konstanten hinzufügen möchten, führen Sie die folgenden Schritte aus
++
+.. Klicken Sie auf die Registerkarte *Konstanten* und fügen Sie dann die erforderlichen Konstanten für Ihren Workflow mit der Schaltfläche *Hinzufügen* hinzu.
++
+Sie können Konstanten definieren, wenn Sie für die Definition der Parameter für mehrere Befehle einen gemeinsamen Wert verwenden. Informationen hierzu finden Sie beispielsweise in der AGGREGAT_OVERCOMMITMENT_THRESHOLD-Konstante, die im Workflow „`Erstellen, Zuordnen und Schützen von LUNs mit SnapVault`“ verwendet wird.
+
+.. Geben Sie den Namen, die Beschreibung und den Wert für jede Konstante ein.
+
+
+. Klicken Sie auf die Registerkarte *Rückgabeparameter* und fügen Sie dann die erforderlichen Parameter für Ihren Workflow mit der Schaltfläche *Hinzufügen* hinzu.
++
+Sie können Rückgabeparameter verwenden, wenn die Workflow-Planung und -Ausführung während der Planung einige berechnete oder ausgewählte Werte zurückgeben muss. Sie können die berechneten oder ausgewählten Werte auf der Registerkarte Rückgabeparameter des Überwachungsfensters in der Workflow-Vorschau oder nach Abschluss der Workflow-Ausführung anzeigen.
+
++
+Aggregat: Sie können Aggregat als Rückgabeparameter angeben, um zu sehen, welches Aggregat mithilfe der Ressourcenauswahllogik ausgewählt wurde.
+
++
+Wenn Sie einen untergeordneten Workflow in Ihren Workflow integriert haben und wenn die Parameternamen für die Rückgabe des untergeordneten Workflows einen Raum, ein Dollarzeichen (€) enthalten, Oder eine Funktion: Geben Sie den Rückgabeparameternamen in eckigen Klammern im übergeordneten Workflow an, um den Rückgabewert des untergeordneten Workflow-Rückgabeparameters in Ihrem übergeordneten Workflow anzuzeigen.
+
++
+[cols="2*"]
+|===
+| Wenn der Parametername... | Angeben als... 
+
+
+ a| 
+`ChildWorkflow1.abc$value`
+ a| 
+`ChildWorkflow1["abc$"+"value"]`
+
+
+
+ a| 
+`ChildWorkflow1.$value`
+ a| 
+`ChildWorkflow1["$"+"value"]`
+
+
+
+ a| 
+`ChildWorkflow1.value$`
+ a| 
+`ChildWorkflow1.value$`
+
+
+
+ a| 
+`ChildWorkflow1.P N`
+ a| 
+`ChildWorkflow1["P N"]`
+
+
+
+ a| 
+`ChildWorkflow1.return_string("HW")`
+ a| 
+`ChildWorkflow1["return_string(\"HW\")"]`
+
+|===
+. *Optional:* Klicken Sie auf die Registerkarte *Hilfe Inhalt*, um die für den Workflow erstellte Hilfeseinhaltsdatei hinzuzufügen.
+. Klicken Sie auf *Vorschau* und stellen Sie sicher, dass die Planung des Workflows erfolgreich abgeschlossen ist.
+. Klicken Sie auf *OK*, um das Vorschaufenster zu schließen.
+. Klicken Sie Auf *Speichern*.
+
+
+
+
+== Nachdem Sie fertig sind
+
+Testen Sie den Workflow in Ihrer Testumgebung, und markieren Sie den Workflow in *_WorkflowName_* > *_Details_* als bereit für die Produktion.

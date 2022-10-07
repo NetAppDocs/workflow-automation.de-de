@@ -1,0 +1,76 @@
+---
+permalink: help/reference-new-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: new, remote, system, type, dialog box, enable, add, oncommand, workflow, automation, predefined, meet, requirement, change, configuration 
+summary: 'Im Dialogfeld „New Remote System Type“ können Sie OnCommand Workflow Automation (WFA) einen neuen Remote-Systemtyp hinzufügen, wenn ein vordefinierter Systemtyp Ihre Anforderungen nicht erfüllt oder Sie die Konfiguration eines vordefinierten Systemtyps ändern möchten.' 
+---
+= Neues Dialogfeld „Remote-Systemtyp“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „New Remote System Type“ können Sie OnCommand Workflow Automation (WFA) einen neuen Remote-Systemtyp hinzufügen, wenn ein vordefinierter Systemtyp Ihre Anforderungen nicht erfüllt oder Sie die Konfiguration eines vordefinierten Systemtyps ändern möchten.
+
+* Registerkarte „Details“
+* Registerkarte Validierungs-Skript
+
+
+
+
+== Registerkarte „Details“
+
+Ermöglicht die Angabe der Details des Remote-Systemtyps, z. B. Name, Beschreibung, Version und Verbindungsprotokoll.
+
+* *Name*
++
+Ermöglicht die Angabe eines Namens für den Remote-Systemtyp. Sie müssen einen Namen angeben, um den Typ des Remote-Systems zu speichern.
+
+* *Beschreibung*
++
+Ermöglicht die Eingabe einer Beschreibung für den Remote-Systemtyp.
+
+* *Version*
++
+Ermöglicht die Angabe der Versionsnummer für den Remote-Systemtyp in `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Verbindungsprotokoll*
++
+Ermöglicht Ihnen die Auswahl eines der folgenden Protokolle, die WFA bei der Verbindung mit dem Remote-System verwenden soll:
+
++
+** HTTPS mit Fallback zu HTTP
++
+Die Verbindung verwendet in erster Linie HTTPS. Wenn die Verbindung über HTTPS fehlschlägt, wird HTTP verwendet. Falls auch die Verbindung über HTTP fehlschlägt, wird der Verbindungsversuch abgebrochen.
+
+** Nur HTTPS
+** Nur HTTP
+** Individuell
+
+
+
+
+Wenn Sie ein Verbindungsprotokoll auswählen, werden die Felder Protokoll, Standardport und Standard-Timeout (s) mit Daten gefüllt.
+
+
+
+== Registerkarte Validierungs-Skript
+
+Ermöglicht das Testen der Konnektivität des ausgewählten Protokolls mit dem Typ des Remote-Systems.
+
+Sie können auf *Perl-Skript testen* klicken, um das Skript zum Testen der Konnektivität auszuführen.
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die Konfigurationseinstellungen des Remote-Systemtyps und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-managing-high-availability.html 
+sidebar: sidebar 
+keywords: manage, high availability 
+summary: Sie können eine Hochverfügbarkeitskonfiguration konfigurieren, um Netzwerkvorgänge ständig zu unterstützen. Wenn eine der Komponenten ausfällt, übernimmt die gespiegelte Komponente in der Einrichtung den Betrieb und stellt unterbrechungsfreie Netzwerkressourcen bereit. Sie können auch ein Backup der WFA Datenbank und der unterstützten Konfigurationen erstellen, damit Sie die Daten bei einem Notfall wiederherstellen können. 
+---
+= Management von Hochverfügbarkeit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Hochverfügbarkeitskonfiguration konfigurieren, um Netzwerkvorgänge ständig zu unterstützen. Wenn eine der Komponenten ausfällt, übernimmt die gespiegelte Komponente in der Einrichtung den Betrieb und stellt unterbrechungsfreie Netzwerkressourcen bereit. Sie können auch ein Backup der WFA Datenbank und der unterstützten Konfigurationen erstellen, damit Sie die Daten bei einem Notfall wiederherstellen können.

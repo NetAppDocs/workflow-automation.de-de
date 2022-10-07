@@ -1,0 +1,288 @@
+---
+section: help
+title: Managen und Konfigurieren
+entries:
+- title: Übersicht über OnCommand Workflow Automation
+  url: "/help/concept-overview-of-oncommand-workflow-automation.html"
+- title: Erstellen Sie lokale Benutzer
+  url: "/help/task-create-local-users.html"
+- title: OnCommand Workflow Automation wird konfiguriert
+  pdf-filename: OnCommand Workflow Automation-Hilfe wird konfiguriert
+  url: "/help/concept-advanced-configuring-oncommand-workflow-automation.html"
+  entries:
+  - title: Konfigurieren Sie die Authentifizierungseinstellungen
+    url: "/help/task-configure-authentication-settings.html"
+  - title: Konfigurieren Sie E-Mail-Benachrichtigungen
+    url: "/help/task-configure-mail.html"
+  - title: Konfigurieren Sie SNMP
+    pdf-filename: Konfigurieren Sie die SNMP-Hilfe
+    url: "/help/task-configure-snmp.html"
+    entries:
+    - title: Konfigurieren Sie SNMP-Version 1
+      url: "/help/task-configure-snmp-version-1.html"
+    - title: Konfigurieren Sie SNMP-Version 3
+      url: "/help/task-configure-snmp-version-3.html"
+  - title: Syslog Konfigurieren
+    url: "/help/task-configure-syslog.html"
+  - title: Konfigurieren Sie AutoSupport
+    url: "/help/task-configure-autosupport.html"
+  - title: Konfigurieren Sie E-Mail-Benachrichtigungen für Fehler bei der Erfassung
+      der Datenquelle
+    url: "/help/task-configure-email-notifications-for-data-source-acquisition-failures.html"
+  - title: Konfiguration der Ressourcenreservierung für Workflows
+    url: "/help/task-configure-resource-reservation-for-workflows.html"
+- title: Konfigurieren Sie die Anmeldedaten eines Zielsystems
+  url: "/help/task-configure-the-credentials-of-a-target-system.html"
+- title: Konfigurieren von Protokollen zum Anschluss an Remote-Systeme
+  url: "/help/task-configure-protocols-for-connecting-to-remote-systems.html"
+- title: Funktionen des OnCommand Workflow Automation Designers
+  url: "/help/reference-oncommand-workflow-automation-designer-features.html"
+  entries:
+  - title: Wie wiederholen Sie Zeilen funktioniert
+    url: "/help/concept-how-repeat-row-works.html"
+  - title: Welche Genehmigungspunkte sind
+    url: "/help/concept-what-approval-points-are.html"
+  - title: Wie weiter bei Ausfall funktioniert
+    url: "/help/concept-what-continue-on-failure-is.html"
+  - title: Funktionsweise der Ressourcenauswahl
+    url: "/help/concept-how-resource-selection-works.html"
+  - title: Wie Reservierung funktioniert
+    url: "/help/concept-how-reservation-works.html"
+  - title: Wie sieht die inkrementelle Benennung aus
+    url: "/help/concept-what-incremental-naming-is.html"
+  - title: Welche bedingte Ausführung ist
+    url: "/help/concept-what-conditional-execution-is.html"
+  - title: Funktionsweise der Rückgabeparameter
+    url: "/help/concept-what-return-parameters-are.html"
+  - title: Welche Schemata sind
+    url: "/help/concept-what-schemes-are.html"
+  - title: Welche Remote-Systemtypen sind vorhanden
+    url: "/help/concept-what-remote-system-types-are.html"
+  - title: Funktionsweise der Versionierung von Einheiten
+    url: "/help/concept-how-entity-versioning-works.html"
+- title: So definieren Sie Workflows
+  url: "/help/concept-how-you-define-workflows.html"
+- title: Zuordnung von Befehlsparametern
+  url: "/help/concept-how-you-map-command-parameters.html"
+- title: So werden Benutzereingaben definiert
+  url: "/help/concept-how-you-define-user-input.html"
+- title: Wie Sie Konstanten definieren
+  url: "/help/concept-how-you-define-constants.html"
+- title: Verwendung VON REST-APIs
+  url: "/help/concept-how-you-use-the-rest-api.html"
+- title: Richten Sie eine Datenquelle ein
+  url: "/help/task-set-up-a-data-source.html"
+  entries:
+  - title: Konfigurieren Sie einen Datenbankbenutzer, indem Sie ocsetup unter Windows
+      ausführen
+    url: "/help/task-configure-a-database-user-by-running-ocsetup-on-windows.html"
+  - title: Konfigurieren Sie einen Datenbankbenutzer, indem Sie ocsetup unter Linux
+      ausführen
+    url: "/help/task-configure-a-database-user-by-running-ocsetup-on-linux.html"
+  - title: Konfigurieren Sie einen Datenbankbenutzer auf Active IQ Unified Manager
+    url: "/help/task-configure-a-database-user-on-active-iq-unified-manager.html"
+- title: Erstellen von Inhalten für die Workflow-Hilfe
+  url: "/help/task-create-workflow-help-content.html"
+- title: Reservierte Wörter
+  url: "/help/reference-reserved-words.html"
+- title: Wo finden Sie Informationen über MVEL
+  url: "/help/reference-mvel-learning-material-reference.html"
+  entries:
+  - title: MVEL-fähige Felder in OnCommand Workflow Automation
+    url: "/help/reference-mvel-enabled-fields-in-wfa.html"
+  - title: Beispiele für MVEL-Syntax
+    url: "/help/reference-mvel-examples.html"
+- title: Verweise auf Lernmaterial
+  url: "/help/reference-references-to-learning-material.html"
+- title: Unterstützte Workflows in ONTAP
+  url: "/help/reference-supported-workflows-in-clustered-data-ontap.html"
+- title: Importieren Sie OnCommand Workflow Automation-Inhalte
+  url: "/help/task-import-oncommand-workflow-automation-content.html"
+- title: Überlegungen beim Importieren von OnCommand Workflow Automation-Inhalten
+  url: "/help/reference-considerations-of-importing-wfa-content.html"
+- title: Exportieren von OnCommand Workflow Automation-Inhalten
+  url: "/help/task-export-oncommand-workflow-automation-content.html"
+- title: Deaktivieren Sie die Cacheerfassung für Wörterbucheinträge
+  url: "/help/task-disable-cache-acquisition-for-dictionary-entries.html"
+- title: Erstellen von WFA Workflow Packs
+  url: "/help/task-create-a-workflow-automation-pack.html"
+- title: OnCommand Workflow Automation Packs löschen
+  url: "/help/task-delete-wfa-packs.html"
+- title: Genehmigungspunkte hinzufügen
+  url: "/help/task-add-approval-points.html"
+- title: Definieren Sie Filterregeln
+  url: "/help/task-define-filter-rules.html"
+- title: Erstellen Sie ein Schema
+  url: "/help/task-create-a-scheme.html"
+- title: Bearbeiten Sie ein Schema
+  url: "/help/task-edit-a-scheme.html"
+- title: Löschen Sie ein Schema
+  url: "/help/task-delete-a-scheme.html"
+- title: Fügen Sie einen neuen Remote-Systemtyp hinzu
+  url: "/help/task-add-a-new-remote-system-type.html"
+- title: Log Viewer-Fenster
+  url: "/help/reference-log-viewer-directory-window.html"
+- title: Fenster Backup und Restore
+  url: "/help/reference-backup-restore-window.html"
+- title: Fenster „Benutzer“
+  url: "/help/reference-user-window.html"
+  entries:
+  - title: Dialogfeld „Neuer Benutzer“
+    url: "/help/reference-new-user-dialog-box.html"
+  - title: Dialogfeld „Benutzer bearbeiten“
+    url: "/help/reference-edit-user-dialog-box.html"
+- title: Fenster „Einstellungen“
+  url: "/help/reference-client-preferences-dialog-box.html"
+- title: Active Directory Groups -Fenster
+  url: "/help/reference-active-directory-groups-window.html"
+  entries:
+  - title: Dialogfeld „Neue Active Directory-Gruppe“
+    url: "/help/reference-new-active-directory-group-dialog-box.html"
+  - title: Dialogfeld „Active Directory-Gruppe bearbeiten“
+    url: "/help/reference-edit-active-directory-group-dialog-box.html"
+  - title: Fenster „Approval Portal“
+    url: "/help/reference-approval-portal.html"
+- title: Fenster „Datenquellen“
+  url: "/help/reference-data-sources-window.html"
+  entries:
+  - title: Dialogfeld „Neue Datenquelle“
+    url: "/help/reference-new-data-source-dialog-box.html"
+  - title: Dialogfeld „Datenquelle bearbeiten“
+    url: "/help/reference-edit-data-source-dialog-box.html"
+- title: Das Fenster „Anmeldeinformationen“
+  url: "/help/reference-credentials-window.html"
+  entries:
+  - title: Dialogfeld „Verbindung testen“
+    url: "/help/reference-test-connectivity-dialog-box.html"
+  - title: Dialogfeld „Neue Anmeldeinformationen“
+    url: "/help/reference-new-credentials-dialog-box.html"
+  - title: Dialogfeld „Anmeldeinformationen bearbeiten“
+    url: "/help/reference-edit-credentials-dialog-box.html"
+- title: Dialogfeld „Info“
+  url: "/help/reference-about-dialog-box.html"
+- title: Workflows-Fenster
+  url: "/help/reference-portal-workflow-window.html"
+- title: Fenster „Ausführungen“
+  url: "/help/reference-execution-status-window.html"
+- title: Fenster wiederkehrende Ausführungen
+  url: "/help/reference-recurring-executions-window.html"
+- title: Reservierungsfenster
+  url: "/help/reference-reservations-window.html"
+- title: Zeitplanfenster
+  url: "/help/reference-schedules-window.html"
+  entries:
+  - title: Dialogfeld „Neuer Zeitplan“
+    url: "/help/reference-new-schedule-dialog-box.html"
+- title: Workflows-Fenster
+  url: "/help/reference-workflows-window.html"
+  entries:
+  - title: Neues Workflow-Fenster
+    url: "/help/reference-new-workflow-window.html"
+    entries:
+    - title: Parameter für das Dialogfeld Befehle
+      url: "/help/reference-parameters-for-commands-dialog-box.html"
+    - title: Dialogfeld „Ressourcenauswahl“
+      url: "/help/reference-resource-selection-dialog-box.html"
+    - title: Assistent Für Inkrementelle Benennung
+      url: "/help/reference-incremental-naming-wizard.html"
+    - title: Dialogfeld „Zeilendwiederholungsdetails“
+      url: "/help/reference-row-repetition-details-dialog-box.html"
+  - title: Workflow <Workflow Name> Fenster
+    url: "/help/reference-edit-workflow-window.html"
+  - title: Dialogfeld „Workflow ausführen“
+    url: "/help/reference-execute-workflow-dialog-box.html"
+  - title: Dialogfeld „Variable bearbeiten“
+    url: "/help/reference-edit-variable-dialog-box.html"
+  - title: Dialogfeld „Workflow-Vorschau“
+    url: "/help/reference-preview-workflow-dialog-box.html"
+  - title: Überwachungsfenster
+    url: "/help/reference-monitoring-window.html"
+  - title: Dialogfeld „Neuer Genehmigungspunkt“
+    url: "/help/reference-new-approval-point-dialog-box.html"
+  - title: Dialogfeld „Genehmigungspunkt bearbeiten“
+    url: "/help/reference-edit-approval-point-dialog-box.html"
+- title: Das Fenster „Finder“
+  url: "/help/reference-finders-window.html"
+  entries:
+  - title: Neues Dialogfeld „Finder“
+    url: "/help/reference-new-finder-dialog-box.html"
+  - title: Dialogfeld „Finder bearbeiten“
+    url: "/help/reference-edit-finder-dialog-box.html"
+  - title: Dialogfeld „Clone Finder“
+    url: "/help/reference-clone-finder-dialog-box.html"
+- title: Fenster Filter
+  url: "/help/reference-filters-window.html"
+  entries:
+  - title: Dialogfeld „Neuer Filter“
+    url: "/help/reference-new-filter-dialog-box.html"
+  - title: Dialogfeld „Filter bearbeiten“
+    url: "/help/reference-edit-filter-dialog-box.html"
+  - title: Dialogfeld „Filter klonen“
+    url: "/help/reference-clone-filter-dialog-box.html"
+- title: Befehlsfenster
+  url: "/help/reference-commands-window.html"
+  entries:
+  - title: Neues Dialogfeld „Befehlsdefinition“
+    url: "/help/reference-new-command-definition-dialog-box.html"
+  - title: Dialogfeld „Befehlsdefinition bearbeiten“
+    url: "/help/reference-edit-command-definition-dialog-box.html"
+  - title: Dialogfeld „Clone Command Definition“
+    url: "/help/reference-clone-command-definition-dialog-box.html"
+- title: Funktionsfenster
+  url: "/help/reference-functions-window.html"
+- title: Vorlagen-Fenster
+  url: "/help/reference-templates-window.html"
+  entries:
+  - title: Dialogfeld „Neue Vorlage“
+    url: "/help/reference-new-template-dialog-box.html"
+  - title: Dialogfeld „Vorlage bearbeiten“
+    url: "/help/reference-edit-template-dialog-box.html"
+  - title: Dialogfeld „Vorlage klonen“
+    url: "/help/reference-clone-template-dialog-box.html"
+- title: Fenster „Schemas“
+  url: "/help/reference-schemes-window.html"
+- title: Fenster „Wörterbuch“
+  url: "/help/reference-dictionary-window.html"
+  entries:
+  - title: Dialogfeld „Neue Wörterbucheingabe“
+    url: "/help/reference-new-dictionary-entry-dialog-box.html"
+  - title: Dialogfeld „Eintrag des Wörterbuchs bearbeiten“
+    url: "/help/reference-edit-dictionary-entry-dialog-box.html"
+  - title: Dialogfeld „Eintrag des Klonwörterbuchs“
+    url: "/help/reference-clone-dictionary-entry-dialog-box.html"
+- title: Fenster „Data Source Types“
+  url: "/help/reference-data-source-types-window.html"
+- title: Fenster „Remote-Systemtypen“
+  url: "/help/reference-remote-system-types-window.html"
+  entries:
+  - title: Neues Dialogfeld „Remote-Systemtyp“
+    url: "/help/reference-new-remote-system-type-dialog-box.html"
+  - title: Dialogfeld „Remote-Systemtyp bearbeiten“
+    url: "/help/reference-edit-remote-system-type-dialog-box.html"
+- title: Fenster Cache-Abfragen
+  url: "/help/reference-cache-queries-window.html"
+  entries:
+  - title: Dialogfeld „Cache-Abfrage hinzufügen“
+    url: "/help/reference-add-cache-query-dialog-box.html"
+  - title: Dialogfeld „Cache-Abfrage bearbeiten“
+    url: "/help/reference-edit-cache-query-dialog-box.html"
+  - title: Dialogfeld „Clone Cache Query“
+    url: "/help/reference-clone-cache-query-dialog-box.html"
+- title: Packfenster
+  url: "/help/reference-packs-window.html"
+  entries:
+  - title: Dialogfeld „Neues Paket“
+    url: "/help/reference-new-pack-dialog-box.html"
+  - title: Dialogfeld „Paket bearbeiten“
+    url: "/help/reference-edit-pack-dialog-box.html"
+- title: Fenster „Kategorien“
+  url: "/help/reference-categories-window.html"
+  entries:
+  - title: Dialogfeld „Neue Kategorie“
+    url: "/help/reference-new-category-dialog-box.html"
+  - title: Dialogfeld Kategorie bearbeiten
+    url: "/help/reference-edit-category-dialog-box.html"
+  - title: Dialogfeld „Kategorie klonen“
+    url: "/help/reference-clone-category-dialog-box.html"
+- title: Storage Automation Store-Fenster
+  url: "/help/reference-wfa-store-window.html"

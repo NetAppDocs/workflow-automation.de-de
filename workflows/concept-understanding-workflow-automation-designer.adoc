@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-understanding-workflow-automation-designer.html 
+sidebar: sidebar 
+keywords: create, workflows, automation, designer, use, building blocks, finders, filters, commands, understanding, important, before, start 
+summary: 'Im Workflow Automation (WFA)-Designer lassen sich Workflows mithilfe von Bausteinen wie Suchfunktionen, Filtern und Befehlen erstellen. Bevor Sie mit der Erstellung Ihrer Workflows beginnen, müssen Sie die Bausteine und den Workflow-Erstellungsprozess verstehen.' 
+---
+= Verstehen des Workflow Automation Designers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Workflow Automation (WFA)-Designer lassen sich Workflows mithilfe von Bausteinen wie Suchfunktionen, Filtern und Befehlen erstellen. Bevor Sie mit der Erstellung Ihrer Workflows beginnen, müssen Sie die Bausteine und den Workflow-Erstellungsprozess verstehen.

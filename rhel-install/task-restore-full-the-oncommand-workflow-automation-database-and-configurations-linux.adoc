@@ -1,0 +1,39 @@
+---
+permalink: rhel-install/task-restore-full-the-oncommand-workflow-automation-database-and-configurations-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, cli 
+summary: 'Sie können die OnCommand Workflow Automation (WFA) Datenbank und die unterstützten Konfigurationen wiederherstellen, die Sie zuvor über die Befehlszeilenschnittstelle (CLI) gesichert haben. In einer vollständigen Wiederherstellung können Sie die WFA Datenbank, die WFA Konfiguration und den Schlüssel wiederherstellen.' 
+---
+= Stellen Sie die WFA Datenbank mithilfe der CLI wieder her (vollständig)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die OnCommand Workflow Automation (WFA) Datenbank und die unterstützten Konfigurationen wiederherstellen, die Sie zuvor über die Befehlszeilenschnittstelle (CLI) gesichert haben. In einer vollständigen Wiederherstellung können Sie die WFA Datenbank, die WFA Konfiguration und den Schlüssel wiederherstellen.
+
+* Sie müssen ein Backup der WFA Datenbank erstellt haben.
+* Sie müssen über Administrator- oder Architekturdaten verfügen.
+
+
+.Schritte
+. Navigieren Sie an der Shell-Eingabeaufforderung zum folgenden Verzeichnis auf dem WFA Server: WFA_install_location/wfa/bin
++
+wfa_install_location ist das WFA Installationsverzeichnis.
+
+. Wiederherstellen der WFA Datenbank:
++
+`wfa --restore --full --user=user_name [--password=password] [--location=path] --restart`
+
++
+** User_Name ist der Benutzername des Admin- oder Architect-Benutzers.
+** Passwort ist das Passwort des Benutzers.
++
+Falls Sie kein Passwort angegeben haben, müssen Sie das Passwort eingeben, wenn Sie dazu aufgefordert werden.
+
+** Der Pfad ist der vollständige Verzeichnispfad zur Wiederherstellungsdatei.
+
+
+. Vergewissern Sie sich, dass der Wiederherstellungsvorgang erfolgreich ist und WFA zugänglich ist.
+

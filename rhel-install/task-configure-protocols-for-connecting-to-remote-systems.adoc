@@ -1,0 +1,53 @@
+---
+permalink: rhel-install/task-configure-protocols-for-connecting-to-remote-systems.html 
+sidebar: sidebar 
+keywords: configure, protocols, connect, remote systems 
+summary: 'Sie können das von OnCommand Workflow Automation (WFA) verwendete Protokoll konfigurieren, um eine Verbindung zu Remote-Systemen herzustellen. Sie können das Protokoll basierend auf den Sicherheitsanforderungen Ihres Unternehmens und dem vom Remote-System unterstützten Protokoll konfigurieren.' 
+---
+= Konfigurieren von Protokollen zum Anschluss an Remote-Systeme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das von OnCommand Workflow Automation (WFA) verwendete Protokoll konfigurieren, um eine Verbindung zu Remote-Systemen herzustellen. Sie können das Protokoll auf Grundlage der Sicherheitsanforderungen Ihres Unternehmens und des vom Remote-System unterstützten Protokolls konfigurieren.
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Administrator bei WFA an.
+. Klicken Sie Auf *Datenquellendesign* > *Remote-Systemtypen*.
+. Führen Sie eine der folgenden Aktionen aus:
++
+[cols="2*"]
+|===
+| Ihr Ziel ist | Tun Sie das... 
+
+
+ a| 
+Konfigurieren eines Protokolls für ein neues Remote-System
+ a| 
+.. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"].
+.. Geben Sie im Dialogfeld Neuer Remote-Systemtyp die Details wie Name, Beschreibung und Version an.
+
+
+
+
+ a| 
+Ändern Sie die Protokollkonfiguration eines vorhandenen Remote-Systems
+ a| 
+.. Wählen Sie das zu ändernde Remote-System aus, und doppelklicken Sie darauf.
+.. Klicken Sie Auf image:../media/edit_wfa_icon.gif["Symbol bearbeiten"].
+
+
+|===
+. Wählen Sie aus der Liste Connection Protocol eine der folgenden Optionen aus:
++
+** HTTPS mit Fallback zu HTTP (Standard)
+** Nur HTTPS
+** Nur HTTP
+** Individuell
+
+
+. Geben Sie Details für das Protokoll, den Standardport und das Standard-Timeout an.
+. Klicken Sie Auf *Speichern*.
+

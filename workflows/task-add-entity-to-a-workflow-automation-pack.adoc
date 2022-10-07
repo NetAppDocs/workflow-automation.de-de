@@ -1,0 +1,42 @@
+---
+permalink: workflows/task-add-entity-to-a-workflow-automation-pack.html 
+sidebar: sidebar 
+keywords: entity, workflow, pack, oncommand, automation, storage, integration, requirements 
+summary: 'Sie können einem Workflow-Paket in OnCommand Workflow Automation (WFA) eine oder mehrere Einheiten hinzufügen, um Ihre Anforderungen an Storage-Automatisierung und -Integration zu erfüllen.' 
+---
+= Fügen Sie Einheiten zu WFA Workflow Packs hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einem Workflow-Paket in OnCommand Workflow Automation (WFA) eine oder mehrere Einheiten hinzufügen, um Ihre Anforderungen zur Storage-Automatisierung und -Integration zu erfüllen.
+
+Sie können ein Paket aus den folgenden Elementen entfernen:
+
+* Workflow
+* Finder
+* Filter
+* Befehle
+* Funktionen
+* Vorlagen
+* Schemata
+* Wörterbuch
+* Datenquellentypen
+* Remote-Systemtypen
+* Cache-Abfragen
+* Kategorien
+
+
+.Schritte
+. Melden Sie sich über einen Webbrowser im *WFA*-Fenster an.
+. Navigieren Sie im *Workflow-Designportal* zu dem Element, das Sie hinzufügen möchten, und klicken Sie auf *<Entity>*.
+. Wählen Sie im Fenster *Entity* das Element aus, das Sie dem Paket hinzufügen möchten.
+. Klicken Sie auf das Symbol *zu Packung hinzufügen*.
++
+„`Add to Pack`“ ist nur für Entitäten aktiviert, für die die Zertifizierung auf *Keine.* eingestellt ist
+
+. Wählen Sie im Dialogfeld *Add to Pack <Entity>* aus der Dropdown-Liste *Available Packs* das Paket aus, zu dem die Einheit hinzugefügt werden soll.
+. Klicken Sie auf *OK*.
+

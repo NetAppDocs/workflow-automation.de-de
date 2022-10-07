@@ -1,0 +1,25 @@
+---
+permalink: workflows/concept-what-continue-on-failure-is.html 
+sidebar: sidebar 
+keywords: continue, failure, feature, help, configure, step, workflow, execution, address, resolve, issue, cause, accessing, wfa.log file, click, icon 
+summary: Mit der Funktion „Fortsetzen bei Ausfall“ können Sie einen Schritt in einem Workflow konfigurieren, sodass die Workflow-Ausführung auch bei einem Ausfall des Schritts fortgesetzt werden kann. Sie können die fehlgeschlagenen Schritte beheben und das Problem, das den Schritt zum Scheitern verursacht hat, indem Sie auf die Datei wfa.log zugreifen oder auf das Symbol klicken. 
+---
+= Wie weiter bei Ausfall funktioniert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Funktion „Fortsetzen bei Ausfall“ können Sie einen Schritt in einem Workflow konfigurieren, sodass die Workflow-Ausführung auch bei einem Ausfall des Schritts fortgesetzt werden kann. Sie können die fehlgeschlagenen Schritte beheben und das Problem, das den Schritt zum Scheitern verurteilt hat, indem Sie auf das zugreifen `wfa.log` Datei oder durch Klicken auf das image:../media/info_icon_execute_wfa.gif[""] Symbol.
+
+Ein Workflow mit einem oder mehreren solchen fehlgeschlagenen Schritten befindet sich nach Abschluss der Ausführung im teilweise erfolgreichen Status. Sie können einen Schritt so konfigurieren, dass die Workflow-Ausführung auch dann fortgesetzt wird, wenn der Schritt fehlschlägt, indem Sie im Dialogfeld Parameter für <Command_Name> auf der Registerkarte Erweitert die gewünschte Option auswählen.
+
+Wenn ein Schritt nicht so konfiguriert ist, dass er bei einem Fehler fortgesetzt werden kann, wird die Workflow-Ausführung abgebrochen, wenn der Schritt fehlschlägt.
+
+Wenn ein Schritt, der so konfiguriert ist, dass ein Fehler weiterhin auftritt, können Sie den Workflow mithilfe einer der folgenden Optionen ausführen:
+
+* Workflow-Ausführung abbrechen (Standardoption)
+* Fahren Sie mit der Ausführung des nächsten Schritts fort
+* Fahren Sie mit der Ausführung in der nächsten Zeile fort
+

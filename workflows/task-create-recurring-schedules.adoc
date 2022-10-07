@@ -1,0 +1,37 @@
+---
+permalink: workflows/task-create-recurring-schedules.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, schedule, options, execute, specific, time, create, recurring, associate, routinely 
+summary: 'OnCommand Workflow Automation (WFA) bietet zwei Planungsoptionen für Workflows. Sie können entweder einen Workflow für die einmalige Ausführung zu einem bestimmten Zeitpunkt planen oder wiederkehrende Zeitpläne erstellen und die Zeitpläne den Workflows zuordnen, sodass die Workflows routinemäßig ausgeführt werden.' 
+---
+= Erstellen wiederkehrender Zeitpläne
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) bietet zwei Planungsoptionen für Workflows. Sie können entweder einen Workflow für die einmalige Ausführung zu einem bestimmten Zeitpunkt planen oder wiederkehrende Zeitpläne erstellen und die Zeitpläne den Workflows zuordnen, sodass die Workflows routinemäßig ausgeführt werden.
+
+Ein von Ihnen erstellter Zeitplan kann wiederverwendet und mit mehreren Workflows verknüpft werden.
+
+.Schritte
+. Klicken Sie Auf *Ausführung* > *Termine*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Geben Sie im Dialogfeld *Neuer Zeitplan* einen Namen, eine Beschreibung und eine Frequenz für den Zeitplan ein oder wählen Sie diesen aus.
++
+Für die Frequenz müssen Sie die Zeit im 24-Stunden-Format eingeben. Die WFA Serverzeit wird auf die Zeitpläne angewendet.
+
+. Klicken Sie auf *OK*.
+
+
+
+
+== Nachdem Sie fertig sind
+
+* Sie können den Zeitplan bei der Ausführung des Workflows mit der Option *rekursiv* ausführen mit einem Workflow verknüpfen.
+* Sie können die Details eines Workflows und dessen Zuordnung zu einem Zeitplan anzeigen, indem Sie auf *Ausführung* > *wiederkehrende Zeitpläne* klicken.
++
+Die Ressourcen- und Ausführungsplanung für die Workflows, die einmal ausgeführt werden sollen, wird sofort ausgeführt, wenn die Workflows zeitgemäß sind. Die Ressourcen- und Ausführungsplanung für die Workflows mit wiederkehrenden Plänen erfolgt jedoch zum geplanten Zeitpunkt und nicht dann, wenn der Zeitplan einem Workflow zugeordnet ist.
+
+

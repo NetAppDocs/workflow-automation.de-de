@@ -1,0 +1,63 @@
+---
+permalink: workflows/task-create-a-function.html 
+sidebar: sidebar 
+keywords: create, wfa, function, use, utility, predefined, suitable, task 
+summary: Sie können eine WFA Funktion erstellen, die als Utility verwendet werden kann, wenn keine vordefinierte WFA Funktion vorhanden ist, die für Ihre Aufgabe geeignet ist. 
+---
+= Funktion erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine WFA Funktion erstellen, die als Utility verwendet werden kann, wenn keine vordefinierte WFA Funktion vorhanden ist, die für Ihre Aufgabe geeignet ist.
+
+Um eine Funktion zu erstellen, müssen Sie die Syntax MVFLEX Expression Language (MVEL) kennen.
+
+Für die Funktionsdefinitionen müssen Sie Folgendes angeben:
+
+* Name: Name der Funktion
++
+In der MVEL-Syntax darf kein reserviertes Wort verwendet werden. Jede Funktion muss einen eindeutigen Namen haben.
+
+* MVEL-Definition: Ein String zur Angabe der MVEL-Syntax der Funktionsdefinition
+
+
+.Schritte
+. Klicken Sie Auf *Workflow Design* > *Funktionen*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Geben Sie im Dialogfeld *Neue Funktion* die gewünschten Details in den Feldern *Funktionsbeschreibung* und *Funktionsdefinition* ein oder wählen Sie diese aus.
++
+[listing]
+----
+def actualVolumeSize(data_size, snap_pct)
+{
+   if (snap_pct < 0 ) {
+        snap_pct = 0;
+   } else if (snap_pct > 99) {
+        snap_pct = 99;
+   }
+
+   div = 1 - (snap_pct/100);
+   return (int)(data_size/div);
+}
+----
++
+Das Feld *Funktionsname* wird aus den Daten ausgefüllt, die in der MVEL-Syntax verwendet werden.
+
+. *Optional:* Klicken Sie auf *Test* um die Funktion zu testen:
++
+.. Geben Sie im Abschnitt *Ausdruck* des Dialogfelds *Test* den gewünschten Funktionsausdruck ein.
++
+`actualVolumeSize(600, 1)`
+
+.. Klicken Sie Auf *Test*.
++
+Das Testergebnis wird angezeigt.
+
+.. Schließen Sie das Dialogfeld.
+
+
+. Klicken Sie Auf *Speichern*.
+

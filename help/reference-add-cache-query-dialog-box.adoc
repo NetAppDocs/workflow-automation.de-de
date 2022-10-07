@@ -1,0 +1,66 @@
+---
+permalink: help/reference-add-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: add, cache, query, dialog, enable, create, new, dictionary, entry, associate, data, provide, type, specific, unified manager, version 
+summary: Das Dialogfeld „Cache-Abfrage hinzufügen“ ermöglicht Ihnen, eine neue Cache-Abfrage für einen Glossareintrag zu erstellen und die Abfrage mit einem Datenausgabetyp, z. B. einer bestimmten Active IQ Unified Manager-Version, zu verknüpfen. 
+---
+= Dialogfeld „Cache-Abfrage hinzufügen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Dialogfeld „Cache-Abfrage hinzufügen“ ermöglicht Ihnen, eine neue Cache-Abfrage für einen Glossareintrag zu erstellen und die Abfrage mit einem Datenausgabetyp, z. B. einer bestimmten Active IQ Unified Manager-Version, zu verknüpfen.
+
+* *Wörterbuch-Eintrag*
++
+Ermöglicht Ihnen die Auswahl eines Wörterbucheintrags, für den Sie eine Cacheabfrage erstellen möchten.
+
+* *Entity Version*
++
+Ermöglicht die Eingabe der Versionsnummer für die Cache-Abfrage in `major.minor.revision` Format – z. B. 1.0.0.
+
+* * Datenquellenarten*
++
+Ermöglicht Ihnen die Auswahl der Datenquelltypen, die Sie der Cache-Abfrage zuordnen möchten, z. B. Active IQ Unified Manager_6.0.
+
+
+
+
+
+== Tabellenstruktur
+
+* *Registerkarte Attribute*
++
+Zeigt die Attribute an, die dem Eintrag des Wörterbuchs zugeordnet sind.
+
+* *Registerkarte TabellenSQL erstellen*
++
+Zeigt das Skript „Tabelle erstellen“ für den Eintrag des Wörterbuchs an.
+
+
+
+
+
+== SQL-Abfrage auswählen
+
+Ermöglicht die Eingabe der SQL SELECT-Abfrage, die Daten aus der Tabelle des angegebenen Datenanbieters abruft.
+
+
+
+== Befehlsschaltflächen
+
+* *Test*
++
+Ermöglicht das Testen der SQL-Abfrage, die im Feld *SQL select query* eingegeben wurde.
+
+* *Speichern*
++
+Speichert die Cache-Abfrage und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

@@ -1,0 +1,74 @@
+---
+permalink: workflows/concept-what-return-parameters-are.html 
+sidebar: sidebar 
+keywords: return, parameters, available, after, planning, phase, workflow, values, useful, debugging, workflow, work, debug 
+summary: Rückgabeparameter sind Parameter, die nach der Planungsphase eines Workflows verfügbar sind. Die von diesen Parametern zurückgegebenen Werte sind nützlich, um einen Workflow zu debuggen. Sie sollten verstehen, wie Rückgabeparameter funktionieren und welche Parameter als Rückgabeparameter zum Debuggen von Workflows verwendet werden können. 
+---
+= Funktionsweise der Rückgabeparameter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Rückgabeparameter sind Parameter, die nach der Planungsphase eines Workflows verfügbar sind. Die von diesen Parametern zurückgegebenen Werte sind nützlich, um einen Workflow zu debuggen. Sie sollten verstehen, wie Rückgabeparameter funktionieren und welche Parameter als Rückgabeparameter zum Debuggen von Workflows verwendet werden können.
+
+Sie können in einem Workflow einen Satz von Parametern wie Variablenattribute, Ausdrücke und Benutzereingabewerte als Rückgabeparameter festlegen. Während der Ausführung des Workflows werden die Werte der festgelegten Parameter in der Planungsphase ausgefüllt und die Ausführung des Workflows beginnt. Die Werte dieser Parameter werden dann zurückgegeben, wie sie in der spezifischen Ausführung des Workflows berechnet wurden. Wenn Sie den Workflow debuggen möchten, können Sie sich die Werte anzeigen lassen, die durch die Parameter zurückgegeben wurden.
+
+Sie können die erforderlichen Rückgabeparameter in einem Workflow angeben, wenn Sie sehen möchten, welche berechneten oder ausgewählten Werte für diese Parameter sind. Wenn Sie z. B. mithilfe der Ressourcenauswahllogik ein Aggregat in einem Workflow auswählen, können Sie das Aggregat als Rückgabeparameter angeben, damit Sie sehen können, welches Aggregat während der Planung des Workflows ausgewählt wurde.
+
+Bevor Sie sich auf die Werte der Rückgabeparameter zum Debuggen Ihres Workflows beziehen, sollten Sie bestätigen, dass die Ausführung des Workflows abgeschlossen ist. Die Werte der Rückgabeparameter werden für jede Workflow-Ausführung festgelegt. Wenn Sie nach mehreren Workflow-Ausführungen einen Rückgabeparameter hinzugefügt haben, ist der Wert dieses Parameters nur für Ausführungen verfügbar, nachdem der Parameter hinzugefügt wurde.
+
+
+
+== Parameter, die als Rückgabeparameter verwendet werden können
+
+[cols="2*"]
+|===
+| Rückgabeparameter | Beispiel 
+
+
+ a| 
+Variable Attribute, die skalar sind
+ a| 
+`volume1.name,` Dies ist ein Attribut der Variablen „`Volume Name`“
+
+
+
+ a| 
+Konstanten
+ a| 
+MAX_VOLUME_SIZE
+
+
+
+ a| 
+Benutzereingaben
+ a| 
+Clustername
+
+
+
+ a| 
+MVEL-Ausdrücke, die variable Attribute, Konstanten und Benutzereingaben beinhalten
+ a| 
+volume1.name+'-'+$clusterName
+
+
+
+ a| 
+Der Rückgabeparameter, den ein Befehl während der Ausführung hinzufügt
+ a| 
+Der `$volumeUUID` Parameter wird als Rückgabeparameter hinzugefügt, wenn Sie in einem PowerShell Befehl die folgende Zeile verwenden: `Add-WfaWorkflowParameter -Name "VolumeUUID" -Value "`12345`" -AddAsReturnParameter $true.`
+
+|===
+
+
+== Beispiele für Rückgabeparameter in vordefinierten Workflows
+
+Wenn Sie verstehen möchten, wie Rückgabeparameter festgelegt werden, können Sie die folgenden vordefinierten Workflows im Designer öffnen und die angegebenen Rückgabeparameter überprüfen:
+
+* Erstellen Sie ein NFS-Volume in einem vFiler
+* Erstellen Sie eine Qtree CIFS Share in einem vFiler
+* Erstellen Sie eine Clustered Data ONTAP Volume CIFS Share
+

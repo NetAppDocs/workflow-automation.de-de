@@ -1,0 +1,43 @@
+---
+permalink: windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html 
+sidebar: sidebar 
+keywords: back up, wfa, database, powershell script 
+summary: 'Wenn Sie häufig ein Backup der OnCommand Workflow Automation (WFA) Datenbank erstellen möchten, können Sie das PowerShell Skript verwenden, das im WFA Installationspaket enthalten ist.' 
+---
+= Sichern Sie die WFA Datenbank mit dem PowerShell Skript
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie häufig ein Backup der OnCommand Workflow Automation (WFA) Datenbank erstellen möchten, können Sie das PowerShell Skript verwenden, das im WFA Installationspaket enthalten ist.
+
+Sie müssen über Anmeldedaten für Admin-Benutzer, Anmeldeinformationen für Architektur oder Sicherungsbenutzer verfügen.
+
+Weitere Informationen finden Sie in DER REST-Dokumentation.
+
+.Schritte
+. Öffnen Sie Windows PowerShell als Admin-Benutzer und sichern Sie anschließend die WFA Datenbank: `<WFA_install_location\WFA\bin\Backup.ps1> -User user_name -Password password -Path backup_file_path`
++
+** WFA_install_location ist das WFA Installationsverzeichnis.
+** User_Name ist der Benutzername des Admin-Benutzers, des Architekten oder des Backup-Benutzers.
+** Das Passwort ist das Passwort des Admin-Benutzers, des Architekten oder des Backup-Benutzers.
+** Backup_file_path ist der vollständige Verzeichnispfad für die Sicherungsdatei.
+
+
+
+
+[NOTE]
+====
+Die Sicherungsdatei ist eine ZIP-Datei mit dem Namen im folgenden Format: wfa_backup_servername_.zip
+
+====
+* wfa_Backup_ ist ein fester Teil des Dateinamens, der der Name des Backup-Servers ist.
+* Servername wird aus der Umgebung des Windows-Servers extrahiert.
+* _.zip ist ein fester Teil des Dateinamens.
+`C:\Program Files\NetApp\WFA\bin\Backup.ps1 -User backup -Password MyPassword123 -Path C:\WFA_backups\backup_10_08_12`
++
+Nach Abschluss des Backups wird die folgende Ausgabe angezeigt: C:\WFA_Backups\Backup_10__08_12\wfa_backup_myserver__.zip . Vergewissern Sie sich, dass die Sicherungsdatei am angegebenen Speicherort erstellt wurde.
+
+

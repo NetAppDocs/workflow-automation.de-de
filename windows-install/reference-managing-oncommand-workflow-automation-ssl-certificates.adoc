@@ -1,0 +1,16 @@
+---
+permalink: windows-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html 
+sidebar: sidebar 
+keywords: manage, oncommand, workflow, automation, ssl certificate 
+summary: 'Sie können das WFA OnCommand Workflow Automation SSL-Standardzertifikat durch ein selbstsigniertes Zertifikat oder ein Zertifikat ersetzen, das von einer Zertifizierungsstelle (CA) signiert ist.' 
+---
+= Verwalten des OnCommand Workflow Automation-SSL-Zertifikats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das WFA OnCommand Workflow Automation SSL-Standardzertifikat durch ein selbstsigniertes Zertifikat oder ein Zertifikat ersetzen, das von einer Zertifizierungsstelle (CA) signiert ist.
+
+Bei der Installation von WFA wird das selbstsignierte WFA SSL-Zertifikat generiert. Wenn Sie ein Upgrade durchführen, wird das Zertifikat für die vorherige Installation durch das neue Zertifikat ersetzt. Wenn Sie ein nicht standardmäßiges selbstsigniertes Zertifikat oder ein von einer CA signiertes Zertifikat verwenden, müssen Sie das Standard-WFA SSL-Zertifikat durch Ihr Zertifikat ersetzen.

@@ -1,0 +1,46 @@
+---
+permalink: help/reference-execute-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: execute, workflow, dialog box, enable, specify, user, iputs, time, execution, comment 
+summary: Im Dialogfeld Workflow ausführen können Sie die erforderlichen Benutzereingaben, die Ausführungszeit und den Ausführungskommentar für einen Workflow angeben. 
+---
+= Dialogfeld „Workflow ausführen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Workflow ausführen können Sie die erforderlichen Benutzereingaben, die Ausführungszeit und den Ausführungskommentar für einen Workflow angeben.
+
+
+
+== Benutzereingaben
+
+Ermöglicht die Angabe der Eingaben für den Workflow. Die obligatorischen Attribute sind mit einem Sternchen (*) markiert und der Rahmen für die Felder ist rot.
+
+
+
+== Optionen
+
+Hier können Sie die Zeit für die Workflow-Ausführung festlegen.
+
+* *Jetzt ausführen*
++
+Ermöglicht Ihnen die sofortige Ausführung des Workflows.
+
+* *Wiederholt ausführen*
++
+Ermöglicht es Ihnen, den Arbeitsablauf so einzustellen, dass er sich regelmäßig wiederholen kann. Diese Option wird nur angezeigt, wenn ein Zeitplan erstellt wurde.
+
+* * Einmal ausführen*
++
+Ermöglicht Ihnen die Planung der Ausführung des Workflows.
+
+
+
+
+
+== Ausführungskommentar
+
+Hier können Sie einen Kommentar für die Workflow-Ausführung angeben. Dieser Kommentar wird im Fenster Ausführungsstatus angezeigt.

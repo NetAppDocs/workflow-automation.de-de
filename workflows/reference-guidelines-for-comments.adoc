@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-comments.html 
+sidebar: sidebar 
+keywords: aware, guidelines, powershell, perl, commnents, scripts, oncommand, workflow, automaion 
+summary: 'In Ihren Skripten für OnCommand Workflow Automation (WFA) müssen Sie die Richtlinien für PowerShell und Perl Kommentare kennen.' 
+---
+= Richtlinien für Kommentare
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Ihren Skripten für OnCommand Workflow Automation (WFA) müssen Sie die Richtlinien für PowerShell und Perl Kommentare kennen.
+
+
+
+== PowerShell kommentiert
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Verwenden Sie das Zeichen # für einen einzelnen Zeilenkommentar.
+ a| 
+[listing]
+----
+# Single line comment
+$options=$option.trim();
+----
+
+
+ a| 
+Verwenden Sie das Zeichen # für einen Zeilenendkommentar.
+ a| 
+[listing]
+----
+$options=$option.trim(); # End of line
+comment
+----
+
+
+ a| 
+Verwenden Sie die Zeichen <# und #> für einen Blockkommentar.
+ a| 
+[listing]
+----
+<#
+This is
+a
+block comment
+#>
+$options=$option.trim();
+----
+|===
+
+
+== Perl-Kommentare
+
+[cols="2*"]
+|===
+| Richtlinien | Beispiel 
+
+
+ a| 
+Verwenden Sie das Zeichen # für einen einzelnen Zeilenkommentar.
+ a| 
+[listing]
+----
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+----
+
+
+ a| 
+Verwenden Sie das Zeichen # für den Zeilenendkommentar.
+ a| 
+[listing]
+----
+my $MaxDirectorySizeBytes = $MaxDirect
+orySiZe * 1024 * 1024; # convert to Bytes
+----
+
+
+ a| 
+Verwenden Sie das # Zeichen in jeder Zeile mit einem leeren # am Anfang und am Ende, um einen Kommentarrahmen für mehrzeilige Kommentare zu erstellen.
+ a| 
+[listing]
+----
+#
+# This is a multi-line comment. Perl 5, unlike
+# Powershell, does not have direct support for
+# multi-line comments. Please use a '#'in every line
+# with an empty '#' at the beginning and end to create
+# a comment border
+#
+----
+
+
+ a| 
+Fügen Sie in den WFA Befehlen keinen kommentierten und toten Code ein. Zu Testzwecken können Sie jedoch den Mechanismus der Plain Old Documentation (POD) verwenden, um den Code zu kommentieren.
+ a| 
+[listing]
+----
+=begin comment
+	# Set deduplication
+	if(defined $Deduplication && $Deduplication eq "enabled")
+	{
+		$wfaUtil->sendLog("Enabling Deduplication");
+	}
+=end comment
+=cut
+----
+|===

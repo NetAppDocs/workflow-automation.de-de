@@ -1,0 +1,87 @@
+---
+permalink: help/reference-new-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: active, directory, group, enable, create, new, oncommand, workflow, automation 
+summary: Im Dialogfeld Neue Active Directory-Gruppe können Sie eine neue OnCommand Workflow Automation Active Directory-Gruppe erstellen. 
+---
+= Dialogfeld „Neue Active Directory-Gruppe“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Neue Active Directory-Gruppe können Sie eine neue OnCommand Workflow Automation Active Directory-Gruppe erstellen.
+
+* *Gruppenname*
++
+Gibt den Gruppennamen an.
+
+* * Rolle*
++
+Ermöglicht Ihnen die Auswahl einer der folgenden Gruppenrollen:
+
++
+** *Gast*
++
+Diese Gruppe kann nur den Status einer Workflow-Ausführung anzeigen oder über eine Änderung des Status einer Workflow-Ausführung benachrichtigt werden.
+
+** *Betreiber*
++
+Diese Gruppe darf Workflows anzeigen und ausführen, für die die Gruppe Zugriff erhält.
+
+** *Genehmiger*
++
+Diese Gruppe kann Workflows anzeigen, ausführen, genehmigen und ablehnen, für die die Gruppe Zugriff erhält.
+
++
+
+NOTE: Sie müssen die E-Mail-ID des Genehmigers und den Status des Workflows angeben, der dem Genehmiger mitgeteilt werden soll. Wenn es mehrere Genehmiger gibt, können Sie im Feld *E-Mail* eine Gruppen-E-Mail-ID angeben.
+
+** * Architekt*
++
+Diese Gruppe hat vollen Zugriff auf die Erstellung von Workflows, ist aber durch das Ändern globaler WFA Servereinstellungen eingeschränkt.
+
+** *Admin*
++
+Diese Gruppe hat vollständigen Zugriff auf den WFA Server.
+
++
+
+NOTE: Sie müssen mindestens eine Administratorgruppe konfigurieren.
+
+
+
+* *E-Mail*
++
+Hiermit können Sie die E-Mail-Adresse der Gruppe angeben, an die Benachrichtigungen gesendet werden, wenn die Option *Notify on* ausgewählt ist.
+
+* *Benachrichtigen Sie Am*
++
+Ermöglicht Ihnen die Auswahl, wann die Active Directory-Gruppe per E-Mail benachrichtigt werden soll. Die Benachrichtigungen zum Workflow-Ausführungsstatus sind spezifisch für die Workflows, die von der Gruppe ausgeführt werden. Sie können eine beliebige Kombination der folgenden Optionen auswählen:
+
++
+** Workflow-Ausführung gestartet: Benachrichtigt die Gruppe, wenn die Workflow-Ausführung beginnt.
+** Workflow-Ausführung fehlgeschlagen/teilweise erfolgreich: Benachrichtigt die Gruppe, wenn die Workflow-Ausführung fehlschlägt oder der Workflow erfolgreich ausgeführt wurde, auch wenn ein oder mehrere Schritte fehlgeschlagen sind.
++
+Die Ausführung ist abgeschlossen, weil die fehlgeschlagenen Schritte so konfiguriert wurden, dass die Workflow-Ausführung auch bei einem fehlgeschlagenen Schritt fortgesetzt werden kann.
+
+** Workflow-Ausführung erfolgreich abgeschlossen: Benachrichtigt die Gruppe, wenn die Workflow-Ausführung erfolgreich abgeschlossen wurde.
+** Workflow-Ausführung wartet auf Genehmigung: Benachrichtigt die Gruppe, wenn die Workflow-Ausführung abhängig von der WFA Konfigurationseinstellung auf Genehmigung durch den Genehmiger, Architekt oder Operator wartet.
+
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die Konfigurationseinstellungen und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

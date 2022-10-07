@@ -1,0 +1,36 @@
+---
+permalink: help/reference-portal-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, displays, ready, production, edit, execute, authorization, access, clicking 
+summary: Im Fenster Workflows werden die Workflows angezeigt, die für die Produktion bereit sind. Sie können die Workflows bearbeiten oder ausführen, für die Sie autorisiert sind. Sie können auf dieses Fenster zugreifen, indem Sie auf die Registerkarte Workflows klicken. 
+---
+= Workflows-Fenster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster Workflows werden die Workflows angezeigt, die für die Produktion bereit sind. Sie können die Workflows bearbeiten oder ausführen, für die Sie autorisiert sind. Sie können auf dieses Fenster zugreifen, indem Sie auf die Registerkarte Workflows klicken.
+
+
+
+== Kategorienfenster
+
+Im Bereich Kategorie können Sie nach Workflows nach Kategorien suchen. Ein Workflow, der keiner Kategorie zugewiesen ist, wird unter „`Keine Kategorie`“ aufgeführt. Rechts neben der Kategorie-Überschrift wird die Gesamtzahl der Workflows innerhalb dieser Kategorie angezeigt. Diese Zahl umfasst die Workflows, die für die Produktion bereit markiert sind. Beispielsweise zeigt „`Data Protection (7)`“ an, dass sieben Workflows in der Kategorie „`Data Protection`“ für die Produktion bereit sind.
+
+
+
+== Schemata
+
+Im Menü Schemata können Sie die Schemata auswählen.
+
+Die angezeigten Schemata basieren auf der Auswahl, die der Administrator in der Option Inhalte für Schemata anzeigen unter *Einstellungen* > *Setup* > *Workflow-Einstellungen* ausgewählt hat. Sie können die Schemata auswählen, die angezeigt werden sollen, indem Sie die Kontrollkästchen aktivieren oder deaktivieren. Diese Auswahl ist nur für die aktuelle Sitzung gültig.
+
+
+
+== Workflow-Bereich
+
+Workflows, die für die Produktion bereit markiert sind, werden im Workflow-Fenster als graue Felder angezeigt. Die Workflow-Felder enthalten den Namen des Workflows und ein Symbol, um anzuzeigen, dass der Modus vom Workflow unterstützt wird. Sie können einen Workflow ausführen, indem Sie auf das Feld Workflow klicken.
+
+Wenn Sie ein Administrator oder Architekt sind, können Sie einen Workflow bearbeiten, indem Sie auf die klicken image:../media/portal_edit_object_wfa_icon.gif[""] Symbol. Der image:../media/info_icon_execute_wfa.gif[""] Symbol bietet weitere Informationen zum Workflow.

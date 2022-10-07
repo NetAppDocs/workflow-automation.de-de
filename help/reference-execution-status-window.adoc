@@ -1,0 +1,237 @@
+---
+permalink: help/reference-execution-status-window.html 
+sidebar: sidebar 
+keywords: execution, window, display, status, process, workflow, submitted, enable, view, details, process, control, access, select 
+summary: Das Fenster „Ausführungsausführungen“ zeigt den Status des Ausführungsprozesses für jeden Workflow an, der zur Ausführung eingereicht wurde. Im Fenster können Sie Details zum Ausführungsprozess anzeigen und die Ausführung eines Workflows steuern. Sie können auf dieses Fenster zugreifen, indem Sie „Ausführung“ > „Ausführungen“ auswählen. 
+---
+= Fenster „Ausführungen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Fenster „Ausführungsausführungen“ zeigt den Status des Ausführungsprozesses für jeden Workflow an, der zur Ausführung eingereicht wurde. Im Fenster können Sie Details zum Ausführungsprozess anzeigen und die Ausführung eines Workflows steuern. Sie können auf dieses Fenster zugreifen, indem Sie *Ausführung* > *Ausführungstermin* wählen.
+
+* Workflow-Tabelle
+* Symbolleiste
+
+
+
+
+== Workflow-Tabelle
+
+In der Tabelle Workflow werden die zur Ausführung eingereichten Workflows aufgeführt. Sie können die Tabellenanzeige mithilfe der für jede Spalte verfügbaren Filter- und Sortierfunktionen anpassen und die Spaltenreihenfolge neu anordnen.
+
+* image:../media/filter_icon_wfa.gif["Filtersymbol"] Aktiviert oder deaktiviert die Filterung für die gesamte Tabelle. Wenn die Filterung deaktiviert ist, wird über dem Symbol ein rotes „x“ angezeigt.
+* Doppelklicken image:../media/filter_icon_wfa.gif["Filtersymbol"] Löscht die Filterauswahl und setzt sie zurück.
+* image:../media/wfa_filter_icon.gif["Filtersymbol"] In jeder Spaltenüberschrift können Sie anhand des Inhalts der Spalten filtern. Klicken Sie Auf image:../media/wfa_filter_icon.gif["Filtersymbol"] In einer Spalte können Sie nach einem bestimmten Element aus der Dropdown-Liste oder nach allen verfügbaren Elementen filtern.
+* Durch Klicken auf die Spaltenüberschrift wird die Sortierung zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Sie können die angewendete Sortierreihenfolge anhand der Sortierpfeile ( identifizierenimage:../media/wfa_sortarrow_up_icon.gif["Sortiersymbol"] Für aufsteigende und image:../media/wfa_sortarrow_down_icon.gif["Sortiersymbol"] Für absteigend).
+* Um die Position der Spalten neu zu ordnen, können Sie Spalten per Drag-and-Drop in jeder gewünschten Reihenfolge platzieren. Sie können diese Spalten jedoch nicht ausblenden oder löschen.
+* Durch Klicken auf das Textfeld * Suchen* können Sie nach bestimmten Inhalten suchen. Darüber hinaus können Sie mithilfe von unterstützten Operatoren nach dem entsprechenden Spaltentyp, Alphabetic oder Numeric suchen.
+
+
+In der folgenden Tabelle werden die unterstützten Operatoren für alphabetische und numerische Spalten in der Workflow-Tabelle dargestellt, die im Textfeld * Suchen* verfügbar sind.
+
+[cols="2*"]
+|===
+| Alphabetisch | Numerisch 
+
+
+ a| 
+* Enthält
+* Enthält nicht
+* Beginnt mit
+* Endet mit
+* Gleich
+* Ist nicht gleich
+* Zurücksetzen
+
+ a| 
+* Gleich
+* Ist nicht gleich
+* Kleiner als
+* Größer als
+* Kleiner oder gleich
+* Größer oder gleich
+* Zwischen
+* Zurücksetzen
+
+
+|===
+Die Workflow-Tabelle enthält die folgenden Spalten:
+
+* *Job #*
++
+Zeigt die Identifikationsnummer des Jobs an.
+
++
+Die Job-ID-Nummer ist eindeutig und wird vom Server beim Start des Jobs zugewiesen.
+
+* *Name*
++
+Zeigt den Namen des Workflows an.
+
+* *Startzeit*
++
+Zeigt das Datum und die Uhrzeit an, zu der der Workflow gestartet wurde.
+
++
+Klicken Sie im Textfeld Filter suchen auf das Kalendersymbol, um nach Workflows mit einem bestimmten Startdatum zu suchen.
+
+* *Endzeit*
++
+Zeigt das Datum und die Uhrzeit an, zu der der Workflow beendet wurde.
+
++
+Klicken Sie im Textfeld Filter suchen auf das Kalendersymbol, um nach Workflows mit einem bestimmten Enddatum zu suchen.
+
+* *Status*
++
+Zeigt den laufenden Status des Jobs an. Für den Status kann einer der folgenden Werte angezeigt werden:
+
++
+** Fehlgeschlagen
++
+Zeigt an, dass der Workflow bei der Ausführung fehlgeschlagen ist. Basierend auf der Zeit, die seit der Ausführung des Workflows verstrichen ist, können Sie den Workflow durch den fehlgeschlagenen Befehl wieder aufnehmen.
+
+** Wird Ausgeführt
++
+Zeigt an, dass der Workflow ausgeführt wird. Der Workflow führt den Plan aus, der in der Planungsphase erstellt wurde, der einer anderen Ausführung vorausgeht.
+
+** Erfolgreich
++
+Zeigt an, dass der Workflow erfolgreich ausgeführt wurde.
+
+** Storniert
++
+Zeigt an, dass der Workflow von einem Benutzer abgebrochen wurde.
+
+** Warten auf Genehmigung
++
+Zeigt an, dass ein Genehmigungspunkt Teil des Workflows ist. Der Workflow bleibt in diesem Status, bis der angegebene Benutzer die Workflow-Ausführung genehmigt.
+
+** Geplant
++
+Zeigt an, dass die Planung des Workflows abgeschlossen ist und der Workflow für die Ausführung geplant ist.
+
+** Wird Abgebrochen
++
+Zeigt an, dass der Workflow abgebrochen wird. Ein abgebrochener Workflow wird mit der Ausführung nicht fortgesetzt; ein zuvor fertigter Teil des Workflows bleibt abgeschlossen.
+
+** Veraltet
++
+Gibt an, dass der geplante Workflow nicht innerhalb der angegebenen Zeit gemäß dem Zeitplan ausgeführt wurde.
+
+** Planung
++
+Zeigt die Auflösung des Workflow-Designs, den Standort aller Ressourcen, die Überprüfung der Funktionsfähigkeit des Designs und die Formulierung des Ausführungsplans an. Die Planung kann eine eigenständige Aktion, Teil der Designüberprüfung oder Teil der Ausführung sein, da jede Ausführung mit einer neuen Planung beginnt.
+
+** Ausstehend
++
+Zeigt an, dass sich der Workflow in der Planungswarteschlange befindet. Dies ist ein interner Status. Der Workflow wird für die Planung aus diesem Status abgerufen.
+
+** Teilweise Erfolgreich
++
+Zeigt an, dass obwohl der Workflow erfolgreich ausgeführt wurde, ein oder mehrere Schritte fehlgeschlagen sind. Die Ausführung ist abgeschlossen, weil die fehlgeschlagenen Schritte so konfiguriert wurden, dass die Workflow-Ausführung auch nach einem fehlgeschlagenen Schritt fortgesetzt wird.
+
+
+
+* *Abgeschlossen*
++
+Zeigt die Anzahl der Schritte an, die die Gesamtanzahl der Schritte für den ausgewählten Workflow abgeschlossen haben.
+
+* *Übermittelt Von*
++
+Zeigt den Benutzernamen des Benutzers an, der den Workflow übermittelt hat.
+
+* *Übermittelt Am*
++
+Zeigt das Datum und die Uhrzeit an, zu der der Workflow übermittelt wurde.
+
++
+Klicken Sie im Textfeld Filter suchen auf das Kalendersymbol, um nach Workflows mit einem bestimmten Datum für die Einreichung zu suchen.
+
+* *Ausführungskommentar*
++
+Zeigt den Kommentar an, der für die Workflow-Ausführung angegeben wurde.
+
+* *Geplant Für*
++
+Zeigt das geplante Datum und die Uhrzeit für die Ausführung des Workflows an.
+
++
+Klicken Sie im Textfeld Filter suchen auf das Kalendersymbol, um nach Workflows mit einem bestimmten geplanten Datum zu suchen.Wenn ein Filter zum Anzeigen der Jobs zu einem späteren Zeitpunkt auf der Spalte angewendet wird, werden möglicherweise Jobs mit „`Job # Zero`“ angezeigt. Dies zeigt an, dass der Job noch nicht erstellt wurde und zum geplanten Zeitpunkt erstellt wird.
+
+* *Wiederkehrende ID*
++
+Zeigt die Kennung des wiederkehrenden Zeitplans an.
+
+* *Terminplanname*
++
+Zeigt den Namen des Zeitplans an.
+
+* *Letzte Statusänderung*
++
+Zeigt die Zeit an, zu der ein Status geändert wurde.
+
++
+Klicken Sie im Textfeld Filter suchen auf das Kalendersymbol, um nach Workflows mit einem bestimmten Datum der letzten Statusänderung zu suchen.
+
+* *Kommentar Zu Genehmigungspunkt*
++
+Gibt die Meldung an, die dem Benutzer bei der Ausführung des Workflows am letzten Genehmigungspunkt angezeigt wird.
+
+
+
+
+
+== Symbolleiste
+
+Die Symbolleiste befindet sich über der Spaltenüberschrift. Sie können die Symbole in der Symbolleiste verwenden, um verschiedene Aktionen durchzuführen. Diese Aktionen können auch über das Kontextmenü im Fenster aufgerufen werden.
+
+* *image:../media/details_wfa_icon.gif["Details-Symbol"] (Details)*
++
+Öffnet das Überwachungsfenster für den ausgewählten Workflow, das die folgenden Registerkarten enthält, um detaillierte Informationen zum Workflow zu erhalten:
+
++
+** Fluss
+** Ausführungsplan
+** Benutzereingaben
+** Rückgabeparameter
+** Verlauf
+
+
+
+
+Sie können auch auf einen Eintrag in der Tabelle doppelklicken, um das Überwachungsfenster zu öffnen, um detaillierte Informationen anzuzeigen.
+
+* *image:../media/abort_wfa_icon.gif["Symbol Abbrechen"] (Abbrechen)*
++
+Verhindert, dass der Ausführungsprozess fortgesetzt wird. Diese Option ist für Workflows aktiviert, die sich im Ausführungsmodus befinden.
+
+* *image:../media/reschedule_wfa_icon.gif["Symbol erneut einlesen"] (Neu Terminieren)*
++
+Öffnet ein Dialogfeld „Workflow neu terminieren“, in dem Sie die Ausführungszeit für den Workflow ändern können. Die Option ist für Workflows aktiviert, die sich im Status „geplant“ befinden.
+
+* *image:../media/resume_wfa_icon.gif["Symbol „Fortsetzen“"] (Fortsetzen)*
++
+Öffnet ein Dialogfeld „Workflow wiederaufnehmen“, in dem Sie die Ausführung des Workflows nach dem Ändern von Umgebungsproblemen fortsetzen können (z. B. falsche Anmeldedaten für ein Array, fehlende Lizenzen oder Array ist nicht verfügbar). Die Option ist für Workflows aktiviert, die sich im befinden `Failed` Bundesland.
+
+* *image:../media/approve_resume_wfa_icon.gif["Symbol „Genehmigen und fortsetzen“"] (Genehmigen Und Fortsetzen)*
++
+Ermöglicht Ihnen, die Ausführung des Workflows zu genehmigen und den Testsuitationsvorgang fortzusetzen. Diese Option ist für Workflows aktiviert, die sich im befinden `Waiting For Approval state`.
+
+* *image:../media/reject_abort_wfa_icon.gif["Symbol Ablehnen und Abbruch"] (Ablehnen & Abbrechen)*
++
+Ermöglicht Ihnen, die Ausführung des Workflows abzulehnen und den Testsuiteheprozess zu beenden. Diese Option ist für Workflows aktiviert, die sich im befinden `Waiting For Approval state`.
+
+* *image:../media/clean_reservation_wfa_icon.gif["Symbol für saubere Reservierung"] (Saubere Reservierung)*
++
+Ermöglicht es Ihnen, die Ressourcenreservierung für einen Workflow aus dem lokalen Cache zu löschen. Eine saubere Reservierung ist nur für geplante, fehlgeschlagene und teilweise erfolgreiche Workflows verfügbar. Sie können die Reservierung nach der Reinigung nicht mehr fortsetzen.
+
+* *image:../media/refresh_wfa_icon.gif["Symbol Refrech"] (Aktualisieren)*
++
+Aktualisiert die Liste der Workflows. Die Ansicht wird automatisch aktualisiert. Sie können die automatische Aktualisierung ein- und ausschalten, indem Sie auf klicken image:../media/refresh_icon_wfa.gif[""] In der Statusleiste.
+
+

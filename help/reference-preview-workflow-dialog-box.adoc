@@ -1,0 +1,34 @@
+---
+permalink: help/reference-preview-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: preview, workflow, dialog box, enable, specify, value, user input, associated 
+summary: Im Dialogfeld „Workflow-Vorschau“ können Sie Werte für Benutzereingaben angeben, die mit einem Workflow verknüpft sind, und anschließend eine Vorschau der Ausführung dieses Workflows mit den angegebenen Werten anzeigen. 
+---
+= Dialogfeld „Workflow-Vorschau“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Workflow-Vorschau“ können Sie Werte für Benutzereingaben angeben, die mit einem Workflow verknüpft sind, und anschließend eine Vorschau der Ausführung dieses Workflows mit den angegebenen Werten anzeigen.
+
+
+
+== Werte der Benutzereingaben
+
+Im Dialogfeld „Workflow-Vorschau“ werden die dem ausgewählten Workflow zugeordneten Benutzereingaben angezeigt und Sie können die Werte für Benutzereingaben festlegen.
+
+
+
+== Befehlsschaltflächen
+
+* *Vorschau*
++
+Öffnet das Überwachungsfenster für den zugehörigen Workflow.
+
+* *Abbrechen*
++
+Schließt das Dialogfeld.
+
+

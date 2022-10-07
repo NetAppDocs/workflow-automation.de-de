@@ -1,0 +1,230 @@
+---
+permalink: workflows/reference-workflow-requirements-checklist.html 
+sidebar: sidebar 
+keywords: workflow, requirements, checklist, include, details, requirements, commands, user, input, resources, planned, workflow, identify, gap 
+summary: Eine Workflow-Anforderungen-Checkliste enthält detaillierte Anforderungen an einen geplanten Workflow, beispielsweise Befehle, Benutzereingabe und Ressourcen. Mithilfe der Checkliste können Sie Ihre Workflows planen und erforderliche Lücken ermitteln. 
+---
+= Beispiel-Workflow-Anforderungen Checkliste
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Workflow-Anforderungen-Checkliste enthält detaillierte Anforderungen wie Befehle, Benutzereingabe und Ressourcen für einen geplanten Workflow. Mithilfe der Checkliste können Sie Ihre Workflows planen und erforderliche Lücken ermitteln.
+
+
+
+== Beispiel einer Checkliste für Anforderungen
+
+In der folgenden Beispiel-Checkliste für Workflow-Anforderungen sind die Anforderungen für den Workflow „`Erstellen eines Clustered Data ONTAP Volumes`“ aufgeführt. Sie können diese Beispiel-Checkliste als Vorlage verwenden, um Ihre Workflow-Anforderungen aufzulisten.
+
+[cols="2*"]
+|===
+| Anforderungen | Beschreibung 
+
+
+ a| 
+Workflow-Name
+ a| 
+Erstellen eines Clustered Data ONTAP Volumes
+
+
+
+ a| 
+Kategorie
+ a| 
+Storage-Bereitstellung
+
+
+
+ a| 
+Beschreibung
+ a| 
+Der Workflow erstellt ein neues Volume in einer bestimmten SVM. Dieser Workflow ist für ein Szenario vorgesehen, in dem ein Volume bereitgestellt und für eine spätere Nutzung delegiert wird.
+
+
+
+ a| 
+Allgemeine Beschreibung der Funktionsweise des Workflows
+ a| 
+* Der Benutzer (Cluster, SVM-Namen) wird die SVM mit dem Volume angegeben.
+* Ein Volume wird auf Basis der angegebenen Größe erstellt.
+* Die Konfiguration des Volume wird in einer Vorlage beschrieben.
+
+
+
+
+ a| 
+Details
+ a| 
+* Verwenden Sie den Befehl *CM Volume* erstellen
+* Befehlsdetails für *CM Volume erstellen*:
++
+** Die Ausführung ist wie immer festgelegt
+** Volume-Details werden durch Ausfüllen von Attributen für das Volume festgelegt
+** Verwenden Sie zur Konfiguration des Volumes die Vorlage *Space Guaranteed Settings*
+** Volume-Name und -Größe werden vom Benutzer bereitgestellt.
++
+Das Volume wird als im SVM-Namespace gemountet `/volname` (Unter dem Root Namespace).
+
+** Verwenden Sie die Funktion *actualVolumeSize*, da die Snap Reserve 5% beträgt.
+** SVM-Referenz wird mit folgender Logik zur Ressourcenauswahl definiert:
++
+*** SVM anhand Schlüssel ZU CM – sucht nach SVM anhand des Namens und des Clusters, der vom Benutzer bereitgestellt wird
+*** SVM nach Typ CM – nur Daten-SVMs (Typ = Cluster)
+*** SVM nach Status -- (Status = ausgeführt)
+
+
+** Aggregatreferenz wird mit der Logik zur Ressourcenauswahl als vordefinierten Finder definiert (CM-Aggregat nach Speicherplatzschwellenwerten und RAID-Typ):
++
+*** CM-Aggregat nach verfügbarer Kapazität (Kapazität = Größe des bereitzustellenden Volumes, vom Benutzer angegebenes Cluster)
+*** CM Aggregat durch Delegation zu SVM
+*** CM-Aggregat nach RAID-Typ (RAID-DP)
+*** CM Aggregat nicht aggr0
+*** CM Aggregat nach genutzter Größe % (Schwellenwert = 90, Leertaste ToBeProvisioned = Größe bereitgestellt, da Garantie Volumen ist)
+*** CM-Aggregat nach Überprovisionierung (Schwellenwert = 300, Leertaste ToBeAlloked = Größe des bereitgestellten Volume)
+*** Wählen Sie das Aggregat mit maximalem freien Speicherplatz aus
+
+
+
+
+
+
+|===
+[cols="3*"]
+|===
+| Name | Typ | Beschreibung (Datenwerte, Validierung usw.) 
+
+
+ a| 
+Cluster
+ a| 
+Gesperrte Abfrage (Tabelle)
+ a| 
+* Das Cluster, das die SVM hostet
+* Die Abfrage kann eine tabellarische Anzeige mit primärer Adresse und dem Namen des Clusters sein
+* Alphabetisch nach Namen sortieren
+
+
+
+
+ a| 
+SVM
+ a| 
+Gesperrte Abfrage
+ a| 
+* SVM, in der das Volume bereitgestellt wird
+* Die Abfrage sollte nur die SVM-Namen anzeigen, die zum Cluster gehören, das in der vorherigen Eingabe ausgewählt wurde
++
+Zeigt nur Cluster-Typen-SVMs an, nicht admin oder Node (Spalte des Typs cm_Storage.vServer)
+
+* Alphabetisch sortieren
+
+
+
+
+ a| 
+Datenmenge
+ a| 
+Zeichenfolge
+ a| 
+* Name des zu erstellenden Volumes
+
+
+
+
+ a| 
+Größe in GB
+ a| 
+Ganzzahl
+ a| 
+* Größe des bereitzustellenden Volumes
+* Datengröße (Snap-Reserve sollte in Betracht gezogen werden)
+
+
+|===
+*Befehle*
+
+[cols="3*"]
+|===
+| Name | Beschreibung | Status 
+
+
+ a| 
+CM-Volumen erstellen
+ a| 
+Erstellung eines Volumes in der SVM
+ a| 
+Vorhanden
+
+|===
+*Rückgabeparameter*
+
+[cols="2*"]
+|===
+| Name | Wert 
+
+
+ a| 
+Volume-Name
+ a| 
+Name des bereitgestellten Volume
+
+
+
+ a| 
+Aggregatname
+ a| 
+Der Name des ausgewählten Aggregats
+
+
+
+ a| 
+Node-Name
+ a| 
+Der Name des Node
+
+
+
+ a| 
+Cluster-Name
+ a| 
+Der Name des Clusters
+
+|===
+*Lücken und Probleme*
+
+[cols="2*"]
+|===
+
+
+ a| 
+1.
+ a| 
+
+
+
+ a| 
+2.
+ a| 
+
+
+
+ a| 
+3.
+ a| 
+
+
+
+ a| 
+4.
+ a| 
+
+
+
+ a| 
+5.
+ a| 
+
+|===

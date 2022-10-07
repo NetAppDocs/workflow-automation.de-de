@@ -1,0 +1,55 @@
+---
+permalink: windows-install/task-create-local-users.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, create, local users 
+summary: 'Mit OnCommand Workflow Automation (WFA) können Sie lokale WFA Benutzer mit spezifischen Berechtigungen für verschiedene Rollen wie Gast, Operator, Genehmiger, Architekt, Admin und Backup.' 
+---
+= Erstellen Sie lokale Benutzer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit OnCommand Workflow Automation (WFA) können Sie lokale WFA Benutzer mit spezifischen Berechtigungen für verschiedene Rollen wie Gast, Operator, Genehmiger, Architekt, Admin und Backup.
+
+Sie müssen WFA installiert und als Administrator angemeldet haben.
+
+WFA ermöglicht Ihnen das Erstellen von Benutzern für die folgenden Rollen:
+
+* *Gast*
++
+Dieser Benutzer kann das Portal und den Status einer Workflow-Ausführung anzeigen und über eine Änderung des Status einer Workflow-Ausführung informiert werden.
+
+* *Betreiber*
++
+Dieser Benutzer darf Workflows anzeigen und ausführen, für die der Benutzer Zugriff erhält.
+
+* *Genehmiger*
++
+Dieser Benutzer kann Workflows anzeigen, ausführen, genehmigen und ablehnen, für die der Benutzer Zugriff erhält.
+
++
+
+NOTE: Es wird empfohlen, die E-Mail-ID des Genehmigers anzugeben. Wenn es mehrere Genehmiger gibt, können Sie im Feld *E-Mail* eine Gruppen-E-Mail-ID angeben.
+
+* * Architekt*
++
+Dieser Benutzer hat vollen Zugriff auf die Erstellung von Workflows, kann aber aufgrund der Änderung globaler WFA Servereinstellungen eingeschränkt werden.
+
+* *Admin*
++
+Dieser Benutzer hat vollständigen Zugriff auf den WFA Server.
+
+* *Backup*
++
+Dieser ist der einzige Benutzer, der im Remote-Zugriff Backups des WFA Servers generieren kann. Der Benutzer ist jedoch von allen anderen Zugriffsrechten eingeschränkt.
+
+
+
+.Schritte
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Verwaltung* auf *Benutzer*.
+. Erstellen Sie einen neuen Benutzer, indem Sie auf klicken image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Geben Sie die erforderlichen Informationen im Dialogfeld Neuer Benutzer ein.
+. Klicken Sie Auf *Speichern*.
+

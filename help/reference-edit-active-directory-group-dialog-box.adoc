@@ -1,0 +1,95 @@
+---
+permalink: help/reference-edit-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, active directory, dialog box, enable, view, modify, oncommand, workflow, automation, group 
+summary: Im Dialogfeld „Active Directory-Gruppe bearbeiten“ können Sie die OnCommand Workflow Automation-Active Directory-Gruppeneinstellungen anzeigen und ändern. 
+---
+= Dialogfeld „Active Directory-Gruppe bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Active Directory-Gruppe bearbeiten“ können Sie die OnCommand Workflow Automation-Active Directory-Gruppeneinstellungen anzeigen und ändern.
+
+Je nach den Berechtigungen und der Rolle Ihrer Active Directory-Gruppe haben Sie möglicherweise keinen Zugriff auf das Fenster „Active Directory-Gruppen“. Sie können die Einstellungen für Ihre Active Directory-Gruppe jedoch bearbeiten, indem Sie *Einstellungen* und unter *Verwaltung* auf *Active Directory-Gruppen* klicken.
+
+
+NOTE: Die Felder, die Ihnen zur Bearbeitung zur Verfügung stehen, hängen von Ihren Active Directory-Gruppenberechtigungen ab.
+
+* *Gruppenname*
++
+Zeigt den Gruppennamen für die Active Directory-Gruppe an.
+
+* * Rolle*
++
+Zeigt die zugewiesene Rolle für das Benutzerkonto an.
+
++
+Zeigt eine der folgenden Gruppenrollen an, die der Active Directory-Gruppe zugewiesen sind:
+
++
+** *Gast*
++
+Diese Gruppe kann nur den Status einer Workflow-Ausführung anzeigen oder über eine Änderung des Status einer Workflow-Ausführung benachrichtigt werden.
+
+** *Betreiber*
++
+Diese Gruppe darf die Workflows anzeigen und ausführen, für die die Gruppe Zugriff erhält.
+
+** *Genehmiger*
++
+Diese Gruppe kann die Workflows anzeigen, ausführen, genehmigen und ablehnen, für die die Gruppe Zugriff hat.
+
++
+
+NOTE: Sie müssen die E-Mail-ID des Genehmigers und den Status des Workflows angeben, der dem Genehmiger mitgeteilt werden soll. Wenn es mehrere Genehmiger gibt, können Sie im Feld *E-Mail* eine Gruppen-E-Mail-ID angeben.
+
+** * Architekt*
++
+Diese Gruppe hat vollen Zugriff auf die Erstellung von Workflows, ist aber durch das Ändern globaler WFA Servereinstellungen eingeschränkt.
+
+** *Admin*
++
+Diese Gruppe hat vollständigen Zugriff auf den WFA Server.
+
++
+
+NOTE: Sie müssen mindestens eine Administratorgruppe konfigurieren.
+
+
+
+* *E-Mail*
++
+Gibt die E-Mail für die Active Directory-Gruppe an, an die Benachrichtigungen gesendet werden, wenn die Option *Notify on* ausgewählt ist.
+
+* *Benachrichtigen Sie Am*
++
+Hiermit können Sie auswählen, wann die Active Directory-Gruppe während der von dieser Active Directory-Gruppe ausgelösten Workflow-Ausführung per E-Mail benachrichtigt werden soll. Sie können eine beliebige Kombination der folgenden Optionen auswählen:
+
++
+** Workflow-Ausführung gestartet: Benachrichtigt den Benutzer, wenn die Workflow-Ausführung beginnt.
+** Workflow-Ausführung fehlgeschlagen/teilweise erfolgreich: Benachrichtigt den Benutzer, wenn die Workflow-Ausführung fehlschlägt oder der Workflow erfolgreich ausgeführt wurde, auch wenn ein oder mehrere Schritte fehlgeschlagen sind.
++
+Die Ausführung ist abgeschlossen, weil die fehlgeschlagenen Schritte so konfiguriert wurden, dass die Workflow-Ausführung auch bei einem fehlgeschlagenen Schritt fortgesetzt werden kann.
+
+** Workflow-Ausführung erfolgreich abgeschlossen: Benachrichtigt den Benutzer, wenn die Workflow-Ausführung erfolgreich abgeschlossen wurde.
+** Workflow-Ausführung wartet auf Genehmigung: Benachrichtigt den Benutzer, wenn die Workflow-Ausführung abhängig von der WFA Konfigurationseinstellung auf Genehmigung durch einen Operator oder einen Architect wartet.
+
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die Konfigurationseinstellungen und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

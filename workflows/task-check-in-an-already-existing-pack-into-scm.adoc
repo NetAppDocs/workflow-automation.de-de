@@ -1,0 +1,28 @@
+---
+permalink: workflows/task-check-in-an-already-existing-pack-into-scm.html 
+sidebar: sidebar 
+keywords: check, existing, packs, source, control, management, scm server, oncommand, workflow, automation 
+summary: 'Sie können bereits vorhandene Pakete auf dem Source Control Management (SCM) Server von OnCommand Workflow Automation (WFA) einchecken.' 
+---
+= Überprüfen Sie vorhandene WFA Workflow Packs auf dem SCM Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können bereits vorhandene Pakete auf dem Source Control Management (SCM) Server von OnCommand Workflow Automation (WFA) einchecken.
+
+Das SCM muss eingerichtet sein und Sie müssen über Administrator- oder Architekturdaten verfügen.
+
+.Schritte
+. Melden Sie sich über einen Webbrowser im *WFA*-Fenster an.
+. Klicken Sie Auf *Content Management* > *Packs*.
+. Klicken Sie auf das Symbol *Export to Server*.
+. Geben Sie im Dialogfeld *in Serverordner exportieren* im Feld *Speicherort des Ordners am Serversystem* den Speicherort des Serverordners ein, an dem das Paket im Server gespeichert wird.
++
+Damit wird das Paket in einer explodierten Form im Dateisystem exportiert, in dem der SCM-Client erstellt wird.
+
+. Überprüfen Sie im SCM-Client den Inhalt des Packs auf dem SCM-Server.
+. Mit den SCM-bereitgestellten Diff-Tools können Sie die Änderungen gegenüber der SCM-Version des Packs überprüfen.
+

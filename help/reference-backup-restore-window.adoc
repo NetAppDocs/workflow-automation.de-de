@@ -1,0 +1,50 @@
+---
+permalink: help/reference-backup-restore-window.html 
+sidebar: sidebar 
+keywords: backup, restore, window, enable, backup, oncommand, workflow, automation, database, contain, system, configuration, settings, cache, information, core, include, powershell, toolkits, perl toolkits, save, upgrade, reinstall 
+summary: 'Im Fenster Backup und Restore können Sie ein Backup der OnCommand Workflow Automation (WFA) Datenbank erstellen, die die Systemkonfigurationseinstellungen, Cache-Informationen und Kernpakete mit PowerShell Toolkits und Perl Toolkits enthält. Sie können auch die gespeicherte Datenbank wiederherstellen, wenn Sie WFA aktualisieren oder neu installieren.' 
+---
+= Fenster Backup und Restore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Fenster Backup und Restore können Sie ein Backup der OnCommand Workflow Automation (WFA) Datenbank erstellen, die die Systemkonfigurationseinstellungen, Cache-Informationen und Kernpakete mit PowerShell Toolkits und Perl Toolkits enthält. Sie können auch die gespeicherte Datenbank wiederherstellen, wenn Sie WFA aktualisieren oder neu installieren.
+
+
+
+== Abschnitt „Backup“
+
+Sie können auf dieses Fenster zugreifen, indem Sie *Einstellungen* und unter *Wartung* auf *Sicherung & Wiederherstellung* klicken.
+
+* *Backup*
++
+Öffnet das Dialogfeld Datei-Download, in dem Sie die aktuelle Datenbank als komprimierte Datei an einem bestimmten Speicherort speichern können.
+
+
+
+
+
+== Abschnitt wiederherstellen
+
+* *Wählen Sie Datei*
++
+Ermöglicht die Suche nach der Backup-Datenbankdatei.
+
+* *Wiederherstellen*
++
+Ermöglicht es Ihnen, die Konfigurationseinstellungen und Cacheinformationen aus der Backup-Datenbankdatei wieder für die aktuelle WFA Konfiguration wiederherzustellen, falls zutreffend.
+
++
+Die neueste Version der Toolkits und Core Packs ist nach einer Wiederherstellung verfügbar.
+
++
+
+NOTE: Wenn Backups neuere Packs enthalten als die auf dem System vorhandenen Packs, sind nach der Wiederherstellung die neueren Packs aus dem Backup verfügbar.
+
++
+Sie müssen alle laufenden Workflows beenden, bevor Sie ein Core Pack importieren.
+
+

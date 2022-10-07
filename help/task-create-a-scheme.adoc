@@ -1,0 +1,36 @@
+---
+permalink: help/task-create-a-scheme.html 
+sidebar: sidebar 
+keywords: create, scheme, data, cached, new, data, source, type, store, workflows, directly, database 
+summary: Sie müssen ein Schema erstellen, wenn Daten von einem neuen Quelltyp zwischengespeichert werden müssen oder wenn Daten von Workflows direkt in der Datenbank gespeichert werden müssen. 
+---
+= Erstellen Sie ein Schema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen ein Schema erstellen, wenn Daten von einem neuen Quelltyp zwischengespeichert werden müssen oder wenn Daten von Workflows direkt in der Datenbank gespeichert werden müssen.
+
+*Was Sie brauchen*
+
+* Sie müssen WFA installiert haben.
+* Sie müssen über Administratorrechte oder Anmeldedaten für den Systemarchitekten für WFA verfügen.
+
+
+*Über diese Aufgabe*
+
+WFA unterstützt standardmäßig zwei Arten von Schemata: Datenquellenerfassung und andere.
+
+* Datenerfassungsschemata: Die Tabellen in diesen Schemata werden von Datenquellen zwischengespeichert, die für die Erfassung von Daten aus Remote-Systemen definiert sind.
+* Andere Schemata: Die Tabellen in diesen Schemata werden mit Daten durch Workflows gefüllt, die angepasst werden, um spezifische Probleme zu lösen.
+
+
+.Schritte
+. Melden Sie sich über einen Webbrowser als Administrator oder Architekt bei WFA an.
+. Klicken Sie Auf *Datenquellendesign* > *Schemas*.
+. Erstellen Sie ein neues Schema, indem Sie auf klicken image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Geben Sie die erforderlichen Informationen wie Name, Typ, Beschreibung und Entity-Version des Schemas im Dialogfeld *Neue Schemata* ein.
+. Klicken Sie Auf *Speichern*.
+

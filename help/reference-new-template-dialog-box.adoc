@@ -1,0 +1,50 @@
+---
+permalink: help/reference-new-template-dialog-box.html 
+sidebar: sidebar 
+keywords: new, template, dialog box, enable, create, new 
+summary: Im Dialogfeld Neue Vorlage können Sie eine neue Vorlage erstellen. 
+---
+= Dialogfeld „Neue Vorlage“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Neue Vorlage können Sie eine neue Vorlage erstellen.
+
+* *Name*
++
+Hier können Sie einen Namen für die Vorlage eingeben.
+
+* *Typ*
++
+Ermöglicht die Auswahl eines Wörterbuchobjekts aus der Liste.
+
+* *Entity Version*
++
+Hier können Sie die Versionsnummer für die Vorlage in eingeben `major.minor.revision` Format – z. B. 1.0.0.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung für die Vorlage eingeben.
+
+* *Attribute*
++
+Zeigt die Attribute für das ausgewählte Wörterbuchobjekt an und ermöglicht die Eingabe eines Werts für jedes Attribut, z. B. enum und Funktion.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die Vorlage und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Speichert die Vorlage nicht und schließt das Dialogfeld.
+
+

@@ -1,0 +1,58 @@
+---
+permalink: help/reference-edit-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, cache, query, dialog box, enable, associate, dictionary, entry 
+summary: Im Dialogfeld „Cache-Abfrage bearbeiten“ können Sie eine Cache-Abfrage bearbeiten, die mit einem Glossareintrag verknüpft ist. 
+---
+= Dialogfeld „Cache-Abfrage bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Cache-Abfrage bearbeiten“ können Sie eine Cache-Abfrage bearbeiten, die mit einem Glossareintrag verknüpft ist.
+
+* *Wörterbuch-Eintrag*
++
+Gibt einen Wörterbucheintrag an, der der Cache-Abfrage zugeordnet ist.
+
+* *Entity Version*
++
+Ermöglicht die Eingabe der Versionsnummer für die Cache-Abfrage in `major.minor.revision` Format – z. B. 1.0.0.
+
+* * Datenquellenarten*
++
+Gibt den mit der Cache-Abfrage verknüpften Datenquellentyp an.
+
+
+
+
+
+== Tabellenstruktur
+
+Zeigt die Attribute und die SQL-Syntax an, die mit dem Glossareintrag verknüpft sind.
+
+* *SQL Select query*
++
+Ermöglicht Ihnen die Bearbeitung der SQL-Abfrage, die dem Eintrag des Wörterbuchs und dem ausgewählten Datenanbietertyp zugeordnet ist.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Test*
++
+Ermöglicht das Testen der SQL-Abfrage, die im Feld *SQL select query* eingegeben wurde.
+
+* *Speichern*
++
+Speichert die Cache-Abfrage und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Bricht ggf. Änderungen ab und schließt das Dialogfeld.
+
+

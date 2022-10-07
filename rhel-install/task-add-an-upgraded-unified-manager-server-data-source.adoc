@@ -1,0 +1,29 @@
+---
+permalink: rhel-install/task-add-an-upgraded-unified-manager-server-data-source.html 
+sidebar: sidebar 
+keywords: add, upgraded, unified manager, server, data source 
+summary: 'Wenn Unified Manager-Server (5.x oder 6.x) als Datenquelle zu WFA hinzugefügt wird und dann der Unified Manager-Server aktualisiert wird, Sie müssen den aktualisierten Unified Manager-Server als Datenquelle hinzufügen, da die Daten, die mit der aktualisierten Version verknüpft sind, nicht in WFA gefüllt werden, es sei denn, er wird manuell als Datenquelle hinzugefügt.' 
+---
+= Fügen Sie einen aktualisierten Unified Manager-Server als Datenquelle hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Unified Manager-Server (5.x oder 6.x) als Datenquelle zu WFA hinzugefügt wird und dann der Unified Manager-Server aktualisiert wird, Sie müssen den aktualisierten Unified Manager-Server als Datenquelle hinzufügen, da die Daten, die mit der aktualisierten Version verknüpft sind, nicht in WFA gefüllt werden, es sei denn, er wird manuell als Datenquelle hinzugefügt.
+
+.Schritte
+. Melden Sie sich als Administrator bei der WFA Web-GUI an.
+. Klicken Sie auf *Einstellungen* und klicken Sie unter *Setup* auf *Datenquellen*.
+. Klicken Sie Auf image:../media/new_wfa_icon.gif["Neues Symbol"] In der Symbolleiste.
+. Wählen Sie im Dialogfeld Neue Datenquelle den erforderlichen Datenquellentyp aus, und geben Sie anschließend einen Namen für die Datenquelle und den Hostnamen ein.
++
+Auf der Grundlage des ausgewählten Datenquelltyps werden die Felder Port, Benutzername, Passwort und Timeout möglicherweise automatisch mit den Standarddaten ausgefüllt, sofern verfügbar. Sie können diese Einträge nach Bedarf bearbeiten.
+
+. Klicken Sie Auf *Speichern*.
+. Wählen Sie die vorherige Version des Unified Manager-Servers aus, und klicken Sie auf image:../media/delete_wfa_icon.gif["Symbol Löschen"] In der Symbolleiste.
+. Klicken Sie im Bestätigungsdialogfeld Datenquelltyp löschen auf *Ja*.
+. Wählen Sie in der Tabelle Datenquellen die Datenquelle aus, und klicken Sie dann auf image:../media/acquire_now_wfa_icon.gif["Symbol „NOW erwerben“"] In der Symbolleiste.
+. Überprüfen Sie den Datenerfassungsstatus in der Tabelle Verlauf.
+

@@ -1,0 +1,29 @@
+---
+permalink: workflows/concept-how-you-execute-custom-rest-end-points.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, mechanism, configure, custom, end points, execute, help, architect, configure, easy, understand, intuitive, uniform, resource, identifiers, follow, conventions, post, put, delete, based, semantics, client, code, developers 
+summary: 'OnCommand Workflow Automation (WFA) bietet einen Mechanismus zum Konfigurieren individueller REST-Endpunkte zur Ausführung der Workflows. Individuelle REST-Endpunkte helfen dem Architekten, leicht verständliche, intuitive und einheitliche Ressourcen-IDs (URIs) zu konfigurieren, um Workflows auszuführen, die den REST-Konventionen des POST-, PUT- oder LÖSCHENS basierend auf der Workflow-Semantik folgen. Diese URIs erleichtern die Entwicklung von Clientcode für Cliententwickler.' 
+---
+= So führen Sie benutzerdefinierte REST-Endpunkte aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) bietet einen Mechanismus zum Konfigurieren individueller REST-Endpunkte zur Ausführung der Workflows. Individuelle REST-Endpunkte helfen dem Architekten, leicht verständliche, intuitive und einheitliche Ressourcen-IDs (URIs) zu konfigurieren, um Workflows auszuführen, die den REST-Konventionen des POST-, PUT- oder LÖSCHENS basierend auf der Workflow-Semantik folgen. Diese URIs erleichtern die Entwicklung von Clientcode für Cliententwickler.
+
+Mit WFA können Sie einen benutzerdefinierten URI-Pfad für die Workflow-Ausführung über die API-Aufrufe konfigurieren. Jedes Segment im URI-Pfad kann ein String oder ein gültiger Name der Benutzereingabe des Workflows in Klammern sein, z. B. `/devops/\{ProjectName}/clone.` Der Workflow kann als Aufruf an aufgerufen werden `_https_://WFAServer: HTTPS_PORT/rest/devops/Project1/clone/jobs.`
+
+Die Validierung für den URI-Pfad lautet wie folgt:
+
+* DER REST-Pfad muss mit „`/`“ beginnen.
+* Zulässige Zeichen sind Buchstaben, Ziffern und Unterstrich.
+* Der Benutzername muss von „`{}`“ umgeben sein.
++
+
+NOTE: Sie müssen überprüfen, ob der von „`{}`“ umgebene Wert ein gültiger Benutzername ist.
+
+* Es sollten keine leeren Pfadsegmente vorhanden sein, zum Beispiel //, /{}/ usw.
+* Die Konfiguration der HTTP-Methode und die Konfiguration des benutzerdefinierten URI-Pfads sollten entweder konfiguriert oder weder konfiguriert werden.
+

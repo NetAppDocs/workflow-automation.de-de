@@ -1,0 +1,16 @@
+---
+permalink: help/reference-mvel-learning-material-reference.html 
+sidebar: sidebar 
+keywords: use, language, guide, learn, expression 
+summary: 'Mit dem MVEL Language Guide erfahren Sie mehr über MVFLEX Expression Language (MVEL).' 
+---
+= Wo finden Sie Informationen über MVEL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dem _MVEL Language Guide_ erfahren Sie mehr über MVFLEX Expression Language (MVEL).
+
+MVEL ist eine Ausdruckssprache, die auf Java-Syntax basiert. Sie können MVEL Expression Syntax in OnCommand Workflow Automation (WFA)-Workflows verwenden, beispielsweise in Funktionen und Variablen.

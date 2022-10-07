@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-data-sources-are.html 
+sidebar: sidebar 
+keywords: data, source, method, establishing, connection, systems, files, databases, order, extract, example, active iq, unified manager 9.4, type 
+summary: Eine Datenquelle ist eine Methode zum Herstellen einer Verbindung zu anderen Systemen, Dateien und Datenbanken, um Daten zu extrahieren. Beispielsweise kann eine Datenquelle eine Verbindung zu einer Active IQ Unified Manager Datenbank mit dem Datenquellentyp Active IQ Unified Manager 9.4 sein. 
+---
+= Was sind Datenquellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Datenquelle ist eine Methode zum Herstellen einer Verbindung zu anderen Systemen, Dateien und Datenbanken, um Daten zu extrahieren. Beispielsweise kann eine Datenquelle eine Verbindung zu einer Active IQ Unified Manager Datenbank mit dem Datenquellentyp Active IQ Unified Manager 9.4 sein.
+
+Sie können OnCommand Workflow Automation (WFA) eine benutzerdefinierte Datenquelle für die Datenerfassung hinzufügen, indem Sie den erforderlichen Quelltyp definieren, indem Sie das Caching-Schema, den erforderlichen Port und die Erfassungsmethode mit dem Datenquelltyp verknüpfen.
+
+WFA speichert Informationen aus verschiedenen Datenquellen. WFA erfasst Ressourceninformationen aus den Datenquellen und formatiert sie für das Caching-Schema. Die Cache-Tabellen, die die Tabellen in den Cacheschemata sind, sind entsprechend den Objekten des Wörterbuchs formatiert. Wenn Sie einen Finder in Workflows verwenden, gibt er ein Wörterbuchobjekt zurück, und die Daten aus dem Wörterbuchobjekt werden aus den Cache-Tabellen gefüllt. Der Prozess, Daten aus den Datenquellen zu erfassen, wird als _Datenquellenerfassung_ bezeichnet. Sie können entweder eine skriptbasierte Methode oder eine Treiberbasierte Methode zur Datenerfassung verwenden. Die Quellen können sich voneinander unterscheiden, und die Datenquellenerfassung kann sie in unterschiedlichen Zeitabständen abtasthalten. WFA führt diese Informationen anschließend in die Datenbank ein und überlagert die Reservierungsdaten, um aktualisierte Ressourceninformationen in der Datenbank beizubehalten.
+
+Die WFA Datenbank umfasst verschiedene Caching-Schemata. Ein Caching-Schema ist eine Reihe von Tabellen, und jede Tabelle enthält Informationen aus einem bestimmten Wörterbucheingabetyp. Die Tabellen können jedoch kombinierte Informationen aus mehreren Quellen eines bestimmten Datenquelltyps enthalten. WFA nutzt die Datenbankinformationen, um den Status der Ressourcen zu ermitteln, Berechnungen durchzuführen und Befehle für die Ressourcen auszuführen.
