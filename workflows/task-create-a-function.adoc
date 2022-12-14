@@ -13,8 +13,10 @@ summary: Sie können eine WFA Funktion erstellen, die als Utility verwendet werd
 [role="lead"]
 Sie können eine WFA Funktion erstellen, die als Utility verwendet werden kann, wenn keine vordefinierte WFA Funktion vorhanden ist, die für Ihre Aufgabe geeignet ist.
 
+.Was Sie benötigen
 Um eine Funktion zu erstellen, müssen Sie die Syntax MVFLEX Expression Language (MVEL) kennen.
 
+.Über diese Aufgabe
 Für die Funktionsdefinitionen müssen Sie Folgendes angeben:
 
 * Name: Name der Funktion

@@ -13,13 +13,14 @@ summary: 'Mit Workflow Automation (WFA) können Sie Workflows für Aufgaben erst
 [role="lead"]
 Mit Workflow Automation (WFA) können Sie Workflows für Aufgaben erstellen, zum Beispiel beim Bereitstellen, Migrieren und Dekommissionierung von Storage für Datenbanken oder Filesysteme. Sie sollten Workflows erstellen, wenn die vordefinierten WFA-Workflows den Anforderungen nicht entsprechen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen die Konzepte für die Bausteine von WFA verstanden haben.
 * Sie müssen über Funktionen wie Wiederholungszeile, Genehmigungspunkte und Ressourcenauswahl verfügen, die für Ihren Workflow erforderlich sind.
 * Sie müssen die für Ihren Workflow erforderliche Planung einschließlich der Workflow-Anforderung-Checkliste abgeschlossen haben.
 * Sie sollten den Hillinhalt erstellt haben, der den Speicherbetreibern Informationen über den Workflow bereitstellt.
 
 
+.Über diese Aufgabe
 Die Erstellung jedes Workflows kann je nach Ziel und Anforderungen des Workflows variieren. Diese Aufgabe enthält keine Anweisungen für einen bestimmten Workflow, sondern allgemeine Anweisungen zur Erstellung eines Workflows.
 
 .Schritte

@@ -13,8 +13,10 @@ summary: 'Sie können ein Paket aus den Entitäten in OnCommand Workflow Automat
 [role="lead"]
 Sie können ein Paket aus den Entitäten in OnCommand Workflow Automation (WFA) entfernen und das aktualisierte Paket zum SCM Server (Source Control Management) einchecken.
 
+.Was Sie benötigen
 Das SCM muss eingerichtet sein und Sie müssen über Administrator- oder Architekturdaten verfügen.
 
+.Über diese Aufgabe
 Sie können ein Paket aus den folgenden Elementen entfernen:
 
 * Workflow

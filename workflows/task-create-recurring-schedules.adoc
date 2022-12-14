@@ -13,6 +13,7 @@ summary: 'OnCommand Workflow Automation (WFA) bietet zwei Planungsoptionen für 
 [role="lead"]
 OnCommand Workflow Automation (WFA) bietet zwei Planungsoptionen für Workflows. Sie können entweder einen Workflow für die einmalige Ausführung zu einem bestimmten Zeitpunkt planen oder wiederkehrende Zeitpläne erstellen und die Zeitpläne den Workflows zuordnen, sodass die Workflows routinemäßig ausgeführt werden.
 
+.Über diese Aufgabe
 Ein von Ihnen erstellter Zeitplan kann wiederverwendet und mit mehreren Workflows verknüpft werden.
 
 .Schritte

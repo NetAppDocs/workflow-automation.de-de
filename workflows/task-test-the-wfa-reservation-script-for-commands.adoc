@@ -13,6 +13,7 @@ summary: 'Sie können die von Ihnen für OnCommand Workflow Automation (WFA) Bef
 [role="lead"]
 Sie können die von Ihnen für OnCommand Workflow Automation (WFA) Befehle geschriebenen Reservierungsskripte in der Playground-Datenbank testen, um sicherzustellen, dass die Skripte ordnungsgemäß funktionieren und die WFA Datenbanktabellen nicht beeinträchtigen.
 
+.Über diese Aufgabe
 In diesem Verfahren wird der WFA Standardinstallationspfad verwendet. Wenn Sie während der Installation den Standardspeicherort geändert haben, müssen Sie den geänderten WFA Installationspfad verwenden.
 
 .Schritte

@@ -13,8 +13,10 @@ summary: 'Sie können einen vordefinierten Workflow-Automatisierungs-Workflow (W
 [role="lead"]
 Sie können einen vordefinierten Workflow-Automatisierungs-Workflow (WFA) anpassen, wenn es keinen vordefinierten Workflow gibt, der Ihren Anforderungen entspricht.
 
+.Was Sie benötigen
 Sie müssen die erforderlichen Änderungen für den vordefinierten Workflow ermittelt haben.
 
+.Über diese Aufgabe
 Fragen und Support-Anfragen für folgende müssen an die WFA Community gerichtet sein:
 
 * Alle Inhalte werden von der WFA Community heruntergeladen

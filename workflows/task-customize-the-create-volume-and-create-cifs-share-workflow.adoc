@@ -13,6 +13,7 @@ summary: Sie können Ihre Workflows an Ihren Anforderungen anpassen. Sie können
 [role="lead"]
 Sie können Ihre Workflows an Ihren Anforderungen anpassen. Sie können beispielsweise den vordefinierten Workflow _Create a Volume und CIFS Share_ ändern, um Deduplizierung und Komprimierung einzuschließen.
 
+.Über diese Aufgabe
 Die Anpassungen und Abbildungen in dieser Aufgabe sind Beispiele; Sie können die WFA Workflows je nach Ihren Anforderungen anpassen.
 
 .Schritte

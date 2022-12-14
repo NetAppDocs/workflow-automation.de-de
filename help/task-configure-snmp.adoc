@@ -13,6 +13,7 @@ summary: 'Sie können OnCommand Workflow Automation (WFA) konfigurieren, um SNMP
 [role="lead"]
 Sie können OnCommand Workflow Automation (WFA) konfigurieren, um SNMP-Traps (Simple Network Management Protocol) zum Status von Workflow-Vorgängen zu senden.
 
+.Über diese Aufgabe
 WFA unterstützt jetzt SNMP v1- und SNMP v3-Protokolle. SNMP v3 bietet zusätzliche Sicherheitsfunktionen.
 
 WFA `.mib` Datei bietet Informationen zu den vom WFA Server gesendeten Traps. Der `.mib` Die Datei befindet sich im `<WFA_install_location>\wfa\bin\wfa.mib` Verzeichnis auf dem WFA Server.

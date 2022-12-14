@@ -13,6 +13,7 @@ summary: Sie können eine Cache-Abfrage definieren, wenn Sie Informationen zu ei
 [role="lead"]
 Sie können eine Cache-Abfrage definieren, wenn Sie Informationen zu einem Wörterbuchobjekt in der WFA Datenbank von einem Datenquelltyp zwischenspeichern möchten. Sie können eine Cache-Abfrage erstellen und sie einem Wörterbucheintrag und einem oder mehreren Datenquelltypen, wie z. B. Active IQ Unified Manager 6.1, zuordnen.
 
+.Was Sie benötigen
 Sie müssen die entsprechenden SQL-Syntax kennen, um eine Cache-Abfrage zu erstellen.
 
 .Schritte

@@ -13,7 +13,7 @@ summary: 'Sie können den vom Benutzer erstellten Inhalt der OnCommand Workflow 
 [role="lead"]
 Sie können Inhalte des vom Benutzer erstellten OnCommand Workflow Automation (WFA) als speichern `.dar` Datei und Freigabe des Inhalts für andere Benutzer. Der WFA Inhalt kann den gesamten vom Benutzer erstellten Inhalt oder bestimmte Elemente wie Workflows, Suchfunktionen, Befehle und Wörterbuchbegriffe enthalten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen Zugriff auf den WFA Inhalt haben, den Sie exportieren möchten.
 * Wenn Inhalte, die exportiert werden sollen, Verweise auf zertifizierte Inhalte enthalten, müssen die entsprechenden zertifizierten Inhaltspakete auf dem System verfügbar sein, wenn der Inhalt importiert wird.
 +

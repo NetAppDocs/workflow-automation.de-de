@@ -13,6 +13,7 @@ summary: 'Sie können bereits vorhandene Pakete auf dem Source Control Managemen
 [role="lead"]
 Sie können bereits vorhandene Pakete auf dem Source Control Management (SCM) Server von OnCommand Workflow Automation (WFA) einchecken.
 
+.Was Sie benötigen
 Das SCM muss eingerichtet sein und Sie müssen über Administrator- oder Architekturdaten verfügen.
 
 .Schritte

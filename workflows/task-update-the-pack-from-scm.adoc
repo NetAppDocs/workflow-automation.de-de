@@ -13,8 +13,10 @@ summary: 'Sie können ein Paket im SCM Server (Source Control Management) aktual
 [role="lead"]
 Sie können ein Paket im SCM Server (Source Control Management) aktualisieren und das aktualisierte Paket nach OnCommand Workflow Automation (WFA) importieren.
 
+.Was Sie benötigen
 Das SCM muss eingerichtet sein und Sie müssen über Administrator- oder Architekturdaten verfügen
 
+.Über diese Aufgabe
 Wenn Sie Änderungen oder Aktualisierungen an einem Paket im SCM-Server vornehmen, müssen der Administrator oder Architekt die Konflikte gegebenenfalls mit Hilfe der SCM-bereitgestellten Diff-Tools lösen. WFA dient zur Abschneide der XML diff-Datei, um nur die relevanten Änderungen anzuzeigen.
 
 Vor dem Importieren des Packs werden Sie über die Änderungen in den WFA Pack-Inhalt informiert.

@@ -13,6 +13,7 @@ summary: 'Sie können ein Paket auf die vorherige Version im Source Control Mana
 [role="lead"]
 Sie können ein Paket auf die vorherige Version im Source Control Management (SCM) zurückführen und in OnCommand Workflow Automation (WFA) importieren.
 
+.Was Sie benötigen
 Das SCM muss eingerichtet sein und Sie müssen über Administrator- oder Architekturdaten verfügen.
 
 .Schritte

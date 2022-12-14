@@ -13,6 +13,7 @@ summary: Sie können einen WFA Filter erstellen, um nach Ressourcen zu suchen, f
 [role="lead"]
 Sie können einen WFA Filter erstellen, um nach Ressourcen zu suchen, falls kein vordefinierter WFA Filter für die Aufgabe geeignet ist.
 
+.Was Sie benötigen
 Sie müssen die entsprechenden SQL-Syntax kennen, um den Filter zu erstellen.
 
 .Schritte

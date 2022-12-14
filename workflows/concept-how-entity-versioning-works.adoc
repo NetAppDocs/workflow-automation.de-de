@@ -162,7 +162,7 @@ Der kleine Teil der Elternversion wird erhöht.
 
 
 
-== Beispiel, wie sich die Versionen der importierten untergeordneten Elemente auf die Version des Elternteils auswirken
+== Beispiel, wie sich die Versionen der importierten untergeordneten Elemente auf die Version des übergeordneten Objekts auswirken
 
 Berücksichtigen Sie folgenden Workflow in WFA: „`Create Volume and Export Using NFS - Custom`“ 1.0.0.
 

@@ -13,6 +13,7 @@ summary: Es lässt sich ein WFA Finder erstellen, der nach Ressourcen sucht, wen
 [role="lead"]
 Es lässt sich ein WFA Finder erstellen, der nach Ressourcen sucht, wenn es keinen vordefinierten WFA Finder zur Suche nach den erforderlichen Ressourcen gibt.
 
+.Was Sie benötigen
 Sie müssen die erforderlichen Filter erstellt haben, die im Finder verwendet werden.
 
 .Schritte

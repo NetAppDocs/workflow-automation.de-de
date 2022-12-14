@@ -13,6 +13,7 @@ summary: Wenn kein vordefinierter WFA-Befehl vorhanden ist, der für die Aufgabe
 [role="lead"]
 Wenn kein vordefinierter WFA-Befehl vorhanden ist, der für die Aufgabe geeignet ist, können Sie einen WFA-Befehl zum Abschließen einer bestimmten Aufgabe erstellen.
 
+.Was Sie benötigen
 Sie müssen wissen, wie der erforderliche Code für den Befehl über PowerShell oder Perl geschrieben wird.
 
 .Schritte

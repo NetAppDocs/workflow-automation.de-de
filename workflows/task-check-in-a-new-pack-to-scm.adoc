@@ -13,6 +13,7 @@ summary: 'Sie können mit OnCommand Workflow Automation (WFA) ein neues Workflow
 [role="lead"]
 Sie können mit OnCommand Workflow Automation (WFA) ein neues Workflow-Paket erstellen und in Source Control Management (SCM) einchecken.
 
+.Was Sie benötigen
 SCM muss eingerichtet sein und Sie müssen über Administrator- oder Architekturdaten verfügen.
 
 .Schritte

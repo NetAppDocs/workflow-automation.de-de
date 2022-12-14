@@ -13,6 +13,7 @@ summary: 'Sie können einem Workflow-Paket in OnCommand Workflow Automation (WFA
 [role="lead"]
 Sie können einem Workflow-Paket in OnCommand Workflow Automation (WFA) eine oder mehrere Einheiten hinzufügen, um Ihre Anforderungen zur Storage-Automatisierung und -Integration zu erfüllen.
 
+.Über diese Aufgabe
 Sie können ein Paket aus den folgenden Elementen entfernen:
 
 * Workflow

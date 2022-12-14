@@ -13,6 +13,7 @@ summary: 'Sie können Workflow Packs vom Server nach OnCommand Workflow Automati
 [role="lead"]
 Sie können Workflow Packs vom Server nach OnCommand Workflow Automation (WFA) importieren, um Ihre Anforderungen zur Storage-Automatisierung und -Integration zu erfüllen.
 
+.Was Sie benötigen
 Sie müssen Zugriff auf den WFA Inhalt in dem Server haben, den Sie importieren möchten.
 
 .Schritte
