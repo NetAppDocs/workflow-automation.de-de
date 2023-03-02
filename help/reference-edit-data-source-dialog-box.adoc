@@ -52,7 +52,6 @@ Zeigt ggf. den zugeordneten Benutzernamen für den ausgewählten Datenquelltyp a
 Sie müssen den entsprechenden Benutzernamen für diese Datenquelle angeben, um den Standardbenutzernamen zu überschreiben:
 
 +
-** Bei Unified Manager-Versionen vor 6.0 müssen Sie den Benutzernamen eingeben, den Sie bei der Ausführung von ocsetup zum Überschreiben der Standardanmeldeinformationen verwendet haben.
 ** Für Unified Manager 6.0 und höher müssen Sie den Benutzernamen des Datenbankbenutzerkontos eingeben, das Sie auf dem Unified Manager-Server erstellt haben.
 ** Für Performance Advisor müssen Sie den Benutzernamen eines Active IQ Unified Manager-Benutzers mit einer Mindestrolle von GlobalRead eingeben.
 
@@ -65,7 +64,6 @@ Ermöglicht die Angabe eines Kennworts für den ausgewählten Datenquelltyp.
 Sie müssen ein Passwort angeben, um das Standardpasswort für den Benutzernamen dieser Datenquelle zu überschreiben:
 
 +
-** Bei Unified Manager-Versionen vor 6.0 müssen Sie das Kennwort eingeben, das Sie bei der Ausführung von ocsetup zum Überschreiben der Standardanmeldeinformationen verwendet haben.
 ** Für Unified Manager 6.0 und höher müssen Sie das Kennwort des Datenbankbenutzerkontos eingeben, das Sie auf dem Server erstellt haben.
 ** Für Performance Advisor müssen Sie das Passwort eines Unified Manager-Benutzers mit einer Mindestrolle von GlobalRead eingeben.
 

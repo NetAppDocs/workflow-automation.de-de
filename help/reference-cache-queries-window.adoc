@@ -13,7 +13,7 @@ summary: Im Fenster Cache-Abfragen können Sie Cache-Abfragen für die Einträge
 [role="lead"]
 Im Fenster Cache-Abfragen können Sie Cache-Abfragen für die Einträge im WFA Wörterbuch und deren zugehörigen Datenquellentypen verwalten.
 
-Eine Cache-Abfrage ist eine SQL-Abfrage, die die erforderlichen Daten aus der in der Abfrage angegebenen Tabelle abruft. Eine Cacheabfrage ist mit einem Wörterbucheintrag und einem oder mehreren Datenquelltypen verknüpft - beispielsweise ist die Cacheabfrage für *Volumen (Speicher)* sowohl mit Active IQ Unified Manager 5.1- als auch mit 5.2-Datenquelltypen verknüpft. Sie können eine Cache-Abfrage definieren, wenn Sie Informationen abrufen möchten, z. B. ein Volume aus einer Tabelle einer Datenquelle von Active IQ Unified Manager 6.0 in den Cache von WFA.
+Eine Cache-Abfrage ist eine SQL-Abfrage, die die erforderlichen Daten aus der in der Abfrage angegebenen Tabelle abruft. Eine Cache-Abfrage ist mit einem Wörterbucheintrag und einem oder mehreren Datenquelltypen verknüpft. Sie können eine Cache-Abfrage definieren, wenn Sie Informationen wie z. B. ein Volume aus einer Tabelle einer Datenquelle „OnCommand Unified Manager 6.0“ in den WFA Cache abrufen möchten.
 
 * Tabelle für Cache-Abfragen
 * Symbolleiste

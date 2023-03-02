@@ -117,17 +117,6 @@ In der folgenden Tabelle sind die Standardports aufgeführt, die auf dem Unified
 
 
  a| 
-2638
- a| 
-Sybase
- a| 
-Eingehend
- a| 
-Caching von Daten aus Active IQ Unified Manager vor 6.0
-
-
-
- a| 
 3306
  a| 
 MySQL
@@ -135,17 +124,6 @@ MySQL
 Eingehend
  a| 
 Caching von Daten aus Active IQ Unified Manager 6.0 und höher
-
-
-
- a| 
-8088, 8488
- a| 
-HTTP, HTTPS
- a| 
-Eingehend
- a| 
-Caching von Daten aus Performance Advisor, einem Bestandteil von Active IQ Unified Manager vor 6.0
 
 |===
 In der folgenden Tabelle ist der Standardport aufgeführt, der auf VMware vCenter geöffnet werden soll:

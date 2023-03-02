@@ -41,7 +41,6 @@ SQL SERVER GESCHULT SIND
  a| 
 Wählen Sie aus der Liste *Treibertyp* einen der folgenden Treiber aus, der für die Datenquelle geeignet ist:
 
-** *Sybase jConnect3*
 ** * MySQL Connector/J*
 ** *MySQL Server JDBC-Treiber 3.0*
 ** *Oracle JDBC-Treiber 11.2.0.3*
