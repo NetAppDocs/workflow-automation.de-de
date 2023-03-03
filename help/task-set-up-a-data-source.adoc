@@ -33,6 +33,7 @@ Dies sind die Standardnummern für TCP-Ports:
 
 
  a| 
+3306
  a| 
 6.x
  a| 
